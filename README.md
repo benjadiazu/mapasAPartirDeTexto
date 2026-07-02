@@ -1,4 +1,3 @@
-# Seminario2025_ICI5541
 GENERACIÓN DE MAPAS A PARTIR DE TEXTO
 
 ## Cómo ejecutar
