@@ -1,0 +1,315 @@
+{
+  "cities": [],
+  "towns": [
+    {
+      "name": "Alforzada",
+      "nx": 0.574931,
+      "ny": 0.616573
+    },
+    {
+      "name": "Archet",
+      "nx": 0.910718,
+      "ny": 0.582157
+    },
+    {
+      "name": "Belfalas",
+      "nx": 0.770004,
+      "ny": 0.082798
+    },
+    {
+      "name": "Beren",
+      "nx": 0.02,
+      "ny": 0.317573
+    },
+    {
+      "name": "Bolson Cerrado",
+      "nx": 0.455778,
+      "ny": 0.524831
+    },
+    {
+      "name": "Bolson de Tirada",
+      "nx": 0.410331,
+      "ny": 0.491185
+    },
+    {
+      "name": "Bosque Cerrado",
+      "nx": 0.79144,
+      "ny": 0.768363
+    },
+    {
+      "name": "Bosque Negro",
+      "nx": 0.978222,
+      "ny": 0.836891
+    },
+    {
+      "name": "Bosque Viejo",
+      "nx": 0.598504,
+      "ny": 0.55746
+    },
+    {
+      "name": "Brandivino",
+      "nx": 0.622202,
+      "ny": 0.614032
+    },
+    {
+      "name": "Bree",
+      "nx": 0.768206,
+      "ny": 0.571657
+    },
+    {
+      "name": "Campos Gladios",
+      "nx": 0.02,
+      "ny": 0.317573
+    },
+    {
+      "name": "Cavada Grande",
+      "nx": 0.520339,
+      "ny": 0.707984
+    },
+    {
+      "name": "Colina",
+      "nx": 0.536698,
+      "ny": 0.509149
+    },
+    {
+      "name": "Comarca",
+      "nx": 0.536242,
+      "ny": 0.509149
+    },
+    {
+      "name": "Cuaderna del Este",
+      "nx": 0.73473,
+      "ny": 0.633214
+    },
+    {
+      "name": "Cuaderna del Oeste",
+      "nx": 0.421605,
+      "ny": 0.432117
+    },
+    {
+      "name": "Cuaderna del Sur",
+      "nx": 0.384121,
+      "ny": 0.687214
+    },
+    {
+      "name": "Delagua",
+      "nx": 0.51971,
+      "ny": 0.648968
+    },
+    {
+      "name": "Erebor",
+      "nx": 0.02,
+      "ny": 0.317573
+    },
+    {
+      "name": "Eriador",
+      "nx": 0.75544,
+      "ny": 0.607367
+    },
+    {
+      "name": "Esgalduin",
+      "nx": 0.02,
+      "ny": 0.317573
+    },
+    {
+      "name": "Esgarot",
+      "nx": 0.178278,
+      "ny": 0.918855
+    },
+    {
+      "name": "Fontegris",
+      "nx": 0.820222,
+      "ny": 0.341218
+    },
+    {
+      "name": "Fornost",
+      "nx": 0.410569,
+      "ny": 0.199649
+    },
+    {
+      "name": "Gamoburgo",
+      "nx": 0.664778,
+      "ny": 0.726448
+    },
+    {
+      "name": "Gran Bosque Verde",
+      "nx": 0.898657,
+      "ny": 0.6685
+    },
+    {
+      "name": "Grandes Aguas",
+      "nx": 0.930536,
+      "ny": 0.444887
+    },
+    {
+      "name": "Grandes Smials",
+      "nx": 0.352524,
+      "ny": 0.586246
+    },
+    {
+      "name": "Hobbiton",
+      "nx": 0.463899,
+      "ny": 0.5955
+    },
+    {
+      "name": "Lago Largo",
+      "nx": 0.265165,
+      "ny": 0.827056
+    },
+    {
+      "name": "Landas de Etten",
+      "nx": 0.881633,
+      "ny": 0.361573
+    },
+    {
+      "name": "Los Gamos",
+      "nx": 0.657266,
+      "ny": 0.636742
+    },
+    {
+      "name": "Lun",
+      "nx": 0.832815,
+      "ny": 0.116653
+    },
+    {
+      "name": "Marjala",
+      "nx": 0.726754,
+      "ny": 0.776742
+    },
+    {
+      "name": "Montana",
+      "nx": 0.02,
+      "ny": 0.317573
+    },
+    {
+      "name": "Montana de Fuego",
+      "nx": 0.02,
+      "ny": 0.317573
+    },
+    {
+      "name": "Montanas Nubladas",
+      "nx": 0.866706,
+      "ny": 0.685065
+    },
+    {
+      "name": "Montanas del Terror",
+      "nx": 0.02,
+      "ny": 0.317573
+    },
+    {
+      "name": "Neldoreth",
+      "nx": 0.02,
+      "ny": 0.317573
+    },
+    {
+      "name": "Norburgo",
+      "nx": 0.458746,
+      "ny": 0.327476
+    },
+    {
+      "name": "Oeste",
+      "nx": 0.59969,
+      "ny": 0.392935
+    },
+    {
+      "name": "Oesternesse",
+      "nx": 0.02,
+      "ny": 0.317573
+    },
+    {
+      "name": "Orodruin",
+      "nx": 0.02,
+      "ny": 0.317573
+    },
+    {
+      "name": "Puente del Brandivino",
+      "nx": 0.611601,
+      "ny": 0.698573
+    },
+    {
+      "name": "Puertos Grises",
+      "nx": 0.518306,
+      "ny": 0.389484
+    },
+    {
+      "name": "Quebradas",
+      "nx": 0.659516,
+      "ny": 0.392935
+    },
+    {
+      "name": "Quebradas Blancas",
+      "nx": 0.48931,
+      "ny": 0.852552
+    },
+    {
+      "name": "Rivendel",
+      "nx": 0.787395,
+      "ny": 0.447992
+    },
+    {
+      "name": "Sonorona",
+      "nx": 0.828935,
+      "ny": 0.275383
+    },
+    {
+      "name": "Tharbad",
+      "nx": 0.781472,
+      "ny": 0.156149
+    },
+    {
+      "name": "Tierra de Mordor",
+      "nx": 0.931972,
+      "ny": 0.395012
+    },
+    {
+      "name": "Tierras Asperas",
+      "nx": 0.98,
+      "ny": 0.776653
+    },
+    {
+      "name": "Tierras Brunas",
+      "nx": 0.703419,
+      "ny": 0.081145
+    },
+    {
+      "name": "Tierras de Tuk",
+      "nx": 0.420694,
+      "ny": 0.571488
+    },
+    {
+      "name": "Tinuviel",
+      "nx": 0.02,
+      "ny": 0.317573
+    },
+    {
+      "name": "Tornasauce",
+      "nx": 0.539141,
+      "ny": 0.514669
+    },
+    {
+      "name": "Torres de Abajo",
+      "nx": 0.231254,
+      "ny": 0.649778
+    },
+    {
+      "name": "bosque de Chet",
+      "nx": 0.910718,
+      "ny": 0.582157
+    },
+    {
+      "name": "el camino Este-Oeste",
+      "nx": 0.475859,
+      "ny": 0.402794
+    },
+    {
+      "name": "las Cuadernas",
+      "nx": 0.599508,
+      "ny": 0.257609
+    },
+    {
+      "name": "los Grandes Tumulos",
+      "nx": 0.720226,
+      "ny": 0.290976
+    }
+  ]
+}

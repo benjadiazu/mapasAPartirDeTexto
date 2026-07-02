@@ -1,0 +1,5752 @@
+{
+  "lugares": [
+    "Angband",
+    "Archet",
+    "Balsadera",
+    "Belfalas",
+    "Bolsón Cerrado",
+    "Bolsón de Tirada",
+    "Bosque Cerrado",
+    "Bosque Viejo",
+    "Brandivino",
+    "Bree",
+    "Bruinen",
+    "Camino Verde",
+    "Campos Gladios",
+    "Carn Dûm",
+    "Cavada Grande",
+    "Cepeda",
+    "Colinas Verdes",
+    "Comarca",
+    "Cricava",
+    "Cuaderna del Este",
+    "Cuaderna del Norte",
+    "Cuaderna del Sur",
+    "Delagua",
+    "Eriador",
+    "Fontegrís",
+    "Fornost",
+    "Gamoburgo",
+    "Gondor",
+    "Grandes Aguas",
+    "Grandes Smials",
+    "Grietas del Destino",
+    "Hobbiton",
+    "La Perca Dorada",
+    "Lago Largo",
+    "Landas de Etten",
+    "Lithe",
+    "Los Gamos",
+    "Lun",
+    "Marjala",
+    "Mitheithel",
+    "Montañas",
+    "Montañas Nubladas",
+    "Montañas del Terror",
+    "Mordor",
+    "Moscagua",
+    "Norburgo",
+    "Orodruin",
+    "Quebradas",
+    "Quebradas Blancas",
+    "Rivendel",
+    "Sobremonte",
+    "Sonorona",
+    "Tharbad",
+    "Tierras Altas",
+    "Tierras Asperas",
+    "Tierras Brunas",
+    "Tornasauce",
+    "Torres de Abajo",
+    "bosque de Chet",
+    "tierra de Angmar"
+  ],
+  "relaciones": [
+    {
+      "origen": "Eriador",
+      "destino": "Montañas Nubladas",
+      "tipo": "OESTE_DE"
+    },
+    {
+      "origen": "Tierras Asperas",
+      "destino": "Eriador",
+      "tipo": "CONECTA"
+    },
+    {
+      "origen": "Tharbad",
+      "destino": "Tierras Brunas",
+      "tipo": "NORTE_DE"
+    },
+    {
+      "origen": "Rivendel",
+      "destino": "Fontegrís",
+      "tipo": "NORTE_DE"
+    },
+    {
+      "origen": "Bree",
+      "destino": "Comarca",
+      "tipo": "ESTE_DE",
+      "distancia": "40",
+      "unidad": "millas",
+      "distancia_m": 59200.0
+    },
+    {
+      "origen": "bosque de Chet",
+      "destino": "Bree",
+      "tipo": "CONECTA"
+    },
+    {
+      "origen": "Belfalas",
+      "destino": "Lun",
+      "tipo": "CONECTA"
+    },
+    {
+      "origen": "Hobbiton",
+      "destino": "Comarca",
+      "tipo": "CONECTA"
+    },
+    {
+      "origen": "Quebradas Blancas",
+      "destino": "Comarca",
+      "tipo": "CONECTA"
+    },
+    {
+      "origen": "Marjala",
+      "destino": "Brandivino",
+      "tipo": "CONECTA"
+    },
+    {
+      "origen": "Cuaderna del Este",
+      "destino": "Brandivino",
+      "tipo": "CONECTA"
+    },
+    {
+      "origen": "Los Gamos",
+      "destino": "Brandivino",
+      "tipo": "ESTE_DE"
+    },
+    {
+      "origen": "Grandes Smials",
+      "destino": "Comarca",
+      "tipo": "CONECTA"
+    },
+    {
+      "origen": "Lago Largo",
+      "destino": "Cuaderna del Sur",
+      "tipo": "CONECTA"
+    },
+    {
+      "origen": "Lago Largo",
+      "destino": "Comarca",
+      "tipo": "SUR_DE"
+    },
+    {
+      "origen": "Bree",
+      "destino": "Comarca",
+      "tipo": "NORTE_DE"
+    },
+    {
+      "origen": "Gondor",
+      "destino": "Camino Verde",
+      "tipo": "CONECTA"
+    },
+    {
+      "origen": "Bree",
+      "destino": "Cuaderna del Sur",
+      "tipo": "CONECTA"
+    },
+    {
+      "origen": "Camino Verde",
+      "destino": "Bree",
+      "tipo": "CONECTA"
+    },
+    {
+      "origen": "Fornost",
+      "destino": "Norburgo",
+      "tipo": "CONECTA"
+    },
+    {
+      "origen": "Norburgo",
+      "destino": "Comarca",
+      "tipo": "NORTE_DE"
+    },
+    {
+      "origen": "Cavada Grande",
+      "destino": "Comarca",
+      "tipo": "CONECTA"
+    },
+    {
+      "origen": "Quebradas Blancas",
+      "destino": "Lithe",
+      "tipo": "CONECTA"
+    },
+    {
+      "origen": "Lithe",
+      "destino": "Comarca",
+      "tipo": "CONECTA"
+    },
+    {
+      "origen": "Bolsón Cerrado",
+      "destino": "Comarca",
+      "tipo": "CERCA_DE"
+    },
+    {
+      "origen": "Tierras Asperas",
+      "destino": "Montañas Nubladas",
+      "tipo": "ESTE_DE"
+    },
+    {
+      "origen": "Torres de Abajo",
+      "destino": "Grandes Smials",
+      "tipo": "CERCA_DE"
+    },
+    {
+      "origen": "Rivendel",
+      "destino": "Comarca",
+      "tipo": "CONECTA"
+    },
+    {
+      "origen": "Gondor",
+      "destino": "Comarca",
+      "tipo": "CONECTA"
+    },
+    {
+      "origen": "Bolsón Cerrado",
+      "destino": "Hobbiton",
+      "tipo": "CERCA_DE"
+    },
+    {
+      "origen": "Rivendel",
+      "destino": "Eriador",
+      "tipo": "CONECTA"
+    },
+    {
+      "origen": "Los Gamos",
+      "destino": "Brandivino",
+      "tipo": "OESTE_DE"
+    },
+    {
+      "origen": "Comarca",
+      "destino": "Hobbiton",
+      "tipo": "CONECTA"
+    },
+    {
+      "origen": "Grandes Smials",
+      "destino": "Comarca",
+      "tipo": "CERCA_DE"
+    },
+    {
+      "origen": "Hobbiton",
+      "destino": "Delagua",
+      "tipo": "CERCA_DE"
+    },
+    {
+      "origen": "Bosque Viejo",
+      "destino": "Brandivino",
+      "tipo": "CERCA_DE"
+    },
+    {
+      "origen": "Bolsón de Tirada",
+      "destino": "Bolsón Cerrado",
+      "tipo": "CERCA_DE"
+    },
+    {
+      "origen": "Bree",
+      "destino": "Rivendel",
+      "tipo": "OESTE_DE"
+    },
+    {
+      "origen": "Hobbiton",
+      "destino": "Comarca",
+      "tipo": "CERCA_DE"
+    },
+    {
+      "origen": "Delagua",
+      "destino": "Comarca",
+      "tipo": "CERCA_DE"
+    },
+    {
+      "origen": "Sobremonte",
+      "destino": "Cuaderna del Norte",
+      "tipo": "CERCA_DE"
+    },
+    {
+      "origen": "Bolsón de Tirada",
+      "destino": "Comarca",
+      "tipo": "CERCA_DE"
+    },
+    {
+      "origen": "Cuaderna del Sur",
+      "destino": "Comarca",
+      "tipo": "SUR_DE"
+    },
+    {
+      "origen": "Campos Gladios",
+      "destino": "Tierras Asperas",
+      "tipo": "CONECTA"
+    },
+    {
+      "origen": "Montañas",
+      "destino": "Tierras Altas",
+      "tipo": "CONECTA"
+    },
+    {
+      "origen": "Comarca",
+      "destino": "Bolsón Cerrado",
+      "tipo": "CONECTA"
+    },
+    {
+      "origen": "Grietas del Destino",
+      "destino": "Orodruin",
+      "tipo": "CONECTA"
+    },
+    {
+      "origen": "Bolsón Cerrado",
+      "destino": "Hobbiton",
+      "tipo": "CONECTA"
+    },
+    {
+      "origen": "Hobbiton",
+      "destino": "Los Gamos",
+      "tipo": "CONECTA"
+    },
+    {
+      "origen": "Cricava",
+      "destino": "Gamoburgo",
+      "tipo": "CONECTA"
+    },
+    {
+      "origen": "Cavada Grande",
+      "destino": "Delagua",
+      "tipo": "CONECTA"
+    },
+    {
+      "origen": "Bosque Cerrado",
+      "destino": "Cuaderna del Este",
+      "tipo": "CONECTA"
+    },
+    {
+      "origen": "Colinas Verdes",
+      "destino": "Bosque Cerrado",
+      "tipo": "CONECTA"
+    },
+    {
+      "origen": "Marjala",
+      "destino": "Cepeda",
+      "tipo": "CONECTA"
+    },
+    {
+      "origen": "Balsadera",
+      "destino": "Gamoburgo",
+      "tipo": "CONECTA"
+    },
+    {
+      "origen": "La Perca Dorada",
+      "destino": "Cepeda",
+      "tipo": "CONECTA"
+    },
+    {
+      "origen": "Cuaderna del Sur",
+      "destino": "Hobbiton",
+      "tipo": "CONECTA"
+    },
+    {
+      "origen": "Rivendel",
+      "destino": "Grandes Aguas",
+      "tipo": "ESTE_DE"
+    },
+    {
+      "origen": "Los Gamos",
+      "destino": "Brandivino",
+      "tipo": "CERCA_DE"
+    },
+    {
+      "origen": "Marjala",
+      "destino": "Los Gamos",
+      "tipo": "CERCA_DE"
+    },
+    {
+      "origen": "Cepeda",
+      "destino": "Marjala",
+      "tipo": "CERCA_DE"
+    },
+    {
+      "origen": "Cricava",
+      "destino": "Bolsón Cerrado",
+      "tipo": "CERCA_DE"
+    },
+    {
+      "origen": "Bosque Viejo",
+      "destino": "Comarca",
+      "tipo": "ESTE_DE"
+    },
+    {
+      "origen": "Tornasauce",
+      "destino": "Bosque Viejo",
+      "tipo": "CERCA_DE"
+    },
+    {
+      "origen": "Bosque Viejo",
+      "destino": "Quebradas",
+      "tipo": "CERCA_DE"
+    },
+    {
+      "origen": "Tornasauce",
+      "destino": "Brandivino",
+      "tipo": "CONECTA"
+    },
+    {
+      "origen": "Carn Dûm",
+      "destino": "tierra de Angmar",
+      "tipo": "CONECTA"
+    },
+    {
+      "origen": "Bree",
+      "destino": "Archet",
+      "tipo": "CERCA_DE"
+    },
+    {
+      "origen": "Archet",
+      "destino": "bosque de Chet",
+      "tipo": "CERCA_DE"
+    },
+    {
+      "origen": "Grandes Aguas",
+      "destino": "Brandivino",
+      "tipo": "CONECTA"
+    },
+    {
+      "origen": "Cuaderna del Este",
+      "destino": "Los Gamos",
+      "tipo": "CERCA_DE"
+    },
+    {
+      "origen": "Archet",
+      "destino": "Bree",
+      "tipo": "ESTE_DE"
+    },
+    {
+      "origen": "Mordor",
+      "destino": "Bree",
+      "tipo": "ESTE_DE"
+    },
+    {
+      "origen": "Comarca",
+      "destino": "Bree",
+      "tipo": "OESTE_DE"
+    },
+    {
+      "origen": "Los Gamos",
+      "destino": "Brandivino",
+      "tipo": "CONECTA"
+    },
+    {
+      "origen": "Bosque Viejo",
+      "destino": "Los Gamos",
+      "tipo": "OESTE_DE"
+    },
+    {
+      "origen": "bosque de Chet",
+      "destino": "Bree",
+      "tipo": "ESTE_DE"
+    },
+    {
+      "origen": "Moscagua",
+      "destino": "bosque de Chet",
+      "tipo": "ESTE_DE"
+    },
+    {
+      "origen": "Montañas Nubladas",
+      "destino": "Moscagua",
+      "tipo": "ESTE_DE"
+    },
+    {
+      "origen": "Sonorona",
+      "destino": "Rivendel",
+      "tipo": "CONECTA"
+    },
+    {
+      "origen": "Montañas del Terror",
+      "destino": "Angband",
+      "tipo": "CERCA_DE"
+    },
+    {
+      "origen": "Rivendel",
+      "destino": "Landas de Etten",
+      "tipo": "SUR_DE"
+    },
+    {
+      "origen": "Fontegrís",
+      "destino": "Mitheithel",
+      "tipo": "CONECTA"
+    },
+    {
+      "origen": "Mitheithel",
+      "destino": "Landas de Etten",
+      "tipo": "SUR_DE"
+    },
+    {
+      "origen": "Sonorona",
+      "destino": "Bruinen",
+      "tipo": "CONECTA"
+    },
+    {
+      "origen": "Bruinen",
+      "destino": "Rivendel",
+      "tipo": "CERCA_DE"
+    }
+  ],
+  "traducciones_pleiades": {
+    "Angband": "Angband",
+    "Archet": "Archet",
+    "Balsadera": "Balsadera",
+    "Belfalas": "Belfalas",
+    "Bolsón Cerrado": "Bag End",
+    "Bolsón de Tirada": "Tighfield",
+    "Bosque Cerrado": "Woodhall",
+    "Bosque Viejo": "el Bosque Viejo",
+    "Brandivino": "Brandywine",
+    "Bree": "Bree-hill",
+    "Bruinen": "Bruinen",
+    "Camino Verde": "Greenway",
+    "Campos Gladios": "Muddy Marshes",
+    "Carn Dûm": "Carn Dûm",
+    "Cavada Grande": "Great Ditch",
+    "Cepeda": "Cepeda",
+    "Colinas Verdes": "Green Hills",
+    "Comarca": "The Shire",
+    "Cricava": "Cricava",
+    "Cuaderna del Este": "Cuaderna del Este",
+    "Cuaderna del Norte": "Northfarthing",
+    "Cuaderna del Sur": "Southfarthing",
+    "Delagua": "Bywater",
+    "Eriador": "Eriador",
+    "Fontegrís": "Fontegrís",
+    "Fornost": "Fornost",
+    "Gamoburgo": "Gamoburgo",
+    "Gondor": "Gondor",
+    "Grandes Aguas": "Grandes Aguas",
+    "Grandes Smials": "Great Smials",
+    "Grietas del Destino": "Cracks of Doom",
+    "Hobbiton": "Hobbiton",
+    "La Perca Dorada": "Golden Perch",
+    "Lago Largo": "Long Lake",
+    "Landas de Etten": "Landas de Etten",
+    "Lithe": "Lithe",
+    "Los Gamos": "Buckland",
+    "Lun": "Lun",
+    "Marjala": "Marjala",
+    "Mitheithel": "Mitheithel",
+    "Montañas": "Montañas",
+    "Montañas Nubladas": "Misty Mountains",
+    "Montañas del Terror": "Montañas del Terror",
+    "Mordor": "Mordor",
+    "Moscagua": "Midgewater Marshes",
+    "Norburgo": "Norbury",
+    "Orodruin": "Orodruin",
+    "Quebradas": "Quebradas",
+    "Quebradas Blancas": "White Downs",
+    "Rivendel": "Rivendel",
+    "Sobremonte": "Sobremonte",
+    "Sonorona": "Sonorona",
+    "Tharbad": "Tharbad",
+    "Tierras Altas": "Highlands",
+    "Tierras Asperas": "the Wold",
+    "Tierras Brunas": "Tierras Brunas",
+    "Tornasauce": "Tornasauce",
+    "Torres de Abajo": "the Lower Stores",
+    "bosque de Chet": "bosque de Chet",
+    "tierra de Angmar": "Tierra de Angmar"
+  },
+  "geo_scores": {
+    "Alforzada": {
+      "score_total": 12,
+      "mentions": 2,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "Amon Sul": {
+      "score_total": 11,
+      "mentions": 1,
+      "degree": 2,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "Anduin": {
+      "score_total": 32,
+      "mentions": 4,
+      "degree": 4,
+      "near_degree": 0,
+      "relation_diversity": 3,
+      "semantic_bonus": 6
+    },
+    "Anduin inferior": {
+      "score_total": 9,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "Angband": {
+      "score_total": 21,
+      "mentions": 2,
+      "degree": 2,
+      "near_degree": 1,
+      "relation_diversity": 2,
+      "semantic_bonus": 6
+    },
+    "Angmar": {
+      "score_total": 27,
+      "mentions": 4,
+      "degree": 2,
+      "near_degree": 1,
+      "relation_diversity": 2,
+      "semantic_bonus": 6
+    },
+    "Archet": {
+      "score_total": 36,
+      "mentions": 6,
+      "degree": 3,
+      "near_degree": 2,
+      "relation_diversity": 2,
+      "semantic_bonus": 6
+    },
+    "Arnor": {
+      "score_total": 9,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "Años Negros": {
+      "score_total": 10,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "Balsadera": {
+      "score_total": 61,
+      "mentions": 17,
+      "degree": 2,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 4
+    },
+    "Baranduin": {
+      "score_total": 15,
+      "mentions": 3,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "Belfalas": {
+      "score_total": 9,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "Bolgovado": {
+      "score_total": 15,
+      "mentions": 1,
+      "degree": 2,
+      "near_degree": 2,
+      "relation_diversity": 1,
+      "semantic_bonus": 4
+    },
+    "Bolsón Cerrado": {
+      "score_total": 207,
+      "mentions": 52,
+      "degree": 15,
+      "near_degree": 11,
+      "relation_diversity": 3,
+      "semantic_bonus": 4
+    },
+    "Bolsón de Tirada": {
+      "score_total": 25,
+      "mentions": 5,
+      "degree": 2,
+      "near_degree": 2,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "Bolsón de Tirada número 3": {
+      "score_total": 7,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 0
+    },
+    "Borde de la cañada": {
+      "score_total": 8,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 0
+    },
+    "Bosque Cerrado": {
+      "score_total": 28,
+      "mentions": 4,
+      "degree": 4,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 6
+    },
+    "Bosque Negro": {
+      "score_total": 59,
+      "mentions": 10,
+      "degree": 8,
+      "near_degree": 1,
+      "relation_diversity": 2,
+      "semantic_bonus": 8
+    },
+    "Bosque Viejo": {
+      "score_total": 112,
+      "mentions": 14,
+      "degree": 20,
+      "near_degree": 10,
+      "relation_diversity": 6,
+      "semantic_bonus": 8
+    },
+    "Bosque de los Trolls": {
+      "score_total": 20,
+      "mentions": 1,
+      "degree": 2,
+      "near_degree": 1,
+      "relation_diversity": 2,
+      "semantic_bonus": 8
+    },
+    "Brandivino": {
+      "score_total": 126,
+      "mentions": 25,
+      "degree": 16,
+      "near_degree": 5,
+      "relation_diversity": 4,
+      "semantic_bonus": 6
+    },
+    "Bree": {
+      "score_total": 365,
+      "mentions": 94,
+      "degree": 29,
+      "near_degree": 9,
+      "relation_diversity": 5,
+      "semantic_bonus": 6
+    },
+    "Bruinen": {
+      "score_total": 24,
+      "mentions": 3,
+      "degree": 2,
+      "near_degree": 1,
+      "relation_diversity": 2,
+      "semantic_bonus": 6
+    },
+    "Camino Verde": {
+      "score_total": 38,
+      "mentions": 8,
+      "degree": 3,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 6
+    },
+    "Campos Gladios": {
+      "score_total": 21,
+      "mentions": 3,
+      "degree": 4,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "Campos Verdes": {
+      "score_total": 9,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "Carn Dûm": {
+      "score_total": 18,
+      "mentions": 2,
+      "degree": 2,
+      "near_degree": 0,
+      "relation_diversity": 2,
+      "semantic_bonus": 4
+    },
+    "Casa Brandi": {
+      "score_total": 60,
+      "mentions": 13,
+      "degree": 5,
+      "near_degree": 3,
+      "relation_diversity": 2,
+      "semantic_bonus": 4
+    },
+    "Casa de Tom Bombadil": {
+      "score_total": 76,
+      "mentions": 5,
+      "degree": 21,
+      "near_degree": 7,
+      "relation_diversity": 5,
+      "semantic_bonus": 2
+    },
+    "Casa del Bosque": {
+      "score_total": 34,
+      "mentions": 7,
+      "degree": 2,
+      "near_degree": 1,
+      "relation_diversity": 2,
+      "semantic_bonus": 4
+    },
+    "Cavada Grande": {
+      "score_total": 34,
+      "mentions": 8,
+      "degree": 3,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "Cepeda": {
+      "score_total": 38,
+      "mentions": 7,
+      "degree": 3,
+      "near_degree": 1,
+      "relation_diversity": 2,
+      "semantic_bonus": 6
+    },
+    "Cerca Alta": {
+      "score_total": 10,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "Cima de los Vientos": {
+      "score_total": 78,
+      "mentions": 20,
+      "degree": 4,
+      "near_degree": 0,
+      "relation_diversity": 4,
+      "semantic_bonus": 2
+    },
+    "Colinas Verdes": {
+      "score_total": 9,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "Colinas de la Torre": {
+      "score_total": 10,
+      "mentions": 2,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 0
+    },
+    "Comarca": {
+      "score_total": 653,
+      "mentions": 176,
+      "degree": 47,
+      "near_degree": 13,
+      "relation_diversity": 6,
+      "semantic_bonus": 6
+    },
+    "Combe": {
+      "score_total": 23,
+      "mentions": 3,
+      "degree": 2,
+      "near_degree": 0,
+      "relation_diversity": 2,
+      "semantic_bonus": 6
+    },
+    "Cricava": {
+      "score_total": 45,
+      "mentions": 10,
+      "degree": 2,
+      "near_degree": 1,
+      "relation_diversity": 2,
+      "semantic_bonus": 6
+    },
+    "Cuaderna del Este": {
+      "score_total": 42,
+      "mentions": 8,
+      "degree": 4,
+      "near_degree": 2,
+      "relation_diversity": 2,
+      "semantic_bonus": 4
+    },
+    "Cuaderna del Norte": {
+      "score_total": 10,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "Cuaderna del Oeste": {
+      "score_total": 15,
+      "mentions": 3,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "Cuaderna del Sur": {
+      "score_total": 28,
+      "mentions": 4,
+      "degree": 4,
+      "near_degree": 0,
+      "relation_diversity": 2,
+      "semantic_bonus": 4
+    },
+    "Delagua": {
+      "score_total": 64,
+      "mentions": 13,
+      "degree": 6,
+      "near_degree": 3,
+      "relation_diversity": 2,
+      "semantic_bonus": 6
+    },
+    "Días Antiguos": {
+      "score_total": 13,
+      "mentions": 5,
+      "degree": 0,
+      "near_degree": 0,
+      "relation_diversity": 0,
+      "semantic_bonus": -2
+    },
+    "El Dragón Verde": {
+      "score_total": 25,
+      "mentions": 4,
+      "degree": 2,
+      "near_degree": 1,
+      "relation_diversity": 2,
+      "semantic_bonus": 4
+    },
+    "El Hobbit": {
+      "score_total": 187,
+      "mentions": 59,
+      "degree": 2,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 4
+    },
+    "El Poney": {
+      "score_total": 105,
+      "mentions": 33,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "El Poney Pisador": {
+      "score_total": 26,
+      "mentions": 6,
+      "degree": 2,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "El Vado de Bruinen": {
+      "score_total": 9,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "Elendil": {
+      "score_total": 30,
+      "mentions": 8,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "Enemigo": {
+      "score_total": 118,
+      "mentions": 40,
+      "degree": 0,
+      "near_degree": 0,
+      "relation_diversity": 0,
+      "semantic_bonus": -2
+    },
+    "Entibo": {
+      "score_total": 30,
+      "mentions": 5,
+      "degree": 2,
+      "near_degree": 1,
+      "relation_diversity": 2,
+      "semantic_bonus": 6
+    },
+    "Erebor": {
+      "score_total": 18,
+      "mentions": 1,
+      "degree": 2,
+      "near_degree": 1,
+      "relation_diversity": 2,
+      "semantic_bonus": 6
+    },
+    "Eregion": {
+      "score_total": 10,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "Eriador": {
+      "score_total": 36,
+      "mentions": 6,
+      "degree": 4,
+      "near_degree": 0,
+      "relation_diversity": 2,
+      "semantic_bonus": 6
+    },
+    "Esgalduin": {
+      "score_total": 10,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "Esgarot": {
+      "score_total": 16,
+      "mentions": 2,
+      "degree": 2,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 4
+    },
+    "Esternesse": {
+      "score_total": 7,
+      "mentions": 0,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "Fin de la Cerca": {
+      "score_total": 17,
+      "mentions": 2,
+      "degree": 2,
+      "near_degree": 1,
+      "relation_diversity": 2,
+      "semantic_bonus": 2
+    },
+    "Fontegrís": {
+      "score_total": 20,
+      "mentions": 2,
+      "degree": 2,
+      "near_degree": 0,
+      "relation_diversity": 2,
+      "semantic_bonus": 6
+    },
+    "Fornost": {
+      "score_total": 19,
+      "mentions": 3,
+      "degree": 2,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 4
+    },
+    "Frodo": {
+      "score_total": 2017,
+      "mentions": 673,
+      "degree": 0,
+      "near_degree": 0,
+      "relation_diversity": 0,
+      "semantic_bonus": -2
+    },
+    "Fronteras del Oeste": {
+      "score_total": 15,
+      "mentions": 1,
+      "degree": 2,
+      "near_degree": 0,
+      "relation_diversity": 2,
+      "semantic_bonus": 4
+    },
+    "Gamoburgo": {
+      "score_total": 50,
+      "mentions": 11,
+      "degree": 3,
+      "near_degree": 1,
+      "relation_diversity": 2,
+      "semantic_bonus": 6
+    },
+    "Gondor": {
+      "score_total": 56,
+      "mentions": 10,
+      "degree": 8,
+      "near_degree": 0,
+      "relation_diversity": 2,
+      "semantic_bonus": 6
+    },
+    "Gran Bosque Verde": {
+      "score_total": 19,
+      "mentions": 1,
+      "degree": 3,
+      "near_degree": 0,
+      "relation_diversity": 3,
+      "semantic_bonus": 4
+    },
+    "Grandes Aguas": {
+      "score_total": 21,
+      "mentions": 3,
+      "degree": 2,
+      "near_degree": 0,
+      "relation_diversity": 2,
+      "semantic_bonus": 4
+    },
+    "Grandes Smials": {
+      "score_total": 34,
+      "mentions": 5,
+      "degree": 4,
+      "near_degree": 3,
+      "relation_diversity": 2,
+      "semantic_bonus": 4
+    },
+    "Grietas del Destino": {
+      "score_total": 15,
+      "mentions": 3,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "Habar": {
+      "score_total": 13,
+      "mentions": 1,
+      "degree": 2,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 4
+    },
+    "Historia de una ida y de una vuelta": {
+      "score_total": 7,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 0
+    },
+    "Hobbiton": {
+      "score_total": 125,
+      "mentions": 28,
+      "degree": 12,
+      "near_degree": 3,
+      "relation_diversity": 4,
+      "semantic_bonus": 6
+    },
+    "Hogar de los Mathoms": {
+      "score_total": 7,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 0
+    },
+    "Isengrim II": {
+      "score_total": 5,
+      "mentions": 1,
+      "degree": 0,
+      "near_degree": 0,
+      "relation_diversity": 0,
+      "semantic_bonus": 2
+    },
+    "La Mata de Hiedra": {
+      "score_total": 14,
+      "mentions": 2,
+      "degree": 2,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "La Perca Dorada": {
+      "score_total": 15,
+      "mentions": 3,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "Lago Largo": {
+      "score_total": 23,
+      "mentions": 1,
+      "degree": 4,
+      "near_degree": 0,
+      "relation_diversity": 2,
+      "semantic_bonus": 8
+    },
+    "Landas de Etten": {
+      "score_total": 14,
+      "mentions": 2,
+      "degree": 2,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "Libro Rojo de la Frontera del Oeste": {
+      "score_total": 20,
+      "mentions": 3,
+      "degree": 2,
+      "near_degree": 1,
+      "relation_diversity": 2,
+      "semantic_bonus": 2
+    },
+    "Lithe": {
+      "score_total": 13,
+      "mentions": 1,
+      "degree": 2,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 4
+    },
+    "Los Gamos": {
+      "score_total": 154,
+      "mentions": 36,
+      "degree": 14,
+      "near_degree": 4,
+      "relation_diversity": 4,
+      "semantic_bonus": 6
+    },
+    "Lun": {
+      "score_total": 12,
+      "mentions": 2,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "Mares que Separan": {
+      "score_total": 13,
+      "mentions": 2,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "Marjala": {
+      "score_total": 47,
+      "mentions": 9,
+      "degree": 4,
+      "near_degree": 2,
+      "relation_diversity": 2,
+      "semantic_bonus": 6
+    },
+    "Minas Tirith": {
+      "score_total": 12,
+      "mentions": 2,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "Mitheithel": {
+      "score_total": 20,
+      "mentions": 2,
+      "degree": 2,
+      "near_degree": 0,
+      "relation_diversity": 2,
+      "semantic_bonus": 6
+    },
+    "Montaña": {
+      "score_total": 51,
+      "mentions": 15,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "Montaña Solitaria": {
+      "score_total": 13,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 6
+    },
+    "Montañas": {
+      "score_total": 131,
+      "mentions": 37,
+      "degree": 4,
+      "near_degree": 2,
+      "relation_diversity": 2,
+      "semantic_bonus": 6
+    },
+    "Montañas Azules": {
+      "score_total": 9,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "Montañas Nubladas": {
+      "score_total": 43,
+      "mentions": 7,
+      "degree": 6,
+      "near_degree": 0,
+      "relation_diversity": 3,
+      "semantic_bonus": 4
+    },
+    "Montañas del Terror": {
+      "score_total": 10,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "Mordor": {
+      "score_total": 89,
+      "mentions": 18,
+      "degree": 9,
+      "near_degree": 5,
+      "relation_diversity": 3,
+      "semantic_bonus": 6
+    },
+    "Moscagua": {
+      "score_total": 19,
+      "mentions": 3,
+      "degree": 2,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 4
+    },
+    "Neldoreth": {
+      "score_total": 18,
+      "mentions": 1,
+      "degree": 3,
+      "near_degree": 3,
+      "relation_diversity": 1,
+      "semantic_bonus": 4
+    },
+    "Norburgo": {
+      "score_total": 20,
+      "mentions": 2,
+      "degree": 2,
+      "near_degree": 0,
+      "relation_diversity": 2,
+      "semantic_bonus": 6
+    },
+    "Númenor": {
+      "score_total": 12,
+      "mentions": 2,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "Oesternesse": {
+      "score_total": 33,
+      "mentions": 6,
+      "degree": 2,
+      "near_degree": 1,
+      "relation_diversity": 2,
+      "semantic_bonus": 6
+    },
+    "Orodruin": {
+      "score_total": 13,
+      "mentions": 1,
+      "degree": 2,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 4
+    },
+    "País de Bree": {
+      "score_total": 18,
+      "mentions": 4,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "País de la Colina Verde": {
+      "score_total": 7,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 0
+    },
+    "Puente Brandivino": {
+      "score_total": 9,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "Puente Grande": {
+      "score_total": 9,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "Puente Ultimo": {
+      "score_total": 11,
+      "mentions": 3,
+      "degree": 0,
+      "near_degree": 0,
+      "relation_diversity": 0,
+      "semantic_bonus": 2
+    },
+    "Puente de los Arbotantes": {
+      "score_total": 9,
+      "mentions": 1,
+      "degree": 2,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 0
+    },
+    "Puente del Brandivino": {
+      "score_total": 37,
+      "mentions": 6,
+      "degree": 4,
+      "near_degree": 1,
+      "relation_diversity": 3,
+      "semantic_bonus": 4
+    },
+    "Puerta Norte": {
+      "score_total": 19,
+      "mentions": 3,
+      "degree": 2,
+      "near_degree": 2,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "Puerta del Este": {
+      "score_total": 13,
+      "mentions": 1,
+      "degree": 2,
+      "near_degree": 2,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "Puerta del Norte": {
+      "score_total": 9,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "Puerta del Oeste": {
+      "score_total": 12,
+      "mentions": 2,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "Puerta del Sur": {
+      "score_total": 15,
+      "mentions": 3,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "Puertos Grises": {
+      "score_total": 28,
+      "mentions": 4,
+      "degree": 3,
+      "near_degree": 0,
+      "relation_diversity": 3,
+      "semantic_bonus": 4
+    },
+    "Puertos Grises del Oeste": {
+      "score_total": 13,
+      "mentions": 1,
+      "degree": 2,
+      "near_degree": 0,
+      "relation_diversity": 2,
+      "semantic_bonus": 2
+    },
+    "Quebradas": {
+      "score_total": 114,
+      "mentions": 24,
+      "degree": 11,
+      "near_degree": 4,
+      "relation_diversity": 5,
+      "semantic_bonus": 6
+    },
+    "Quebradas Blancas": {
+      "score_total": 14,
+      "mentions": 2,
+      "degree": 2,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "Rivendel": {
+      "score_total": 165,
+      "mentions": 36,
+      "degree": 17,
+      "near_degree": 5,
+      "relation_diversity": 6,
+      "semantic_bonus": 6
+    },
+    "Rohan": {
+      "score_total": 11,
+      "mentions": 3,
+      "degree": 0,
+      "near_degree": 0,
+      "relation_diversity": 0,
+      "semantic_bonus": 2
+    },
+    "Río Grande": {
+      "score_total": 24,
+      "mentions": 4,
+      "degree": 2,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 6
+    },
+    "Sacovilla-Bolsón": {
+      "score_total": 72,
+      "mentions": 22,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "Sobremonte": {
+      "score_total": 10,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "Sonorona": {
+      "score_total": 36,
+      "mentions": 5,
+      "degree": 4,
+      "near_degree": 1,
+      "relation_diversity": 3,
+      "semantic_bonus": 6
+    },
+    "Tharbad": {
+      "score_total": 9,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "Tierra Media": {
+      "score_total": 81,
+      "mentions": 13,
+      "degree": 13,
+      "near_degree": 6,
+      "relation_diversity": 3,
+      "semantic_bonus": 4
+    },
+    "Tierra de Mordor": {
+      "score_total": 22,
+      "mentions": 5,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "Tierras Altas": {
+      "score_total": 22,
+      "mentions": 4,
+      "degree": 3,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "Tierras Asperas": {
+      "score_total": 29,
+      "mentions": 5,
+      "degree": 3,
+      "near_degree": 0,
+      "relation_diversity": 2,
+      "semantic_bonus": 4
+    },
+    "Tierras Brunas": {
+      "score_total": 9,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "Tierras de Tuk": {
+      "score_total": 12,
+      "mentions": 2,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "Tornasauce": {
+      "score_total": 71,
+      "mentions": 11,
+      "degree": 10,
+      "near_degree": 8,
+      "relation_diversity": 2,
+      "semantic_bonus": 6
+    },
+    "Torre Oscura": {
+      "score_total": 13,
+      "mentions": 2,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "Torres Blancas": {
+      "score_total": 9,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "Torres de Abajo": {
+      "score_total": 13,
+      "mentions": 2,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "Tuk": {
+      "score_total": 108,
+      "mentions": 34,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "Vado de Rivendel": {
+      "score_total": 16,
+      "mentions": 1,
+      "degree": 3,
+      "near_degree": 3,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "Vado de Sarn": {
+      "score_total": 9,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "Vado del Bruinen": {
+      "score_total": 10,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "Valles de Etten": {
+      "score_total": 9,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "abertura del norte": {
+      "score_total": 5,
+      "mentions": 1,
+      "degree": 0,
+      "near_degree": 0,
+      "relation_diversity": 0,
+      "semantic_bonus": 2
+    },
+    "acantilado": {
+      "score_total": 19,
+      "mentions": 4,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "afuera": {
+      "score_total": 63,
+      "mentions": 17,
+      "degree": 3,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 4
+    },
+    "agua": {
+      "score_total": 294,
+      "mentions": 90,
+      "degree": 5,
+      "near_degree": 2,
+      "relation_diversity": 3,
+      "semantic_bonus": 6
+    },
+    "agua profunda": {
+      "score_total": 9,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "aguas": {
+      "score_total": 73,
+      "mentions": 25,
+      "degree": 0,
+      "near_degree": 0,
+      "relation_diversity": 0,
+      "semantic_bonus": -2
+    },
+    "aguas abajo": {
+      "score_total": 10,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "agujero": {
+      "score_total": 40,
+      "mentions": 11,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "ala norte": {
+      "score_total": 12,
+      "mentions": 2,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "albergue": {
+      "score_total": 18,
+      "mentions": 2,
+      "degree": 2,
+      "near_degree": 2,
+      "relation_diversity": 1,
+      "semantic_bonus": 4
+    },
+    "altura que dominaba el este del paso": {
+      "score_total": 7,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 0
+    },
+    "alturas": {
+      "score_total": 16,
+      "mentions": 3,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "angosto valle del río": {
+      "score_total": 8,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 0
+    },
+    "arriba": {
+      "score_total": 135,
+      "mentions": 43,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "arroyo sombrío": {
+      "score_total": 9,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "arroyos": {
+      "score_total": 19,
+      "mentions": 4,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "bajo la montaña": {
+      "score_total": 10,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "barranca": {
+      "score_total": 54,
+      "mentions": 12,
+      "degree": 4,
+      "near_degree": 4,
+      "relation_diversity": 1,
+      "semantic_bonus": 4
+    },
+    "biblioteca vacía": {
+      "score_total": 5,
+      "mentions": 1,
+      "degree": 0,
+      "near_degree": 0,
+      "relation_diversity": 0,
+      "semantic_bonus": 2
+    },
+    "borde del camino": {
+      "score_total": 22,
+      "mentions": 5,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "bosque": {
+      "score_total": 381,
+      "mentions": 116,
+      "degree": 9,
+      "near_degree": 3,
+      "relation_diversity": 3,
+      "semantic_bonus": 6
+    },
+    "bosque de Chet": {
+      "score_total": 35,
+      "mentions": 4,
+      "degree": 4,
+      "near_degree": 1,
+      "relation_diversity": 3,
+      "semantic_bonus": 8
+    },
+    "bosque seco de abetos": {
+      "score_total": 13,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 6
+    },
+    "bosques": {
+      "score_total": 114,
+      "mentions": 33,
+      "degree": 2,
+      "near_degree": 1,
+      "relation_diversity": 2,
+      "semantic_bonus": 6
+    },
+    "bosques cultivados": {
+      "score_total": 10,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "cadena de lomas": {
+      "score_total": 9,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "cadena de tierras altas": {
+      "score_total": 3,
+      "mentions": 1,
+      "degree": 0,
+      "near_degree": 0,
+      "relation_diversity": 0,
+      "semantic_bonus": 0
+    },
+    "calzada": {
+      "score_total": 49,
+      "mentions": 10,
+      "degree": 4,
+      "near_degree": 1,
+      "relation_diversity": 2,
+      "semantic_bonus": 6
+    },
+    "cama": {
+      "score_total": 82,
+      "mentions": 25,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "camino": {
+      "score_total": 746,
+      "mentions": 228,
+      "degree": 19,
+      "near_degree": 12,
+      "relation_diversity": 3,
+      "semantic_bonus": 6
+    },
+    "campo": {
+      "score_total": 77,
+      "mentions": 19,
+      "degree": 4,
+      "near_degree": 2,
+      "relation_diversity": 2,
+      "semantic_bonus": 6
+    },
+    "campo oscuro": {
+      "score_total": 7,
+      "mentions": 0,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "campo salvaje": {
+      "score_total": 10,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "campos": {
+      "score_total": 90,
+      "mentions": 26,
+      "degree": 2,
+      "near_degree": 2,
+      "relation_diversity": 1,
+      "semantic_bonus": 4
+    },
+    "cantera de piedra": {
+      "score_total": 10,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "casa": {
+      "score_total": 407,
+      "mentions": 122,
+      "degree": 11,
+      "near_degree": 9,
+      "relation_diversity": 2,
+      "semantic_bonus": 6
+    },
+    "casa de los hombres": {
+      "score_total": 5,
+      "mentions": 0,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 0
+    },
+    "casita": {
+      "score_total": 21,
+      "mentions": 3,
+      "degree": 2,
+      "near_degree": 2,
+      "relation_diversity": 1,
+      "semantic_bonus": 4
+    },
+    "caverna": {
+      "score_total": 15,
+      "mentions": 3,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "cavidad poco profunda": {
+      "score_total": 13,
+      "mentions": 1,
+      "degree": 2,
+      "near_degree": 2,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "cañada": {
+      "score_total": 48,
+      "mentions": 10,
+      "degree": 4,
+      "near_degree": 4,
+      "relation_diversity": 1,
+      "semantic_bonus": 4
+    },
+    "cañas": {
+      "score_total": 36,
+      "mentions": 10,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "cielo raso": {
+      "score_total": 10,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "cima": {
+      "score_total": 145,
+      "mentions": 49,
+      "degree": 0,
+      "near_degree": 0,
+      "relation_diversity": 0,
+      "semantic_bonus": -2
+    },
+    "cima de una loma": {
+      "score_total": 14,
+      "mentions": 3,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 0
+    },
+    "cinturón de alisos": {
+      "score_total": 9,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "claro del bosque": {
+      "score_total": 10,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "colina": {
+      "score_total": 228,
+      "mentions": 65,
+      "degree": 9,
+      "near_degree": 5,
+      "relation_diversity": 2,
+      "semantic_bonus": 6
+    },
+    "colinas": {
+      "score_total": 160,
+      "mentions": 41,
+      "degree": 10,
+      "near_degree": 7,
+      "relation_diversity": 2,
+      "semantic_bonus": 6
+    },
+    "costeras": {
+      "score_total": 7,
+      "mentions": 0,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "cresta de la colina": {
+      "score_total": 8,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 0
+    },
+    "crestas": {
+      "score_total": 19,
+      "mentions": 4,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "crestas del mundo": {
+      "score_total": 9,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "cruce del Camino Verde": {
+      "score_total": 8,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 0
+    },
+    "cuarto pequeño y agradable": {
+      "score_total": 8,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 0
+    },
+    "cueva": {
+      "score_total": 42,
+      "mentions": 10,
+      "degree": 2,
+      "near_degree": 2,
+      "relation_diversity": 1,
+      "semantic_bonus": 4
+    },
+    "cámara": {
+      "score_total": 15,
+      "mentions": 3,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "cámara de roca": {
+      "score_total": 10,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "desfiladero de paredes de piedra roja": {
+      "score_total": 8,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 0
+    },
+    "desierto": {
+      "score_total": 19,
+      "mentions": 7,
+      "degree": 0,
+      "near_degree": 0,
+      "relation_diversity": 0,
+      "semantic_bonus": -2
+    },
+    "dormitorios": {
+      "score_total": 12,
+      "mentions": 2,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "dos piedras enormes": {
+      "score_total": 11,
+      "mentions": 1,
+      "degree": 2,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "dragones": {
+      "score_total": 33,
+      "mentions": 9,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "el Claro de la Hoguera": {
+      "score_total": 11,
+      "mentions": 2,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 0
+    },
+    "el Noroeste del Viejo Mundo": {
+      "score_total": 13,
+      "mentions": 1,
+      "degree": 2,
+      "near_degree": 0,
+      "relation_diversity": 2,
+      "semantic_bonus": 2
+    },
+    "el ala norte de la casa": {
+      "score_total": 7,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 0
+    },
+    "el bosque por el lado este": {
+      "score_total": 12,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 4
+    },
+    "el cercado": {
+      "score_total": 16,
+      "mentions": 3,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "el cerco recortado": {
+      "score_total": 10,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "el cerro del bosque": {
+      "score_total": 9,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "el claro": {
+      "score_total": 142,
+      "mentions": 45,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "el dormitorio": {
+      "score_total": 9,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "el extremo de la cámara": {
+      "score_total": 12,
+      "mentions": 2,
+      "degree": 2,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 0
+    },
+    "el fondo de la galería": {
+      "score_total": 14,
+      "mentions": 1,
+      "degree": 2,
+      "near_degree": 1,
+      "relation_diversity": 2,
+      "semantic_bonus": 2
+    },
+    "el granjero Maggot": {
+      "score_total": 27,
+      "mentions": 7,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "el interior de un túmulo": {
+      "score_total": 9,
+      "mentions": 1,
+      "degree": 2,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 0
+    },
+    "el jardín de flores": {
+      "score_total": 10,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "el lado este": {
+      "score_total": 22,
+      "mentions": 3,
+      "degree": 2,
+      "near_degree": 1,
+      "relation_diversity": 2,
+      "semantic_bonus": 4
+    },
+    "el lado este de la piedra": {
+      "score_total": 7,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 0
+    },
+    "el lado norte": {
+      "score_total": 13,
+      "mentions": 2,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "el lado oeste del montículo": {
+      "score_total": 7,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 0
+    },
+    "el largo valle": {
+      "score_total": 12,
+      "mentions": 2,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "el mar de nieblas": {
+      "score_total": 13,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 6
+    },
+    "el montículo": {
+      "score_total": 26,
+      "mentions": 4,
+      "degree": 2,
+      "near_degree": 0,
+      "relation_diversity": 2,
+      "semantic_bonus": 6
+    },
+    "el pasto": {
+      "score_total": 49,
+      "mentions": 14,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "el pie del acantilado": {
+      "score_total": 10,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "el pie verde de una colina escarpada": {
+      "score_total": 7,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 0
+    },
+    "el portón": {
+      "score_total": 19,
+      "mentions": 4,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "el reborde oriental": {
+      "score_total": 9,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "el recinto oscuro": {
+      "score_total": 14,
+      "mentions": 2,
+      "degree": 2,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "el sendero sinuoso": {
+      "score_total": 9,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "el túmulo": {
+      "score_total": 48,
+      "mentions": 9,
+      "degree": 4,
+      "near_degree": 1,
+      "relation_diversity": 3,
+      "semantic_bonus": 6
+    },
+    "el túmulo verde": {
+      "score_total": 11,
+      "mentions": 1,
+      "degree": 2,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "el túnel": {
+      "score_total": 30,
+      "mentions": 8,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "el umbral": {
+      "score_total": 31,
+      "mentions": 8,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "empalizada": {
+      "score_total": 19,
+      "mentions": 4,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "escritorio": {
+      "score_total": 18,
+      "mentions": 2,
+      "degree": 2,
+      "near_degree": 2,
+      "relation_diversity": 1,
+      "semantic_bonus": 4
+    },
+    "espesura": {
+      "score_total": 22,
+      "mentions": 5,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "establo": {
+      "score_total": 18,
+      "mentions": 4,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "estanque": {
+      "score_total": 25,
+      "mentions": 6,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "este": {
+      "score_total": 611,
+      "mentions": 192,
+      "degree": 10,
+      "near_degree": 3,
+      "relation_diversity": 3,
+      "semantic_bonus": 6
+    },
+    "estrellas": {
+      "score_total": 127,
+      "mentions": 43,
+      "degree": 0,
+      "near_degree": 0,
+      "relation_diversity": 0,
+      "semantic_bonus": -2
+    },
+    "estribación rocosa": {
+      "score_total": 16,
+      "mentions": 2,
+      "degree": 2,
+      "near_degree": 2,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "extremo oeste de la villa": {
+      "score_total": 7,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 0
+    },
+    "extremo sur": {
+      "score_total": 11,
+      "mentions": 3,
+      "degree": 0,
+      "near_degree": 0,
+      "relation_diversity": 0,
+      "semantic_bonus": 2
+    },
+    "floresta de Neldoreth": {
+      "score_total": 10,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "fosa": {
+      "score_total": 21,
+      "mentions": 3,
+      "degree": 2,
+      "near_degree": 2,
+      "relation_diversity": 1,
+      "semantic_bonus": 4
+    },
+    "fuego": {
+      "score_total": 237,
+      "mentions": 75,
+      "degree": 3,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 4
+    },
+    "gran multitud": {
+      "score_total": 10,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "gruta": {
+      "score_total": 15,
+      "mentions": 1,
+      "degree": 2,
+      "near_degree": 2,
+      "relation_diversity": 1,
+      "semantic_bonus": 4
+    },
+    "habitacion": {
+      "score_total": 72,
+      "mentions": 18,
+      "degree": 4,
+      "near_degree": 4,
+      "relation_diversity": 1,
+      "semantic_bonus": 4
+    },
+    "hierba": {
+      "score_total": 132,
+      "mentions": 42,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "hogar": {
+      "score_total": 60,
+      "mentions": 15,
+      "degree": 3,
+      "near_degree": 3,
+      "relation_diversity": 1,
+      "semantic_bonus": 4
+    },
+    "hondonada": {
+      "score_total": 42,
+      "mentions": 8,
+      "degree": 3,
+      "near_degree": 2,
+      "relation_diversity": 2,
+      "semantic_bonus": 6
+    },
+    "hondonada estrecha": {
+      "score_total": 10,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "hornos": {
+      "score_total": 9,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "jardín": {
+      "score_total": 75,
+      "mentions": 20,
+      "degree": 3,
+      "near_degree": 3,
+      "relation_diversity": 1,
+      "semantic_bonus": 4
+    },
+    "jardín de la Comarca": {
+      "score_total": 8,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 0
+    },
+    "la Casa de los Mathoms de Cavada Grande": {
+      "score_total": 8,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 0
+    },
+    "la Cerca": {
+      "score_total": 233,
+      "mentions": 70,
+      "degree": 4,
+      "near_degree": 1,
+      "relation_diversity": 4,
+      "semantic_bonus": 6
+    },
+    "la Frontera del Oeste": {
+      "score_total": 22,
+      "mentions": 5,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "la Posada Abandonada": {
+      "score_total": 9,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "la abertura en forma de puerta": {
+      "score_total": 7,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 0
+    },
+    "la casa al pie de la loma": {
+      "score_total": 9,
+      "mentions": 1,
+      "degree": 2,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 0
+    },
+    "la casa de Cricava": {
+      "score_total": 9,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "la casa del viejo Hombre-Sauce": {
+      "score_total": 11,
+      "mentions": 1,
+      "degree": 2,
+      "near_degree": 2,
+      "relation_diversity": 1,
+      "semantic_bonus": 0
+    },
+    "la chimenea": {
+      "score_total": 37,
+      "mentions": 13,
+      "degree": 0,
+      "near_degree": 0,
+      "relation_diversity": 0,
+      "semantic_bonus": -2
+    },
+    "la costa del oeste": {
+      "score_total": 9,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "la depresión": {
+      "score_total": 24,
+      "mentions": 6,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "la depresión circular": {
+      "score_total": 23,
+      "mentions": 1,
+      "degree": 5,
+      "near_degree": 0,
+      "relation_diversity": 3,
+      "semantic_bonus": 4
+    },
+    "la granja": {
+      "score_total": 36,
+      "mentions": 7,
+      "degree": 2,
+      "near_degree": 1,
+      "relation_diversity": 2,
+      "semantic_bonus": 6
+    },
+    "la hierba limpia": {
+      "score_total": 11,
+      "mentions": 1,
+      "degree": 2,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "la hondonada verde": {
+      "score_total": 11,
+      "mentions": 1,
+      "degree": 2,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "la huerta": {
+      "score_total": 21,
+      "mentions": 1,
+      "degree": 3,
+      "near_degree": 2,
+      "relation_diversity": 2,
+      "semantic_bonus": 6
+    },
+    "la ladera oriental de las montañas": {
+      "score_total": 8,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 0
+    },
+    "la loma siguiente": {
+      "score_total": 16,
+      "mentions": 1,
+      "degree": 2,
+      "near_degree": 1,
+      "relation_diversity": 2,
+      "semantic_bonus": 4
+    },
+    "la luz de las estrellas": {
+      "score_total": 30,
+      "mentions": 10,
+      "degree": 0,
+      "near_degree": 0,
+      "relation_diversity": 0,
+      "semantic_bonus": 0
+    },
+    "la luz del día": {
+      "score_total": 23,
+      "mentions": 5,
+      "degree": 2,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "la luz del sol": {
+      "score_total": 33,
+      "mentions": 9,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "la línea del Tornasauce": {
+      "score_total": 19,
+      "mentions": 2,
+      "degree": 2,
+      "near_degree": 1,
+      "relation_diversity": 2,
+      "semantic_bonus": 4
+    },
+    "la noche del este": {
+      "score_total": 10,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "la orilla verde": {
+      "score_total": 10,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "la pared oeste de la depresión": {
+      "score_total": 7,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 0
+    },
+    "la piedra fría": {
+      "score_total": 9,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "la puerta": {
+      "score_total": 364,
+      "mentions": 119,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "la puerta de Bilbo": {
+      "score_total": 10,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "la puerta norte de las Quebradas de los Túmulos": {
+      "score_total": 13,
+      "mentions": 1,
+      "degree": 2,
+      "near_degree": 0,
+      "relation_diversity": 2,
+      "semantic_bonus": 2
+    },
+    "la región": {
+      "score_total": 87,
+      "mentions": 24,
+      "degree": 3,
+      "near_degree": 3,
+      "relation_diversity": 1,
+      "semantic_bonus": 4
+    },
+    "la repisa de la chimenea": {
+      "score_total": 12,
+      "mentions": 4,
+      "degree": 0,
+      "near_degree": 0,
+      "relation_diversity": 0,
+      "semantic_bonus": 0
+    },
+    "la salida": {
+      "score_total": 27,
+      "mentions": 7,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "la tierra": {
+      "score_total": 180,
+      "mentions": 58,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "la ventana del estudio": {
+      "score_total": 10,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "la verde hondonada": {
+      "score_total": 20,
+      "mentions": 1,
+      "degree": 3,
+      "near_degree": 1,
+      "relation_diversity": 3,
+      "semantic_bonus": 4
+    },
+    "ladera empinada": {
+      "score_total": 12,
+      "mentions": 2,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "ladera muy inclinada": {
+      "score_total": 5,
+      "mentions": 1,
+      "degree": 0,
+      "near_degree": 0,
+      "relation_diversity": 0,
+      "semantic_bonus": 2
+    },
+    "laderas": {
+      "score_total": 46,
+      "mentions": 13,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "laderas de pinos": {
+      "score_total": 10,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "lado sur de la estribación": {
+      "score_total": 7,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 0
+    },
+    "lagos profundos": {
+      "score_total": 12,
+      "mentions": 2,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "las Cuadernas": {
+      "score_total": 12,
+      "mentions": 2,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "las Quebradas de los Túmulos": {
+      "score_total": 19,
+      "mentions": 5,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 0
+    },
+    "las cimas": {
+      "score_total": 16,
+      "mentions": 6,
+      "degree": 0,
+      "near_degree": 0,
+      "relation_diversity": 0,
+      "semantic_bonus": -2
+    },
+    "las estribaciones": {
+      "score_total": 24,
+      "mentions": 6,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "las laderas orientales": {
+      "score_total": 9,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "las orillas": {
+      "score_total": 40,
+      "mentions": 11,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "las profundas y negras minas subterráneas de los Orcos": {
+      "score_total": 14,
+      "mentions": 1,
+      "degree": 2,
+      "near_degree": 1,
+      "relation_diversity": 2,
+      "semantic_bonus": 2
+    },
+    "las puertas inferiores de las minas": {
+      "score_total": 8,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 0
+    },
+    "las quebradas decrecientes": {
+      "score_total": 5,
+      "mentions": 1,
+      "degree": 0,
+      "near_degree": 0,
+      "relation_diversity": 0,
+      "semantic_bonus": 2
+    },
+    "las regiones orientales": {
+      "score_total": 9,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "las tierras bajas": {
+      "score_total": 18,
+      "mentions": 4,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "las tierras boscosas y altas": {
+      "score_total": 8,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 0
+    },
+    "las tierras del viejo Maggot": {
+      "score_total": 7,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 0
+    },
+    "las tierras estériles": {
+      "score_total": 9,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "lecho de piedra": {
+      "score_total": 9,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "lindes de Rivendel": {
+      "score_total": 10,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "llanos": {
+      "score_total": 18,
+      "mentions": 4,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "llanura": {
+      "score_total": 22,
+      "mentions": 5,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "loma": {
+      "score_total": 146,
+      "mentions": 40,
+      "degree": 6,
+      "near_degree": 4,
+      "relation_diversity": 2,
+      "semantic_bonus": 6
+    },
+    "loma escarpada": {
+      "score_total": 10,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "lomas": {
+      "score_total": 101,
+      "mentions": 24,
+      "degree": 7,
+      "near_degree": 5,
+      "relation_diversity": 2,
+      "semantic_bonus": 6
+    },
+    "los Campos del Puente": {
+      "score_total": 10,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "los Túmulos": {
+      "score_total": 42,
+      "mentions": 12,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "los bajos": {
+      "score_total": 19,
+      "mentions": 4,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "los grandes túmulos": {
+      "score_total": 10,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "los mares": {
+      "score_total": 30,
+      "mentions": 8,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "los terraplenes": {
+      "score_total": 13,
+      "mentions": 2,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "los terrenos del bosque": {
+      "score_total": 5,
+      "mentions": 1,
+      "degree": 0,
+      "near_degree": 0,
+      "relation_diversity": 0,
+      "semantic_bonus": 2
+    },
+    "los túneles": {
+      "score_total": 37,
+      "mentions": 9,
+      "degree": 2,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 4
+    },
+    "luna": {
+      "score_total": 141,
+      "mentions": 40,
+      "degree": 5,
+      "near_degree": 1,
+      "relation_diversity": 2,
+      "semantic_bonus": 6
+    },
+    "línea de árboles": {
+      "score_total": 11,
+      "mentions": 3,
+      "degree": 0,
+      "near_degree": 0,
+      "relation_diversity": 0,
+      "semantic_bonus": 2
+    },
+    "mar": {
+      "score_total": 76,
+      "mentions": 19,
+      "degree": 3,
+      "near_degree": 1,
+      "relation_diversity": 3,
+      "semantic_bonus": 6
+    },
+    "mares del cielo": {
+      "score_total": 9,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "matorrales": {
+      "score_total": 46,
+      "mentions": 13,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "matorrales de brezos y arándanos": {
+      "score_total": 8,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 0
+    },
+    "mesa de madera oscura y pulida": {
+      "score_total": 8,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 0
+    },
+    "montarías altas y distantes": {
+      "score_total": 7,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 0
+    },
+    "monte de castaños frondosos": {
+      "score_total": 14,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 6
+    },
+    "montes": {
+      "score_total": 27,
+      "mentions": 4,
+      "degree": 2,
+      "near_degree": 1,
+      "relation_diversity": 2,
+      "semantic_bonus": 6
+    },
+    "montículos verdes": {
+      "score_total": 16,
+      "mentions": 3,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "moradas de Elrond": {
+      "score_total": 2,
+      "mentions": 0,
+      "degree": 0,
+      "near_degree": 0,
+      "relation_diversity": 0,
+      "semantic_bonus": 2
+    },
+    "mundo próximo": {
+      "score_total": 9,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "muro de piedra": {
+      "score_total": 13,
+      "mentions": 2,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "muros de piedra": {
+      "score_total": 13,
+      "mentions": 2,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "niebla": {
+      "score_total": 123,
+      "mentions": 39,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "norte": {
+      "score_total": 252,
+      "mentions": 75,
+      "degree": 7,
+      "near_degree": 1,
+      "relation_diversity": 3,
+      "semantic_bonus": 6
+    },
+    "océano muerto": {
+      "score_total": 11,
+      "mentions": 1,
+      "degree": 2,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "oeste": {
+      "score_total": 254,
+      "mentions": 78,
+      "degree": 5,
+      "near_degree": 0,
+      "relation_diversity": 2,
+      "semantic_bonus": 6
+    },
+    "oriente": {
+      "score_total": 24,
+      "mentions": 3,
+      "degree": 2,
+      "near_degree": 1,
+      "relation_diversity": 2,
+      "semantic_bonus": 6
+    },
+    "orilla": {
+      "score_total": 58,
+      "mentions": 17,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "oscuro viento": {
+      "score_total": 9,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "otras cimas": {
+      "score_total": 11,
+      "mentions": 1,
+      "degree": 2,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "otras cumbres": {
+      "score_total": 5,
+      "mentions": 1,
+      "degree": 0,
+      "near_degree": 0,
+      "relation_diversity": 0,
+      "semantic_bonus": 2
+    },
+    "otros valles": {
+      "score_total": 9,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "pabellón": {
+      "score_total": 19,
+      "mentions": 4,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "pantanos del sur": {
+      "score_total": 9,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "pared": {
+      "score_total": 55,
+      "mentions": 16,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "pared de piedra": {
+      "score_total": 13,
+      "mentions": 1,
+      "degree": 2,
+      "near_degree": 2,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "pared interior": {
+      "score_total": 10,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "pasaje": {
+      "score_total": 29,
+      "mentions": 4,
+      "degree": 3,
+      "near_degree": 1,
+      "relation_diversity": 2,
+      "semantic_bonus": 6
+    },
+    "pasaje estrecho entre dos lomas": {
+      "score_total": 7,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 0
+    },
+    "pasillo": {
+      "score_total": 19,
+      "mentions": 7,
+      "degree": 0,
+      "near_degree": 0,
+      "relation_diversity": 0,
+      "semantic_bonus": -2
+    },
+    "paso": {
+      "score_total": 171,
+      "mentions": 55,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "paso estrecho entre dos elevaciones": {
+      "score_total": 7,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 0
+    },
+    "pendiente": {
+      "score_total": 67,
+      "mentions": 20,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "picos": {
+      "score_total": 12,
+      "mentions": 2,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "pie de las colinas": {
+      "score_total": 11,
+      "mentions": 2,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 0
+    },
+    "piedra": {
+      "score_total": 158,
+      "mentions": 47,
+      "degree": 3,
+      "near_degree": 1,
+      "relation_diversity": 2,
+      "semantic_bonus": 6
+    },
+    "piso": {
+      "score_total": 48,
+      "mentions": 11,
+      "degree": 2,
+      "near_degree": 1,
+      "relation_diversity": 2,
+      "semantic_bonus": 6
+    },
+    "planta baja": {
+      "score_total": 9,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "plantas": {
+      "score_total": 11,
+      "mentions": 3,
+      "degree": 0,
+      "near_degree": 0,
+      "relation_diversity": 0,
+      "semantic_bonus": 2
+    },
+    "pozos profundos y llameantes": {
+      "score_total": 3,
+      "mentions": 1,
+      "degree": 0,
+      "near_degree": 0,
+      "relation_diversity": 0,
+      "semantic_bonus": 0
+    },
+    "praderas profundas": {
+      "score_total": 9,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "prados": {
+      "score_total": 16,
+      "mentions": 3,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "puerta de entrada": {
+      "score_total": 10,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "puerta de trancas": {
+      "score_total": 19,
+      "mentions": 3,
+      "degree": 2,
+      "near_degree": 2,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "puertas": {
+      "score_total": 81,
+      "mentions": 25,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "páramos del norte": {
+      "score_total": 15,
+      "mentions": 3,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "raices nudosas de un viejo pino": {
+      "score_total": 3,
+      "mentions": 1,
+      "degree": 0,
+      "near_degree": 0,
+      "relation_diversity": 0,
+      "semantic_bonus": 0
+    },
+    "regiones desconocidas": {
+      "score_total": 5,
+      "mentions": 1,
+      "degree": 0,
+      "near_degree": 0,
+      "relation_diversity": 0,
+      "semantic_bonus": 2
+    },
+    "región sombría de árboles oscuros": {
+      "score_total": 12,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 4
+    },
+    "reino": {
+      "score_total": 31,
+      "mentions": 11,
+      "degree": 0,
+      "near_degree": 0,
+      "relation_diversity": 0,
+      "semantic_bonus": -2
+    },
+    "resguardado y cómodo": {
+      "score_total": 5,
+      "mentions": 1,
+      "degree": 0,
+      "near_degree": 0,
+      "relation_diversity": 0,
+      "semantic_bonus": 2
+    },
+    "riberas floridas de un río": {
+      "score_total": 8,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 0
+    },
+    "riscos": {
+      "score_total": 10,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "río": {
+      "score_total": 342,
+      "mentions": 101,
+      "degree": 10,
+      "near_degree": 9,
+      "relation_diversity": 2,
+      "semantic_bonus": 6
+    },
+    "sala": {
+      "score_total": 27,
+      "mentions": 7,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "salón": {
+      "score_total": 39,
+      "mentions": 9,
+      "degree": 2,
+      "near_degree": 2,
+      "relation_diversity": 1,
+      "semantic_bonus": 4
+    },
+    "salón común de la posada": {
+      "score_total": 8,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 0
+    },
+    "sauce": {
+      "score_total": 93,
+      "mentions": 29,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "sendero": {
+      "score_total": 177,
+      "mentions": 55,
+      "degree": 3,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 4
+    },
+    "senderos y cursos": {
+      "score_total": 12,
+      "mentions": 2,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "sitio de los abetos": {
+      "score_total": 7,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 0
+    },
+    "sol": {
+      "score_total": 277,
+      "mentions": 86,
+      "degree": 4,
+      "near_degree": 1,
+      "relation_diversity": 2,
+      "semantic_bonus": 6
+    },
+    "sol poniente": {
+      "score_total": 11,
+      "mentions": 3,
+      "degree": 0,
+      "near_degree": 0,
+      "relation_diversity": 0,
+      "semantic_bonus": 2
+    },
+    "sombra de los árboles": {
+      "score_total": 7,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 0
+    },
+    "suelo": {
+      "score_total": 171,
+      "mentions": 52,
+      "degree": 2,
+      "near_degree": 1,
+      "relation_diversity": 2,
+      "semantic_bonus": 6
+    },
+    "sur": {
+      "score_total": 205,
+      "mentions": 61,
+      "degree": 6,
+      "near_degree": 0,
+      "relation_diversity": 2,
+      "semantic_bonus": 6
+    },
+    "terreno llano": {
+      "score_total": 8,
+      "mentions": 2,
+      "degree": 0,
+      "near_degree": 0,
+      "relation_diversity": 0,
+      "semantic_bonus": 2
+    },
+    "tierra de Angmar": {
+      "score_total": 9,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "tierra reseca": {
+      "score_total": 9,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "tierras de Bree": {
+      "score_total": 13,
+      "mentions": 2,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "tierras del norte": {
+      "score_total": 12,
+      "mentions": 2,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "tierras del sur": {
+      "score_total": 9,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "tierras escarpadas": {
+      "score_total": 13,
+      "mentions": 1,
+      "degree": 2,
+      "near_degree": 2,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "tierras salvajes": {
+      "score_total": 31,
+      "mentions": 8,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "torres": {
+      "score_total": 42,
+      "mentions": 10,
+      "degree": 2,
+      "near_degree": 2,
+      "relation_diversity": 1,
+      "semantic_bonus": 4
+    },
+    "túnel de árboles": {
+      "score_total": 10,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "umbral de piedra": {
+      "score_total": 13,
+      "mentions": 1,
+      "degree": 2,
+      "near_degree": 2,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "un agujero de la isla": {
+      "score_total": 8,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 0
+    },
+    "un cerro": {
+      "score_total": 14,
+      "mentions": 2,
+      "degree": 2,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "un lago helado": {
+      "score_total": 13,
+      "mentions": 1,
+      "degree": 2,
+      "near_degree": 2,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "un montón de tierra": {
+      "score_total": 9,
+      "mentions": 1,
+      "degree": 2,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 0
+    },
+    "un túmulo": {
+      "score_total": 14,
+      "mentions": 2,
+      "degree": 2,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "un valle más profundo y más ancho": {
+      "score_total": 9,
+      "mentions": 1,
+      "degree": 2,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 0
+    },
+    "una abertura baja": {
+      "score_total": 11,
+      "mentions": 1,
+      "degree": 2,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "una cuesta empinada": {
+      "score_total": 14,
+      "mentions": 2,
+      "degree": 2,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "una elevación del terreno": {
+      "score_total": 8,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 0
+    },
+    "una isla rocosa": {
+      "score_total": 13,
+      "mentions": 1,
+      "degree": 2,
+      "near_degree": 2,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "una loma redonda": {
+      "score_total": 8,
+      "mentions": 0,
+      "degree": 2,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "una puerta": {
+      "score_total": 71,
+      "mentions": 21,
+      "degree": 2,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "unas gruesas paredes": {
+      "score_total": 9,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "vado": {
+      "score_total": 75,
+      "mentions": 18,
+      "degree": 4,
+      "near_degree": 3,
+      "relation_diversity": 2,
+      "semantic_bonus": 6
+    },
+    "valle": {
+      "score_total": 166,
+      "mentions": 43,
+      "degree": 11,
+      "near_degree": 5,
+      "relation_diversity": 2,
+      "semantic_bonus": 6
+    },
+    "vertiente sur de la colina": {
+      "score_total": 8,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 1,
+      "relation_diversity": 1,
+      "semantic_bonus": 0
+    },
+    "vestíbulo": {
+      "score_total": 33,
+      "mentions": 7,
+      "degree": 2,
+      "near_degree": 2,
+      "relation_diversity": 1,
+      "semantic_bonus": 4
+    },
+    "yunques": {
+      "score_total": 9,
+      "mentions": 1,
+      "degree": 1,
+      "near_degree": 0,
+      "relation_diversity": 1,
+      "semantic_bonus": 2
+    },
+    "árboles": {
+      "score_total": 343,
+      "mentions": 115,
+      "degree": 0,
+      "near_degree": 0,
+      "relation_diversity": 0,
+      "semantic_bonus": -2
+    }
+  },
+  "canonical_groups": {
+    "libro rojo de la frontera del oeste": [
+      "Libro Rojo de la Frontera del Oeste",
+      "el Libro Rojo de la Frontera del Oeste"
+    ],
+    "hobbit": [
+      "El Hobbit"
+    ],
+    "historia de una ida y de una vuelta": [
+      "Historia de una ida y de una vuelta"
+    ],
+    "tierra media": [
+      "La Tierra Media",
+      "Tierra Media"
+    ],
+    "noroeste del viejo mundo": [
+      "el Noroeste del Viejo Mundo"
+    ],
+    "mar": [
+      "Mar",
+      "el Mar",
+      "mar"
+    ],
+    "gran bosque verde": [
+      "Gran Bosque Verde"
+    ],
+    "montanas nubladas": [
+      "Montañas Nubladas",
+      "las Montañas Nubladas"
+    ],
+    "eriador": [
+      "Eriador"
+    ],
+    "negro": [
+      "Bosque Negro"
+    ],
+    "cima de los vientos": [
+      "Cima de los Vientos"
+    ],
+    "tierras asperas": [
+      "Tierras Asperas",
+      "las Tierras Asperas"
+    ],
+    "anduin": [
+      "Anduin"
+    ],
+    "sonorona": [
+      "Sonorona"
+    ],
+    "tharbad": [
+      "Tharbad"
+    ],
+    "tierras brunas": [
+      "Tierras Brunas"
+    ],
+    "rivendel": [
+      "Rivendel"
+    ],
+    "fontegris": [
+      "Fontegrís",
+      "Río Fontegrís"
+    ],
+    "bree": [
+      "Bree",
+      "Colina de Bree",
+      "colina de Bree"
+    ],
+    "chet": [
+      "Bosque de Chet",
+      "bosque de Chet"
+    ],
+    "arnor": [
+      "Arnor"
+    ],
+    "gondor": [
+      "Gondor"
+    ],
+    "belfalas": [
+      "Belfalas"
+    ],
+    "lun": [
+      "Lun"
+    ],
+    "baranduin": [
+      "Baranduin"
+    ],
+    "puente de los arbotantes": [
+      "Puente de los Arbotantes"
+    ],
+    "norte": [
+      "Camino del Norte",
+      "Reino del Norte",
+      "del Norte",
+      "el norte",
+      "norte"
+    ],
+    "fornost": [
+      "Fornost"
+    ],
+    "puente grande": [
+      "Puente Grande"
+    ],
+    "fronteras del oeste": [
+      "Fronteras del Oeste"
+    ],
+    "colinas de la torre": [
+      "Colinas de la Torre"
+    ],
+    "puente del brandivino": [
+      "El Puente del Brandivino",
+      "Puente del Brandivino"
+    ],
+    "paramos del norte": [
+      "páramos del norte"
+    ],
+    "pantanos del sur": [
+      "pantanos del sur"
+    ],
+    "comarca": [
+      "Comarca",
+      "La Comarca",
+      "la Comarca"
+    ],
+    "campos verdes": [
+      "Campos Verdes"
+    ],
+    "cavada grande": [
+      "Cavada Grande"
+    ],
+    "hogar de los mathoms": [
+      "Hogar de los Mathoms"
+    ],
+    "hobbiton": [
+      "Hobbiton"
+    ],
+    "alforzada": [
+      "Alforzada"
+    ],
+    "quebradas blancas": [
+      "Quebradas Blancas",
+      "las Quebradas Blancas"
+    ],
+    "marjala": [
+      "Marjala"
+    ],
+    "brandivino": [
+      "Brandivino",
+      "el Brandivino",
+      "el Valle del Brandivino",
+      "el río Brandivino"
+    ],
+    "cuaderna del este": [
+      "Cuaderna del Este"
+    ],
+    "gamos": [
+      "Los Gamos"
+    ],
+    "cuaderna del oeste": [
+      "Cuaderna del Oeste"
+    ],
+    "puertos grises del oeste": [
+      "Puertos Grises del Oeste"
+    ],
+    "grandes smials": [
+      "Grandes Smials"
+    ],
+    "casa brandi": [
+      "Casa Brandi"
+    ],
+    "cuaderna del sur": [
+      "Cuaderna del Sur"
+    ],
+    "largo": [
+      "Lago Largo",
+      "Valle Largo",
+      "valle largo"
+    ],
+    "isengrim ii": [
+      "Isengrim II"
+    ],
+    "vertiente sur de la colina": [
+      "vertiente sur de la colina"
+    ],
+    "poney pisador": [
+      "El Poney Pisador"
+    ],
+    "anduin inferior": [
+      "Anduin inferior"
+    ],
+    "oesternesse": [
+      "Oesternesse"
+    ],
+    "verde": [
+      "Camino Verde"
+    ],
+    "elendil": [
+      "Elendil"
+    ],
+    "cuadernas": [
+      "las Cuadernas"
+    ],
+    "sur": [
+      "del Sur",
+      "el Sur",
+      "el sur",
+      "sur"
+    ],
+    "este": [
+      "Camino del Este",
+      "del Este",
+      "el camino del este",
+      "el este",
+      "este"
+    ],
+    "oeste": [
+      "del Oeste",
+      "el oeste",
+      "oeste"
+    ],
+    "tierras de tuk": [
+      "Tierras de Tuk"
+    ],
+    "norburgo": [
+      "Norburgo"
+    ],
+    "lithe": [
+      "Lithe"
+    ],
+    "puerta de bilbo": [
+      "la puerta de Bilbo"
+    ],
+    "bolson cerrado": [
+      "Bolsón Cerrado"
+    ],
+    "erebor": [
+      "Erebor"
+    ],
+    "valle": [
+      "Valle",
+      "el Valle",
+      "el valle",
+      "valle"
+    ],
+    "profundas y negras minas subterraneas de los orcos": [
+      "las profundas y negras minas subterráneas de los Orcos"
+    ],
+    "bajo la montana": [
+      "bajo la montaña"
+    ],
+    "fondo de la galeria": [
+      "el fondo de la galería"
+    ],
+    "un lago helado": [
+      "un lago helado"
+    ],
+    "una isla rocosa": [
+      "una isla rocosa"
+    ],
+    "aguas": [
+      "aguas",
+      "las aguas"
+    ],
+    "un agujero de la isla": [
+      "un agujero de la isla"
+    ],
+    "salida": [
+      "la salida"
+    ],
+    "tuneles": [
+      "los túneles"
+    ],
+    "pasaje": [
+      "el pasaje",
+      "pasaje"
+    ],
+    "puertas inferiores de las minas": [
+      "las puertas inferiores de las minas"
+    ],
+    "ladera oriental de las montanas": [
+      "la ladera oriental de las montañas"
+    ],
+    "casa de los mathoms de cavada grande": [
+      "la Casa de los Mathoms de Cavada Grande"
+    ],
+    "torres de abajo": [
+      "Torres de Abajo"
+    ],
+    "frontera del oeste": [
+      "la Frontera del Oeste"
+    ],
+    "hogar": [
+      "el hogar",
+      "hogar"
+    ],
+    "minas tirith": [
+      "Minas Tirith"
+    ],
+    "delagua": [
+      "Delagua"
+    ],
+    "mata de hiedra": [
+      "La Mata de Hiedra"
+    ],
+    "viejo": [
+      "Bosque Viejo",
+      "el Bosque Viejo"
+    ],
+    "bolson de tirada": [
+      "Bolsón de Tirada"
+    ],
+    "colina": [
+      "La Colina",
+      "colina",
+      "la colina"
+    ],
+    "rohan": [
+      "Rohan"
+    ],
+    "puertos grises": [
+      "Puertos Grises"
+    ],
+    "numenor": [
+      "Númenor"
+    ],
+    "montana": [
+      "Montaña"
+    ],
+    "bolson de tirada numero 3": [
+      "Bolsón de Tirada número 3"
+    ],
+    "campo": [
+      "campo"
+    ],
+    "pabellon": [
+      "pabellón"
+    ],
+    "campo salvaje": [
+      "campo salvaje"
+    ],
+    "montanas": [
+      "Montañas",
+      "las montañas",
+      "montañas"
+    ],
+    "frodo": [
+      "Frodo"
+    ],
+    "campos": [
+      "campos",
+      "los campos"
+    ],
+    "bosques": [
+      "bosques"
+    ],
+    "arroyos": [
+      "arroyos"
+    ],
+    "repisa de la chimenea": [
+      "la repisa de la chimenea"
+    ],
+    "vestibulo": [
+      "vestíbulo"
+    ],
+    "casa": [
+      "casa",
+      "la casa"
+    ],
+    "jardin": [
+      "jardín"
+    ],
+    "prados": [
+      "prados"
+    ],
+    "dragon verde": [
+      "El Dragón Verde"
+    ],
+    "sobremonte": [
+      "Sobremonte"
+    ],
+    "cuaderna del norte": [
+      "Cuaderna del Norte"
+    ],
+    "torres blancas": [
+      "Torres Blancas"
+    ],
+    "montanas azules": [
+      "Montañas Azules"
+    ],
+    "tierras del sur": [
+      "tierras del sur"
+    ],
+    "enemigo": [
+      "Enemigo"
+    ],
+    "tierra de mordor": [
+      "Tierra de Mordor"
+    ],
+    "mordor": [
+      "Mordor"
+    ],
+    "torre oscura": [
+      "Torre Oscura"
+    ],
+    "eregion": [
+      "Eregion"
+    ],
+    "salon": [
+      "salón"
+    ],
+    "escritorio": [
+      "escritorio"
+    ],
+    "biblioteca vacia": [
+      "biblioteca vacía"
+    ],
+    "rio": [
+      "el río",
+      "río"
+    ],
+    "senderos y cursos": [
+      "senderos y cursos"
+    ],
+    "lomas": [
+      "las lomas",
+      "lomas"
+    ],
+    "gran multitud": [
+      "gran multitud"
+    ],
+    "campo oscuro": [
+      "campo oscuro"
+    ],
+    "ventana del estudio": [
+      "la ventana del estudio"
+    ],
+    "habitacion": [
+      "habitacion",
+      "habitación"
+    ],
+    "oriente": [
+      "oriente"
+    ],
+    "anos negros": [
+      "Años Negros"
+    ],
+    "esternesse": [
+      "Esternesse"
+    ],
+    "grande": [
+      "Río Grande"
+    ],
+    "campos gladios": [
+      "Campos Gladios"
+    ],
+    "lagos profundos": [
+      "lagos profundos"
+    ],
+    "arboles": [
+      "árboles"
+    ],
+    "plantas": [
+      "plantas"
+    ],
+    "monticulos verdes": [
+      "los montículos verdes",
+      "montículos verdes"
+    ],
+    "tierras altas": [
+      "Tierras Altas"
+    ],
+    "caverna": [
+      "caverna"
+    ],
+    "arroyo sombrio": [
+      "arroyo sombrío"
+    ],
+    "esgarot": [
+      "Esgarot"
+    ],
+    "grietas del destino": [
+      "Grietas del Destino"
+    ],
+    "orodruin": [
+      "Orodruin"
+    ],
+    "fuego": [
+      "Montaña de Fuego",
+      "fuego"
+    ],
+    "cricava": [
+      "Cricava"
+    ],
+    "gamoburgo": [
+      "Gamoburgo"
+    ],
+    "sacovilla-bolson": [
+      "Sacovilla-Bolsón"
+    ],
+    "puente brandivino": [
+      "Puente Brandivino"
+    ],
+    "pais de la colina verde": [
+      "País de la Colina Verde"
+    ],
+    "agua": [
+      "El Agua",
+      "Valle del Agua",
+      "agua",
+      "el agua"
+    ],
+    "cerrado": [
+      "Bosque Cerrado"
+    ],
+    "casa del bosque": [
+      "Casa del Bosque"
+    ],
+    "colinas verdes": [
+      "Colinas Verdes"
+    ],
+    "cepeda": [
+      "Cepeda"
+    ],
+    "balsadera": [
+      "Balsadera"
+    ],
+    "perca dorada": [
+      "La Perca Dorada"
+    ],
+    "tuk": [
+      "Tuk"
+    ],
+    "grandes aguas": [
+      "Grandes Aguas"
+    ],
+    "solitaria": [
+      "Montaña Solitaria"
+    ],
+    "colinas": [
+      "colinas",
+      "las colinas"
+    ],
+    "crestas del mundo": [
+      "crestas del mundo"
+    ],
+    "resguardado y comodo": [
+      "resguardado y cómodo"
+    ],
+    "seco de abetos": [
+      "bosque seco de abetos"
+    ],
+    "sitio de los abetos": [
+      "sitio de los abetos"
+    ],
+    "pozos profundos y llameantes": [
+      "pozos profundos y llameantes"
+    ],
+    "hondonada": [
+      "hondonada",
+      "la hondonada"
+    ],
+    "praderas profundas": [
+      "praderas profundas"
+    ],
+    "sendero": [
+      "el sendero",
+      "sendero"
+    ],
+    "estrellas": [
+      "estrellas"
+    ],
+    "sala": [
+      "sala"
+    ],
+    "hornos": [
+      "hornos"
+    ],
+    "yunques": [
+      "yunques"
+    ],
+    "dragones": [
+      "dragones"
+    ],
+    "luna": [
+      "la luna",
+      "luna"
+    ],
+    "sol": [
+      "el sol",
+      "sol"
+    ],
+    "habar": [
+      "Habar"
+    ],
+    "tierras del viejo maggot": [
+      "las tierras del viejo Maggot"
+    ],
+    "granja": [
+      "la granja"
+    ],
+    "calzada": [
+      "calzada",
+      "la calzada"
+    ],
+    "porton": [
+      "el portón"
+    ],
+    "cerca alta": [
+      "Cerca Alta"
+    ],
+    "fin de la cerca": [
+      "Fin de la Cerca"
+    ],
+    "tornasauce": [
+      "Tornasauce",
+      "el Tornasauce",
+      "el Valle del Tornasauce",
+      "el río Tornasauce"
+    ],
+    "puerta norte": [
+      "Puerta Norte"
+    ],
+    "bolgovado": [
+      "Bolgovado"
+    ],
+    "campos del puente": [
+      "los Campos del Puente"
+    ],
+    "puerta": [
+      "la puerta"
+    ],
+    "cerca": [
+      "la Cerca",
+      "la cerca"
+    ],
+    "cercado": [
+      "el cercado"
+    ],
+    "tunel": [
+      "el túnel"
+    ],
+    "depresion": [
+      "la depresión"
+    ],
+    "bosque": [
+      "bosque",
+      "el bosque"
+    ],
+    "claro de la hoguera": [
+      "el Claro de la Hoguera"
+    ],
+    "terrenos del bosque": [
+      "los terrenos del bosque"
+    ],
+    "linea del tornasauce": [
+      "la línea del Tornasauce"
+    ],
+    "loma": [
+      "la loma",
+      "loma"
+    ],
+    "quebradas de los tumulos": [
+      "las Quebradas de los Túmulos"
+    ],
+    "orilla verde": [
+      "la orilla verde"
+    ],
+    "pie del acantilado": [
+      "el pie del acantilado"
+    ],
+    "barranca": [
+      "barranca",
+      "la barranca"
+    ],
+    "claro": [
+      "el claro"
+    ],
+    "tierras boscosas y altas": [
+      "las tierras boscosas y altas"
+    ],
+    "terraplenes": [
+      "los terraplenes"
+    ],
+    "suelo": [
+      "el suelo",
+      "suelo"
+    ],
+    "sendero sinuoso": [
+      "el sendero sinuoso"
+    ],
+    "lado este": [
+      "el lado este"
+    ],
+    "por el lado este": [
+      "el bosque por el lado este"
+    ],
+    "orillas": [
+      "las orillas"
+    ],
+    "camino": [
+      "Camino",
+      "camino",
+      "el camino"
+    ],
+    "casa de tom bombadil": [
+      "Casa de Tom Bombadil",
+      "la casa de Tom Bombadil"
+    ],
+    "luz de las estrellas": [
+      "la luz de las estrellas"
+    ],
+    "noche del este": [
+      "la noche del este"
+    ],
+    "umbral": [
+      "el umbral"
+    ],
+    "lado norte": [
+      "el lado norte"
+    ],
+    "puerta de entrada": [
+      "puerta de entrada"
+    ],
+    "umbral de piedra": [
+      "umbral de piedra"
+    ],
+    "cielo raso": [
+      "cielo raso"
+    ],
+    "mesa de madera oscura y pulida": [
+      "mesa de madera oscura y pulida"
+    ],
+    "riberas floridas de un rio": [
+      "riberas floridas de un río"
+    ],
+    "estanque": [
+      "estanque"
+    ],
+    "agua profunda": [
+      "agua profunda"
+    ],
+    "niebla": [
+      "niebla"
+    ],
+    "sombra de los arboles": [
+      "sombra de los árboles"
+    ],
+    "puertas": [
+      "puertas"
+    ],
+    "ala norte de la casa": [
+      "el ala norte de la casa"
+    ],
+    "region": [
+      "la región"
+    ],
+    "casa del viejo hombre-sauce": [
+      "la casa del viejo Hombre-Sauce"
+    ],
+    "quebradas": [
+      "Quebradas",
+      "las Quebradas"
+    ],
+    "huerta": [
+      "la huerta"
+    ],
+    "jardin de flores": [
+      "el jardín de flores"
+    ],
+    "cerco recortado": [
+      "el cerco recortado"
+    ],
+    "grandes tumulos": [
+      "los grandes túmulos"
+    ],
+    "bajos": [
+      "los bajos"
+    ],
+    "mares": [
+      "los mares"
+    ],
+    "costa del oeste": [
+      "la costa del oeste"
+    ],
+    "afuera": [
+      "Afuera",
+      "afuera"
+    ],
+    "laderas orientales": [
+      "las laderas orientales"
+    ],
+    "tumulos": [
+      "los Túmulos"
+    ],
+    "dormitorio": [
+      "el dormitorio"
+    ],
+    "chimenea": [
+      "la chimenea"
+    ],
+    "granjero maggot": [
+      "el granjero Maggot"
+    ],
+    "cerro del bosque": [
+      "el cerro del bosque"
+    ],
+    "regiones desconocidas": [
+      "regiones desconocidas"
+    ],
+    "tierras bajas": [
+      "las tierras bajas"
+    ],
+    "quebradas decrecientes": [
+      "las quebradas decrecientes"
+    ],
+    "regiones orientales": [
+      "las regiones orientales"
+    ],
+    "montarias altas y distantes": [
+      "montarías altas y distantes"
+    ],
+    "estribaciones": [
+      "las estribaciones"
+    ],
+    "hondonada verde": [
+      "la hondonada verde"
+    ],
+    "pie verde de una colina escarpada": [
+      "el pie verde de una colina escarpada"
+    ],
+    "un valle mas profundo y mas ancho": [
+      "un valle más profundo y más ancho"
+    ],
+    "otras cimas": [
+      "otras cimas"
+    ],
+    "otras cumbres": [
+      "otras cumbres"
+    ],
+    "otros valles": [
+      "otros valles"
+    ],
+    "cimas": [
+      "las cimas"
+    ],
+    "depresion circular": [
+      "la depresión circular"
+    ],
+    "piedra": [
+      "la piedra",
+      "piedra"
+    ],
+    "lado este de la piedra": [
+      "el lado este de la piedra"
+    ],
+    "pared oeste de la depresion": [
+      "la pared oeste de la depresión"
+    ],
+    "reborde oriental": [
+      "el reborde oriental"
+    ],
+    "nieblas": [
+      "el mar de nieblas"
+    ],
+    "abertura en forma de puerta": [
+      "la abertura en forma de puerta"
+    ],
+    "largo valle": [
+      "el largo valle"
+    ],
+    "puerta norte de las quebradas de los tumulos": [
+      "la puerta norte de las Quebradas de los Túmulos"
+    ],
+    "dos piedras enormes": [
+      "dos piedras enormes"
+    ],
+    "una cuesta empinada": [
+      "una cuesta empinada"
+    ],
+    "un cerro": [
+      "un cerro"
+    ],
+    "una loma redonda": [
+      "una loma redonda"
+    ],
+    "un tumulo": [
+      "un túmulo"
+    ],
+    "interior de un tumulo": [
+      "el interior de un túmulo"
+    ],
+    "piedra fria": [
+      "la piedra fría"
+    ],
+    "lecho de piedra": [
+      "lecho de piedra"
+    ],
+    "oscuro viento": [
+      "oscuro viento"
+    ],
+    "oceano muerto": [
+      "océano muerto"
+    ],
+    "tierra reseca": [
+      "tierra reseca"
+    ],
+    "hierba": [
+      "hierba"
+    ],
+    "casa al pie de la loma": [
+      "la casa al pie de la loma"
+    ],
+    "canas": [
+      "cañas"
+    ],
+    "sauce": [
+      "sauce"
+    ],
+    "tierra": [
+      "la tierra"
+    ],
+    "unas gruesas paredes": [
+      "unas gruesas paredes"
+    ],
+    "camara": [
+      "cámara"
+    ],
+    "luz del dia": [
+      "la luz del día"
+    ],
+    "una abertura baja": [
+      "una abertura baja"
+    ],
+    "una puerta": [
+      "una puerta"
+    ],
+    "extremo de la camara": [
+      "el extremo de la cámara"
+    ],
+    "recinto oscuro": [
+      "el recinto oscuro"
+    ],
+    "tierras esteriles": [
+      "las tierras estériles"
+    ],
+    "montes": [
+      "los montes",
+      "montes"
+    ],
+    "tumulo": [
+      "el túmulo"
+    ],
+    "hierba limpia": [
+      "la hierba limpia"
+    ],
+    "un monton de tierra": [
+      "un montón de tierra"
+    ],
+    "luz del sol": [
+      "la luz del sol"
+    ],
+    "lado oeste del monticulo": [
+      "el lado oeste del montículo"
+    ],
+    "monticulo": [
+      "el montículo"
+    ],
+    "tumulo verde": [
+      "el túmulo verde"
+    ],
+    "arriba": [
+      "arriba"
+    ],
+    "piso": [
+      "el piso",
+      "piso"
+    ],
+    "carn dum": [
+      "Carn Dûm"
+    ],
+    "pasto": [
+      "el pasto"
+    ],
+    "verde hondonada": [
+      "la verde hondonada"
+    ],
+    "loma siguiente": [
+      "la loma siguiente"
+    ],
+    "una elevacion del terreno": [
+      "una elevación del terreno"
+    ],
+    "cresta de la colina": [
+      "cresta de la colina"
+    ],
+    "fosa": [
+      "fosa"
+    ],
+    "pared": [
+      "pared"
+    ],
+    "tierra de angmar": [
+      "tierra de Angmar"
+    ],
+    "abertura del norte": [
+      "abertura del norte"
+    ],
+    "linea de arboles": [
+      "línea de árboles"
+    ],
+    "matorrales": [
+      "matorrales"
+    ],
+    "reino": [
+      "reino"
+    ],
+    "sol poniente": [
+      "sol poniente"
+    ],
+    "tierras de bree": [
+      "tierras de Bree"
+    ],
+    "entibo": [
+      "Entibo"
+    ],
+    "combe": [
+      "Combe"
+    ],
+    "archet": [
+      "Archet"
+    ],
+    "bosques cultivados": [
+      "bosques cultivados"
+    ],
+    "mundo proximo": [
+      "mundo próximo"
+    ],
+    "dias antiguos": [
+      "Días Antiguos"
+    ],
+    "tierras salvajes": [
+      "tierras salvajes"
+    ],
+    "pared interior": [
+      "pared interior"
+    ],
+    "puerta de trancas": [
+      "puerta de trancas"
+    ],
+    "extremo sur": [
+      "extremo sur"
+    ],
+    "extremo oeste de la villa": [
+      "extremo oeste de la villa"
+    ],
+    "cruce del camino verde": [
+      "cruce del Camino Verde"
+    ],
+    "puerta del este": [
+      "Puerta del Este"
+    ],
+    "casita": [
+      "casita"
+    ],
+    "empalizada": [
+      "empalizada"
+    ],
+    "pasillo": [
+      "pasillo"
+    ],
+    "ala norte": [
+      "ala norte"
+    ],
+    "planta baja": [
+      "planta baja"
+    ],
+    "salon comun de la posada": [
+      "salón común de la posada"
+    ],
+    "cuarto pequeno y agradable": [
+      "cuarto pequeño y agradable"
+    ],
+    "dormitorios": [
+      "dormitorios"
+    ],
+    "establo": [
+      "establo"
+    ],
+    "casa de los hombres": [
+      "casa de los hombres"
+    ],
+    "albergue": [
+      "albergue"
+    ],
+    "cama": [
+      "cama"
+    ],
+    "poney": [
+      "El Poney"
+    ],
+    "vado de sarn": [
+      "Vado de Sarn"
+    ],
+    "casa de cricava": [
+      "la casa de Cricava"
+    ],
+    "puerta del norte": [
+      "Puerta del Norte"
+    ],
+    "puerta del oeste": [
+      "Puerta del Oeste"
+    ],
+    "puerta del sur": [
+      "Puerta del Sur"
+    ],
+    "pais de bree": [
+      "País de Bree"
+    ],
+    "moscagua": [
+      "Moscagua"
+    ],
+    "amon sul": [
+      "Amon Sul"
+    ],
+    "angmar": [
+      "Angmar"
+    ],
+    "vado de bruinen": [
+      "El Vado de Bruinen"
+    ],
+    "posada abandonada": [
+      "la Posada Abandonada"
+    ],
+    "angband": [
+      "Angband"
+    ],
+    "montanas del terror": [
+      "Montañas del Terror"
+    ],
+    "neldoreth": [
+      "Neldoreth"
+    ],
+    "esgalduin": [
+      "Esgalduin"
+    ],
+    "mares que separan": [
+      "Mares que Separan"
+    ],
+    "mares del cielo": [
+      "mares del cielo"
+    ],
+    "canada": [
+      "cañada"
+    ],
+    "llanos": [
+      "llanos"
+    ],
+    "picos": [
+      "picos"
+    ],
+    "mitheithel": [
+      "Mitheithel"
+    ],
+    "landas de etten": [
+      "Landas de Etten"
+    ],
+    "bruinen": [
+      "Bruinen"
+    ],
+    "puente ultimo": [
+      "Puente Ultimo"
+    ],
+    "trolls": [
+      "Bosque de los Trolls"
+    ],
+    "jardin de la comarca": [
+      "jardín de la Comarca"
+    ],
+    "moradas de elrond": [
+      "moradas de Elrond"
+    ],
+    "floresta de neldoreth": [
+      "floresta de Neldoreth"
+    ],
+    "tierras del norte": [
+      "tierras del norte"
+    ],
+    "tierras escarpadas": [
+      "tierras escarpadas"
+    ],
+    "sombria de arboles oscuros": [
+      "región sombría de árboles oscuros"
+    ],
+    "gruta": [
+      "gruta"
+    ],
+    "muro de piedra": [
+      "muro de piedra"
+    ],
+    "riscos": [
+      "riscos"
+    ],
+    "laderas de pinos": [
+      "laderas de pinos"
+    ],
+    "costeras": [
+      "costeras"
+    ],
+    "borde de la canada": [
+      "Borde de la cañada"
+    ],
+    "pendiente": [
+      "pendiente"
+    ],
+    "borde del camino": [
+      "borde del camino"
+    ],
+    "pie de las colinas": [
+      "pie de las colinas"
+    ],
+    "alturas": [
+      "alturas"
+    ],
+    "crestas": [
+      "crestas"
+    ],
+    "torres": [
+      "torres"
+    ],
+    "muros de piedra": [
+      "muros de piedra"
+    ],
+    "hondonada estrecha": [
+      "hondonada estrecha"
+    ],
+    "estribacion rocosa": [
+      "estribación rocosa"
+    ],
+    "agujero": [
+      "agujero"
+    ],
+    "acantilado": [
+      "acantilado"
+    ],
+    "valles de etten": [
+      "Valles de Etten"
+    ],
+    "vado del bruinen": [
+      "Vado del Bruinen"
+    ],
+    "pasaje estrecho entre dos lomas": [
+      "pasaje estrecho entre dos lomas"
+    ],
+    "cadena de tierras altas": [
+      "cadena de tierras altas"
+    ],
+    "cadena de lomas": [
+      "cadena de lomas"
+    ],
+    "paso estrecho entre dos elevaciones": [
+      "paso estrecho entre dos elevaciones"
+    ],
+    "desierto": [
+      "desierto"
+    ],
+    "raices nudosas de un viejo pino": [
+      "raices nudosas de un viejo pino"
+    ],
+    "cavidad poco profunda": [
+      "cavidad poco profunda"
+    ],
+    "cantera de piedra": [
+      "cantera de piedra"
+    ],
+    "paso": [
+      "paso"
+    ],
+    "altura que dominaba el este del paso": [
+      "altura que dominaba el este del paso"
+    ],
+    "vado": [
+      "Camino del Vado",
+      "vado"
+    ],
+    "lado sur de la estribacion": [
+      "lado sur de la estribación"
+    ],
+    "cinturon de alisos": [
+      "cinturón de alisos"
+    ],
+    "ladera empinada": [
+      "ladera empinada"
+    ],
+    "terreno llano": [
+      "terreno llano"
+    ],
+    "pared de piedra": [
+      "pared de piedra"
+    ],
+    "cueva": [
+      "cueva"
+    ],
+    "camara de roca": [
+      "cámara de roca"
+    ],
+    "claro del bosque": [
+      "claro del bosque"
+    ],
+    "espesura": [
+      "espesura"
+    ],
+    "cima de una loma": [
+      "cima de una loma"
+    ],
+    "angosto valle del rio": [
+      "angosto valle del río"
+    ],
+    "matorrales de brezos y arandanos": [
+      "matorrales de brezos y arándanos"
+    ],
+    "laderas": [
+      "laderas"
+    ],
+    "castanos frondosos": [
+      "monte de castaños frondosos"
+    ],
+    "desfiladero de paredes de piedra roja": [
+      "desfiladero de paredes de piedra roja"
+    ],
+    "tunel de arboles": [
+      "túnel de árboles"
+    ],
+    "llanura": [
+      "llanura"
+    ],
+    "ladera muy inclinada": [
+      "ladera muy inclinada"
+    ],
+    "vado de rivendel": [
+      "Vado de Rivendel"
+    ],
+    "loma escarpada": [
+      "loma escarpada"
+    ],
+    "cima": [
+      "cima"
+    ],
+    "lindes de rivendel": [
+      "lindes de Rivendel"
+    ],
+    "orilla": [
+      "orilla"
+    ],
+    "aguas abajo": [
+      "aguas abajo"
+    ]
+  },
+  "discarded_step3": {
+    "Casa Brandi": "micro_prefix",
+    "Casa de Tom Bombadil": "micro_prefix",
+    "Casa del Bosque": "micro_prefix",
+    "Enemigo": "narrative_noise",
+    "Frodo": "narrative_noise",
+    "Puerta Norte": "micro_prefix",
+    "Puerta del Este": "micro_prefix",
+    "Puerta del Norte": "micro_prefix",
+    "Puerta del Oeste": "micro_prefix",
+    "Puerta del Sur": "micro_prefix",
+    "Torre Oscura": "micro_prefix",
+    "aguas": "narrative_noise",
+    "casa": "micro_prefix",
+    "casa de los hombres": "micro_prefix",
+    "cima": "narrative_noise",
+    "desierto": "narrative_noise",
+    "estrellas": "narrative_noise",
+    "la Casa de los Mathoms de Cavada Grande": "micro_prefix",
+    "la casa al pie de la loma": "micro_prefix",
+    "la casa de Cricava": "micro_prefix",
+    "la casa del viejo Hombre-Sauce": "micro_prefix",
+    "la chimenea": "narrative_noise",
+    "la luz de las estrellas": "narrative_noise",
+    "la puerta": "micro_prefix",
+    "la puerta de Bilbo": "micro_prefix",
+    "la puerta norte de las Quebradas de los Túmulos": "micro_prefix",
+    "las cimas": "narrative_noise",
+    "pasillo": "narrative_noise",
+    "puerta de entrada": "micro_prefix",
+    "puerta de trancas": "micro_prefix",
+    "reino": "narrative_noise",
+    "árboles": "narrative_noise"
+  },
+  "discarded_step35": {
+    "Anduin inferior": "semantic_non_place",
+    "El Vado de Bruinen": "semantic_non_place",
+    "Isengrim II": "semantic_ambiguous",
+    "La Mata de Hiedra": "semantic_non_place",
+    "Rohan": "semantic_ambiguous",
+    "abertura del norte": "semantic_non_place",
+    "acantilado": "semantic_non_place",
+    "afuera": "semantic_non_place",
+    "agua": "semantic_non_place",
+    "agua profunda": "semantic_non_place",
+    "aguas abajo": "semantic_non_place",
+    "agujero": "semantic_non_place",
+    "ala norte": "semantic_non_place",
+    "albergue": "semantic_non_place",
+    "altura que dominaba el este del paso": "semantic_non_place",
+    "alturas": "semantic_non_place",
+    "angosto valle del río": "semantic_non_place",
+    "arriba": "semantic_non_place",
+    "arroyo sombrío": "semantic_non_place",
+    "arroyos": "semantic_non_place",
+    "bajo la montaña": "semantic_non_place",
+    "barranca": "semantic_non_place",
+    "biblioteca vacía": "semantic_non_place",
+    "borde del camino": "semantic_non_place",
+    "bosque": "semantic_non_place",
+    "bosque seco de abetos": "semantic_non_place",
+    "bosques": "semantic_non_place",
+    "bosques cultivados": "semantic_non_place",
+    "cadena de lomas": "semantic_non_place",
+    "cadena de tierras altas": "semantic_non_place",
+    "calzada": "semantic_non_place",
+    "cama": "semantic_non_place",
+    "camino": "semantic_non_place",
+    "campo": "semantic_non_place",
+    "campo oscuro": "semantic_non_place",
+    "campo salvaje": "semantic_non_place",
+    "campos": "semantic_non_place",
+    "cantera de piedra": "semantic_non_place",
+    "casita": "semantic_non_place",
+    "caverna": "semantic_non_place",
+    "cavidad poco profunda": "semantic_non_place",
+    "cañada": "semantic_non_place",
+    "cañas": "semantic_non_place",
+    "cielo raso": "semantic_non_place",
+    "cima de una loma": "semantic_non_place",
+    "cinturón de alisos": "semantic_non_place",
+    "claro del bosque": "semantic_non_place",
+    "colina": "semantic_non_place",
+    "colinas": "semantic_non_place",
+    "costeras": "semantic_non_place",
+    "cresta de la colina": "semantic_non_place",
+    "crestas": "semantic_non_place",
+    "crestas del mundo": "semantic_non_place",
+    "cuarto pequeño y agradable": "semantic_non_place",
+    "cueva": "semantic_non_place",
+    "cámara": "semantic_non_place",
+    "cámara de roca": "semantic_non_place",
+    "desfiladero de paredes de piedra roja": "semantic_non_place",
+    "dormitorios": "semantic_non_place",
+    "dos piedras enormes": "semantic_non_place",
+    "dragones": "semantic_non_place",
+    "el Claro de la Hoguera": "semantic_non_place",
+    "el Noroeste del Viejo Mundo": "semantic_non_place",
+    "el ala norte de la casa": "semantic_non_place",
+    "el bosque por el lado este": "semantic_non_place",
+    "el cercado": "semantic_non_place",
+    "el cerco recortado": "semantic_non_place",
+    "el cerro del bosque": "semantic_non_place",
+    "el claro": "semantic_non_place",
+    "el dormitorio": "semantic_non_place",
+    "el extremo de la cámara": "semantic_non_place",
+    "el fondo de la galería": "semantic_non_place",
+    "el interior de un túmulo": "semantic_non_place",
+    "el jardín de flores": "semantic_non_place",
+    "el lado este": "semantic_non_place",
+    "el lado este de la piedra": "semantic_non_place",
+    "el lado norte": "semantic_non_place",
+    "el lado oeste del montículo": "semantic_non_place",
+    "el largo valle": "semantic_non_place",
+    "el mar de nieblas": "semantic_non_place",
+    "el montículo": "semantic_non_place",
+    "el pasto": "semantic_non_place",
+    "el pie del acantilado": "semantic_non_place",
+    "el pie verde de una colina escarpada": "semantic_non_place",
+    "el portón": "semantic_non_place",
+    "el reborde oriental": "semantic_non_place",
+    "el recinto oscuro": "semantic_non_place",
+    "el sendero sinuoso": "semantic_non_place",
+    "el túmulo": "semantic_non_place",
+    "el túmulo verde": "semantic_non_place",
+    "el túnel": "semantic_non_place",
+    "el umbral": "semantic_non_place",
+    "empalizada": "semantic_non_place",
+    "escritorio": "semantic_non_place",
+    "espesura": "semantic_non_place",
+    "establo": "semantic_non_place",
+    "estanque": "semantic_non_place",
+    "este": "semantic_non_place",
+    "estribación rocosa": "semantic_non_place",
+    "extremo oeste de la villa": "semantic_non_place",
+    "extremo sur": "semantic_non_place",
+    "fosa": "semantic_non_place",
+    "fuego": "semantic_non_place",
+    "gran multitud": "semantic_non_place",
+    "gruta": "semantic_non_place",
+    "habitacion": "semantic_non_place",
+    "hierba": "semantic_non_place",
+    "hogar": "semantic_non_place",
+    "hondonada": "semantic_non_place",
+    "hondonada estrecha": "semantic_non_place",
+    "hornos": "semantic_non_place",
+    "jardín": "semantic_non_place",
+    "la Frontera del Oeste": "semantic_non_place",
+    "la abertura en forma de puerta": "semantic_non_place",
+    "la costa del oeste": "semantic_non_place",
+    "la depresión": "semantic_non_place",
+    "la depresión circular": "semantic_non_place",
+    "la granja": "semantic_non_place",
+    "la hierba limpia": "semantic_non_place",
+    "la hondonada verde": "semantic_non_place",
+    "la huerta": "semantic_non_place",
+    "la ladera oriental de las montañas": "semantic_non_place",
+    "la loma siguiente": "semantic_non_place",
+    "la luz del día": "semantic_non_place",
+    "la luz del sol": "semantic_non_place",
+    "la línea del Tornasauce": "semantic_non_place",
+    "la noche del este": "semantic_non_place",
+    "la orilla verde": "semantic_non_place",
+    "la pared oeste de la depresión": "semantic_non_place",
+    "la piedra fría": "semantic_non_place",
+    "la región": "semantic_non_place",
+    "la repisa de la chimenea": "semantic_non_place",
+    "la salida": "semantic_non_place",
+    "la tierra": "semantic_non_place",
+    "la ventana del estudio": "semantic_non_place",
+    "la verde hondonada": "semantic_non_place",
+    "ladera empinada": "semantic_non_place",
+    "ladera muy inclinada": "semantic_non_place",
+    "laderas": "semantic_non_place",
+    "laderas de pinos": "semantic_non_place",
+    "lado sur de la estribación": "semantic_non_place",
+    "lagos profundos": "semantic_non_place",
+    "las Quebradas de los Túmulos": "semantic_non_place",
+    "las estribaciones": "semantic_non_place",
+    "las laderas orientales": "semantic_non_place",
+    "las orillas": "semantic_non_place",
+    "las profundas y negras minas subterráneas de los Orcos": "semantic_non_place",
+    "las puertas inferiores de las minas": "semantic_non_place",
+    "las quebradas decrecientes": "semantic_non_place",
+    "las regiones orientales": "semantic_non_place",
+    "las tierras bajas": "semantic_non_place",
+    "las tierras boscosas y altas": "semantic_non_place",
+    "las tierras del viejo Maggot": "semantic_non_place",
+    "las tierras estériles": "semantic_non_place",
+    "lecho de piedra": "semantic_non_place",
+    "llanos": "semantic_non_place",
+    "llanura": "semantic_non_place",
+    "loma": "semantic_non_place",
+    "loma escarpada": "semantic_non_place",
+    "lomas": "semantic_non_place",
+    "los Campos del Puente": "semantic_non_place",
+    "los bajos": "semantic_non_place",
+    "los grandes túmulos": "semantic_non_place",
+    "los mares": "semantic_non_place",
+    "los terraplenes": "semantic_non_place",
+    "los terrenos del bosque": "semantic_non_place",
+    "los túneles": "semantic_non_place",
+    "luna": "semantic_non_place",
+    "línea de árboles": "semantic_non_place",
+    "mar": "semantic_non_place",
+    "mares del cielo": "semantic_non_place",
+    "matorrales": "semantic_non_place",
+    "matorrales de brezos y arándanos": "semantic_non_place",
+    "mesa de madera oscura y pulida": "semantic_non_place",
+    "montarías altas y distantes": "semantic_non_place",
+    "monte de castaños frondosos": "semantic_non_place",
+    "montes": "semantic_non_place",
+    "montículos verdes": "semantic_non_place",
+    "moradas de Elrond": "semantic_ambiguous",
+    "mundo próximo": "semantic_non_place",
+    "muro de piedra": "semantic_non_place",
+    "muros de piedra": "semantic_non_place",
+    "niebla": "semantic_non_place",
+    "norte": "semantic_non_place",
+    "océano muerto": "semantic_non_place",
+    "oeste": "semantic_non_place",
+    "oriente": "semantic_non_place",
+    "orilla": "semantic_non_place",
+    "oscuro viento": "semantic_non_place",
+    "otras cimas": "semantic_non_place",
+    "otras cumbres": "semantic_non_place",
+    "otros valles": "semantic_non_place",
+    "pabellón": "semantic_non_place",
+    "pantanos del sur": "semantic_non_place",
+    "pared": "semantic_non_place",
+    "pared de piedra": "semantic_non_place",
+    "pared interior": "semantic_non_place",
+    "pasaje": "semantic_non_place",
+    "pasaje estrecho entre dos lomas": "semantic_non_place",
+    "paso": "semantic_non_place",
+    "paso estrecho entre dos elevaciones": "semantic_non_place",
+    "pendiente": "semantic_non_place",
+    "picos": "semantic_non_place",
+    "pie de las colinas": "semantic_non_place",
+    "piedra": "semantic_non_place",
+    "piso": "semantic_non_place",
+    "planta baja": "semantic_non_place",
+    "plantas": "semantic_non_place",
+    "pozos profundos y llameantes": "semantic_non_place",
+    "praderas profundas": "semantic_non_place",
+    "prados": "semantic_non_place",
+    "puertas": "semantic_non_place",
+    "páramos del norte": "semantic_non_place",
+    "raices nudosas de un viejo pino": "semantic_non_place",
+    "regiones desconocidas": "semantic_non_place",
+    "región sombría de árboles oscuros": "semantic_non_place",
+    "resguardado y cómodo": "semantic_non_place",
+    "riberas floridas de un río": "semantic_non_place",
+    "riscos": "semantic_non_place",
+    "río": "semantic_non_place",
+    "sala": "semantic_non_place",
+    "salón": "semantic_non_place",
+    "salón común de la posada": "semantic_non_place",
+    "sauce": "semantic_non_place",
+    "sendero": "semantic_non_place",
+    "senderos y cursos": "semantic_non_place",
+    "sitio de los abetos": "semantic_non_place",
+    "sol": "semantic_non_place",
+    "sol poniente": "semantic_non_place",
+    "sombra de los árboles": "semantic_non_place",
+    "suelo": "semantic_non_place",
+    "sur": "semantic_non_place",
+    "terreno llano": "semantic_non_place",
+    "tierra reseca": "semantic_non_place",
+    "tierras del norte": "semantic_non_place",
+    "tierras del sur": "semantic_non_place",
+    "tierras escarpadas": "semantic_non_place",
+    "tierras salvajes": "semantic_non_place",
+    "torres": "semantic_non_place",
+    "túnel de árboles": "semantic_non_place",
+    "umbral de piedra": "semantic_non_place",
+    "un agujero de la isla": "semantic_non_place",
+    "un cerro": "semantic_non_place",
+    "un lago helado": "semantic_non_place",
+    "un montón de tierra": "semantic_non_place",
+    "un túmulo": "semantic_non_place",
+    "un valle más profundo y más ancho": "semantic_non_place",
+    "una abertura baja": "semantic_non_place",
+    "una cuesta empinada": "semantic_non_place",
+    "una elevación del terreno": "semantic_non_place",
+    "una isla rocosa": "semantic_non_place",
+    "una loma redonda": "semantic_non_place",
+    "una puerta": "semantic_non_place",
+    "unas gruesas paredes": "semantic_non_place",
+    "vado": "semantic_non_place",
+    "valle": "semantic_non_place",
+    "vertiente sur de la colina": "semantic_non_place",
+    "vestíbulo": "semantic_non_place",
+    "yunques": "semantic_non_place"
+  },
+  "discarded_step38": {},
+  "discarded_microtoponyms": {
+    "Borde de la cañada": "isolated_no_relations",
+    "Días Antiguos": "isolated_no_relations",
+    "Habar": "isolated_no_relations",
+    "Montaña": "isolated_no_relations",
+    "Neldoreth": "city_satellite",
+    "Puente Ultimo": "isolated_no_relations",
+    "Puertos Grises": "city_satellite"
+  },
+  "pivotes": [
+    "Comarca",
+    "Los Gamos",
+    "Montañas",
+    "Brandivino",
+    "Quebradas"
+  ],
+  "seed_layout": {
+    "Comarca": {
+      "x": 500,
+      "y": 500
+    }
+  },
+  "discarded_micro": {
+    "Borde de la cañada": "isolated_no_relations",
+    "Días Antiguos": "isolated_no_relations",
+    "Habar": "isolated_no_relations",
+    "Montaña": "isolated_no_relations",
+    "Neldoreth": "city_satellite",
+    "Puente Ultimo": "isolated_no_relations",
+    "Puertos Grises": "city_satellite"
+  },
+  "graph_meta": {
+    "num_nodes": 60,
+    "num_edges": 73,
+    "density": 0.0412,
+    "connected_components": 8
+  },
+  "hub_nodes": [
+    "Comarca",
+    "Rivendel",
+    "Bree",
+    "Brandivino",
+    "Los Gamos"
+  ],
+  "bridge_nodes": [
+    "Comarca",
+    "Rivendel",
+    "Bree",
+    "Bosque Viejo",
+    "Brandivino"
+  ],
+  "clusters": {
+    "cluster_0": [
+      "Angband",
+      "Montañas del Terror"
+    ],
+    "cluster_1": [
+      "Archet",
+      "Balsadera",
+      "Bolsón Cerrado",
+      "Bolsón de Tirada",
+      "Bosque Cerrado",
+      "Bosque Viejo",
+      "Brandivino",
+      "Bree",
+      "Bruinen",
+      "Camino Verde",
+      "Campos Gladios",
+      "Cavada Grande",
+      "Cepeda",
+      "Colinas Verdes",
+      "Comarca",
+      "Cricava",
+      "Cuaderna del Este",
+      "Cuaderna del Sur",
+      "Delagua",
+      "Eriador",
+      "Fontegrís",
+      "Fornost",
+      "Gamoburgo",
+      "Gondor",
+      "Grandes Aguas",
+      "Grandes Smials",
+      "Hobbiton",
+      "La Perca Dorada",
+      "Lago Largo",
+      "Landas de Etten",
+      "Lithe",
+      "Los Gamos",
+      "Marjala",
+      "Mitheithel",
+      "Montañas Nubladas",
+      "Mordor",
+      "Moscagua",
+      "Norburgo",
+      "Quebradas",
+      "Quebradas Blancas",
+      "Rivendel",
+      "Sonorona",
+      "Tierras Asperas",
+      "Tornasauce",
+      "Torres de Abajo",
+      "bosque de Chet"
+    ],
+    "cluster_2": [
+      "Belfalas",
+      "Lun"
+    ],
+    "cluster_3": [
+      "Carn Dûm",
+      "tierra de Angmar"
+    ],
+    "cluster_4": [
+      "Cuaderna del Norte",
+      "Sobremonte"
+    ],
+    "cluster_5": [
+      "Grietas del Destino",
+      "Orodruin"
+    ],
+    "cluster_6": [
+      "Montañas",
+      "Tierras Altas"
+    ],
+    "cluster_7": [
+      "Tharbad",
+      "Tierras Brunas"
+    ]
+  }
+}

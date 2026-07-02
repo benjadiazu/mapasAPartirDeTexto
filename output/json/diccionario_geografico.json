@@ -1,0 +1,176 @@
+{
+  "Adriático": {
+    "lat": 42.775833,
+    "lon": 15.426111,
+    "source": "Wikidata",
+    "id": "Q13924"
+  },
+  "Alatri": {
+    "lat": 41.726388888889,
+    "lon": 13.342222222222,
+    "source": "Wikidata",
+    "id": "Q18400"
+  },
+  "Alba": {
+    "lat": 44.691542,
+    "lon": 8.025636,
+    "source": "Wikidata",
+    "id": "Q18341"
+  },
+  "Alba Longa": {
+    "lat": 41.74691,
+    "lon": 12.65026,
+    "source": "Wikidata",
+    "id": "Q335070"
+  },
+  "Alejandría": {
+    "lat": 31.1975,
+    "lon": 29.8925,
+    "source": "Wikidata",
+    "id": "Q87"
+  },
+  "Arezzo": {
+    "lat": 43.463055555556,
+    "lon": 11.878055555556,
+    "source": "Wikidata",
+    "id": "Q13378"
+  },
+  "Ariccia": {
+    "lat": 41.716666666667,
+    "lon": 12.666666666667,
+    "source": "Wikidata",
+    "id": "Q241744"
+  },
+  "Calacia": {
+    "lat": 41.04388889,
+    "lon": 14.3625,
+    "source": "Wikidata",
+    "id": "Q951442"
+  },
+  "Calcis": {
+    "lat": 38.4625,
+    "lon": 23.595,
+    "source": "Wikidata",
+    "id": "Q200133"
+  },
+  "Calvi Risorta": {
+    "lat": 41.218888888889,
+    "lon": 14.129166666667,
+    "source": "Wikidata",
+    "id": "Q58458"
+  },
+  "Campania": {
+    "lat": 40.75,
+    "lon": 14.95,
+    "source": "Wikidata",
+    "id": "Q1438"
+  },
+  "Corioli": {
+    "lat": 41.7909,
+    "lon": 12.7621,
+    "source": "Wikidata",
+    "id": "Q1132979"
+  },
+  "Cortona": {
+    "lat": 43.275555555556,
+    "lon": 11.988055555556,
+    "source": "Wikidata",
+    "id": "Q52080"
+  },
+  "Crustumeria": {
+    "lat": 42.012775,
+    "lon": 12.548217,
+    "source": "Wikidata",
+    "id": "Q1142110"
+  },
+  "Cumas": {
+    "lat": 40.848611,
+    "lon": 14.053611,
+    "source": "Wikidata",
+    "id": "Q243456"
+  },
+  "Gabii": {
+    "lat": 41.88688888888889,
+    "lon": 12.715833333333334,
+    "source": "Wikidata",
+    "id": "Q614510"
+  },
+  "Massilia": {
+    "lat": 43.296666666667,
+    "lon": 5.3763888888889,
+    "source": "Wikidata",
+    "id": "Q23482"
+  },
+  "Metaponto": {
+    "lat": 40.37139,
+    "lon": 16.81122,
+    "source": "Wikidata",
+    "id": "Q18428693"
+  },
+  "Pallantium": {
+    "lat": 37.4545887,
+    "lon": 22.3331865,
+    "source": "Wikidata",
+    "id": "Q11939941"
+  },
+  "Pescara": {
+    "lat": 42.464277777778,
+    "lon": 14.214188888889,
+    "source": "Wikidata",
+    "id": "Q2704"
+  },
+  "Pietrabbondante": {
+    "lat": 41.75,
+    "lon": 14.383333333333,
+    "source": "Wikidata",
+    "id": "Q279358"
+  },
+  "Sezze": {
+    "lat": 41.5,
+    "lon": 13.066666666667,
+    "source": "Wikidata",
+    "id": "Q128206"
+  },
+  "Sicilia": {
+    "lat": 37.6,
+    "lon": 14.016666666666667,
+    "source": "Wikidata",
+    "id": "Q1460"
+  },
+  "Turias": {
+    "lat": 41.904444444444444,
+    "lon": -1.7241666666666666,
+    "source": "Wikidata",
+    "id": "Q639412"
+  },
+  "Tusculo": {
+    "lat": 41.798333333333,
+    "lon": 12.710833333333,
+    "source": "Wikidata",
+    "id": "Q754314"
+  },
+  "Tíber": {
+    "lat": 43.786916666667,
+    "lon": 12.077666666667,
+    "source": "Wikidata",
+    "id": "Q13712"
+  },
+  "Tívoli": {
+    "lat": 41.966666666667,
+    "lon": 12.8,
+    "source": "Wikidata",
+    "id": "Q159605"
+  },
+  "río Nar": {
+    "lat": 58.9873,
+    "lon": 27.7303,
+    "source": "Wikidata",
+    "id": "Q209031"
+  },
+  "Ánxur": {
+    "lat": 41.283333333333,
+    "lon": 13.25,
+    "source": "Wikidata",
+    "id": "Q128226"
+  }
+}

@@ -1,0 +1,246 @@
+{
+  "metricas": {
+    "cobertura": 24.2,
+    "similitud_posicional": 74.4,
+    "n_common": 8,
+    "n_off": 33,
+    "n_gen": 65
+  },
+  "nodos_emparejados": [
+    {
+      "oficial": "Amon Sul",
+      "generado": "Amon Sul",
+      "off_x": 0.456,
+      "off_y": 0.333,
+      "gen_x": 0.418,
+      "gen_y": 0.657
+    },
+    {
+      "oficial": "Bree",
+      "generado": "Bree",
+      "off_x": 0.384,
+      "off_y": 0.337,
+      "gen_x": 0.298,
+      "gen_y": 0.613
+    },
+    {
+      "oficial": "Carn Dum",
+      "generado": "Carn Dûm",
+      "off_x": 0.44,
+      "off_y": 0.1,
+      "gen_x": 0.843,
+      "gen_y": 0.331
+    },
+    {
+      "oficial": "Fornost",
+      "generado": "Fornost",
+      "off_x": 0.36,
+      "off_y": 0.25,
+      "gen_x": 0.635,
+      "gen_y": 0.575
+    },
+    {
+      "oficial": "Hobbiton",
+      "generado": "Hobbiton",
+      "off_x": 0.3,
+      "off_y": 0.313,
+      "gen_x": 0.413,
+      "gen_y": 0.52
+    },
+    {
+      "oficial": "La Comarca",
+      "generado": "Comarca",
+      "off_x": 0.26,
+      "off_y": 0.33,
+      "gen_x": 0.437,
+      "gen_y": 0.584
+    },
+    {
+      "oficial": "Puertos Grises",
+      "generado": "los Puertos Grises",
+      "off_x": 0.12,
+      "off_y": 0.333,
+      "gen_x": 0.346,
+      "gen_y": 0.623
+    },
+    {
+      "oficial": "Tharbad",
+      "generado": "Tharbad",
+      "off_x": 0.42,
+      "off_y": 0.417,
+      "gen_x": 0.739,
+      "gen_y": 0.052
+    }
+  ],
+  "orientaciones": {
+    "NORTE_DE": {
+      "correctas": 0,
+      "total": 0,
+      "pares": []
+    },
+    "SUR_DE": {
+      "correctas": 5,
+      "total": 7,
+      "pares": [
+        {
+          "A": "Bree",
+          "B": "Carn Dum",
+          "correcto": true
+        },
+        {
+          "A": "Hobbiton",
+          "B": "Carn Dum",
+          "correcto": true
+        },
+        {
+          "A": "Tharbad",
+          "B": "Fornost",
+          "correcto": false
+        },
+        {
+          "A": "Tharbad",
+          "B": "Carn Dum",
+          "correcto": false
+        },
+        {
+          "A": "Fornost",
+          "B": "Carn Dum",
+          "correcto": true
+        },
+        {
+          "A": "Amon Sul",
+          "B": "Carn Dum",
+          "correcto": true
+        },
+        {
+          "A": "La Comarca",
+          "B": "Carn Dum",
+          "correcto": true
+        }
+      ]
+    },
+    "ESTE_DE": {
+      "correctas": 5,
+      "total": 7,
+      "pares": [
+        {
+          "A": "Bree",
+          "B": "Puertos Grises",
+          "correcto": false
+        },
+        {
+          "A": "Hobbiton",
+          "B": "Puertos Grises",
+          "correcto": true
+        },
+        {
+          "A": "Tharbad",
+          "B": "Puertos Grises",
+          "correcto": true
+        },
+        {
+          "A": "Tharbad",
+          "B": "La Comarca",
+          "correcto": true
+        },
+        {
+          "A": "Fornost",
+          "B": "Puertos Grises",
+          "correcto": true
+        },
+        {
+          "A": "Amon Sul",
+          "B": "Puertos Grises",
+          "correcto": true
+        },
+        {
+          "A": "Amon Sul",
+          "B": "La Comarca",
+          "correcto": false
+        }
+      ]
+    },
+    "OESTE_DE": {
+      "correctas": 3,
+      "total": 3,
+      "pares": [
+        {
+          "A": "Hobbiton",
+          "B": "Tharbad",
+          "correcto": true
+        },
+        {
+          "A": "Hobbiton",
+          "B": "Amon Sul",
+          "correcto": true
+        },
+        {
+          "A": "Puertos Grises",
+          "B": "Carn Dum",
+          "correcto": true
+        }
+      ]
+    },
+    "CERCA_DE": {
+      "correctas": 5,
+      "total": 11,
+      "pares": [
+        {
+          "A": "Bree",
+          "B": "Hobbiton",
+          "correcto": true
+        },
+        {
+          "A": "Bree",
+          "B": "Tharbad",
+          "correcto": false
+        },
+        {
+          "A": "Bree",
+          "B": "Fornost",
+          "correcto": false
+        },
+        {
+          "A": "Bree",
+          "B": "Amon Sul",
+          "correcto": true
+        },
+        {
+          "A": "Bree",
+          "B": "La Comarca",
+          "correcto": true
+        },
+        {
+          "A": "Hobbiton",
+          "B": "Fornost",
+          "correcto": false
+        },
+        {
+          "A": "Hobbiton",
+          "B": "La Comarca",
+          "correcto": true
+        },
+        {
+          "A": "Tharbad",
+          "B": "Amon Sul",
+          "correcto": false
+        },
+        {
+          "A": "Fornost",
+          "B": "Amon Sul",
+          "correcto": false
+        },
+        {
+          "A": "Fornost",
+          "B": "La Comarca",
+          "correcto": false
+        },
+        {
+          "A": "Puertos Grises",
+          "B": "La Comarca",
+          "correcto": true
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,295 @@
+{
+  "metricas": {
+    "cobertura": 27.3,
+    "similitud_posicional": 63.5,
+    "n_common": 9,
+    "n_off": 33,
+    "n_gen": 54
+  },
+  "nodos_emparejados": [
+    {
+      "oficial": "Amon Sul",
+      "generado": "Amon Sul",
+      "off_x": 0.456,
+      "off_y": 0.333,
+      "gen_x": 0.32,
+      "gen_y": 0.082
+    },
+    {
+      "oficial": "Bree",
+      "generado": "Bree",
+      "off_x": 0.384,
+      "off_y": 0.337,
+      "gen_x": 0.432,
+      "gen_y": 0.549
+    },
+    {
+      "oficial": "Carn Dum",
+      "generado": "Carn Dûm",
+      "off_x": 0.44,
+      "off_y": 0.1,
+      "gen_x": 0.841,
+      "gen_y": 0.757
+    },
+    {
+      "oficial": "Erebor",
+      "generado": "Erebor",
+      "off_x": 0.752,
+      "off_y": 0.193,
+      "gen_x": 0.055,
+      "gen_y": 0.981
+    },
+    {
+      "oficial": "Fornost",
+      "generado": "Fornost",
+      "off_x": 0.36,
+      "off_y": 0.25,
+      "gen_x": 0.055,
+      "gen_y": 0.981
+    },
+    {
+      "oficial": "Hobbiton",
+      "generado": "Hobbiton",
+      "off_x": 0.3,
+      "off_y": 0.313,
+      "gen_x": 0.282,
+      "gen_y": 0.469
+    },
+    {
+      "oficial": "Puertos Grises",
+      "generado": "Puertos Grises",
+      "off_x": 0.12,
+      "off_y": 0.333,
+      "gen_x": 0.84,
+      "gen_y": 0.321
+    },
+    {
+      "oficial": "Rivendel",
+      "generado": "Rivendel",
+      "off_x": 0.58,
+      "off_y": 0.317,
+      "gen_x": 0.455,
+      "gen_y": 0.525
+    },
+    {
+      "oficial": "Tharbad",
+      "generado": "Tharbad",
+      "off_x": 0.42,
+      "off_y": 0.417,
+      "gen_x": 0.531,
+      "gen_y": 0.019
+    }
+  ],
+  "orientaciones": {
+    "NORTE_DE": {
+      "correctas": 0,
+      "total": 1,
+      "pares": [
+        {
+          "A": "Fornost",
+          "B": "Tharbad",
+          "correcto": false
+        }
+      ]
+    },
+    "SUR_DE": {
+      "correctas": 1,
+      "total": 6,
+      "pares": [
+        {
+          "A": "Amon Sul",
+          "B": "Carn Dum",
+          "correcto": false
+        },
+        {
+          "A": "Fornost",
+          "B": "Carn Dum",
+          "correcto": true
+        },
+        {
+          "A": "Rivendel",
+          "B": "Carn Dum",
+          "correcto": false
+        },
+        {
+          "A": "Tharbad",
+          "B": "Carn Dum",
+          "correcto": false
+        },
+        {
+          "A": "Bree",
+          "B": "Carn Dum",
+          "correcto": false
+        },
+        {
+          "A": "Hobbiton",
+          "B": "Carn Dum",
+          "correcto": false
+        }
+      ]
+    },
+    "ESTE_DE": {
+      "correctas": 4,
+      "total": 14,
+      "pares": [
+        {
+          "A": "Amon Sul",
+          "B": "Puertos Grises",
+          "correcto": false
+        },
+        {
+          "A": "Amon Sul",
+          "B": "Hobbiton",
+          "correcto": true
+        },
+        {
+          "A": "Fornost",
+          "B": "Puertos Grises",
+          "correcto": false
+        },
+        {
+          "A": "Rivendel",
+          "B": "Tharbad",
+          "correcto": false
+        },
+        {
+          "A": "Rivendel",
+          "B": "Bree",
+          "correcto": true
+        },
+        {
+          "A": "Rivendel",
+          "B": "Puertos Grises",
+          "correcto": false
+        },
+        {
+          "A": "Rivendel",
+          "B": "Hobbiton",
+          "correcto": true
+        },
+        {
+          "A": "Tharbad",
+          "B": "Puertos Grises",
+          "correcto": false
+        },
+        {
+          "A": "Tharbad",
+          "B": "Hobbiton",
+          "correcto": true
+        },
+        {
+          "A": "Erebor",
+          "B": "Bree",
+          "correcto": false
+        },
+        {
+          "A": "Erebor",
+          "B": "Puertos Grises",
+          "correcto": false
+        },
+        {
+          "A": "Erebor",
+          "B": "Hobbiton",
+          "correcto": false
+        },
+        {
+          "A": "Erebor",
+          "B": "Carn Dum",
+          "correcto": false
+        },
+        {
+          "A": "Bree",
+          "B": "Puertos Grises",
+          "correcto": false
+        }
+      ]
+    },
+    "OESTE_DE": {
+      "correctas": 3,
+      "total": 7,
+      "pares": [
+        {
+          "A": "Amon Sul",
+          "B": "Erebor",
+          "correcto": false
+        },
+        {
+          "A": "Fornost",
+          "B": "Rivendel",
+          "correcto": true
+        },
+        {
+          "A": "Fornost",
+          "B": "Erebor",
+          "correcto": true
+        },
+        {
+          "A": "Rivendel",
+          "B": "Erebor",
+          "correcto": false
+        },
+        {
+          "A": "Tharbad",
+          "B": "Erebor",
+          "correcto": false
+        },
+        {
+          "A": "Puertos Grises",
+          "B": "Hobbiton",
+          "correcto": false
+        },
+        {
+          "A": "Puertos Grises",
+          "B": "Carn Dum",
+          "correcto": true
+        }
+      ]
+    },
+    "CERCA_DE": {
+      "correctas": 0,
+      "total": 8,
+      "pares": [
+        {
+          "A": "Amon Sul",
+          "B": "Fornost",
+          "correcto": false
+        },
+        {
+          "A": "Amon Sul",
+          "B": "Rivendel",
+          "correcto": false
+        },
+        {
+          "A": "Amon Sul",
+          "B": "Tharbad",
+          "correcto": false
+        },
+        {
+          "A": "Amon Sul",
+          "B": "Bree",
+          "correcto": false
+        },
+        {
+          "A": "Fornost",
+          "B": "Bree",
+          "correcto": false
+        },
+        {
+          "A": "Fornost",
+          "B": "Hobbiton",
+          "correcto": false
+        },
+        {
+          "A": "Tharbad",
+          "B": "Bree",
+          "correcto": false
+        },
+        {
+          "A": "Bree",
+          "B": "Hobbiton",
+          "correcto": false
+        }
+      ]
+    }
+  }
+}

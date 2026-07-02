@@ -1,0 +1,341 @@
+{
+  "coords": {
+    "Alforzada": {
+      "x": 0,
+      "y": 0
+    },
+    "Amon Sul": {
+      "x": 1,
+      "y": 0
+    },
+    "Angmar": {
+      "x": 0,
+      "y": 2160
+    },
+    "Archet": {
+      "x": 2160,
+      "y": 99
+    },
+    "Balsadera": {
+      "x": 1,
+      "y": 2160
+    },
+    "Belfalas": {
+      "x": 0,
+      "y": 1
+    },
+    "Bolsón Cerrado": {
+      "x": 112,
+      "y": 504
+    },
+    "Bosque Cerrado": {
+      "x": 0,
+      "y": 0
+    },
+    "Bosque Negro": {
+      "x": 2160,
+      "y": 0
+    },
+    "Bosque Viejo": {
+      "x": 2160,
+      "y": 110
+    },
+    "Brandivino": {
+      "x": 80,
+      "y": 110
+    },
+    "Bree": {
+      "x": 964,
+      "y": 100
+    },
+    "Bruinen": {
+      "x": 0,
+      "y": 0
+    },
+    "Camino Verde": {
+      "x": 0,
+      "y": 0
+    },
+    "Carn Dûm": {
+      "x": 2160,
+      "y": 0
+    },
+    "Cepeda": {
+      "x": 0,
+      "y": 0
+    },
+    "Colinas Verdes": {
+      "x": 0,
+      "y": 0
+    },
+    "Cricava": {
+      "x": 2160,
+      "y": 1
+    },
+    "Cuaderna del Este": {
+      "x": 0,
+      "y": 0
+    },
+    "Cuaderna del Sur": {
+      "x": 0,
+      "y": 0
+    },
+    "Erebor": {
+      "x": 0,
+      "y": 0
+    },
+    "Esgalduin": {
+      "x": 0,
+      "y": 0
+    },
+    "Fontegrís": {
+      "x": 1337,
+      "y": 0
+    },
+    "Fornost": {
+      "x": 0,
+      "y": 0
+    },
+    "Gamoburgo": {
+      "x": 0,
+      "y": 0
+    },
+    "Gondor": {
+      "x": 0,
+      "y": 0
+    },
+    "Grandes Smials": {
+      "x": 0,
+      "y": 0
+    },
+    "Hobbiton": {
+      "x": 0,
+      "y": 0
+    },
+    "La Perca Dorada": {
+      "x": 0,
+      "y": 0
+    },
+    "Lago Largo": {
+      "x": 0,
+      "y": 0
+    },
+    "Landas de Etten": {
+      "x": 1336,
+      "y": 2160
+    },
+    "Los Gamos": {
+      "x": 47,
+      "y": 111
+    },
+    "Lun": {
+      "x": 2160,
+      "y": 0
+    },
+    "Marjala": {
+      "x": 0,
+      "y": 0
+    },
+    "Montaña": {
+      "x": 0,
+      "y": 0
+    },
+    "Montañas del Terror": {
+      "x": 0,
+      "y": 0
+    },
+    "Mordor": {
+      "x": 0,
+      "y": 2160
+    },
+    "Neldoreth": {
+      "x": 0,
+      "y": 0
+    },
+    "Norburgo": {
+      "x": 0,
+      "y": 0
+    },
+    "Oesternesse": {
+      "x": 0,
+      "y": 1
+    },
+    "Puente Brandivino": {
+      "x": 0,
+      "y": 0
+    },
+    "Puente del Brandivino": {
+      "x": 0,
+      "y": 0
+    },
+    "Puertos Grises": {
+      "x": 0,
+      "y": 1
+    },
+    "Quebradas": {
+      "x": 0,
+      "y": 99
+    },
+    "Rivendel": {
+      "x": 1335,
+      "y": 480
+    },
+    "Sonorona": {
+      "x": 1336,
+      "y": 2160
+    },
+    "Tharbad": {
+      "x": 0,
+      "y": 2160
+    },
+    "Tierra de Angmar": {
+      "x": 0,
+      "y": 0
+    },
+    "Tierras Brunas": {
+      "x": 1,
+      "y": 0
+    },
+    "Tierras de Tuk": {
+      "x": 0,
+      "y": 0
+    },
+    "Tornasauce": {
+      "x": 79,
+      "y": 2160
+    },
+    "Torres Blancas": {
+      "x": 2160,
+      "y": 0
+    },
+    "Torres de Abajo": {
+      "x": 0,
+      "y": 0
+    },
+    "bosque de Chet": {
+      "x": 2160,
+      "y": 101
+    }
+  },
+  "CSR": 0.8947,
+  "total_constraints": 19,
+  "width": 2160,
+  "height": 2160,
+  "rel_eval": [
+    {
+      "origen": "Tharbad",
+      "tipo": "NORTE_DE",
+      "destino": "Tierras Brunas",
+      "satisface": true
+    },
+    {
+      "origen": "Rivendel",
+      "tipo": "NORTE_DE",
+      "destino": "Fontegrís",
+      "satisface": true
+    },
+    {
+      "origen": "Belfalas",
+      "tipo": "OESTE_DE",
+      "destino": "Lun",
+      "satisface": true
+    },
+    {
+      "origen": "Los Gamos",
+      "tipo": "ESTE_DE",
+      "destino": "Brandivino",
+      "satisface": false
+    },
+    {
+      "origen": "Puertos Grises",
+      "tipo": "OESTE_DE",
+      "destino": "Torres Blancas",
+      "satisface": true
+    },
+    {
+      "origen": "Bosque Negro",
+      "tipo": "ESTE_DE",
+      "destino": "Mordor",
+      "satisface": true
+    },
+    {
+      "origen": "Bosque Negro",
+      "tipo": "SUR_DE",
+      "destino": "Mordor",
+      "satisface": true
+    },
+    {
+      "origen": "Cricava",
+      "tipo": "ESTE_DE",
+      "destino": "Gamoburgo",
+      "satisface": true
+    },
+    {
+      "origen": "Balsadera",
+      "tipo": "NORTE_DE",
+      "destino": "Gamoburgo",
+      "satisface": true
+    },
+    {
+      "origen": "Los Gamos",
+      "tipo": "OESTE_DE",
+      "destino": "Bosque Viejo",
+      "satisface": true
+    },
+    {
+      "origen": "Brandivino",
+      "tipo": "SUR_DE",
+      "destino": "Tornasauce",
+      "satisface": true
+    },
+    {
+      "origen": "Oesternesse",
+      "tipo": "OESTE_DE",
+      "destino": "Carn Dûm",
+      "satisface": true
+    },
+    {
+      "origen": "Quebradas",
+      "tipo": "OESTE_DE",
+      "destino": "Bree",
+      "satisface": true
+    },
+    {
+      "origen": "Archet",
+      "tipo": "ESTE_DE",
+      "destino": "Bree",
+      "satisface": true
+    },
+    {
+      "origen": "bosque de Chet",
+      "tipo": "ESTE_DE",
+      "destino": "Bree",
+      "satisface": true
+    },
+    {
+      "origen": "Angmar",
+      "tipo": "NORTE_DE",
+      "destino": "Amon Sul",
+      "satisface": true
+    },
+    {
+      "origen": "Rivendel",
+      "tipo": "SUR_DE",
+      "destino": "Landas de Etten",
+      "satisface": true
+    },
+    {
+      "origen": "Fontegrís",
+      "tipo": "NORTE_DE",
+      "destino": "Landas de Etten",
+      "satisface": false
+    },
+    {
+      "origen": "Fontegrís",
+      "tipo": "SUR_DE",
+      "destino": "Sonorona",
+      "satisface": true
+    }
+  ],
+  "solver_mode": "optimized_soft_constraints"
+}

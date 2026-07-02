@@ -1,0 +1,685 @@
+{
+  "coords": {
+    "Alforzada": {
+      "x": 825,
+      "y": 351
+    },
+    "Amon Sul": {
+      "x": 1,
+      "y": 1
+    },
+    "Angband": {
+      "x": 0,
+      "y": 0
+    },
+    "Angmar": {
+      "x": 0,
+      "y": 0
+    },
+    "Archet": {
+      "x": 1653,
+      "y": 354
+    },
+    "Belfalas": {
+      "x": 0,
+      "y": 0
+    },
+    "Bolsón Cerrado": {
+      "x": 822,
+      "y": 349
+    },
+    "Bolsón de Tirada": {
+      "x": 823,
+      "y": 348
+    },
+    "Bosque Cerrado": {
+      "x": 0,
+      "y": 0
+    },
+    "Bosque de Chet": {
+      "x": 475,
+      "y": 355
+    },
+    "Brandivino": {
+      "x": 829,
+      "y": 354
+    },
+    "Bree": {
+      "x": 476,
+      "y": 353
+    },
+    "Camino del Vado": {
+      "x": 2005,
+      "y": 1
+    },
+    "Campos Gladios": {
+      "x": 2274,
+      "y": 354
+    },
+    "Carn Dûm": {
+      "x": 828,
+      "y": 2359
+    },
+    "Cepeda": {
+      "x": 1,
+      "y": 1
+    },
+    "Comarca": {
+      "x": 828,
+      "y": 355
+    },
+    "Cricava": {
+      "x": 824,
+      "y": 350
+    },
+    "Cuaderna del Este": {
+      "x": 827,
+      "y": 354
+    },
+    "Cuaderna del Oeste": {
+      "x": 827,
+      "y": 356
+    },
+    "Cuaderna del Sur": {
+      "x": 2,
+      "y": 2
+    },
+    "Delagua": {
+      "x": 742,
+      "y": 348
+    },
+    "Erebor": {
+      "x": 982,
+      "y": 788
+    },
+    "Eriador": {
+      "x": 2360,
+      "y": 0
+    },
+    "Esgalduin": {
+      "x": 1,
+      "y": 1
+    },
+    "Fornost": {
+      "x": 0,
+      "y": 2360
+    },
+    "Gamoburgo": {
+      "x": 825,
+      "y": 351
+    },
+    "Grandes Túmulos": {
+      "x": 38,
+      "y": 1415
+    },
+    "Grietas del Destino": {
+      "x": 0,
+      "y": 0
+    },
+    "Hobbiton": {
+      "x": 741,
+      "y": 347
+    },
+    "Isengrim II": {
+      "x": 1,
+      "y": 1
+    },
+    "Los Gamos": {
+      "x": 826,
+      "y": 352
+    },
+    "Lun": {
+      "x": 1,
+      "y": 1
+    },
+    "Mares que Separan": {
+      "x": 0,
+      "y": 1
+    },
+    "Marjala": {
+      "x": 827,
+      "y": 353
+    },
+    "Montaña de Fuego": {
+      "x": 2,
+      "y": 2
+    },
+    "Montañas Nubladas": {
+      "x": 2275,
+      "y": 355
+    },
+    "Montañas del Terror": {
+      "x": 1,
+      "y": 2360
+    },
+    "Neldoreth": {
+      "x": 0,
+      "y": 0
+    },
+    "Norburgo": {
+      "x": 1887,
+      "y": 2360
+    },
+    "Númenor": {
+      "x": 1,
+      "y": 0
+    },
+    "Oesternesse": {
+      "x": 827,
+      "y": 2358
+    },
+    "Orodruin": {
+      "x": 1,
+      "y": 1
+    },
+    "Puente del Brandivino": {
+      "x": 0,
+      "y": 351
+    },
+    "Quebradas": {
+      "x": 39,
+      "y": 1416
+    },
+    "Rivendel": {
+      "x": 2360,
+      "y": 354
+    },
+    "Sonorona": {
+      "x": 827,
+      "y": 0
+    },
+    "Tharbad": {
+      "x": 0,
+      "y": 0
+    },
+    "Tierra de Angmar": {
+      "x": 829,
+      "y": 2360
+    },
+    "Tierras Asperas": {
+      "x": 0,
+      "y": 0
+    },
+    "Tierras Brunas": {
+      "x": 1,
+      "y": 1
+    },
+    "Tirada": {
+      "x": 824,
+      "y": 350
+    },
+    "Tobold Corneta": {
+      "x": 0,
+      "y": 0
+    },
+    "Tornasauce": {
+      "x": 113,
+      "y": 135
+    },
+    "Vado de Rivendel": {
+      "x": 2359,
+      "y": 355
+    },
+    "Valle": {
+      "x": 983,
+      "y": 787
+    },
+    "Valle Largo": {
+      "x": 1,
+      "y": 1
+    },
+    "arroyo Cepeda": {
+      "x": 0,
+      "y": 0
+    },
+    "bosque Viejo": {
+      "x": 825,
+      "y": 351
+    }
+  },
+  "CSR": 0.8904,
+  "total_constraints": 73,
+  "width": 2360,
+  "height": 2360,
+  "rel_eval": [
+    {
+      "origen": "Tharbad",
+      "tipo": "CONECTA",
+      "destino": "Tierras Brunas",
+      "satisface": true
+    },
+    {
+      "origen": "Bree",
+      "tipo": "CERCA_DE",
+      "destino": "Bosque de Chet",
+      "satisface": true
+    },
+    {
+      "origen": "Belfalas",
+      "tipo": "CONECTA",
+      "destino": "Lun",
+      "satisface": true
+    },
+    {
+      "origen": "Hobbiton",
+      "tipo": "CONECTA",
+      "destino": "Comarca",
+      "satisface": true
+    },
+    {
+      "origen": "Alforzada",
+      "tipo": "CONECTA",
+      "destino": "Comarca",
+      "satisface": true
+    },
+    {
+      "origen": "Marjala",
+      "tipo": "CERCA_DE",
+      "destino": "Brandivino",
+      "satisface": true
+    },
+    {
+      "origen": "Brandivino",
+      "tipo": "CONECTA",
+      "destino": "Comarca",
+      "satisface": true
+    },
+    {
+      "origen": "Cuaderna del Este",
+      "tipo": "CONECTA",
+      "destino": "Comarca",
+      "satisface": true
+    },
+    {
+      "origen": "Los Gamos",
+      "tipo": "ESTE_DE",
+      "destino": "Brandivino",
+      "satisface": false
+    },
+    {
+      "origen": "Valle Largo",
+      "tipo": "CERCA_DE",
+      "destino": "Cuaderna del Sur",
+      "satisface": true
+    },
+    {
+      "origen": "Tobold Corneta",
+      "tipo": "CONECTA",
+      "destino": "Valle Largo",
+      "satisface": true
+    },
+    {
+      "origen": "Tobold Corneta",
+      "tipo": "CONECTA",
+      "destino": "Isengrim II",
+      "satisface": true
+    },
+    {
+      "origen": "Bree",
+      "tipo": "CONECTA",
+      "destino": "Comarca",
+      "satisface": true
+    },
+    {
+      "origen": "Norburgo",
+      "tipo": "CONECTA",
+      "destino": "Fornost",
+      "satisface": false
+    },
+    {
+      "origen": "Norburgo",
+      "tipo": "NORTE_DE",
+      "destino": "Comarca",
+      "satisface": true
+    },
+    {
+      "origen": "Bolsón Cerrado",
+      "tipo": "ESTE_DE",
+      "destino": "Comarca",
+      "satisface": false
+    },
+    {
+      "origen": "Erebor",
+      "tipo": "CERCA_DE",
+      "destino": "Valle",
+      "satisface": true
+    },
+    {
+      "origen": "Montañas Nubladas",
+      "tipo": "ESTE_DE",
+      "destino": "Tierras Asperas",
+      "satisface": true
+    },
+    {
+      "origen": "Rivendel",
+      "tipo": "CONECTA",
+      "destino": "Comarca",
+      "satisface": false
+    },
+    {
+      "origen": "Los Gamos",
+      "tipo": "CONECTA",
+      "destino": "Comarca",
+      "satisface": true
+    },
+    {
+      "origen": "Alforzada",
+      "tipo": "CONECTA",
+      "destino": "Los Gamos",
+      "satisface": true
+    },
+    {
+      "origen": "Eriador",
+      "tipo": "CONECTA",
+      "destino": "Comarca",
+      "satisface": false
+    },
+    {
+      "origen": "Bolsón Cerrado",
+      "tipo": "CONECTA",
+      "destino": "Hobbiton",
+      "satisface": true
+    },
+    {
+      "origen": "Delagua",
+      "tipo": "CONECTA",
+      "destino": "Hobbiton",
+      "satisface": true
+    },
+    {
+      "origen": "Bolsón de Tirada",
+      "tipo": "CERCA_DE",
+      "destino": "Bolsón Cerrado",
+      "satisface": true
+    },
+    {
+      "origen": "bosque Viejo",
+      "tipo": "CONECTA",
+      "destino": "Brandivino",
+      "satisface": true
+    },
+    {
+      "origen": "Cuaderna del Oeste",
+      "tipo": "CONECTA",
+      "destino": "Comarca",
+      "satisface": true
+    },
+    {
+      "origen": "Puente del Brandivino",
+      "tipo": "CONECTA",
+      "destino": "Brandivino",
+      "satisface": true
+    },
+    {
+      "origen": "Hobbiton",
+      "tipo": "CONECTA",
+      "destino": "Delagua",
+      "satisface": true
+    },
+    {
+      "origen": "Delagua",
+      "tipo": "CONECTA",
+      "destino": "Bolsón Cerrado",
+      "satisface": true
+    },
+    {
+      "origen": "Los Gamos",
+      "tipo": "CONECTA",
+      "destino": "Brandivino",
+      "satisface": true
+    },
+    {
+      "origen": "Bree",
+      "tipo": "CONECTA",
+      "destino": "Rivendel",
+      "satisface": false
+    },
+    {
+      "origen": "Campos Gladios",
+      "tipo": "CERCA_DE",
+      "destino": "Montañas Nubladas",
+      "satisface": true
+    },
+    {
+      "origen": "Grietas del Destino",
+      "tipo": "CERCA_DE",
+      "destino": "Orodruin",
+      "satisface": true
+    },
+    {
+      "origen": "Orodruin",
+      "tipo": "CONECTA",
+      "destino": "Montaña de Fuego",
+      "satisface": true
+    },
+    {
+      "origen": "Los Gamos",
+      "tipo": "ESTE_DE",
+      "destino": "Hobbiton",
+      "satisface": true
+    },
+    {
+      "origen": "Gamoburgo",
+      "tipo": "CERCA_DE",
+      "destino": "Los Gamos",
+      "satisface": true
+    },
+    {
+      "origen": "Rivendel",
+      "tipo": "ESTE_DE",
+      "destino": "Comarca",
+      "satisface": true
+    },
+    {
+      "origen": "Puente del Brandivino",
+      "tipo": "CERCA_DE",
+      "destino": "Los Gamos",
+      "satisface": true
+    },
+    {
+      "origen": "Bosque Cerrado",
+      "tipo": "CERCA_DE",
+      "destino": "Cuaderna del Este",
+      "satisface": true
+    },
+    {
+      "origen": "Cricava",
+      "tipo": "CERCA_DE",
+      "destino": "Gamoburgo",
+      "satisface": true
+    },
+    {
+      "origen": "Tirada",
+      "tipo": "CERCA_DE",
+      "destino": "Gamoburgo",
+      "satisface": true
+    },
+    {
+      "origen": "Bolsón de Tirada",
+      "tipo": "CERCA_DE",
+      "destino": "Tirada",
+      "satisface": true
+    },
+    {
+      "origen": "arroyo Cepeda",
+      "tipo": "CERCA_DE",
+      "destino": "Cepeda",
+      "satisface": true
+    },
+    {
+      "origen": "Los Gamos",
+      "tipo": "CERCA_DE",
+      "destino": "Marjala",
+      "satisface": true
+    },
+    {
+      "origen": "Hobbiton",
+      "tipo": "CERCA_DE",
+      "destino": "Comarca",
+      "satisface": true
+    },
+    {
+      "origen": "Cricava",
+      "tipo": "CERCA_DE",
+      "destino": "Los Gamos",
+      "satisface": true
+    },
+    {
+      "origen": "Bolsón Cerrado",
+      "tipo": "CERCA_DE",
+      "destino": "Cricava",
+      "satisface": true
+    },
+    {
+      "origen": "bosque Viejo",
+      "tipo": "CONECTA",
+      "destino": "Los Gamos",
+      "satisface": true
+    },
+    {
+      "origen": "bosque Viejo",
+      "tipo": "CERCA_DE",
+      "destino": "Comarca",
+      "satisface": true
+    },
+    {
+      "origen": "Cricava",
+      "tipo": "CERCA_DE",
+      "destino": "Comarca",
+      "satisface": true
+    },
+    {
+      "origen": "Gamoburgo",
+      "tipo": "CERCA_DE",
+      "destino": "Brandivino",
+      "satisface": true
+    },
+    {
+      "origen": "Grandes Túmulos",
+      "tipo": "CONECTA",
+      "destino": "Quebradas",
+      "satisface": true
+    },
+    {
+      "origen": "Brandivino",
+      "tipo": "NORTE_DE",
+      "destino": "Tornasauce",
+      "satisface": true
+    },
+    {
+      "origen": "Archet",
+      "tipo": "CERCA_DE",
+      "destino": "Bosque de Chet",
+      "satisface": true
+    },
+    {
+      "origen": "Los Gamos",
+      "tipo": "CERCA_DE",
+      "destino": "Cuaderna del Este",
+      "satisface": true
+    },
+    {
+      "origen": "Puente del Brandivino",
+      "tipo": "OESTE_DE",
+      "destino": "Cuaderna del Este",
+      "satisface": true
+    },
+    {
+      "origen": "Montañas Nubladas",
+      "tipo": "ESTE_DE",
+      "destino": "Bree",
+      "satisface": true
+    },
+    {
+      "origen": "Oesternesse",
+      "tipo": "CONECTA",
+      "destino": "Carn Dûm",
+      "satisface": true
+    },
+    {
+      "origen": "Carn Dûm",
+      "tipo": "CONECTA",
+      "destino": "Tierra de Angmar",
+      "satisface": true
+    },
+    {
+      "origen": "Tierra de Angmar",
+      "tipo": "NORTE_DE",
+      "destino": "Comarca",
+      "satisface": true
+    },
+    {
+      "origen": "Archet",
+      "tipo": "ESTE_DE",
+      "destino": "Bree",
+      "satisface": true
+    },
+    {
+      "origen": "Cricava",
+      "tipo": "CONECTA",
+      "destino": "Los Gamos",
+      "satisface": true
+    },
+    {
+      "origen": "Montañas Nubladas",
+      "tipo": "OESTE_DE",
+      "destino": "Rivendel",
+      "satisface": true
+    },
+    {
+      "origen": "Angmar",
+      "tipo": "CONECTA",
+      "destino": "Amon Sul",
+      "satisface": true
+    },
+    {
+      "origen": "Bosque de Chet",
+      "tipo": "OESTE_DE",
+      "destino": "Bree",
+      "satisface": false
+    },
+    {
+      "origen": "Montañas del Terror",
+      "tipo": "NORTE_DE",
+      "destino": "Angband",
+      "satisface": true
+    },
+    {
+      "origen": "Neldoreth",
+      "tipo": "CERCA_DE",
+      "destino": "Esgalduin",
+      "satisface": true
+    },
+    {
+      "origen": "Mares que Separan",
+      "tipo": "CERCA_DE",
+      "destino": "Númenor",
+      "satisface": true
+    },
+    {
+      "origen": "Sonorona",
+      "tipo": "CONECTA",
+      "destino": "Rivendel",
+      "satisface": false
+    },
+    {
+      "origen": "Sonorona",
+      "tipo": "CERCA_DE",
+      "destino": "Camino del Vado",
+      "satisface": true
+    },
+    {
+      "origen": "Camino del Vado",
+      "tipo": "CONECTA",
+      "destino": "Rivendel",
+      "satisface": true
+    },
+    {
+      "origen": "Vado de Rivendel",
+      "tipo": "CONECTA",
+      "destino": "Rivendel",
+      "satisface": true
+    }
+  ],
+  "solver_mode": "optimized_soft_constraints"
+}

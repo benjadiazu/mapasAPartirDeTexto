@@ -1,0 +1,251 @@
+{
+  "accuracy_real": 0.3235,
+  "total_relaciones": 34,
+  "correctas": 11,
+  "errores_por_tipo": {
+    "CERCA_DE": 21,
+    "ESTE_DE": 1,
+    "NORTE_DE": 1
+  },
+  "umbral_cerca_km": 150,
+  "evaluacion_detalle": [
+    {
+      "origen": "Fidenas",
+      "tipo": "CERCA_DE",
+      "destino": "Roma",
+      "cumple": false,
+      "info": "missing_coords"
+    },
+    {
+      "origen": "Anio",
+      "tipo": "CERCA_DE",
+      "destino": "Tíber",
+      "cumple": false,
+      "info": "missing_coords"
+    },
+    {
+      "origen": "Janículo",
+      "tipo": "CERCA_DE",
+      "destino": "Roma",
+      "cumple": true,
+      "info": 1.8000645452050388
+    },
+    {
+      "origen": "Janículo",
+      "tipo": "ESTE_DE",
+      "destino": "Tíber",
+      "cumple": true,
+      "info": null
+    },
+    {
+      "origen": "Roma",
+      "tipo": "ESTE_DE",
+      "destino": "Veyes",
+      "cumple": true,
+      "info": null
+    },
+    {
+      "origen": "Álgido",
+      "tipo": "CERCA_DE",
+      "destino": "Roma",
+      "cumple": false,
+      "info": "missing_coords"
+    },
+    {
+      "origen": "Túsculo",
+      "tipo": "CERCA_DE",
+      "destino": "Álgido",
+      "cumple": false,
+      "info": "missing_coords"
+    },
+    {
+      "origen": "Corbión",
+      "tipo": "CERCA_DE",
+      "destino": "Álgido",
+      "cumple": false,
+      "info": "missing_coords"
+    },
+    {
+      "origen": "Túsculo",
+      "tipo": "CERCA_DE",
+      "destino": "Roma",
+      "cumple": true,
+      "info": 21.628604403179953
+    },
+    {
+      "origen": "Túsculo",
+      "tipo": "CERCA_DE",
+      "destino": "Ardea",
+      "cumple": false,
+      "info": "missing_coords"
+    },
+    {
+      "origen": "Ardea",
+      "tipo": "CERCA_DE",
+      "destino": "Roma",
+      "cumple": false,
+      "info": "missing_coords"
+    },
+    {
+      "origen": "Fidenas",
+      "tipo": "CERCA_DE",
+      "destino": "Anio",
+      "cumple": false,
+      "info": "missing_coords"
+    },
+    {
+      "origen": "Tíber",
+      "tipo": "CERCA_DE",
+      "destino": "Fidenas",
+      "cumple": false,
+      "info": "missing_coords"
+    },
+    {
+      "origen": "Caere",
+      "tipo": "CERCA_DE",
+      "destino": "Veyes",
+      "cumple": true,
+      "info": 24.337225103878048
+    },
+    {
+      "origen": "Veyes",
+      "tipo": "CERCA_DE",
+      "destino": "Roma",
+      "cumple": true,
+      "info": 16.02920732247156
+    },
+    {
+      "origen": "Veyes",
+      "tipo": "CERCA_DE",
+      "destino": "Tíber",
+      "cumple": true,
+      "info": 197.80438786912342
+    },
+    {
+      "origen": "Ardea",
+      "tipo": "CERCA_DE",
+      "destino": "Veyes",
+      "cumple": false,
+      "info": "missing_coords"
+    },
+    {
+      "origen": "Veyes",
+      "tipo": "ESTE_DE",
+      "destino": "Roma",
+      "cumple": false,
+      "info": null
+    },
+    {
+      "origen": "Velletri",
+      "tipo": "NORTE_DE",
+      "destino": "Túsculo",
+      "cumple": false,
+      "info": null
+    },
+    {
+      "origen": "Velletri",
+      "tipo": "ESTE_DE",
+      "destino": "Túsculo",
+      "cumple": true,
+      "info": null
+    },
+    {
+      "origen": "Lanuvio",
+      "tipo": "CERCA_DE",
+      "destino": "Roma",
+      "cumple": true,
+      "info": 29.464675773198607
+    },
+    {
+      "origen": "río Astura",
+      "tipo": "CERCA_DE",
+      "destino": "Pedum",
+      "cumple": false,
+      "info": "missing_coords"
+    },
+    {
+      "origen": "río Astura",
+      "tipo": "CERCA_DE",
+      "destino": "Lanuvio",
+      "cumple": false,
+      "info": "missing_coords"
+    },
+    {
+      "origen": "río Astura",
+      "tipo": "CERCA_DE",
+      "destino": "Velletri",
+      "cumple": false,
+      "info": "missing_coords"
+    },
+    {
+      "origen": "río Astura",
+      "tipo": "CERCA_DE",
+      "destino": "Anzio",
+      "cumple": false,
+      "info": "missing_coords"
+    },
+    {
+      "origen": "Pedum",
+      "tipo": "CERCA_DE",
+      "destino": "Velletri",
+      "cumple": false,
+      "info": "missing_coords"
+    },
+    {
+      "origen": "Pedum",
+      "tipo": "CERCA_DE",
+      "destino": "Lanuvio",
+      "cumple": false,
+      "info": "missing_coords"
+    },
+    {
+      "origen": "Pedum",
+      "tipo": "CERCA_DE",
+      "destino": "Anzio",
+      "cumple": false,
+      "info": "missing_coords"
+    },
+    {
+      "origen": "Tíber",
+      "tipo": "CERCA_DE",
+      "destino": "Velletri",
+      "cumple": false,
+      "info": 242.70233419378746
+    },
+    {
+      "origen": "Paleópolis",
+      "tipo": "CERCA_DE",
+      "destino": "Samnio",
+      "cumple": true,
+      "info": 80.51677937451473
+    },
+    {
+      "origen": "Chiusi",
+      "tipo": "CERCA_DE",
+      "destino": "Apeninos",
+      "cumple": true,
+      "info": 145.29550378401342
+    },
+    {
+      "origen": "Cominio",
+      "tipo": "CERCA_DE",
+      "destino": "Aquilonia",
+      "cumple": false,
+      "info": "missing_coords"
+    },
+    {
+      "origen": "Cominio",
+      "tipo": "CERCA_DE",
+      "destino": "Boiano",
+      "cumple": false,
+      "info": "missing_coords"
+    },
+    {
+      "origen": "Aquilonia",
+      "tipo": "CERCA_DE",
+      "destino": "Boiano",
+      "cumple": false,
+      "info": "missing_coords"
+    }
+  ]
+}

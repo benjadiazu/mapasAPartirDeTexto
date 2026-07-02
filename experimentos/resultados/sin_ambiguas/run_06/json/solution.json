@@ -1,0 +1,365 @@
+{
+  "coords": {
+    "Alforzada": {
+      "x": 0,
+      "y": 0
+    },
+    "Amon Sul": {
+      "x": 1,
+      "y": 2280
+    },
+    "Anduin": {
+      "x": 0,
+      "y": 0
+    },
+    "Angmar": {
+      "x": 0,
+      "y": 0
+    },
+    "Archet": {
+      "x": 0,
+      "y": 0
+    },
+    "Arnor": {
+      "x": 1,
+      "y": 0
+    },
+    "Balsadera": {
+      "x": 0,
+      "y": 0
+    },
+    "Belfalas": {
+      "x": 2280,
+      "y": 0
+    },
+    "Bolsón Cerrado": {
+      "x": 0,
+      "y": 0
+    },
+    "Bosque Negro": {
+      "x": 2280,
+      "y": 2279
+    },
+    "Bosque Viejo": {
+      "x": 0,
+      "y": 1100
+    },
+    "Brandivino": {
+      "x": 170,
+      "y": 1099
+    },
+    "Bree": {
+      "x": 0,
+      "y": 1102
+    },
+    "Camino Verde": {
+      "x": 0,
+      "y": 0
+    },
+    "Campos Gladios": {
+      "x": 0,
+      "y": 2280
+    },
+    "Cavada Grande": {
+      "x": 0,
+      "y": 0
+    },
+    "Cepeda": {
+      "x": 0,
+      "y": 0
+    },
+    "Comarca": {
+      "x": 139,
+      "y": 1101
+    },
+    "Cricava": {
+      "x": 0,
+      "y": 0
+    },
+    "Cuaderna del Este": {
+      "x": 0,
+      "y": 0
+    },
+    "Cuaderna del Sur": {
+      "x": 138,
+      "y": 0
+    },
+    "Cuadernas": {
+      "x": 0,
+      "y": 0
+    },
+    "Erebor": {
+      "x": 0,
+      "y": 0
+    },
+    "Eriador": {
+      "x": 0,
+      "y": 1104
+    },
+    "Este": {
+      "x": 0,
+      "y": 0
+    },
+    "Fornost": {
+      "x": 0,
+      "y": 0
+    },
+    "Frontera del Oeste": {
+      "x": 0,
+      "y": 0
+    },
+    "Gamoburgo": {
+      "x": 0,
+      "y": 0
+    },
+    "Gondor": {
+      "x": 0,
+      "y": 2280
+    },
+    "Gran Bosque Verde": {
+      "x": 2280,
+      "y": 1104
+    },
+    "Grandes Aguas": {
+      "x": 0,
+      "y": 1104
+    },
+    "Grandes Smials": {
+      "x": 0,
+      "y": 0
+    },
+    "Grietas del Destino": {
+      "x": 0,
+      "y": 0
+    },
+    "Hobbiton": {
+      "x": 0,
+      "y": 0
+    },
+    "Lago Largo": {
+      "x": 0,
+      "y": 0
+    },
+    "Los Gamos": {
+      "x": 2280,
+      "y": 1098
+    },
+    "Lun": {
+      "x": 0,
+      "y": 1
+    },
+    "Marjala": {
+      "x": 0,
+      "y": 0
+    },
+    "Mitheithel": {
+      "x": 0,
+      "y": 0
+    },
+    "Montaña": {
+      "x": 0,
+      "y": 0
+    },
+    "Montañas Nubladas": {
+      "x": 2279,
+      "y": 1103
+    },
+    "Mordor": {
+      "x": 149,
+      "y": 264
+    },
+    "Neldoreth": {
+      "x": 0,
+      "y": 0
+    },
+    "Norburgo": {
+      "x": 0,
+      "y": 0
+    },
+    "Oesternesse": {
+      "x": 0,
+      "y": 0
+    },
+    "Orodruin": {
+      "x": 0,
+      "y": 0
+    },
+    "Rivendel": {
+      "x": 2280,
+      "y": 1103
+    },
+    "Sonorona": {
+      "x": 1,
+      "y": 2280
+    },
+    "Tharbad": {
+      "x": 0,
+      "y": 2280
+    },
+    "Tierra de Mordor": {
+      "x": 0,
+      "y": 0
+    },
+    "Tierras Asperas": {
+      "x": 0,
+      "y": 1102
+    },
+    "Tierras Brunas": {
+      "x": 1,
+      "y": 0
+    },
+    "Tornasauce": {
+      "x": 0,
+      "y": 0
+    },
+    "Torres de Abajo": {
+      "x": 0,
+      "y": 0
+    },
+    "Valle": {
+      "x": 132,
+      "y": 1181
+    },
+    "bosque de Chet": {
+      "x": 0,
+      "y": 0
+    },
+    "las Quebradas": {
+      "x": 191,
+      "y": 298
+    }
+  },
+  "CSR": 0.8095,
+  "total_constraints": 21,
+  "width": 2280,
+  "height": 2280,
+  "rel_eval": [
+    {
+      "origen": "Bree",
+      "tipo": "ESTE_DE",
+      "destino": "Comarca",
+      "satisface": false
+    },
+    {
+      "origen": "Los Gamos",
+      "tipo": "ESTE_DE",
+      "destino": "Brandivino",
+      "satisface": true
+    },
+    {
+      "origen": "Gran Bosque Verde",
+      "tipo": "ESTE_DE",
+      "destino": "Montañas Nubladas",
+      "satisface": false
+    },
+    {
+      "origen": "Eriador",
+      "tipo": "OESTE_DE",
+      "destino": "Montañas Nubladas",
+      "satisface": true
+    },
+    {
+      "origen": "Tharbad",
+      "tipo": "NORTE_DE",
+      "destino": "Tierras Brunas",
+      "satisface": true
+    },
+    {
+      "origen": "Arnor",
+      "tipo": "SUR_DE",
+      "destino": "Gondor",
+      "satisface": true
+    },
+    {
+      "origen": "Belfalas",
+      "tipo": "ESTE_DE",
+      "destino": "Lun",
+      "satisface": true
+    },
+    {
+      "origen": "Bree",
+      "tipo": "OESTE_DE",
+      "destino": "Comarca",
+      "satisface": true
+    },
+    {
+      "origen": "Montañas Nubladas",
+      "tipo": "ESTE_DE",
+      "destino": "Tierras Asperas",
+      "satisface": true
+    },
+    {
+      "origen": "Brandivino",
+      "tipo": "ESTE_DE",
+      "destino": "Bosque Viejo",
+      "satisface": true
+    },
+    {
+      "origen": "Bosque Negro",
+      "tipo": "ESTE_DE",
+      "destino": "Campos Gladios",
+      "satisface": true
+    },
+    {
+      "origen": "Montañas Nubladas",
+      "tipo": "OESTE_DE",
+      "destino": "Campos Gladios",
+      "satisface": false
+    },
+    {
+      "origen": "Los Gamos",
+      "tipo": "ESTE_DE",
+      "destino": "Comarca",
+      "satisface": true
+    },
+    {
+      "origen": "Cuaderna del Sur",
+      "tipo": "SUR_DE",
+      "destino": "Comarca",
+      "satisface": true
+    },
+    {
+      "origen": "Tierra de Mordor",
+      "tipo": "SUR_DE",
+      "destino": "Bosque Negro",
+      "satisface": true
+    },
+    {
+      "origen": "Grandes Aguas",
+      "tipo": "OESTE_DE",
+      "destino": "Rivendel",
+      "satisface": true
+    },
+    {
+      "origen": "Montañas Nubladas",
+      "tipo": "ESTE_DE",
+      "destino": "Bree",
+      "satisface": true
+    },
+    {
+      "origen": "Rivendel",
+      "tipo": "ESTE_DE",
+      "destino": "Bree",
+      "satisface": true
+    },
+    {
+      "origen": "Montañas Nubladas",
+      "tipo": "OESTE_DE",
+      "destino": "Eriador",
+      "satisface": false
+    },
+    {
+      "origen": "Amon Sul",
+      "tipo": "NORTE_DE",
+      "destino": "Angmar",
+      "satisface": true
+    },
+    {
+      "origen": "Mitheithel",
+      "tipo": "SUR_DE",
+      "destino": "Sonorona",
+      "satisface": true
+    }
+  ],
+  "solver_mode": "optimized_soft_constraints"
+}

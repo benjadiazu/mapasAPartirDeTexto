@@ -1,0 +1,3560 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+<style>
+    .leaflet-container {
+        background-image:
+            linear-gradient(to right, rgba(0,0,0,0.12) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(0,0,0,0.12) 1px, transparent 1px);
+        background-size: 100px 100px;
+    }
+</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_42903e443edb16212f5cff6b08caab9f {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdn.jsdelivr.net/gh/ardhi/Leaflet.MousePosition/src/L.Control.MousePosition.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ardhi/Leaflet.MousePosition/src/L.Control.MousePosition.min.css"/>
+</head>
+<body>
+    
+    
+<div style="position:fixed; top:15px; left:35px; z-index:9999;">
+    <img src="../../data/imagenes_ref/rosa.png" style="width:240px; opacity:0.9;">
+</div>
+    
+<div style="position:fixed; bottom:30px; left:30px; background:white;
+            padding:14px 18px; border:2px solid #aaa; border-radius:10px;
+            z-index:1000; font-size:13px; font-family:serif; line-height:1.8;">
+    <b>Leyenda</b><br>
+    <span style="color:#FFD700; font-size:18px;">●</span>
+        Pivote (lugar más conectado)<br>
+    <span style="color:#1a6fc4; font-size:18px;">●</span>
+        Lugar conocido (Pleiades / Wikidata)<br>
+    <span style="color:#e07b00; font-size:18px;">●</span>
+        Lugar estimado (Z3, anclado a coords reales)<br>
+    <span style="color:#888; font-size:18px;">▶</span>
+        Ver lugares sin posición determinada →
+</div>
+    
+<div id="panel-inciertos"
+     style="position:fixed; top:60px; right:0; width:260px; max-height:80vh;
+            background:white; border:2px solid #999; border-right:none;
+            border-radius:10px 0 0 10px; z-index:1000;
+            font-family:serif; font-size:12px; box-shadow:-3px 3px 8px rgba(0,0,0,0.2);
+            display:flex; flex-direction:column;">
+
+    <!-- Cabecera clicable -->
+    <div onclick="(function(){
+            var b=document.getElementById('pi-body');
+            var i=document.getElementById('pi-icon');
+            if(b.style.display==='none'){b.style.display='block';i.textContent='▼';}
+            else{b.style.display='none';i.textContent='▶';}
+         })()"
+         style="cursor:pointer; background:#f0f0f0; padding:10px 14px;
+                border-radius:8px 0 0 0; display:flex; justify-content:space-between;
+                align-items:center; font-weight:bold; color:#444;">
+        <span>Posición incierta&nbsp;(126)</span>
+        <span id="pi-icon">▶</span>
+    </div>
+
+    <!-- Cuerpo colapsable -->
+    <div id="pi-body" style="display:none; overflow-y:auto; max-height:calc(80vh - 42px);
+                              padding:8px 14px;">
+        <p style="color:#666; font-size:11px; margin:4px 0 8px 0;">
+            Estos lugares aparecen en el texto pero el texto no proporciona
+            suficiente contexto geográfico para ubicarlos en el mapa.
+        </p>
+        <ul style="list-style:none; margin:0; padding:0; color:#333;">
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Alia</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Alife</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Ancio</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Antonino Augusto Pío</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Anzio</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Apeninos</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Ara Maxima</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Arcadia</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Ardea</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Arienzo</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Arpinates</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Arpos</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Atenas</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Augusto</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Aurunca</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Ausona</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Aventino</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Benevento</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Bevaña</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Boiano</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Bovilas</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Brixia</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Callifae</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Canosa</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Carvento</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Castel di Sangro</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Ceccano</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Cerceii</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Circeio</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Circo Flaminio</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Consenza</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Cora</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Corbión</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Corfú</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Dodona</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Egipto</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Esquilino</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Ferentina</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Ferentino</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Feritro</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Ficana</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Focea</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Fondi</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Formia</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Fregellas</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Fresilia</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Frontera</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Frusinos</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Fuente Ferentina</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Gabinia</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Heraclea</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Italia meridional</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Labico</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Lacio</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Lanuvio</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Lipari</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Llanuras</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Longula</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Luca</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Lucania</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Lucera</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Luceria</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Maleventum</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Materina</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Menturnas</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Milionia</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Minturnas</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Monte Sacro</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Monte Vesubio</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Narni</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Narnia</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Norba</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Padua</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Paflagonia</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Palatino</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Palestrina</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Paleópolis</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Pedum</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Plestina</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Plística</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Po</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Polusca</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Pomecia</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Pontino</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Presenzano</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Priverno</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Rocavecchia</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Roselle</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Rusella</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Samnio</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">San Felice Circeo</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Satícula</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Segni</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Sessa</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Signia</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Siponto</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Suessa</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Suessula</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Sátrico</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Tarento</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Teano</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Tebas</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Telenas</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Terracina</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Ticino</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Tiferno</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Tirreno</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Trebulanos</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Troya</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Velia</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Velletri</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Venetia</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Verrugo</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Veseris</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Vía Apia</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Vía Nomentana</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">circo llamado Marítimo</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">ciudad de Nequinum</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">desembocadura del Liris</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">islas de Lipari</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">la Ficolense</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">montañas de Preneste</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">murallas de Roma</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">praderas Flaminias</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">río Astura</li>
+<li style="padding:2px 0; border-bottom:1px solid #eee;">Álgido</li>
+        </ul>
+    </div>
+</div>
+    
+            <div class="folium-map" id="map_42903e443edb16212f5cff6b08caab9f" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_42903e443edb16212f5cff6b08caab9f = L.map(
+                "map_42903e443edb16212f5cff6b08caab9f",
+                {
+                    center: [42.405534993206246, 14.058180449261023],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 6,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_4665a31e88b502654ed1a37c4ee706bb = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "Tiles \u00a9 CartoDB",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_4665a31e88b502654ed1a37c4ee706bb.addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+            var layer_control_f1d484f8249b85f5fdca6b45b07935b1_layers = {
+                base_layers : {
+                    "cartodbpositron" : tile_layer_4665a31e88b502654ed1a37c4ee706bb,
+                },
+                overlays :  {
+                },
+            };
+            let layer_control_f1d484f8249b85f5fdca6b45b07935b1 = L.control.layers(
+                layer_control_f1d484f8249b85f5fdca6b45b07935b1_layers.base_layers,
+                layer_control_f1d484f8249b85f5fdca6b45b07935b1_layers.overlays,
+                {
+  "position": "bottomleft",
+  "collapsed": true,
+  "autoZIndex": true,
+  "imperial": false,
+}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+
+        
+    
+            var mouse_position_b3ebebf20c6cb3f5f17aa19dfdc191f4 = new L.Control.MousePosition(
+                {
+  "position": "topright",
+  "separator": " | ",
+  "emptyString": "Unavailable",
+  "lngFirst": false,
+  "numDigits": 5,
+  "prefix": "COORD:",
+}
+            );
+            mouse_position_b3ebebf20c6cb3f5f17aa19dfdc191f4.options["latFormatter"] =
+                undefined;
+            mouse_position_b3ebebf20c6cb3f5f17aa19dfdc191f4.options["lngFormatter"] =
+                undefined;
+            map_42903e443edb16212f5cff6b08caab9f.addControl(mouse_position_b3ebebf20c6cb3f5f17aa19dfdc191f4);
+        
+    
+            var circle_marker_36ae290f406939a7822e6ea4ee4fa847 = L.circleMarker(
+                [42.775833, 15.426111],
+                {"bubblingMouseEvents": true, "color": "#1a4f8a", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a6fc4", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+        var popup_0f1f0f3e9f6db5ffd7971aaeb6a3317f = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_a4678259f9940f40417d6ca174870966 = $(`<div id="html_a4678259f9940f40417d6ca174870966" style="width: 100.0%; height: 100.0%;"><b>Adriático</b><br>Fuente: Wikidata<br>Lat: 42.7758 | Lon: 15.4261</div>`)[0];
+                popup_0f1f0f3e9f6db5ffd7971aaeb6a3317f.setContent(html_a4678259f9940f40417d6ca174870966);
+            
+        
+
+        circle_marker_36ae290f406939a7822e6ea4ee4fa847.bindPopup(popup_0f1f0f3e9f6db5ffd7971aaeb6a3317f)
+        ;
+
+        
+    
+    
+            circle_marker_36ae290f406939a7822e6ea4ee4fa847.bindTooltip(
+                `<div>
+                     <b>Adriático</b><br>Fuente: Wikidata
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_44352c22814a84164a7853a6b1679824 = L.marker(
+                [42.775833, 15.426111],
+                {
+}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+            var div_icon_cfe6a39097d298533cd02425a4ea079d = L.divIcon({
+  "html": "\n            \u003cdiv style=\"font-family:serif; font-size:11pt; color:#0d2b52;\n                        font-weight:bold; text-shadow:1px 1px 3px white;\n                        white-space:nowrap;\"\u003e\n                Adri\u00e1tico\n            \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_44352c22814a84164a7853a6b1679824.setIcon(div_icon_cfe6a39097d298533cd02425a4ea079d);
+            
+    
+            var circle_marker_2163724b4a2d3c3e515ea0fb81c41440 = L.circleMarker(
+                [41.726388888889, 13.342222222222],
+                {"bubblingMouseEvents": true, "color": "#1a4f8a", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a6fc4", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+        var popup_ac14b2743e17403996ae32fd1921b7ef = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_62e58267f9f5f9d8af926a71a26e12f6 = $(`<div id="html_62e58267f9f5f9d8af926a71a26e12f6" style="width: 100.0%; height: 100.0%;"><b>Alatri</b><br>Fuente: Wikidata<br>Lat: 41.7264 | Lon: 13.3422</div>`)[0];
+                popup_ac14b2743e17403996ae32fd1921b7ef.setContent(html_62e58267f9f5f9d8af926a71a26e12f6);
+            
+        
+
+        circle_marker_2163724b4a2d3c3e515ea0fb81c41440.bindPopup(popup_ac14b2743e17403996ae32fd1921b7ef)
+        ;
+
+        
+    
+    
+            circle_marker_2163724b4a2d3c3e515ea0fb81c41440.bindTooltip(
+                `<div>
+                     <b>Alatri</b><br>Fuente: Wikidata
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_8952d27d2550ebc759f45231553b2915 = L.marker(
+                [41.726388888889, 13.342222222222],
+                {
+}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+            var div_icon_d248260059adb2e90e1d57cbc89da52f = L.divIcon({
+  "html": "\n            \u003cdiv style=\"font-family:serif; font-size:11pt; color:#0d2b52;\n                        font-weight:bold; text-shadow:1px 1px 3px white;\n                        white-space:nowrap;\"\u003e\n                Alatri\n            \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_8952d27d2550ebc759f45231553b2915.setIcon(div_icon_d248260059adb2e90e1d57cbc89da52f);
+            
+    
+            var circle_marker_57d16a4eabb73b18dcafd05a5ddd7fae = L.circleMarker(
+                [44.691542, 8.025636],
+                {"bubblingMouseEvents": true, "color": "#8B6914", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFD700", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+        var popup_c92912580949cfa108f2aa6565581f81 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_5b08266e5861393d3b4e278cdadf58e9 = $(`<div id="html_5b08266e5861393d3b4e278cdadf58e9" style="width: 100.0%; height: 100.0%;"><b>Alba</b><br>Fuente: Wikidata<br>Lat: 44.6915 | Lon: 8.0256</div>`)[0];
+                popup_c92912580949cfa108f2aa6565581f81.setContent(html_5b08266e5861393d3b4e278cdadf58e9);
+            
+        
+
+        circle_marker_57d16a4eabb73b18dcafd05a5ddd7fae.bindPopup(popup_c92912580949cfa108f2aa6565581f81)
+        ;
+
+        
+    
+    
+            circle_marker_57d16a4eabb73b18dcafd05a5ddd7fae.bindTooltip(
+                `<div>
+                     <b>Alba</b><br>Fuente: Wikidata<br><b>⭐ Pivote</b>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_e77790e4650c253024501114ebabdf53 = L.marker(
+                [44.691542, 8.025636],
+                {
+}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+            var div_icon_a1999b52873e6a2a96875569b8238cab = L.divIcon({
+  "html": "\n            \u003cdiv style=\"font-family:serif; font-size:11pt; color:#5a3e00;\n                        font-weight:bold; text-shadow:1px 1px 3px white;\n                        white-space:nowrap;\"\u003e\n                \u2605 Alba\n            \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_e77790e4650c253024501114ebabdf53.setIcon(div_icon_a1999b52873e6a2a96875569b8238cab);
+            
+    
+            var circle_marker_910408940ca31d4416c5b521463dc660 = L.circleMarker(
+                [41.74691, 12.65026],
+                {"bubblingMouseEvents": true, "color": "#1a4f8a", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a6fc4", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+        var popup_39b588099e6a555fc922e8473dc2f47a = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_88ecd1cd926fd149b0789c9e59a80b66 = $(`<div id="html_88ecd1cd926fd149b0789c9e59a80b66" style="width: 100.0%; height: 100.0%;"><b>Alba Longa</b><br>Fuente: Wikidata<br>Lat: 41.7469 | Lon: 12.6503</div>`)[0];
+                popup_39b588099e6a555fc922e8473dc2f47a.setContent(html_88ecd1cd926fd149b0789c9e59a80b66);
+            
+        
+
+        circle_marker_910408940ca31d4416c5b521463dc660.bindPopup(popup_39b588099e6a555fc922e8473dc2f47a)
+        ;
+
+        
+    
+    
+            circle_marker_910408940ca31d4416c5b521463dc660.bindTooltip(
+                `<div>
+                     <b>Alba Longa</b><br>Fuente: Wikidata
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_cb258dd3cde5094f4d78a417e2473048 = L.marker(
+                [41.74691, 12.65026],
+                {
+}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+            var div_icon_8b57a54007daa6eec0f04f122a5bfd0b = L.divIcon({
+  "html": "\n            \u003cdiv style=\"font-family:serif; font-size:11pt; color:#0d2b52;\n                        font-weight:bold; text-shadow:1px 1px 3px white;\n                        white-space:nowrap;\"\u003e\n                Alba Longa\n            \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_cb258dd3cde5094f4d78a417e2473048.setIcon(div_icon_8b57a54007daa6eec0f04f122a5bfd0b);
+            
+    
+            var circle_marker_1144a3119f7bf48df0d354a401d062a7 = L.circleMarker(
+                [31.1975, 29.8925],
+                {"bubblingMouseEvents": true, "color": "#1a4f8a", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a6fc4", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+        var popup_d0d609c903faf0f521dfbda8ee6f4f50 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_b05ebb7b25c307b8eac24e8c73e01e1e = $(`<div id="html_b05ebb7b25c307b8eac24e8c73e01e1e" style="width: 100.0%; height: 100.0%;"><b>Alejandría</b><br>Fuente: Wikidata<br>Lat: 31.1975 | Lon: 29.8925</div>`)[0];
+                popup_d0d609c903faf0f521dfbda8ee6f4f50.setContent(html_b05ebb7b25c307b8eac24e8c73e01e1e);
+            
+        
+
+        circle_marker_1144a3119f7bf48df0d354a401d062a7.bindPopup(popup_d0d609c903faf0f521dfbda8ee6f4f50)
+        ;
+
+        
+    
+    
+            circle_marker_1144a3119f7bf48df0d354a401d062a7.bindTooltip(
+                `<div>
+                     <b>Alejandría</b><br>Fuente: Wikidata
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_c84ca7c9c3fe0c44d2c1b22e41e7cf05 = L.marker(
+                [31.1975, 29.8925],
+                {
+}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+            var div_icon_a73ff09d5c5e3f7b1e3994c302d9984b = L.divIcon({
+  "html": "\n            \u003cdiv style=\"font-family:serif; font-size:11pt; color:#0d2b52;\n                        font-weight:bold; text-shadow:1px 1px 3px white;\n                        white-space:nowrap;\"\u003e\n                Alejandr\u00eda\n            \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_c84ca7c9c3fe0c44d2c1b22e41e7cf05.setIcon(div_icon_a73ff09d5c5e3f7b1e3994c302d9984b);
+            
+    
+            var circle_marker_07dd1fb672217a1f64b8c42f32a6a94b = L.circleMarker(
+                [43.463055555556, 11.878055555556],
+                {"bubblingMouseEvents": true, "color": "#1a4f8a", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a6fc4", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+        var popup_af674099606e80e2ccdd653552c88ab0 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_8a32ad6058959cac13af887ff26c31c9 = $(`<div id="html_8a32ad6058959cac13af887ff26c31c9" style="width: 100.0%; height: 100.0%;"><b>Arezzo</b><br>Fuente: Wikidata<br>Lat: 43.4631 | Lon: 11.8781</div>`)[0];
+                popup_af674099606e80e2ccdd653552c88ab0.setContent(html_8a32ad6058959cac13af887ff26c31c9);
+            
+        
+
+        circle_marker_07dd1fb672217a1f64b8c42f32a6a94b.bindPopup(popup_af674099606e80e2ccdd653552c88ab0)
+        ;
+
+        
+    
+    
+            circle_marker_07dd1fb672217a1f64b8c42f32a6a94b.bindTooltip(
+                `<div>
+                     <b>Arezzo</b><br>Fuente: Wikidata
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_224171361dbcf0b88d6bb5ca2be16013 = L.marker(
+                [43.463055555556, 11.878055555556],
+                {
+}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+            var div_icon_8954289fe25d4910616756fe8321bc44 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"font-family:serif; font-size:11pt; color:#0d2b52;\n                        font-weight:bold; text-shadow:1px 1px 3px white;\n                        white-space:nowrap;\"\u003e\n                Arezzo\n            \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_224171361dbcf0b88d6bb5ca2be16013.setIcon(div_icon_8954289fe25d4910616756fe8321bc44);
+            
+    
+            var circle_marker_2fa7720d44199c51fcb874579234aa4c = L.circleMarker(
+                [41.716666666667, 12.666666666667],
+                {"bubblingMouseEvents": true, "color": "#1a4f8a", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a6fc4", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+        var popup_e18fd04d55118b70372eca4a326c4377 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_76e1e9908abb270b6899ec61c1c6d90e = $(`<div id="html_76e1e9908abb270b6899ec61c1c6d90e" style="width: 100.0%; height: 100.0%;"><b>Ariccia</b><br>Fuente: Wikidata<br>Lat: 41.7167 | Lon: 12.6667</div>`)[0];
+                popup_e18fd04d55118b70372eca4a326c4377.setContent(html_76e1e9908abb270b6899ec61c1c6d90e);
+            
+        
+
+        circle_marker_2fa7720d44199c51fcb874579234aa4c.bindPopup(popup_e18fd04d55118b70372eca4a326c4377)
+        ;
+
+        
+    
+    
+            circle_marker_2fa7720d44199c51fcb874579234aa4c.bindTooltip(
+                `<div>
+                     <b>Ariccia</b><br>Fuente: Wikidata
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_2f7f1143c3614e602468d9b34460281d = L.marker(
+                [41.716666666667, 12.666666666667],
+                {
+}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+            var div_icon_3c526f16bae6bf810bee73fb2c96d94e = L.divIcon({
+  "html": "\n            \u003cdiv style=\"font-family:serif; font-size:11pt; color:#0d2b52;\n                        font-weight:bold; text-shadow:1px 1px 3px white;\n                        white-space:nowrap;\"\u003e\n                Ariccia\n            \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_2f7f1143c3614e602468d9b34460281d.setIcon(div_icon_3c526f16bae6bf810bee73fb2c96d94e);
+            
+    
+            var circle_marker_dc871aa6cd53e0c67ef2e745e08432b5 = L.circleMarker(
+                [41.04388889, 14.3625],
+                {"bubblingMouseEvents": true, "color": "#1a4f8a", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a6fc4", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+        var popup_064aae6dddd8b40c76547876aed48097 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_5903478a9d7f820fc2fdba8310e2296c = $(`<div id="html_5903478a9d7f820fc2fdba8310e2296c" style="width: 100.0%; height: 100.0%;"><b>Calacia</b><br>Fuente: Wikidata<br>Lat: 41.0439 | Lon: 14.3625</div>`)[0];
+                popup_064aae6dddd8b40c76547876aed48097.setContent(html_5903478a9d7f820fc2fdba8310e2296c);
+            
+        
+
+        circle_marker_dc871aa6cd53e0c67ef2e745e08432b5.bindPopup(popup_064aae6dddd8b40c76547876aed48097)
+        ;
+
+        
+    
+    
+            circle_marker_dc871aa6cd53e0c67ef2e745e08432b5.bindTooltip(
+                `<div>
+                     <b>Calacia</b><br>Fuente: Wikidata
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_f079fcab068bcc59655f843bd106ee5b = L.marker(
+                [41.04388889, 14.3625],
+                {
+}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+            var div_icon_7b66f7b8939129ac13fe6aea5a925655 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"font-family:serif; font-size:11pt; color:#0d2b52;\n                        font-weight:bold; text-shadow:1px 1px 3px white;\n                        white-space:nowrap;\"\u003e\n                Calacia\n            \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_f079fcab068bcc59655f843bd106ee5b.setIcon(div_icon_7b66f7b8939129ac13fe6aea5a925655);
+            
+    
+            var circle_marker_3350e2eba645d73580197d90725fb91a = L.circleMarker(
+                [38.4625, 23.595],
+                {"bubblingMouseEvents": true, "color": "#1a4f8a", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a6fc4", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+        var popup_84a95374c6cb3ea5a224831188c114af = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_5c40aeab37f82b64cd480c50ecfc8bd0 = $(`<div id="html_5c40aeab37f82b64cd480c50ecfc8bd0" style="width: 100.0%; height: 100.0%;"><b>Calcis</b><br>Fuente: Wikidata<br>Lat: 38.4625 | Lon: 23.5950</div>`)[0];
+                popup_84a95374c6cb3ea5a224831188c114af.setContent(html_5c40aeab37f82b64cd480c50ecfc8bd0);
+            
+        
+
+        circle_marker_3350e2eba645d73580197d90725fb91a.bindPopup(popup_84a95374c6cb3ea5a224831188c114af)
+        ;
+
+        
+    
+    
+            circle_marker_3350e2eba645d73580197d90725fb91a.bindTooltip(
+                `<div>
+                     <b>Calcis</b><br>Fuente: Wikidata
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_fb2eca59eb1d9d771fe436662c1c9295 = L.marker(
+                [38.4625, 23.595],
+                {
+}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+            var div_icon_51dffafc7e79ae0793eaf2e8589408eb = L.divIcon({
+  "html": "\n            \u003cdiv style=\"font-family:serif; font-size:11pt; color:#0d2b52;\n                        font-weight:bold; text-shadow:1px 1px 3px white;\n                        white-space:nowrap;\"\u003e\n                Calcis\n            \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_fb2eca59eb1d9d771fe436662c1c9295.setIcon(div_icon_51dffafc7e79ae0793eaf2e8589408eb);
+            
+    
+            var circle_marker_86d4bf8289d05027413c4429007c1181 = L.circleMarker(
+                [41.218888888889, 14.129166666667],
+                {"bubblingMouseEvents": true, "color": "#1a4f8a", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a6fc4", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+        var popup_41420517117cdc6112ab26449fc49760 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_3993f1c1d1cfa79fb17eddd9ab482d08 = $(`<div id="html_3993f1c1d1cfa79fb17eddd9ab482d08" style="width: 100.0%; height: 100.0%;"><b>Calvi Risorta</b><br>Fuente: Wikidata<br>Lat: 41.2189 | Lon: 14.1292</div>`)[0];
+                popup_41420517117cdc6112ab26449fc49760.setContent(html_3993f1c1d1cfa79fb17eddd9ab482d08);
+            
+        
+
+        circle_marker_86d4bf8289d05027413c4429007c1181.bindPopup(popup_41420517117cdc6112ab26449fc49760)
+        ;
+
+        
+    
+    
+            circle_marker_86d4bf8289d05027413c4429007c1181.bindTooltip(
+                `<div>
+                     <b>Calvi Risorta</b><br>Fuente: Wikidata
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_b88e6d7efa762c36f1d1c236676119bb = L.marker(
+                [41.218888888889, 14.129166666667],
+                {
+}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+            var div_icon_f22294072a3b42e8bbcd6bc6aed01fc5 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"font-family:serif; font-size:11pt; color:#0d2b52;\n                        font-weight:bold; text-shadow:1px 1px 3px white;\n                        white-space:nowrap;\"\u003e\n                Calvi Risorta\n            \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_b88e6d7efa762c36f1d1c236676119bb.setIcon(div_icon_f22294072a3b42e8bbcd6bc6aed01fc5);
+            
+    
+            var circle_marker_37a5df9f9c7e630926140c68cc363152 = L.circleMarker(
+                [40.75, 14.95],
+                {"bubblingMouseEvents": true, "color": "#8B6914", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFD700", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+        var popup_2c0c01c31cbdea382b9b6005befd1f32 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_178ab69769084f8c4cb2f1533b452694 = $(`<div id="html_178ab69769084f8c4cb2f1533b452694" style="width: 100.0%; height: 100.0%;"><b>Campania</b><br>Fuente: Wikidata<br>Lat: 40.7500 | Lon: 14.9500</div>`)[0];
+                popup_2c0c01c31cbdea382b9b6005befd1f32.setContent(html_178ab69769084f8c4cb2f1533b452694);
+            
+        
+
+        circle_marker_37a5df9f9c7e630926140c68cc363152.bindPopup(popup_2c0c01c31cbdea382b9b6005befd1f32)
+        ;
+
+        
+    
+    
+            circle_marker_37a5df9f9c7e630926140c68cc363152.bindTooltip(
+                `<div>
+                     <b>Campania</b><br>Fuente: Wikidata<br><b>⭐ Pivote</b>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_41c66a2d7dd360a5d61a431ab90309a7 = L.marker(
+                [40.75, 14.95],
+                {
+}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+            var div_icon_53249f5af8fc4a83e5aa9b682ff61da6 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"font-family:serif; font-size:11pt; color:#5a3e00;\n                        font-weight:bold; text-shadow:1px 1px 3px white;\n                        white-space:nowrap;\"\u003e\n                \u2605 Campania\n            \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_41c66a2d7dd360a5d61a431ab90309a7.setIcon(div_icon_53249f5af8fc4a83e5aa9b682ff61da6);
+            
+    
+            var circle_marker_c03f774844c254d7233e81bd29ae2bd6 = L.circleMarker(
+                [41.7909, 12.7621],
+                {"bubblingMouseEvents": true, "color": "#1a4f8a", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a6fc4", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+        var popup_23cb836f2a5d1aba3dd252d2deb9f0e5 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_a0ddc5735c37ccfd45657b06ed73fa48 = $(`<div id="html_a0ddc5735c37ccfd45657b06ed73fa48" style="width: 100.0%; height: 100.0%;"><b>Corioli</b><br>Fuente: Wikidata<br>Lat: 41.7909 | Lon: 12.7621</div>`)[0];
+                popup_23cb836f2a5d1aba3dd252d2deb9f0e5.setContent(html_a0ddc5735c37ccfd45657b06ed73fa48);
+            
+        
+
+        circle_marker_c03f774844c254d7233e81bd29ae2bd6.bindPopup(popup_23cb836f2a5d1aba3dd252d2deb9f0e5)
+        ;
+
+        
+    
+    
+            circle_marker_c03f774844c254d7233e81bd29ae2bd6.bindTooltip(
+                `<div>
+                     <b>Corioli</b><br>Fuente: Wikidata
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_e5a3146a98ff16b0625150def5466204 = L.marker(
+                [41.7909, 12.7621],
+                {
+}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+            var div_icon_4dc8d599745d37d2c779695161d43fa3 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"font-family:serif; font-size:11pt; color:#0d2b52;\n                        font-weight:bold; text-shadow:1px 1px 3px white;\n                        white-space:nowrap;\"\u003e\n                Corioli\n            \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_e5a3146a98ff16b0625150def5466204.setIcon(div_icon_4dc8d599745d37d2c779695161d43fa3);
+            
+    
+            var circle_marker_fd19520fb6d555a9718c6a5ab98cdbd6 = L.circleMarker(
+                [43.275555555556, 11.988055555556],
+                {"bubblingMouseEvents": true, "color": "#1a4f8a", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a6fc4", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+        var popup_b947f17cb333cd8a0949ccb62c3aecc3 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_edb9980b11e430ac09a5542ba4b86c5a = $(`<div id="html_edb9980b11e430ac09a5542ba4b86c5a" style="width: 100.0%; height: 100.0%;"><b>Cortona</b><br>Fuente: Wikidata<br>Lat: 43.2756 | Lon: 11.9881</div>`)[0];
+                popup_b947f17cb333cd8a0949ccb62c3aecc3.setContent(html_edb9980b11e430ac09a5542ba4b86c5a);
+            
+        
+
+        circle_marker_fd19520fb6d555a9718c6a5ab98cdbd6.bindPopup(popup_b947f17cb333cd8a0949ccb62c3aecc3)
+        ;
+
+        
+    
+    
+            circle_marker_fd19520fb6d555a9718c6a5ab98cdbd6.bindTooltip(
+                `<div>
+                     <b>Cortona</b><br>Fuente: Wikidata
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_93f2636edd792206572d5d69d1777165 = L.marker(
+                [43.275555555556, 11.988055555556],
+                {
+}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+            var div_icon_9780ced3c34672e1ca93dd625f97be12 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"font-family:serif; font-size:11pt; color:#0d2b52;\n                        font-weight:bold; text-shadow:1px 1px 3px white;\n                        white-space:nowrap;\"\u003e\n                Cortona\n            \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_93f2636edd792206572d5d69d1777165.setIcon(div_icon_9780ced3c34672e1ca93dd625f97be12);
+            
+    
+            var circle_marker_e9221239479454602d66dfebaf439264 = L.circleMarker(
+                [42.012775, 12.548217],
+                {"bubblingMouseEvents": true, "color": "#1a4f8a", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a6fc4", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+        var popup_0672b776655309b7dc08276cde2e116a = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_431aa7a54c5b90ac32a31993a3e1de29 = $(`<div id="html_431aa7a54c5b90ac32a31993a3e1de29" style="width: 100.0%; height: 100.0%;"><b>Crustumeria</b><br>Fuente: Wikidata<br>Lat: 42.0128 | Lon: 12.5482</div>`)[0];
+                popup_0672b776655309b7dc08276cde2e116a.setContent(html_431aa7a54c5b90ac32a31993a3e1de29);
+            
+        
+
+        circle_marker_e9221239479454602d66dfebaf439264.bindPopup(popup_0672b776655309b7dc08276cde2e116a)
+        ;
+
+        
+    
+    
+            circle_marker_e9221239479454602d66dfebaf439264.bindTooltip(
+                `<div>
+                     <b>Crustumeria</b><br>Fuente: Wikidata
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_ecc6bb2e2081f91ed39a6a80f369fe4a = L.marker(
+                [42.012775, 12.548217],
+                {
+}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+            var div_icon_065f90f2466809665cc7f884db244095 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"font-family:serif; font-size:11pt; color:#0d2b52;\n                        font-weight:bold; text-shadow:1px 1px 3px white;\n                        white-space:nowrap;\"\u003e\n                Crustumeria\n            \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_ecc6bb2e2081f91ed39a6a80f369fe4a.setIcon(div_icon_065f90f2466809665cc7f884db244095);
+            
+    
+            var circle_marker_4582fe07080a2ffc94cb5063c2d9999d = L.circleMarker(
+                [40.848611, 14.053611],
+                {"bubblingMouseEvents": true, "color": "#1a4f8a", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a6fc4", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+        var popup_0fcd9f4904a6bc7fb68cd0cdad572fb5 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_8affac5ff5f5e1f65f3a624ad65c6692 = $(`<div id="html_8affac5ff5f5e1f65f3a624ad65c6692" style="width: 100.0%; height: 100.0%;"><b>Cumas</b><br>Fuente: Wikidata<br>Lat: 40.8486 | Lon: 14.0536</div>`)[0];
+                popup_0fcd9f4904a6bc7fb68cd0cdad572fb5.setContent(html_8affac5ff5f5e1f65f3a624ad65c6692);
+            
+        
+
+        circle_marker_4582fe07080a2ffc94cb5063c2d9999d.bindPopup(popup_0fcd9f4904a6bc7fb68cd0cdad572fb5)
+        ;
+
+        
+    
+    
+            circle_marker_4582fe07080a2ffc94cb5063c2d9999d.bindTooltip(
+                `<div>
+                     <b>Cumas</b><br>Fuente: Wikidata
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_4e07a2403fa0d58cadba1ced07461233 = L.marker(
+                [40.848611, 14.053611],
+                {
+}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+            var div_icon_cf472eb46118785dbb92a8bd44323396 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"font-family:serif; font-size:11pt; color:#0d2b52;\n                        font-weight:bold; text-shadow:1px 1px 3px white;\n                        white-space:nowrap;\"\u003e\n                Cumas\n            \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_4e07a2403fa0d58cadba1ced07461233.setIcon(div_icon_cf472eb46118785dbb92a8bd44323396);
+            
+    
+            var circle_marker_37d1577460f03b4ebc26c99a00b7e129 = L.circleMarker(
+                [41.88688888888889, 12.715833333333334],
+                {"bubblingMouseEvents": true, "color": "#1a4f8a", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a6fc4", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+        var popup_548f35aa007fd081bfb1e71db78b6a36 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_c3ac16960e3dcfe5951e4b70e36e276a = $(`<div id="html_c3ac16960e3dcfe5951e4b70e36e276a" style="width: 100.0%; height: 100.0%;"><b>Gabii</b><br>Fuente: Wikidata<br>Lat: 41.8869 | Lon: 12.7158</div>`)[0];
+                popup_548f35aa007fd081bfb1e71db78b6a36.setContent(html_c3ac16960e3dcfe5951e4b70e36e276a);
+            
+        
+
+        circle_marker_37d1577460f03b4ebc26c99a00b7e129.bindPopup(popup_548f35aa007fd081bfb1e71db78b6a36)
+        ;
+
+        
+    
+    
+            circle_marker_37d1577460f03b4ebc26c99a00b7e129.bindTooltip(
+                `<div>
+                     <b>Gabii</b><br>Fuente: Wikidata
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_7ceb68b4b732561a294237d1fa35eeb2 = L.marker(
+                [41.88688888888889, 12.715833333333334],
+                {
+}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+            var div_icon_3bf6430ad8a69fd40ccc8dd8dfba7439 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"font-family:serif; font-size:11pt; color:#0d2b52;\n                        font-weight:bold; text-shadow:1px 1px 3px white;\n                        white-space:nowrap;\"\u003e\n                Gabii\n            \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_7ceb68b4b732561a294237d1fa35eeb2.setIcon(div_icon_3bf6430ad8a69fd40ccc8dd8dfba7439);
+            
+    
+            var circle_marker_44004e1b222ad4edb6670704741543f6 = L.circleMarker(
+                [43.296666666667, 5.3763888888889],
+                {"bubblingMouseEvents": true, "color": "#1a4f8a", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a6fc4", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+        var popup_b35be55bcc9922ed390f6df699bf1c0f = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_56a199c5f2e5024eddea3f80657f79a7 = $(`<div id="html_56a199c5f2e5024eddea3f80657f79a7" style="width: 100.0%; height: 100.0%;"><b>Massilia</b><br>Fuente: Wikidata<br>Lat: 43.2967 | Lon: 5.3764</div>`)[0];
+                popup_b35be55bcc9922ed390f6df699bf1c0f.setContent(html_56a199c5f2e5024eddea3f80657f79a7);
+            
+        
+
+        circle_marker_44004e1b222ad4edb6670704741543f6.bindPopup(popup_b35be55bcc9922ed390f6df699bf1c0f)
+        ;
+
+        
+    
+    
+            circle_marker_44004e1b222ad4edb6670704741543f6.bindTooltip(
+                `<div>
+                     <b>Massilia</b><br>Fuente: Wikidata
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_f9c6c8b53c865d61b55f5d22fca71a34 = L.marker(
+                [43.296666666667, 5.3763888888889],
+                {
+}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+            var div_icon_aa8d8229d537d255249be62be0e71028 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"font-family:serif; font-size:11pt; color:#0d2b52;\n                        font-weight:bold; text-shadow:1px 1px 3px white;\n                        white-space:nowrap;\"\u003e\n                Massilia\n            \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_f9c6c8b53c865d61b55f5d22fca71a34.setIcon(div_icon_aa8d8229d537d255249be62be0e71028);
+            
+    
+            var circle_marker_37d7a943990b9bcee1a6d4754a0ab8d4 = L.circleMarker(
+                [40.37139, 16.81122],
+                {"bubblingMouseEvents": true, "color": "#1a4f8a", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a6fc4", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+        var popup_21b7b267b9e315d417301f99c02dd28f = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_196f0696e662bfa63e6d65d182749a11 = $(`<div id="html_196f0696e662bfa63e6d65d182749a11" style="width: 100.0%; height: 100.0%;"><b>Metaponto</b><br>Fuente: Wikidata<br>Lat: 40.3714 | Lon: 16.8112</div>`)[0];
+                popup_21b7b267b9e315d417301f99c02dd28f.setContent(html_196f0696e662bfa63e6d65d182749a11);
+            
+        
+
+        circle_marker_37d7a943990b9bcee1a6d4754a0ab8d4.bindPopup(popup_21b7b267b9e315d417301f99c02dd28f)
+        ;
+
+        
+    
+    
+            circle_marker_37d7a943990b9bcee1a6d4754a0ab8d4.bindTooltip(
+                `<div>
+                     <b>Metaponto</b><br>Fuente: Wikidata
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_d73f7bc3103de2afa41acd40a20f5b98 = L.marker(
+                [40.37139, 16.81122],
+                {
+}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+            var div_icon_249d6d487cf2dcaf830ce902198fda3c = L.divIcon({
+  "html": "\n            \u003cdiv style=\"font-family:serif; font-size:11pt; color:#0d2b52;\n                        font-weight:bold; text-shadow:1px 1px 3px white;\n                        white-space:nowrap;\"\u003e\n                Metaponto\n            \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_d73f7bc3103de2afa41acd40a20f5b98.setIcon(div_icon_249d6d487cf2dcaf830ce902198fda3c);
+            
+    
+            var circle_marker_4019518e2239f047df4d12ce214190ff = L.circleMarker(
+                [37.4545887, 22.3331865],
+                {"bubblingMouseEvents": true, "color": "#1a4f8a", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a6fc4", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+        var popup_4fc6c356b47f1aaf1c9969c3e6a6a506 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_0528d06df06e4b0731b2421ab7559bc2 = $(`<div id="html_0528d06df06e4b0731b2421ab7559bc2" style="width: 100.0%; height: 100.0%;"><b>Pallantium</b><br>Fuente: Wikidata<br>Lat: 37.4546 | Lon: 22.3332</div>`)[0];
+                popup_4fc6c356b47f1aaf1c9969c3e6a6a506.setContent(html_0528d06df06e4b0731b2421ab7559bc2);
+            
+        
+
+        circle_marker_4019518e2239f047df4d12ce214190ff.bindPopup(popup_4fc6c356b47f1aaf1c9969c3e6a6a506)
+        ;
+
+        
+    
+    
+            circle_marker_4019518e2239f047df4d12ce214190ff.bindTooltip(
+                `<div>
+                     <b>Pallantium</b><br>Fuente: Wikidata
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_5f9e430f79c05f9cfac6041ac65689d3 = L.marker(
+                [37.4545887, 22.3331865],
+                {
+}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+            var div_icon_c73353bca7165f0759f78a9a02de1df1 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"font-family:serif; font-size:11pt; color:#0d2b52;\n                        font-weight:bold; text-shadow:1px 1px 3px white;\n                        white-space:nowrap;\"\u003e\n                Pallantium\n            \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_5f9e430f79c05f9cfac6041ac65689d3.setIcon(div_icon_c73353bca7165f0759f78a9a02de1df1);
+            
+    
+            var circle_marker_1fcda7933dbb6b9ea851df828601d0ad = L.circleMarker(
+                [42.464277777778, 14.214188888889],
+                {"bubblingMouseEvents": true, "color": "#1a4f8a", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a6fc4", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+        var popup_701cf74587e963790a36cb411097c68b = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_b1f1fcb34b9cac7cb77f69435096e530 = $(`<div id="html_b1f1fcb34b9cac7cb77f69435096e530" style="width: 100.0%; height: 100.0%;"><b>Pescara</b><br>Fuente: Wikidata<br>Lat: 42.4643 | Lon: 14.2142</div>`)[0];
+                popup_701cf74587e963790a36cb411097c68b.setContent(html_b1f1fcb34b9cac7cb77f69435096e530);
+            
+        
+
+        circle_marker_1fcda7933dbb6b9ea851df828601d0ad.bindPopup(popup_701cf74587e963790a36cb411097c68b)
+        ;
+
+        
+    
+    
+            circle_marker_1fcda7933dbb6b9ea851df828601d0ad.bindTooltip(
+                `<div>
+                     <b>Pescara</b><br>Fuente: Wikidata
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_6e5aaa13303ddc92a8df7572c8694269 = L.marker(
+                [42.464277777778, 14.214188888889],
+                {
+}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+            var div_icon_8e986a1fdac1af4ec1ae0e5088dcbca8 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"font-family:serif; font-size:11pt; color:#0d2b52;\n                        font-weight:bold; text-shadow:1px 1px 3px white;\n                        white-space:nowrap;\"\u003e\n                Pescara\n            \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_6e5aaa13303ddc92a8df7572c8694269.setIcon(div_icon_8e986a1fdac1af4ec1ae0e5088dcbca8);
+            
+    
+            var circle_marker_8c5060688a9e19b5d491ca90fcde0086 = L.circleMarker(
+                [41.75, 14.383333333333],
+                {"bubblingMouseEvents": true, "color": "#1a4f8a", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a6fc4", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+        var popup_05f55b05b610fd0c17b411e57c75088b = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_3529b77508e25c5833ebf82dce9e50db = $(`<div id="html_3529b77508e25c5833ebf82dce9e50db" style="width: 100.0%; height: 100.0%;"><b>Pietrabbondante</b><br>Fuente: Wikidata<br>Lat: 41.7500 | Lon: 14.3833</div>`)[0];
+                popup_05f55b05b610fd0c17b411e57c75088b.setContent(html_3529b77508e25c5833ebf82dce9e50db);
+            
+        
+
+        circle_marker_8c5060688a9e19b5d491ca90fcde0086.bindPopup(popup_05f55b05b610fd0c17b411e57c75088b)
+        ;
+
+        
+    
+    
+            circle_marker_8c5060688a9e19b5d491ca90fcde0086.bindTooltip(
+                `<div>
+                     <b>Pietrabbondante</b><br>Fuente: Wikidata
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_25b52aacf33e9ef7c57b45362b2ceae4 = L.marker(
+                [41.75, 14.383333333333],
+                {
+}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+            var div_icon_541715322622ceb9bbc8894b21f41a85 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"font-family:serif; font-size:11pt; color:#0d2b52;\n                        font-weight:bold; text-shadow:1px 1px 3px white;\n                        white-space:nowrap;\"\u003e\n                Pietrabbondante\n            \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_25b52aacf33e9ef7c57b45362b2ceae4.setIcon(div_icon_541715322622ceb9bbc8894b21f41a85);
+            
+    
+            var circle_marker_0599a862338be29eb5586e42d9b0ca71 = L.circleMarker(
+                [41.5, 13.066666666667],
+                {"bubblingMouseEvents": true, "color": "#1a4f8a", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a6fc4", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+        var popup_14843112391cd44fdd5668536fa87fae = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_77e6acb0a6003abf3adcd35000efd40c = $(`<div id="html_77e6acb0a6003abf3adcd35000efd40c" style="width: 100.0%; height: 100.0%;"><b>Sezze</b><br>Fuente: Wikidata<br>Lat: 41.5000 | Lon: 13.0667</div>`)[0];
+                popup_14843112391cd44fdd5668536fa87fae.setContent(html_77e6acb0a6003abf3adcd35000efd40c);
+            
+        
+
+        circle_marker_0599a862338be29eb5586e42d9b0ca71.bindPopup(popup_14843112391cd44fdd5668536fa87fae)
+        ;
+
+        
+    
+    
+            circle_marker_0599a862338be29eb5586e42d9b0ca71.bindTooltip(
+                `<div>
+                     <b>Sezze</b><br>Fuente: Wikidata
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_da616eae4d846d5ae7189cef266a8c20 = L.marker(
+                [41.5, 13.066666666667],
+                {
+}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+            var div_icon_b1dce64777429112850d2e46859a6566 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"font-family:serif; font-size:11pt; color:#0d2b52;\n                        font-weight:bold; text-shadow:1px 1px 3px white;\n                        white-space:nowrap;\"\u003e\n                Sezze\n            \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_da616eae4d846d5ae7189cef266a8c20.setIcon(div_icon_b1dce64777429112850d2e46859a6566);
+            
+    
+            var circle_marker_a9cf9627092c7ee92e026e685ee68055 = L.circleMarker(
+                [37.6, 14.016666666666667],
+                {"bubblingMouseEvents": true, "color": "#1a4f8a", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a6fc4", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+        var popup_1bbcf12c508d225044741c5412bae26a = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_0950ac5f19e051684581ea1ddc062b1f = $(`<div id="html_0950ac5f19e051684581ea1ddc062b1f" style="width: 100.0%; height: 100.0%;"><b>Sicilia</b><br>Fuente: Wikidata<br>Lat: 37.6000 | Lon: 14.0167</div>`)[0];
+                popup_1bbcf12c508d225044741c5412bae26a.setContent(html_0950ac5f19e051684581ea1ddc062b1f);
+            
+        
+
+        circle_marker_a9cf9627092c7ee92e026e685ee68055.bindPopup(popup_1bbcf12c508d225044741c5412bae26a)
+        ;
+
+        
+    
+    
+            circle_marker_a9cf9627092c7ee92e026e685ee68055.bindTooltip(
+                `<div>
+                     <b>Sicilia</b><br>Fuente: Wikidata
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_55030358f07297b4e8fd2848bad01ed7 = L.marker(
+                [37.6, 14.016666666666667],
+                {
+}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+            var div_icon_81a4838bf607db44bb3c9858cdf5d7f8 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"font-family:serif; font-size:11pt; color:#0d2b52;\n                        font-weight:bold; text-shadow:1px 1px 3px white;\n                        white-space:nowrap;\"\u003e\n                Sicilia\n            \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_55030358f07297b4e8fd2848bad01ed7.setIcon(div_icon_81a4838bf607db44bb3c9858cdf5d7f8);
+            
+    
+            var circle_marker_d07bf2314bbf42cb72831d0eadc55eda = L.circleMarker(
+                [41.904444444444444, -1.7241666666666666],
+                {"bubblingMouseEvents": true, "color": "#1a4f8a", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a6fc4", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+        var popup_2a3ebc876d7182aa4d97633e6813deb1 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_c6aae0549d0350a3ba003f70d69cef30 = $(`<div id="html_c6aae0549d0350a3ba003f70d69cef30" style="width: 100.0%; height: 100.0%;"><b>Turias</b><br>Fuente: Wikidata<br>Lat: 41.9044 | Lon: -1.7242</div>`)[0];
+                popup_2a3ebc876d7182aa4d97633e6813deb1.setContent(html_c6aae0549d0350a3ba003f70d69cef30);
+            
+        
+
+        circle_marker_d07bf2314bbf42cb72831d0eadc55eda.bindPopup(popup_2a3ebc876d7182aa4d97633e6813deb1)
+        ;
+
+        
+    
+    
+            circle_marker_d07bf2314bbf42cb72831d0eadc55eda.bindTooltip(
+                `<div>
+                     <b>Turias</b><br>Fuente: Wikidata
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_a740973e90ac804ae8f08d72b243017e = L.marker(
+                [41.904444444444444, -1.7241666666666666],
+                {
+}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+            var div_icon_f1fa709729ee3eb42c7d026c761e5e14 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"font-family:serif; font-size:11pt; color:#0d2b52;\n                        font-weight:bold; text-shadow:1px 1px 3px white;\n                        white-space:nowrap;\"\u003e\n                Turias\n            \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_a740973e90ac804ae8f08d72b243017e.setIcon(div_icon_f1fa709729ee3eb42c7d026c761e5e14);
+            
+    
+            var circle_marker_25cc92d350b73c3d16d80f205dd48fba = L.circleMarker(
+                [41.798333333333, 12.710833333333],
+                {"bubblingMouseEvents": true, "color": "#8B6914", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFD700", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+        var popup_1e0726f7fa00caaf8708f1a3a1358090 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_e28cdaf9a9cd7f82ee8016637be31ae6 = $(`<div id="html_e28cdaf9a9cd7f82ee8016637be31ae6" style="width: 100.0%; height: 100.0%;"><b>Tusculo</b><br>Fuente: Wikidata<br>Lat: 41.7983 | Lon: 12.7108</div>`)[0];
+                popup_1e0726f7fa00caaf8708f1a3a1358090.setContent(html_e28cdaf9a9cd7f82ee8016637be31ae6);
+            
+        
+
+        circle_marker_25cc92d350b73c3d16d80f205dd48fba.bindPopup(popup_1e0726f7fa00caaf8708f1a3a1358090)
+        ;
+
+        
+    
+    
+            circle_marker_25cc92d350b73c3d16d80f205dd48fba.bindTooltip(
+                `<div>
+                     <b>Tusculo</b><br>Fuente: Wikidata<br><b>⭐ Pivote</b>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_8fcdd0c27c1fa08bd5054f0c45396d0f = L.marker(
+                [41.798333333333, 12.710833333333],
+                {
+}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+            var div_icon_21667c0517c35c3cfaa8ce110c8790b3 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"font-family:serif; font-size:11pt; color:#5a3e00;\n                        font-weight:bold; text-shadow:1px 1px 3px white;\n                        white-space:nowrap;\"\u003e\n                \u2605 Tusculo\n            \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_8fcdd0c27c1fa08bd5054f0c45396d0f.setIcon(div_icon_21667c0517c35c3cfaa8ce110c8790b3);
+            
+    
+            var circle_marker_04d4fd4fa8f884f10f76f9d987229faa = L.circleMarker(
+                [43.786916666667, 12.077666666667],
+                {"bubblingMouseEvents": true, "color": "#8B6914", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFD700", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+        var popup_71a05576b70ee8fb677f6832cce9e346 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_afe0ee4add850d121ca9034a96b80b82 = $(`<div id="html_afe0ee4add850d121ca9034a96b80b82" style="width: 100.0%; height: 100.0%;"><b>Tíber</b><br>Fuente: Wikidata<br>Lat: 43.7869 | Lon: 12.0777</div>`)[0];
+                popup_71a05576b70ee8fb677f6832cce9e346.setContent(html_afe0ee4add850d121ca9034a96b80b82);
+            
+        
+
+        circle_marker_04d4fd4fa8f884f10f76f9d987229faa.bindPopup(popup_71a05576b70ee8fb677f6832cce9e346)
+        ;
+
+        
+    
+    
+            circle_marker_04d4fd4fa8f884f10f76f9d987229faa.bindTooltip(
+                `<div>
+                     <b>Tíber</b><br>Fuente: Wikidata<br><b>⭐ Pivote</b>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_08a2381a44516f23a8c7f8f1eb013848 = L.marker(
+                [43.786916666667, 12.077666666667],
+                {
+}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+            var div_icon_3370fabedf28cec5e0a8da78f26076c9 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"font-family:serif; font-size:11pt; color:#5a3e00;\n                        font-weight:bold; text-shadow:1px 1px 3px white;\n                        white-space:nowrap;\"\u003e\n                \u2605 T\u00edber\n            \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_08a2381a44516f23a8c7f8f1eb013848.setIcon(div_icon_3370fabedf28cec5e0a8da78f26076c9);
+            
+    
+            var circle_marker_145854d141bb0a27a81ba3ab3a9eaaf8 = L.circleMarker(
+                [41.966666666667, 12.8],
+                {"bubblingMouseEvents": true, "color": "#1a4f8a", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a6fc4", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+        var popup_c3a4c78582f0e99cea86bcf84d7a31bd = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_c93e5f2d7b5470020ec116112806a47c = $(`<div id="html_c93e5f2d7b5470020ec116112806a47c" style="width: 100.0%; height: 100.0%;"><b>Tívoli</b><br>Fuente: Wikidata<br>Lat: 41.9667 | Lon: 12.8000</div>`)[0];
+                popup_c3a4c78582f0e99cea86bcf84d7a31bd.setContent(html_c93e5f2d7b5470020ec116112806a47c);
+            
+        
+
+        circle_marker_145854d141bb0a27a81ba3ab3a9eaaf8.bindPopup(popup_c3a4c78582f0e99cea86bcf84d7a31bd)
+        ;
+
+        
+    
+    
+            circle_marker_145854d141bb0a27a81ba3ab3a9eaaf8.bindTooltip(
+                `<div>
+                     <b>Tívoli</b><br>Fuente: Wikidata
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_3eecc370fbdbc21b841772f2281e4eb2 = L.marker(
+                [41.966666666667, 12.8],
+                {
+}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+            var div_icon_afca4528d50875af8aae8f5663169b37 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"font-family:serif; font-size:11pt; color:#0d2b52;\n                        font-weight:bold; text-shadow:1px 1px 3px white;\n                        white-space:nowrap;\"\u003e\n                T\u00edvoli\n            \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_3eecc370fbdbc21b841772f2281e4eb2.setIcon(div_icon_afca4528d50875af8aae8f5663169b37);
+            
+    
+            var circle_marker_8066a7e2485086056a3c9643033c7c90 = L.circleMarker(
+                [58.9873, 27.7303],
+                {"bubblingMouseEvents": true, "color": "#1a4f8a", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a6fc4", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+        var popup_b4714c594883a7705766523f295cc20a = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_639195bc19504bb734e4ef7694bb8813 = $(`<div id="html_639195bc19504bb734e4ef7694bb8813" style="width: 100.0%; height: 100.0%;"><b>río Nar</b><br>Fuente: Wikidata<br>Lat: 58.9873 | Lon: 27.7303</div>`)[0];
+                popup_b4714c594883a7705766523f295cc20a.setContent(html_639195bc19504bb734e4ef7694bb8813);
+            
+        
+
+        circle_marker_8066a7e2485086056a3c9643033c7c90.bindPopup(popup_b4714c594883a7705766523f295cc20a)
+        ;
+
+        
+    
+    
+            circle_marker_8066a7e2485086056a3c9643033c7c90.bindTooltip(
+                `<div>
+                     <b>río Nar</b><br>Fuente: Wikidata
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_2ce84511221c99a8b30e35506a44f88a = L.marker(
+                [58.9873, 27.7303],
+                {
+}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+            var div_icon_aa6003f8cb3b348db2a065c20164a76e = L.divIcon({
+  "html": "\n            \u003cdiv style=\"font-family:serif; font-size:11pt; color:#0d2b52;\n                        font-weight:bold; text-shadow:1px 1px 3px white;\n                        white-space:nowrap;\"\u003e\n                r\u00edo Nar\n            \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_2ce84511221c99a8b30e35506a44f88a.setIcon(div_icon_aa6003f8cb3b348db2a065c20164a76e);
+            
+    
+            var circle_marker_43a9d3ccc50e4f6fb961a98263a4e22f = L.circleMarker(
+                [41.283333333333, 13.25],
+                {"bubblingMouseEvents": true, "color": "#1a4f8a", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a6fc4", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+        var popup_47fa0a7e10480aeb9a8208fa41ba7750 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_b419bd8fb38e8a4f9f73aa89df1e6c43 = $(`<div id="html_b419bd8fb38e8a4f9f73aa89df1e6c43" style="width: 100.0%; height: 100.0%;"><b>Ánxur</b><br>Fuente: Wikidata<br>Lat: 41.2833 | Lon: 13.2500</div>`)[0];
+                popup_47fa0a7e10480aeb9a8208fa41ba7750.setContent(html_b419bd8fb38e8a4f9f73aa89df1e6c43);
+            
+        
+
+        circle_marker_43a9d3ccc50e4f6fb961a98263a4e22f.bindPopup(popup_47fa0a7e10480aeb9a8208fa41ba7750)
+        ;
+
+        
+    
+    
+            circle_marker_43a9d3ccc50e4f6fb961a98263a4e22f.bindTooltip(
+                `<div>
+                     <b>Ánxur</b><br>Fuente: Wikidata
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_b717594e16bb10bc626615a0009db30b = L.marker(
+                [41.283333333333, 13.25],
+                {
+}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+            var div_icon_964869c49f68a7e6326897b9e1b2bfee = L.divIcon({
+  "html": "\n            \u003cdiv style=\"font-family:serif; font-size:11pt; color:#0d2b52;\n                        font-weight:bold; text-shadow:1px 1px 3px white;\n                        white-space:nowrap;\"\u003e\n                \u00c1nxur\n            \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_b717594e16bb10bc626615a0009db30b.setIcon(div_icon_964869c49f68a7e6326897b9e1b2bfee);
+            
+    
+            var circle_marker_5884d97b0e3862650d601b073df0615a = L.circleMarker(
+                [44.47193936159782, 18.965486265112602],
+                {"bubblingMouseEvents": true, "color": "#a05000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e07b00", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+        var popup_31caf8ef6d2e980a9fe8ee37c8badbd7 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_a90b7504f4a3a60710d29671f8a0ee6f = $(`<div id="html_a90b7504f4a3a60710d29671f8a0ee6f" style="width: 100.0%; height: 100.0%;"><b>Alpes</b><br>Estimado por Z3<br>Lat: 44.4719 | Lon: 18.9655</div>`)[0];
+                popup_31caf8ef6d2e980a9fe8ee37c8badbd7.setContent(html_a90b7504f4a3a60710d29671f8a0ee6f);
+            
+        
+
+        circle_marker_5884d97b0e3862650d601b073df0615a.bindPopup(popup_31caf8ef6d2e980a9fe8ee37c8badbd7)
+        ;
+
+        
+    
+    
+            circle_marker_5884d97b0e3862650d601b073df0615a.bindTooltip(
+                `<div>
+                     <b>Alpes</b><br>Posición estimada (Z3)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_b5be463fedf1ddf71f869d507d31a7ab = L.marker(
+                [44.47193936159782, 18.965486265112602],
+                {
+}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+            var div_icon_2c653b710d82b8b5dd9de199491ac8fa = L.divIcon({
+  "html": "\n            \u003cdiv style=\"font-family:serif; font-size:11pt; color:#6b3300;\n                        font-weight:bold; text-shadow:1px 1px 3px white;\n                        white-space:nowrap;\"\u003e\n                Alpes\n            \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_b5be463fedf1ddf71f869d507d31a7ab.setIcon(div_icon_2c653b710d82b8b5dd9de199491ac8fa);
+            
+    
+            var circle_marker_25147c5a5aeb5b4f9f21b4b522570964 = L.circleMarker(
+                [44.00597404098515, 15.814251929438406],
+                {"bubblingMouseEvents": true, "color": "#a05000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e07b00", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+        var popup_84ad1ab13546787e0eaa115f7aa8ba10 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_c899947d9690fb6adc8a13cdfb63753f = $(`<div id="html_c899947d9690fb6adc8a13cdfb63753f" style="width: 100.0%; height: 100.0%;"><b>Amiterno</b><br>Estimado por Z3<br>Lat: 44.0060 | Lon: 15.8143</div>`)[0];
+                popup_84ad1ab13546787e0eaa115f7aa8ba10.setContent(html_c899947d9690fb6adc8a13cdfb63753f);
+            
+        
+
+        circle_marker_25147c5a5aeb5b4f9f21b4b522570964.bindPopup(popup_84ad1ab13546787e0eaa115f7aa8ba10)
+        ;
+
+        
+    
+    
+            circle_marker_25147c5a5aeb5b4f9f21b4b522570964.bindTooltip(
+                `<div>
+                     <b>Amiterno</b><br>Posición estimada (Z3)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_8dd23c2543245d450ecb64323f6b9754 = L.marker(
+                [44.00597404098515, 15.814251929438406],
+                {
+}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+            var div_icon_48fb82b245807816974e1e072a85356e = L.divIcon({
+  "html": "\n            \u003cdiv style=\"font-family:serif; font-size:11pt; color:#6b3300;\n                        font-weight:bold; text-shadow:1px 1px 3px white;\n                        white-space:nowrap;\"\u003e\n                Amiterno\n            \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_8dd23c2543245d450ecb64323f6b9754.setIcon(div_icon_48fb82b245807816974e1e072a85356e);
+            
+    
+            var circle_marker_f9980924e0fd2de763336dbe6d44ff0e = L.circleMarker(
+                [46.19784801498796, 14.698549914716324],
+                {"bubblingMouseEvents": true, "color": "#a05000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e07b00", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+        var popup_a8943eee12ecc0f216bec5d38c068d16 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_69043e379c3e6bb3005ff1fe0a43cdbd = $(`<div id="html_69043e379c3e6bb3005ff1fe0a43cdbd" style="width: 100.0%; height: 100.0%;"><b>Anio</b><br>Estimado por Z3<br>Lat: 46.1978 | Lon: 14.6985</div>`)[0];
+                popup_a8943eee12ecc0f216bec5d38c068d16.setContent(html_69043e379c3e6bb3005ff1fe0a43cdbd);
+            
+        
+
+        circle_marker_f9980924e0fd2de763336dbe6d44ff0e.bindPopup(popup_a8943eee12ecc0f216bec5d38c068d16)
+        ;
+
+        
+    
+    
+            circle_marker_f9980924e0fd2de763336dbe6d44ff0e.bindTooltip(
+                `<div>
+                     <b>Anio</b><br>Posición estimada (Z3)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_9cb811b87642c82eeed874f02caee5ba = L.marker(
+                [46.19784801498796, 14.698549914716324],
+                {
+}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+            var div_icon_0c7bd533fdc67185dd33f7a84b7fdadd = L.divIcon({
+  "html": "\n            \u003cdiv style=\"font-family:serif; font-size:11pt; color:#6b3300;\n                        font-weight:bold; text-shadow:1px 1px 3px white;\n                        white-space:nowrap;\"\u003e\n                Anio\n            \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_9cb811b87642c82eeed874f02caee5ba.setIcon(div_icon_0c7bd533fdc67185dd33f7a84b7fdadd);
+            
+    
+            var circle_marker_430f4701295c9be2ba0de75caf0593a5 = L.circleMarker(
+                [40.71492137329281, 16.726272131075024],
+                {"bubblingMouseEvents": true, "color": "#a05000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e07b00", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+        var popup_f98b9f3c9ca5125dbc161008aedccf03 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_d6d9e52a5951fcf651db51df6e40708e = $(`<div id="html_d6d9e52a5951fcf651db51df6e40708e" style="width: 100.0%; height: 100.0%;"><b>Apulia</b><br>Estimado por Z3<br>Lat: 40.7149 | Lon: 16.7263</div>`)[0];
+                popup_f98b9f3c9ca5125dbc161008aedccf03.setContent(html_d6d9e52a5951fcf651db51df6e40708e);
+            
+        
+
+        circle_marker_430f4701295c9be2ba0de75caf0593a5.bindPopup(popup_f98b9f3c9ca5125dbc161008aedccf03)
+        ;
+
+        
+    
+    
+            circle_marker_430f4701295c9be2ba0de75caf0593a5.bindTooltip(
+                `<div>
+                     <b>Apulia</b><br>Posición estimada (Z3)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_e74cd4d15eff01a1c2fdda4a2ecce156 = L.marker(
+                [40.71492137329281, 16.726272131075024],
+                {
+}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+            var div_icon_b8b9a9438b3fc3aacc0fd1240053ba88 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"font-family:serif; font-size:11pt; color:#6b3300;\n                        font-weight:bold; text-shadow:1px 1px 3px white;\n                        white-space:nowrap;\"\u003e\n                Apulia\n            \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_e74cd4d15eff01a1c2fdda4a2ecce156.setIcon(div_icon_b8b9a9438b3fc3aacc0fd1240053ba88);
+            
+    
+            var circle_marker_02134826c44b53387bcbc3544b58f111 = L.circleMarker(
+                [40.042247224975554, 20.36692381373995],
+                {"bubblingMouseEvents": true, "color": "#a05000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e07b00", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+        var popup_41600c60941043bb7bbd1e8a592f38a7 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_355c09cdebcb272d31283fd17328b91c = $(`<div id="html_355c09cdebcb272d31283fd17328b91c" style="width: 100.0%; height: 100.0%;"><b>Aquilonia</b><br>Estimado por Z3<br>Lat: 40.0422 | Lon: 20.3669</div>`)[0];
+                popup_41600c60941043bb7bbd1e8a592f38a7.setContent(html_355c09cdebcb272d31283fd17328b91c);
+            
+        
+
+        circle_marker_02134826c44b53387bcbc3544b58f111.bindPopup(popup_41600c60941043bb7bbd1e8a592f38a7)
+        ;
+
+        
+    
+    
+            circle_marker_02134826c44b53387bcbc3544b58f111.bindTooltip(
+                `<div>
+                     <b>Aquilonia</b><br>Posición estimada (Z3)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_443d692a55ad4207454651b6a7e69155 = L.marker(
+                [40.042247224975554, 20.36692381373995],
+                {
+}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+            var div_icon_5cdabeb4060445b5197054d4d8219b61 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"font-family:serif; font-size:11pt; color:#6b3300;\n                        font-weight:bold; text-shadow:1px 1px 3px white;\n                        white-space:nowrap;\"\u003e\n                Aquilonia\n            \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_443d692a55ad4207454651b6a7e69155.setIcon(div_icon_5cdabeb4060445b5197054d4d8219b61);
+            
+    
+            var circle_marker_af42761daa85ae779f61035e6785a0b3 = L.circleMarker(
+                [40.45150268908147, 9.790565894003581],
+                {"bubblingMouseEvents": true, "color": "#a05000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e07b00", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+        var popup_591a0c94790d5641f95935c9aaaf2a8e = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_ad01678e84976a37b633672fc8cd5d00 = $(`<div id="html_ad01678e84976a37b633672fc8cd5d00" style="width: 100.0%; height: 100.0%;"><b>Aricia</b><br>Estimado por Z3<br>Lat: 40.4515 | Lon: 9.7906</div>`)[0];
+                popup_591a0c94790d5641f95935c9aaaf2a8e.setContent(html_ad01678e84976a37b633672fc8cd5d00);
+            
+        
+
+        circle_marker_af42761daa85ae779f61035e6785a0b3.bindPopup(popup_591a0c94790d5641f95935c9aaaf2a8e)
+        ;
+
+        
+    
+    
+            circle_marker_af42761daa85ae779f61035e6785a0b3.bindTooltip(
+                `<div>
+                     <b>Aricia</b><br>Posición estimada (Z3)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_8fbe6d1bd3f1f646d281168646e7be02 = L.marker(
+                [40.45150268908147, 9.790565894003581],
+                {
+}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+            var div_icon_70f7e511f873fa26bac7de02340b93c2 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"font-family:serif; font-size:11pt; color:#6b3300;\n                        font-weight:bold; text-shadow:1px 1px 3px white;\n                        white-space:nowrap;\"\u003e\n                Aricia\n            \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_8fbe6d1bd3f1f646d281168646e7be02.setIcon(div_icon_70f7e511f873fa26bac7de02340b93c2);
+            
+    
+            var circle_marker_f1a4fd78bbaaa081368c123e65c12bf4 = L.circleMarker(
+                [43.503109293626366, 16.803182612284523],
+                {"bubblingMouseEvents": true, "color": "#a05000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e07b00", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+        var popup_1ac5c587e9b2bd6ae534062668e2b79b = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_90cd314c37381abd75937a9304466dc9 = $(`<div id="html_90cd314c37381abd75937a9304466dc9" style="width: 100.0%; height: 100.0%;"><b>Atria</b><br>Estimado por Z3<br>Lat: 43.5031 | Lon: 16.8032</div>`)[0];
+                popup_1ac5c587e9b2bd6ae534062668e2b79b.setContent(html_90cd314c37381abd75937a9304466dc9);
+            
+        
+
+        circle_marker_f1a4fd78bbaaa081368c123e65c12bf4.bindPopup(popup_1ac5c587e9b2bd6ae534062668e2b79b)
+        ;
+
+        
+    
+    
+            circle_marker_f1a4fd78bbaaa081368c123e65c12bf4.bindTooltip(
+                `<div>
+                     <b>Atria</b><br>Posición estimada (Z3)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_965b8d84688829b7da25b2ccd6dea22d = L.marker(
+                [43.503109293626366, 16.803182612284523],
+                {
+}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+            var div_icon_f0dcc67786c52bc797aad3b686ab9080 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"font-family:serif; font-size:11pt; color:#6b3300;\n                        font-weight:bold; text-shadow:1px 1px 3px white;\n                        white-space:nowrap;\"\u003e\n                Atria\n            \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_965b8d84688829b7da25b2ccd6dea22d.setIcon(div_icon_f0dcc67786c52bc797aad3b686ab9080);
+            
+    
+            var circle_marker_cb1eb973abafb5d2bcc8ffa21508d874 = L.circleMarker(
+                [38.30721376757444, 15.976263977162688],
+                {"bubblingMouseEvents": true, "color": "#a05000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e07b00", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+        var popup_908f2ca96e1267be648ca53e03827713 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_bc9c64a1b9bcfcb5122abe7b3def2e59 = $(`<div id="html_bc9c64a1b9bcfcb5122abe7b3def2e59" style="width: 100.0%; height: 100.0%;"><b>Aufidena</b><br>Estimado por Z3<br>Lat: 38.3072 | Lon: 15.9763</div>`)[0];
+                popup_908f2ca96e1267be648ca53e03827713.setContent(html_bc9c64a1b9bcfcb5122abe7b3def2e59);
+            
+        
+
+        circle_marker_cb1eb973abafb5d2bcc8ffa21508d874.bindPopup(popup_908f2ca96e1267be648ca53e03827713)
+        ;
+
+        
+    
+    
+            circle_marker_cb1eb973abafb5d2bcc8ffa21508d874.bindTooltip(
+                `<div>
+                     <b>Aufidena</b><br>Posición estimada (Z3)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_6a10c26dae458db4220b1a1cf123d09c = L.marker(
+                [38.30721376757444, 15.976263977162688],
+                {
+}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+            var div_icon_fe343c7aebefb584a5a23870a09c5e3b = L.divIcon({
+  "html": "\n            \u003cdiv style=\"font-family:serif; font-size:11pt; color:#6b3300;\n                        font-weight:bold; text-shadow:1px 1px 3px white;\n                        white-space:nowrap;\"\u003e\n                Aufidena\n            \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_6a10c26dae458db4220b1a1cf123d09c.setIcon(div_icon_fe343c7aebefb584a5a23870a09c5e3b);
+            
+    
+            var circle_marker_b886462348634fd9ab3c232c21a107e7 = L.circleMarker(
+                [45.90193222175512, 9.96305491130439],
+                {"bubblingMouseEvents": true, "color": "#a05000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e07b00", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+        var popup_d9a775a3187646fa493d0161ef04e3a5 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_2cb05204dcecdd9894607ab701bae82c = $(`<div id="html_2cb05204dcecdd9894607ab701bae82c" style="width: 100.0%; height: 100.0%;"><b>Caere</b><br>Estimado por Z3<br>Lat: 45.9019 | Lon: 9.9631</div>`)[0];
+                popup_d9a775a3187646fa493d0161ef04e3a5.setContent(html_2cb05204dcecdd9894607ab701bae82c);
+            
+        
+
+        circle_marker_b886462348634fd9ab3c232c21a107e7.bindPopup(popup_d9a775a3187646fa493d0161ef04e3a5)
+        ;
+
+        
+    
+    
+            circle_marker_b886462348634fd9ab3c232c21a107e7.bindTooltip(
+                `<div>
+                     <b>Caere</b><br>Posición estimada (Z3)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_29f15031c4f4631433f03624bc8d2a77 = L.marker(
+                [45.90193222175512, 9.96305491130439],
+                {
+}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+            var div_icon_b957f720e55b5f858ae48401d488e98e = L.divIcon({
+  "html": "\n            \u003cdiv style=\"font-family:serif; font-size:11pt; color:#6b3300;\n                        font-weight:bold; text-shadow:1px 1px 3px white;\n                        white-space:nowrap;\"\u003e\n                Caere\n            \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_29f15031c4f4631433f03624bc8d2a77.setIcon(div_icon_b957f720e55b5f858ae48401d488e98e);
+            
+    
+            var circle_marker_2225b007fc3e97a3812609a7882e60f6 = L.circleMarker(
+                [38.99985842993324, 16.20780500480392],
+                {"bubblingMouseEvents": true, "color": "#a05000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e07b00", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+        var popup_a4fd2335022d7fa75223fcf6578f1642 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_a64b117bccc69281cf57e73171fd70d9 = $(`<div id="html_a64b117bccc69281cf57e73171fd70d9" style="width: 100.0%; height: 100.0%;"><b>Capua</b><br>Estimado por Z3<br>Lat: 38.9999 | Lon: 16.2078</div>`)[0];
+                popup_a4fd2335022d7fa75223fcf6578f1642.setContent(html_a64b117bccc69281cf57e73171fd70d9);
+            
+        
+
+        circle_marker_2225b007fc3e97a3812609a7882e60f6.bindPopup(popup_a4fd2335022d7fa75223fcf6578f1642)
+        ;
+
+        
+    
+    
+            circle_marker_2225b007fc3e97a3812609a7882e60f6.bindTooltip(
+                `<div>
+                     <b>Capua</b><br>Posición estimada (Z3)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_8bd3ed48c251868ac55fb6554bbdec5b = L.marker(
+                [38.99985842993324, 16.20780500480392],
+                {
+}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+            var div_icon_c9cdca6f476ca862ac295bada26b7f00 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"font-family:serif; font-size:11pt; color:#6b3300;\n                        font-weight:bold; text-shadow:1px 1px 3px white;\n                        white-space:nowrap;\"\u003e\n                Capua\n            \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_8bd3ed48c251868ac55fb6554bbdec5b.setIcon(div_icon_c9cdca6f476ca862ac295bada26b7f00);
+            
+    
+            var circle_marker_124a091b7e9cd0c4390dd9f23aeb5c39 = L.circleMarker(
+                [41.086116799616136, 16.792896133063934],
+                {"bubblingMouseEvents": true, "color": "#a05000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e07b00", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+        var popup_123c8883c7aacae53e31162ccaf46ada = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_3e56652e8688b2040480599ae8bc7f3b = $(`<div id="html_3e56652e8688b2040480599ae8bc7f3b" style="width: 100.0%; height: 100.0%;"><b>Caudio</b><br>Estimado por Z3<br>Lat: 41.0861 | Lon: 16.7929</div>`)[0];
+                popup_123c8883c7aacae53e31162ccaf46ada.setContent(html_3e56652e8688b2040480599ae8bc7f3b);
+            
+        
+
+        circle_marker_124a091b7e9cd0c4390dd9f23aeb5c39.bindPopup(popup_123c8883c7aacae53e31162ccaf46ada)
+        ;
+
+        
+    
+    
+            circle_marker_124a091b7e9cd0c4390dd9f23aeb5c39.bindTooltip(
+                `<div>
+                     <b>Caudio</b><br>Posición estimada (Z3)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_e6e1f0cfe08eca796910b6ee0d34170a = L.marker(
+                [41.086116799616136, 16.792896133063934],
+                {
+}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+            var div_icon_37a4fea16b3a89fbebe0d03bd9967fe9 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"font-family:serif; font-size:11pt; color:#6b3300;\n                        font-weight:bold; text-shadow:1px 1px 3px white;\n                        white-space:nowrap;\"\u003e\n                Caudio\n            \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_e6e1f0cfe08eca796910b6ee0d34170a.setIcon(div_icon_37a4fea16b3a89fbebe0d03bd9967fe9);
+            
+    
+            var circle_marker_bb652fedb745deee220f47a00d8b24aa = L.circleMarker(
+                [47.3623410952823, 9.314816230051317],
+                {"bubblingMouseEvents": true, "color": "#a05000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e07b00", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+        var popup_b30d843b302f2cf5eafd0fe7279e9b8e = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_c14b15a269eebf5c7452f2348e051939 = $(`<div id="html_c14b15a269eebf5c7452f2348e051939" style="width: 100.0%; height: 100.0%;"><b>Cerveteri</b><br>Estimado por Z3<br>Lat: 47.3623 | Lon: 9.3148</div>`)[0];
+                popup_b30d843b302f2cf5eafd0fe7279e9b8e.setContent(html_c14b15a269eebf5c7452f2348e051939);
+            
+        
+
+        circle_marker_bb652fedb745deee220f47a00d8b24aa.bindPopup(popup_b30d843b302f2cf5eafd0fe7279e9b8e)
+        ;
+
+        
+    
+    
+            circle_marker_bb652fedb745deee220f47a00d8b24aa.bindTooltip(
+                `<div>
+                     <b>Cerveteri</b><br>Posición estimada (Z3)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_c97f39a515fbd84c5e9849f37824956f = L.marker(
+                [47.3623410952823, 9.314816230051317],
+                {
+}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+            var div_icon_b0e0412e73f2e260d629397bc8d421cc = L.divIcon({
+  "html": "\n            \u003cdiv style=\"font-family:serif; font-size:11pt; color:#6b3300;\n                        font-weight:bold; text-shadow:1px 1px 3px white;\n                        white-space:nowrap;\"\u003e\n                Cerveteri\n            \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_c97f39a515fbd84c5e9849f37824956f.setIcon(div_icon_b0e0412e73f2e260d629397bc8d421cc);
+            
+    
+            var circle_marker_defe7ad60732b32e7637251fe337bc98 = L.circleMarker(
+                [46.06181639729815, 12.090594074173996],
+                {"bubblingMouseEvents": true, "color": "#a05000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e07b00", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+        var popup_f2dc3497abedf17a6f352a6830a0c182 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_71a11418df11770d1f1ae0480bafe036 = $(`<div id="html_71a11418df11770d1f1ae0480bafe036" style="width: 100.0%; height: 100.0%;"><b>Colinas</b><br>Estimado por Z3<br>Lat: 46.0618 | Lon: 12.0906</div>`)[0];
+                popup_f2dc3497abedf17a6f352a6830a0c182.setContent(html_71a11418df11770d1f1ae0480bafe036);
+            
+        
+
+        circle_marker_defe7ad60732b32e7637251fe337bc98.bindPopup(popup_f2dc3497abedf17a6f352a6830a0c182)
+        ;
+
+        
+    
+    
+            circle_marker_defe7ad60732b32e7637251fe337bc98.bindTooltip(
+                `<div>
+                     <b>Colinas</b><br>Posición estimada (Z3)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_151d67bdffd0e13a5ab0b2b445b18157 = L.marker(
+                [46.06181639729815, 12.090594074173996],
+                {
+}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+            var div_icon_2768d551877be7031b26fcd26033b623 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"font-family:serif; font-size:11pt; color:#6b3300;\n                        font-weight:bold; text-shadow:1px 1px 3px white;\n                        white-space:nowrap;\"\u003e\n                Colinas\n            \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_151d67bdffd0e13a5ab0b2b445b18157.setIcon(div_icon_2768d551877be7031b26fcd26033b623);
+            
+    
+            var circle_marker_8df4fb661845d17f614d3a1592df6a55 = L.circleMarker(
+                [40.54579233052813, 19.85307607860032],
+                {"bubblingMouseEvents": true, "color": "#a05000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e07b00", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+        var popup_3a5c50a8d2b6ad53503676af2e1dd21f = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_7716a6fb879bd44bfb928fbec585b4fa = $(`<div id="html_7716a6fb879bd44bfb928fbec585b4fa" style="width: 100.0%; height: 100.0%;"><b>Cominio</b><br>Estimado por Z3<br>Lat: 40.5458 | Lon: 19.8531</div>`)[0];
+                popup_3a5c50a8d2b6ad53503676af2e1dd21f.setContent(html_7716a6fb879bd44bfb928fbec585b4fa);
+            
+        
+
+        circle_marker_8df4fb661845d17f614d3a1592df6a55.bindPopup(popup_3a5c50a8d2b6ad53503676af2e1dd21f)
+        ;
+
+        
+    
+    
+            circle_marker_8df4fb661845d17f614d3a1592df6a55.bindTooltip(
+                `<div>
+                     <b>Cominio</b><br>Posición estimada (Z3)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_66a11543fbff410fb8ed15a48cc8b70d = L.marker(
+                [40.54579233052813, 19.85307607860032],
+                {
+}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+            var div_icon_c7bcf8a70183edbf062e7c0f94afbfba = L.divIcon({
+  "html": "\n            \u003cdiv style=\"font-family:serif; font-size:11pt; color:#6b3300;\n                        font-weight:bold; text-shadow:1px 1px 3px white;\n                        white-space:nowrap;\"\u003e\n                Cominio\n            \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_66a11543fbff410fb8ed15a48cc8b70d.setIcon(div_icon_c7bcf8a70183edbf062e7c0f94afbfba);
+            
+    
+            var circle_marker_f0f6e00f47ef128bf343836f5e8eb984 = L.circleMarker(
+                [42.22971888125379, 8.979981806903334],
+                {"bubblingMouseEvents": true, "color": "#a05000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e07b00", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+        var popup_1399b0bd476c875dc6a9014e56c1baef = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_987742217f858c0dd178032a33e4e9fe = $(`<div id="html_987742217f858c0dd178032a33e4e9fe" style="width: 100.0%; height: 100.0%;"><b>Crémera</b><br>Estimado por Z3<br>Lat: 42.2297 | Lon: 8.9800</div>`)[0];
+                popup_1399b0bd476c875dc6a9014e56c1baef.setContent(html_987742217f858c0dd178032a33e4e9fe);
+            
+        
+
+        circle_marker_f0f6e00f47ef128bf343836f5e8eb984.bindPopup(popup_1399b0bd476c875dc6a9014e56c1baef)
+        ;
+
+        
+    
+    
+            circle_marker_f0f6e00f47ef128bf343836f5e8eb984.bindTooltip(
+                `<div>
+                     <b>Crémera</b><br>Posición estimada (Z3)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_7cc3c987ea7c669fa77c97d16cd68314 = L.marker(
+                [42.22971888125379, 8.979981806903334],
+                {
+}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+            var div_icon_c172a9d18612353305215f8180ee4488 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"font-family:serif; font-size:11pt; color:#6b3300;\n                        font-weight:bold; text-shadow:1px 1px 3px white;\n                        white-space:nowrap;\"\u003e\n                Cr\u00e9mera\n            \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_7cc3c987ea7c669fa77c97d16cd68314.setIcon(div_icon_c172a9d18612353305215f8180ee4488);
+            
+    
+            var circle_marker_ba71fd026c22c9f6a5786e0e08bb7732 = L.circleMarker(
+                [40.8131731006916, 8.87068796518457],
+                {"bubblingMouseEvents": true, "color": "#a05000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e07b00", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+        var popup_4f8188ab2a429b77025b90694dc4de68 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_9a250f7609e923790087549ffead8873 = $(`<div id="html_9a250f7609e923790087549ffead8873" style="width: 100.0%; height: 100.0%;"><b>Ecetra</b><br>Estimado por Z3<br>Lat: 40.8132 | Lon: 8.8707</div>`)[0];
+                popup_4f8188ab2a429b77025b90694dc4de68.setContent(html_9a250f7609e923790087549ffead8873);
+            
+        
+
+        circle_marker_ba71fd026c22c9f6a5786e0e08bb7732.bindPopup(popup_4f8188ab2a429b77025b90694dc4de68)
+        ;
+
+        
+    
+    
+            circle_marker_ba71fd026c22c9f6a5786e0e08bb7732.bindTooltip(
+                `<div>
+                     <b>Ecetra</b><br>Posición estimada (Z3)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_141d6f61972c9e6893d0b275067e6784 = L.marker(
+                [40.8131731006916, 8.87068796518457],
+                {
+}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+            var div_icon_c498ed87cfe43824ce2baef044d1eb1e = L.divIcon({
+  "html": "\n            \u003cdiv style=\"font-family:serif; font-size:11pt; color:#6b3300;\n                        font-weight:bold; text-shadow:1px 1px 3px white;\n                        white-space:nowrap;\"\u003e\n                Ecetra\n            \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_141d6f61972c9e6893d0b275067e6784.setIcon(div_icon_c498ed87cfe43824ce2baef044d1eb1e);
+            
+    
+            var circle_marker_12605546326caf4fbe892d7ea44dd3ee = L.circleMarker(
+                [36.85436887631951, 14.84151292684692],
+                {"bubblingMouseEvents": true, "color": "#a05000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e07b00", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+        var popup_656b186af508d2258f74010a07e318ca = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_f07b881453a392d9dc57b08d0a439ac3 = $(`<div id="html_f07b881453a392d9dc57b08d0a439ac3" style="width: 100.0%; height: 100.0%;"><b>Eubea</b><br>Estimado por Z3<br>Lat: 36.8544 | Lon: 14.8415</div>`)[0];
+                popup_656b186af508d2258f74010a07e318ca.setContent(html_f07b881453a392d9dc57b08d0a439ac3);
+            
+        
+
+        circle_marker_12605546326caf4fbe892d7ea44dd3ee.bindPopup(popup_656b186af508d2258f74010a07e318ca)
+        ;
+
+        
+    
+    
+            circle_marker_12605546326caf4fbe892d7ea44dd3ee.bindTooltip(
+                `<div>
+                     <b>Eubea</b><br>Posición estimada (Z3)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_d0aff0d12fd82e24285c7d34259ff6f0 = L.marker(
+                [36.85436887631951, 14.84151292684692],
+                {
+}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+            var div_icon_035862ebe09e325e234002f62ae52e7f = L.divIcon({
+  "html": "\n            \u003cdiv style=\"font-family:serif; font-size:11pt; color:#6b3300;\n                        font-weight:bold; text-shadow:1px 1px 3px white;\n                        white-space:nowrap;\"\u003e\n                Eubea\n            \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_d0aff0d12fd82e24285c7d34259ff6f0.setIcon(div_icon_035862ebe09e325e234002f62ae52e7f);
+            
+    
+            var circle_marker_80b9add8d66297ff7e016f2542fb1215 = L.circleMarker(
+                [45.68229658836833, 9.420633622774236],
+                {"bubblingMouseEvents": true, "color": "#a05000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e07b00", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+        var popup_81933ed0817cc2623879c7d351e27d54 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_f96750e0aaf66766eefdd1f1cc044571 = $(`<div id="html_f96750e0aaf66766eefdd1f1cc044571" style="width: 100.0%; height: 100.0%;"><b>Faleria</b><br>Estimado por Z3<br>Lat: 45.6823 | Lon: 9.4206</div>`)[0];
+                popup_81933ed0817cc2623879c7d351e27d54.setContent(html_f96750e0aaf66766eefdd1f1cc044571);
+            
+        
+
+        circle_marker_80b9add8d66297ff7e016f2542fb1215.bindPopup(popup_81933ed0817cc2623879c7d351e27d54)
+        ;
+
+        
+    
+    
+            circle_marker_80b9add8d66297ff7e016f2542fb1215.bindTooltip(
+                `<div>
+                     <b>Faleria</b><br>Posición estimada (Z3)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_534acfea2c2547e131ea8403813b5c45 = L.marker(
+                [45.68229658836833, 9.420633622774236],
+                {
+}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+            var div_icon_7c357f63552cd77cd16020317f239f9c = L.divIcon({
+  "html": "\n            \u003cdiv style=\"font-family:serif; font-size:11pt; color:#6b3300;\n                        font-weight:bold; text-shadow:1px 1px 3px white;\n                        white-space:nowrap;\"\u003e\n                Faleria\n            \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_534acfea2c2547e131ea8403813b5c45.setIcon(div_icon_7c357f63552cd77cd16020317f239f9c);
+            
+    
+            var circle_marker_9b4f3db26f40fea7c0c0625cf1715c69 = L.circleMarker(
+                [40.076985513929586, 16.229711395736658],
+                {"bubblingMouseEvents": true, "color": "#a05000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e07b00", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+        var popup_b23d61ca58c6de68d4de024ffdd63b51 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_c560d18fdaea36dce0fb432e53032df9 = $(`<div id="html_c560d18fdaea36dce0fb432e53032df9" style="width: 100.0%; height: 100.0%;"><b>Falerno</b><br>Estimado por Z3<br>Lat: 40.0770 | Lon: 16.2297</div>`)[0];
+                popup_b23d61ca58c6de68d4de024ffdd63b51.setContent(html_c560d18fdaea36dce0fb432e53032df9);
+            
+        
+
+        circle_marker_9b4f3db26f40fea7c0c0625cf1715c69.bindPopup(popup_b23d61ca58c6de68d4de024ffdd63b51)
+        ;
+
+        
+    
+    
+            circle_marker_9b4f3db26f40fea7c0c0625cf1715c69.bindTooltip(
+                `<div>
+                     <b>Falerno</b><br>Posición estimada (Z3)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_e7ea336e8c4658c48b0ca3973c1a3dca = L.marker(
+                [40.076985513929586, 16.229711395736658],
+                {
+}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+            var div_icon_f6c7d52d0f88b8e64b8778297495e162 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"font-family:serif; font-size:11pt; color:#6b3300;\n                        font-weight:bold; text-shadow:1px 1px 3px white;\n                        white-space:nowrap;\"\u003e\n                Falerno\n            \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_e7ea336e8c4658c48b0ca3973c1a3dca.setIcon(div_icon_f6c7d52d0f88b8e64b8778297495e162);
+            
+    
+            var circle_marker_a176853235705bc2d848ad7b27d555f7 = L.circleMarker(
+                [44.37945066831122, 12.053686567711235],
+                {"bubblingMouseEvents": true, "color": "#a05000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e07b00", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+        var popup_04ddb5669c5f476b740ae18d1f0fa56c = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_e3010e40b454eba500586aaf5b0ed9cc = $(`<div id="html_e3010e40b454eba500586aaf5b0ed9cc" style="width: 100.0%; height: 100.0%;"><b>Fidenas</b><br>Estimado por Z3<br>Lat: 44.3795 | Lon: 12.0537</div>`)[0];
+                popup_04ddb5669c5f476b740ae18d1f0fa56c.setContent(html_e3010e40b454eba500586aaf5b0ed9cc);
+            
+        
+
+        circle_marker_a176853235705bc2d848ad7b27d555f7.bindPopup(popup_04ddb5669c5f476b740ae18d1f0fa56c)
+        ;
+
+        
+    
+    
+            circle_marker_a176853235705bc2d848ad7b27d555f7.bindTooltip(
+                `<div>
+                     <b>Fidenas</b><br>Posición estimada (Z3)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_f971cdad94fa7a98bac5217a00acc375 = L.marker(
+                [44.37945066831122, 12.053686567711235],
+                {
+}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+            var div_icon_31eac3000fea8bf7cbc19fbd5123a1e9 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"font-family:serif; font-size:11pt; color:#6b3300;\n                        font-weight:bold; text-shadow:1px 1px 3px white;\n                        white-space:nowrap;\"\u003e\n                Fidenas\n            \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_f971cdad94fa7a98bac5217a00acc375.setIcon(div_icon_31eac3000fea8bf7cbc19fbd5123a1e9);
+            
+    
+            var circle_marker_0b5d81876dacf5e29e6d179e1b0982de = L.circleMarker(
+                [40.41356271450956, 17.908788638141953],
+                {"bubblingMouseEvents": true, "color": "#a05000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e07b00", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+        var popup_a3e273478780fc6ff368f8eadd9a0305 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_82526cc16ddb064c3134f78b9e16bb33 = $(`<div id="html_82526cc16ddb064c3134f78b9e16bb33" style="width: 100.0%; height: 100.0%;"><b>Horcas Caudinas</b><br>Estimado por Z3<br>Lat: 40.4136 | Lon: 17.9088</div>`)[0];
+                popup_a3e273478780fc6ff368f8eadd9a0305.setContent(html_82526cc16ddb064c3134f78b9e16bb33);
+            
+        
+
+        circle_marker_0b5d81876dacf5e29e6d179e1b0982de.bindPopup(popup_a3e273478780fc6ff368f8eadd9a0305)
+        ;
+
+        
+    
+    
+            circle_marker_0b5d81876dacf5e29e6d179e1b0982de.bindTooltip(
+                `<div>
+                     <b>Horcas Caudinas</b><br>Posición estimada (Z3)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_95504241efe7220a36da5378aa816483 = L.marker(
+                [40.41356271450956, 17.908788638141953],
+                {
+}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+            var div_icon_4d0140122c50705d8dddf7db017a15f1 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"font-family:serif; font-size:11pt; color:#6b3300;\n                        font-weight:bold; text-shadow:1px 1px 3px white;\n                        white-space:nowrap;\"\u003e\n                Horcas Caudinas\n            \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_95504241efe7220a36da5378aa816483.setIcon(div_icon_4d0140122c50705d8dddf7db017a15f1);
+            
+    
+            var circle_marker_d922b81aaccaff429ae9aaa02d6c46a7 = L.circleMarker(
+                [47.33852855849929, 13.037474010947058],
+                {"bubblingMouseEvents": true, "color": "#a05000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e07b00", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+        var popup_d01dc9d81db85e8d884c5aa1db1ffdd1 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_5e029dec971c7db5a181b90396c58209 = $(`<div id="html_5e029dec971c7db5a181b90396c58209" style="width: 100.0%; height: 100.0%;"><b>Janículo</b><br>Estimado por Z3<br>Lat: 47.3385 | Lon: 13.0375</div>`)[0];
+                popup_d01dc9d81db85e8d884c5aa1db1ffdd1.setContent(html_5e029dec971c7db5a181b90396c58209);
+            
+        
+
+        circle_marker_d922b81aaccaff429ae9aaa02d6c46a7.bindPopup(popup_d01dc9d81db85e8d884c5aa1db1ffdd1)
+        ;
+
+        
+    
+    
+            circle_marker_d922b81aaccaff429ae9aaa02d6c46a7.bindTooltip(
+                `<div>
+                     <b>Janículo</b><br>Posición estimada (Z3)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_f9e02892055b00090bd66faccdc544a5 = L.marker(
+                [47.33852855849929, 13.037474010947058],
+                {
+}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+            var div_icon_cd6fe9d0e1ebdc9e9fc31a073083e2b4 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"font-family:serif; font-size:11pt; color:#6b3300;\n                        font-weight:bold; text-shadow:1px 1px 3px white;\n                        white-space:nowrap;\"\u003e\n                Jan\u00edculo\n            \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_f9e02892055b00090bd66faccdc544a5.setIcon(div_icon_cd6fe9d0e1ebdc9e9fc31a073083e2b4);
+            
+    
+            var circle_marker_7cc6be74bf5593da1115a66d1a41453f = L.circleMarker(
+                [42.550287653744334, 12.082069630745824],
+                {"bubblingMouseEvents": true, "color": "#a05000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e07b00", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+        var popup_f4e642d7c95da41ca43d22d53cba8e59 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_7b36b7137249367a455e81571c5feae1 = $(`<div id="html_7b36b7137249367a455e81571c5feae1" style="width: 100.0%; height: 100.0%;"><b>Lavinio</b><br>Estimado por Z3<br>Lat: 42.5503 | Lon: 12.0821</div>`)[0];
+                popup_f4e642d7c95da41ca43d22d53cba8e59.setContent(html_7b36b7137249367a455e81571c5feae1);
+            
+        
+
+        circle_marker_7cc6be74bf5593da1115a66d1a41453f.bindPopup(popup_f4e642d7c95da41ca43d22d53cba8e59)
+        ;
+
+        
+    
+    
+            circle_marker_7cc6be74bf5593da1115a66d1a41453f.bindTooltip(
+                `<div>
+                     <b>Lavinio</b><br>Posición estimada (Z3)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_2c5f96472a287da8b041a1b8a2ec4659 = L.marker(
+                [42.550287653744334, 12.082069630745824],
+                {
+}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+            var div_icon_3c65dfd76a1a04f493fcc452742becc5 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"font-family:serif; font-size:11pt; color:#6b3300;\n                        font-weight:bold; text-shadow:1px 1px 3px white;\n                        white-space:nowrap;\"\u003e\n                Lavinio\n            \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_2c5f96472a287da8b041a1b8a2ec4659.setIcon(div_icon_3c65dfd76a1a04f493fcc452742becc5);
+            
+    
+            var circle_marker_968de3795695a1a4d2a5e27b14ad18c8 = L.circleMarker(
+                [45.14677464770714, 11.130236944718408],
+                {"bubblingMouseEvents": true, "color": "#a05000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e07b00", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+        var popup_84768326a1eec7bd29f31979de360914 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_843a701723b2a98a66c071286b4adf1f = $(`<div id="html_843a701723b2a98a66c071286b4adf1f" style="width: 100.0%; height: 100.0%;"><b>Nomento</b><br>Estimado por Z3<br>Lat: 45.1468 | Lon: 11.1302</div>`)[0];
+                popup_84768326a1eec7bd29f31979de360914.setContent(html_843a701723b2a98a66c071286b4adf1f);
+            
+        
+
+        circle_marker_968de3795695a1a4d2a5e27b14ad18c8.bindPopup(popup_84768326a1eec7bd29f31979de360914)
+        ;
+
+        
+    
+    
+            circle_marker_968de3795695a1a4d2a5e27b14ad18c8.bindTooltip(
+                `<div>
+                     <b>Nomento</b><br>Posición estimada (Z3)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_9607ea9c31282c6b1a3e951d54c9f975 = L.marker(
+                [45.14677464770714, 11.130236944718408],
+                {
+}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+            var div_icon_df2452175834c2bbeff512db36773fbe = L.divIcon({
+  "html": "\n            \u003cdiv style=\"font-family:serif; font-size:11pt; color:#6b3300;\n                        font-weight:bold; text-shadow:1px 1px 3px white;\n                        white-space:nowrap;\"\u003e\n                Nomento\n            \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_9607ea9c31282c6b1a3e951d54c9f975.setIcon(div_icon_df2452175834c2bbeff512db36773fbe);
+            
+    
+            var circle_marker_93a1297f147fabc4ba89d48bb2aa78af = L.circleMarker(
+                [41.09264023406257, 20.163051510298548],
+                {"bubblingMouseEvents": true, "color": "#a05000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e07b00", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+        var popup_7ae9cf3271f1d4577d963c64b03b8a8b = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_285e3e16fc297da98b8a59acc78e0113 = $(`<div id="html_285e3e16fc297da98b8a59acc78e0113" style="width: 100.0%; height: 100.0%;"><b>Nuceria Alfaterna</b><br>Estimado por Z3<br>Lat: 41.0926 | Lon: 20.1631</div>`)[0];
+                popup_7ae9cf3271f1d4577d963c64b03b8a8b.setContent(html_285e3e16fc297da98b8a59acc78e0113);
+            
+        
+
+        circle_marker_93a1297f147fabc4ba89d48bb2aa78af.bindPopup(popup_7ae9cf3271f1d4577d963c64b03b8a8b)
+        ;
+
+        
+    
+    
+            circle_marker_93a1297f147fabc4ba89d48bb2aa78af.bindTooltip(
+                `<div>
+                     <b>Nuceria Alfaterna</b><br>Posición estimada (Z3)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_ce617250cb60854cf3754161202b2fc5 = L.marker(
+                [41.09264023406257, 20.163051510298548],
+                {
+}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+            var div_icon_6df1ad000c32e2d9587e01ac37ca216f = L.divIcon({
+  "html": "\n            \u003cdiv style=\"font-family:serif; font-size:11pt; color:#6b3300;\n                        font-weight:bold; text-shadow:1px 1px 3px white;\n                        white-space:nowrap;\"\u003e\n                Nuceria Alfaterna\n            \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_ce617250cb60854cf3754161202b2fc5.setIcon(div_icon_6df1ad000c32e2d9587e01ac37ca216f);
+            
+    
+            var circle_marker_0609eb7cabef5b279679e17f6bc55a5b = L.circleMarker(
+                [40.59037580275715, 15.839253788655117],
+                {"bubblingMouseEvents": true, "color": "#a05000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e07b00", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+        var popup_13c013443b1aeb36a355b7677b6a28c8 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_4939787ffb30de0aea6241590d7163f0 = $(`<div id="html_4939787ffb30de0aea6241590d7163f0" style="width: 100.0%; height: 100.0%;"><b>Nápoles</b><br>Estimado por Z3<br>Lat: 40.5904 | Lon: 15.8393</div>`)[0];
+                popup_13c013443b1aeb36a355b7677b6a28c8.setContent(html_4939787ffb30de0aea6241590d7163f0);
+            
+        
+
+        circle_marker_0609eb7cabef5b279679e17f6bc55a5b.bindPopup(popup_13c013443b1aeb36a355b7677b6a28c8)
+        ;
+
+        
+    
+    
+            circle_marker_0609eb7cabef5b279679e17f6bc55a5b.bindTooltip(
+                `<div>
+                     <b>Nápoles</b><br>Posición estimada (Z3)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_e124cda988b1d5dc16afdd5f7afdc1cc = L.marker(
+                [40.59037580275715, 15.839253788655117],
+                {
+}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+            var div_icon_14d848cf9f6c12199226279ba2171c88 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"font-family:serif; font-size:11pt; color:#6b3300;\n                        font-weight:bold; text-shadow:1px 1px 3px white;\n                        white-space:nowrap;\"\u003e\n                N\u00e1poles\n            \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_e124cda988b1d5dc16afdd5f7afdc1cc.setIcon(div_icon_14d848cf9f6c12199226279ba2171c88);
+            
+    
+            var circle_marker_17c3aafd487b71e9846e4c83ee46bae6 = L.circleMarker(
+                [45.72495904922662, 12.846174070997485],
+                {"bubblingMouseEvents": true, "color": "#a05000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e07b00", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+        var popup_2e044468cffcd4db040d1e6782d6218b = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_469616fdbd6ee53008532eacfab8d838 = $(`<div id="html_469616fdbd6ee53008532eacfab8d838" style="width: 100.0%; height: 100.0%;"><b>Puente Sublicio</b><br>Estimado por Z3<br>Lat: 45.7250 | Lon: 12.8462</div>`)[0];
+                popup_2e044468cffcd4db040d1e6782d6218b.setContent(html_469616fdbd6ee53008532eacfab8d838);
+            
+        
+
+        circle_marker_17c3aafd487b71e9846e4c83ee46bae6.bindPopup(popup_2e044468cffcd4db040d1e6782d6218b)
+        ;
+
+        
+    
+    
+            circle_marker_17c3aafd487b71e9846e4c83ee46bae6.bindTooltip(
+                `<div>
+                     <b>Puente Sublicio</b><br>Posición estimada (Z3)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_82c04808ecca7dddcd13410dd12e0a33 = L.marker(
+                [45.72495904922662, 12.846174070997485],
+                {
+}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+            var div_icon_947192aba943fe5192d26cea308c472c = L.divIcon({
+  "html": "\n            \u003cdiv style=\"font-family:serif; font-size:11pt; color:#6b3300;\n                        font-weight:bold; text-shadow:1px 1px 3px white;\n                        white-space:nowrap;\"\u003e\n                Puente Sublicio\n            \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_82c04808ecca7dddcd13410dd12e0a33.setIcon(div_icon_947192aba943fe5192d26cea308c472c);
+            
+    
+            var circle_marker_1078e3cf16e05b68e238d0c1e67266bd = L.circleMarker(
+                [43.02125560813495, 13.105812426139398],
+                {"bubblingMouseEvents": true, "color": "#a05000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e07b00", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+        var popup_46402aa81cf1bbbafa7d40a54a34bdeb = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_c68b2d2bb0434ed9b8829d2576485436 = $(`<div id="html_c68b2d2bb0434ed9b8829d2576485436" style="width: 100.0%; height: 100.0%;"><b>Regilo</b><br>Estimado por Z3<br>Lat: 43.0213 | Lon: 13.1058</div>`)[0];
+                popup_46402aa81cf1bbbafa7d40a54a34bdeb.setContent(html_c68b2d2bb0434ed9b8829d2576485436);
+            
+        
+
+        circle_marker_1078e3cf16e05b68e238d0c1e67266bd.bindPopup(popup_46402aa81cf1bbbafa7d40a54a34bdeb)
+        ;
+
+        
+    
+    
+            circle_marker_1078e3cf16e05b68e238d0c1e67266bd.bindTooltip(
+                `<div>
+                     <b>Regilo</b><br>Posición estimada (Z3)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_3257921a33f5afb9d530e35eaa5d90bb = L.marker(
+                [43.02125560813495, 13.105812426139398],
+                {
+}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+            var div_icon_eb03f4b76c0587a0629de52e912c7684 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"font-family:serif; font-size:11pt; color:#6b3300;\n                        font-weight:bold; text-shadow:1px 1px 3px white;\n                        white-space:nowrap;\"\u003e\n                Regilo\n            \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_3257921a33f5afb9d530e35eaa5d90bb.setIcon(div_icon_eb03f4b76c0587a0629de52e912c7684);
+            
+    
+            var circle_marker_5976361b7b29282d58cc057c19aad4b2 = L.circleMarker(
+                [44.81223852170858, 9.296910136593256],
+                {"bubblingMouseEvents": true, "color": "#a05000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e07b00", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+        var popup_a0486dd4bdfcb0dfd6367e4c6775a96e = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_2f0386df888ee963ba0c787ae78637a6 = $(`<div id="html_2f0386df888ee963ba0c787ae78637a6" style="width: 100.0%; height: 100.0%;"><b>República</b><br>Estimado por Z3<br>Lat: 44.8122 | Lon: 9.2969</div>`)[0];
+                popup_a0486dd4bdfcb0dfd6367e4c6775a96e.setContent(html_2f0386df888ee963ba0c787ae78637a6);
+            
+        
+
+        circle_marker_5976361b7b29282d58cc057c19aad4b2.bindPopup(popup_a0486dd4bdfcb0dfd6367e4c6775a96e)
+        ;
+
+        
+    
+    
+            circle_marker_5976361b7b29282d58cc057c19aad4b2.bindTooltip(
+                `<div>
+                     <b>República</b><br>Posición estimada (Z3)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_b5e7f11c5376a8f45837a5a8ccaf4f64 = L.marker(
+                [44.81223852170858, 9.296910136593256],
+                {
+}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+            var div_icon_01a61386fc87fb8adb9799d6049b301c = L.divIcon({
+  "html": "\n            \u003cdiv style=\"font-family:serif; font-size:11pt; color:#6b3300;\n                        font-weight:bold; text-shadow:1px 1px 3px white;\n                        white-space:nowrap;\"\u003e\n                Rep\u00fablica\n            \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_b5e7f11c5376a8f45837a5a8ccaf4f64.setIcon(div_icon_01a61386fc87fb8adb9799d6049b301c);
+            
+    
+            var circle_marker_d92bae29eb1dcc2db71e192db5c649dd = L.circleMarker(
+                [41.314517047381884, 15.731817227906735],
+                {"bubblingMouseEvents": true, "color": "#a05000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e07b00", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+        var popup_478a0f3fe941d2557da72cb8d9728654 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_55bb78896a42ebd4d3246d3991a41fd9 = $(`<div id="html_55bb78896a42ebd4d3246d3991a41fd9" style="width: 100.0%; height: 100.0%;"><b>Sora</b><br>Estimado por Z3<br>Lat: 41.3145 | Lon: 15.7318</div>`)[0];
+                popup_478a0f3fe941d2557da72cb8d9728654.setContent(html_55bb78896a42ebd4d3246d3991a41fd9);
+            
+        
+
+        circle_marker_d92bae29eb1dcc2db71e192db5c649dd.bindPopup(popup_478a0f3fe941d2557da72cb8d9728654)
+        ;
+
+        
+    
+    
+            circle_marker_d92bae29eb1dcc2db71e192db5c649dd.bindTooltip(
+                `<div>
+                     <b>Sora</b><br>Posición estimada (Z3)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_955b4fdb38005940d701027199afd884 = L.marker(
+                [41.314517047381884, 15.731817227906735],
+                {
+}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+            var div_icon_ffb83248bccda29ec006b1339ad55d6e = L.divIcon({
+  "html": "\n            \u003cdiv style=\"font-family:serif; font-size:11pt; color:#6b3300;\n                        font-weight:bold; text-shadow:1px 1px 3px white;\n                        white-space:nowrap;\"\u003e\n                Sora\n            \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_955b4fdb38005940d701027199afd884.setIcon(div_icon_ffb83248bccda29ec006b1339ad55d6e);
+            
+    
+            var circle_marker_13c52a29ead49dc6dbaeb8e6f522186b = L.circleMarker(
+                [44.861744585575096, 10.696585649428187],
+                {"bubblingMouseEvents": true, "color": "#a05000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e07b00", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+        var popup_46970c5af91b8d58f1fd11f4c2ac29dc = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_c7c9298fc956ba86019898d3df4bfe34 = $(`<div id="html_c7c9298fc956ba86019898d3df4bfe34" style="width: 100.0%; height: 100.0%;"><b>Sutri</b><br>Estimado por Z3<br>Lat: 44.8617 | Lon: 10.6966</div>`)[0];
+                popup_46970c5af91b8d58f1fd11f4c2ac29dc.setContent(html_c7c9298fc956ba86019898d3df4bfe34);
+            
+        
+
+        circle_marker_13c52a29ead49dc6dbaeb8e6f522186b.bindPopup(popup_46970c5af91b8d58f1fd11f4c2ac29dc)
+        ;
+
+        
+    
+    
+            circle_marker_13c52a29ead49dc6dbaeb8e6f522186b.bindTooltip(
+                `<div>
+                     <b>Sutri</b><br>Posición estimada (Z3)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_ca6e9a776a7a4a3ee37b008b1d59de91 = L.marker(
+                [44.861744585575096, 10.696585649428187],
+                {
+}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+            var div_icon_f05a29776126143b153d82a150818ccd = L.divIcon({
+  "html": "\n            \u003cdiv style=\"font-family:serif; font-size:11pt; color:#6b3300;\n                        font-weight:bold; text-shadow:1px 1px 3px white;\n                        white-space:nowrap;\"\u003e\n                Sutri\n            \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_ca6e9a776a7a4a3ee37b008b1d59de91.setIcon(div_icon_f05a29776126143b153d82a150818ccd);
+            
+    
+            var circle_marker_a53930a51a77842c59407aac590ce599 = L.circleMarker(
+                [47.10556590872807, 8.674340030802671],
+                {"bubblingMouseEvents": true, "color": "#a05000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e07b00", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+        var popup_f9b47fb76ad37857afe09381fee2ca45 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_84da366bc64a6b4ab5f16c735fafbaa7 = $(`<div id="html_84da366bc64a6b4ab5f16c735fafbaa7" style="width: 100.0%; height: 100.0%;"><b>Tarquinia</b><br>Estimado por Z3<br>Lat: 47.1056 | Lon: 8.6743</div>`)[0];
+                popup_f9b47fb76ad37857afe09381fee2ca45.setContent(html_84da366bc64a6b4ab5f16c735fafbaa7);
+            
+        
+
+        circle_marker_a53930a51a77842c59407aac590ce599.bindPopup(popup_f9b47fb76ad37857afe09381fee2ca45)
+        ;
+
+        
+    
+    
+            circle_marker_a53930a51a77842c59407aac590ce599.bindTooltip(
+                `<div>
+                     <b>Tarquinia</b><br>Posición estimada (Z3)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_bcf1d22666fb9d4de8c452209ed0dc97 = L.marker(
+                [47.10556590872807, 8.674340030802671],
+                {
+}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+            var div_icon_b18ad7811b1c1c2a5902b95d5d8c4c0a = L.divIcon({
+  "html": "\n            \u003cdiv style=\"font-family:serif; font-size:11pt; color:#6b3300;\n                        font-weight:bold; text-shadow:1px 1px 3px white;\n                        white-space:nowrap;\"\u003e\n                Tarquinia\n            \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_bcf1d22666fb9d4de8c452209ed0dc97.setIcon(div_icon_b18ad7811b1c1c2a5902b95d5d8c4c0a);
+            
+    
+            var circle_marker_c785f6512962aecc8b9cda65f5de9b38 = L.circleMarker(
+                [45.558951649939374, 20.261677892084844],
+                {"bubblingMouseEvents": true, "color": "#a05000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e07b00", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+        var popup_7604c94a538b8d9b4ba60c14ca7ac88c = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_882f1b42cbbe2532ed7489257ef8397b = $(`<div id="html_882f1b42cbbe2532ed7489257ef8397b" style="width: 100.0%; height: 100.0%;"><b>Verona</b><br>Estimado por Z3<br>Lat: 45.5590 | Lon: 20.2617</div>`)[0];
+                popup_7604c94a538b8d9b4ba60c14ca7ac88c.setContent(html_882f1b42cbbe2532ed7489257ef8397b);
+            
+        
+
+        circle_marker_c785f6512962aecc8b9cda65f5de9b38.bindPopup(popup_7604c94a538b8d9b4ba60c14ca7ac88c)
+        ;
+
+        
+    
+    
+            circle_marker_c785f6512962aecc8b9cda65f5de9b38.bindTooltip(
+                `<div>
+                     <b>Verona</b><br>Posición estimada (Z3)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_cc37e8965968fb129198211d37e3fb9e = L.marker(
+                [45.558951649939374, 20.261677892084844],
+                {
+}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+            var div_icon_0ac63839c728279626eebf6af36c8a7f = L.divIcon({
+  "html": "\n            \u003cdiv style=\"font-family:serif; font-size:11pt; color:#6b3300;\n                        font-weight:bold; text-shadow:1px 1px 3px white;\n                        white-space:nowrap;\"\u003e\n                Verona\n            \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_cc37e8965968fb129198211d37e3fb9e.setIcon(div_icon_0ac63839c728279626eebf6af36c8a7f);
+            
+    
+            var circle_marker_86c02cc7bd9b9c9c841d7ebae36407a8 = L.circleMarker(
+                [43.75996452232105, 10.863598068995813],
+                {"bubblingMouseEvents": true, "color": "#8B6914", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFD700", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+        var popup_080e8b1b37b3ed3f37ac53207a08bc00 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_9421a6ab1eea565a49ea3ecc2cc83d21 = $(`<div id="html_9421a6ab1eea565a49ea3ecc2cc83d21" style="width: 100.0%; height: 100.0%;"><b>Veyes</b><br>Estimado por Z3<br>Lat: 43.7600 | Lon: 10.8636</div>`)[0];
+                popup_080e8b1b37b3ed3f37ac53207a08bc00.setContent(html_9421a6ab1eea565a49ea3ecc2cc83d21);
+            
+        
+
+        circle_marker_86c02cc7bd9b9c9c841d7ebae36407a8.bindPopup(popup_080e8b1b37b3ed3f37ac53207a08bc00)
+        ;
+
+        
+    
+    
+            circle_marker_86c02cc7bd9b9c9c841d7ebae36407a8.bindTooltip(
+                `<div>
+                     <b>Veyes</b><br>Posición estimada (Z3)<br><b>⭐ Pivote</b>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_4d354504aecaa35f04c2adfd30dbdf6e = L.marker(
+                [43.75996452232105, 10.863598068995813],
+                {
+}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+            var div_icon_b3cfd9feebe9ec727fdcc5037d602b81 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"font-family:serif; font-size:11pt; color:#5a3e00;\n                        font-weight:bold; text-shadow:1px 1px 3px white;\n                        white-space:nowrap;\"\u003e\n                \u2605 Veyes\n            \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_4d354504aecaa35f04c2adfd30dbdf6e.setIcon(div_icon_b3cfd9feebe9ec727fdcc5037d602b81);
+            
+    
+            var circle_marker_68fae9030ab3057fc53434512a745fe5 = L.circleMarker(
+                [39.64435774481312, 16.035744590803972],
+                {"bubblingMouseEvents": true, "color": "#a05000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e07b00", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+        var popup_917bda83dfa4f1a46e3e1dd15e8c7fa4 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_4914abc9b1b576e620abadbeaaad0faa = $(`<div id="html_4914abc9b1b576e620abadbeaaad0faa" style="width: 100.0%; height: 100.0%;"><b>Volturno</b><br>Estimado por Z3<br>Lat: 39.6444 | Lon: 16.0357</div>`)[0];
+                popup_917bda83dfa4f1a46e3e1dd15e8c7fa4.setContent(html_4914abc9b1b576e620abadbeaaad0faa);
+            
+        
+
+        circle_marker_68fae9030ab3057fc53434512a745fe5.bindPopup(popup_917bda83dfa4f1a46e3e1dd15e8c7fa4)
+        ;
+
+        
+    
+    
+            circle_marker_68fae9030ab3057fc53434512a745fe5.bindTooltip(
+                `<div>
+                     <b>Volturno</b><br>Posición estimada (Z3)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_6aad3b4ee315527eeb10fc5b84d186d9 = L.marker(
+                [39.64435774481312, 16.035744590803972],
+                {
+}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+            var div_icon_b92926ff7202eb151f036144fd69ba87 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"font-family:serif; font-size:11pt; color:#6b3300;\n                        font-weight:bold; text-shadow:1px 1px 3px white;\n                        white-space:nowrap;\"\u003e\n                Volturno\n            \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_6aad3b4ee315527eeb10fc5b84d186d9.setIcon(div_icon_b92926ff7202eb151f036144fd69ba87);
+            
+    
+            var circle_marker_46393684347e6b10870a9164eeb41e44 = L.circleMarker(
+                [42.90791593726189, 10.616722567701665],
+                {"bubblingMouseEvents": true, "color": "#a05000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e07b00", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+        var popup_fac1d46f8cdb6e09051941f17ff21e09 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_5b1531c331a01361b818dc333cac0d84 = $(`<div id="html_5b1531c331a01361b818dc333cac0d84" style="width: 100.0%; height: 100.0%;"><b>colina Palatina</b><br>Estimado por Z3<br>Lat: 42.9079 | Lon: 10.6167</div>`)[0];
+                popup_fac1d46f8cdb6e09051941f17ff21e09.setContent(html_5b1531c331a01361b818dc333cac0d84);
+            
+        
+
+        circle_marker_46393684347e6b10870a9164eeb41e44.bindPopup(popup_fac1d46f8cdb6e09051941f17ff21e09)
+        ;
+
+        
+    
+    
+            circle_marker_46393684347e6b10870a9164eeb41e44.bindTooltip(
+                `<div>
+                     <b>colina Palatina</b><br>Posición estimada (Z3)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_dafc4dc9f48afab4dd7b5c1e84a7df18 = L.marker(
+                [42.90791593726189, 10.616722567701665],
+                {
+}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+            var div_icon_00b0cea8810193d3f6a15625ac771d40 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"font-family:serif; font-size:11pt; color:#6b3300;\n                        font-weight:bold; text-shadow:1px 1px 3px white;\n                        white-space:nowrap;\"\u003e\n                colina Palatina\n            \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_dafc4dc9f48afab4dd7b5c1e84a7df18.setIcon(div_icon_00b0cea8810193d3f6a15625ac771d40);
+            
+    
+            var circle_marker_6f6ccac5d57ecc4aad2fb5ae0b7070fc = L.circleMarker(
+                [42.461240772496964, 13.757479933799335],
+                {"bubblingMouseEvents": true, "color": "#a05000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e07b00", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 2}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+        var popup_63425f8459830ce037ddf4569f2f1728 = L.popup({
+  "maxWidth": 220,
+});
+
+        
+            
+                var html_728b1e65c902c93bd8a95effbb109b1f = $(`<div id="html_728b1e65c902c93bd8a95effbb109b1f" style="width: 100.0%; height: 100.0%;"><b>lago Albano</b><br>Estimado por Z3<br>Lat: 42.4612 | Lon: 13.7575</div>`)[0];
+                popup_63425f8459830ce037ddf4569f2f1728.setContent(html_728b1e65c902c93bd8a95effbb109b1f);
+            
+        
+
+        circle_marker_6f6ccac5d57ecc4aad2fb5ae0b7070fc.bindPopup(popup_63425f8459830ce037ddf4569f2f1728)
+        ;
+
+        
+    
+    
+            circle_marker_6f6ccac5d57ecc4aad2fb5ae0b7070fc.bindTooltip(
+                `<div>
+                     <b>lago Albano</b><br>Posición estimada (Z3)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_d9391c0173d221995d53eb292f720010 = L.marker(
+                [42.461240772496964, 13.757479933799335],
+                {
+}
+            ).addTo(map_42903e443edb16212f5cff6b08caab9f);
+        
+    
+            var div_icon_5e9a7ae9bdfa0169e8f6ffe2a18a1fc9 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"font-family:serif; font-size:11pt; color:#6b3300;\n                        font-weight:bold; text-shadow:1px 1px 3px white;\n                        white-space:nowrap;\"\u003e\n                lago Albano\n            \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+                marker_d9391c0173d221995d53eb292f720010.setIcon(div_icon_5e9a7ae9bdfa0169e8f6ffe2a18a1fc9);
+            
+</script>
+</html>

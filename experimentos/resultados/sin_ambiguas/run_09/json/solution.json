@@ -1,0 +1,359 @@
+{
+  "coords": {
+    "Amon Sul": {
+      "x": 1,
+      "y": 0
+    },
+    "Anduin": {
+      "x": 0,
+      "y": 0
+    },
+    "Angmar": {
+      "x": 0,
+      "y": 2280
+    },
+    "Archet": {
+      "x": 2280,
+      "y": 2280
+    },
+    "Belfalas": {
+      "x": 0,
+      "y": 0
+    },
+    "Beren": {
+      "x": 0,
+      "y": 0
+    },
+    "Bolsón Cerrado": {
+      "x": 0,
+      "y": 0
+    },
+    "Bolsón de Tirada": {
+      "x": 0,
+      "y": 0
+    },
+    "Bosque Viejo": {
+      "x": 793,
+      "y": 174
+    },
+    "Brandivino": {
+      "x": 789,
+      "y": 179
+    },
+    "Bree": {
+      "x": 0,
+      "y": 2
+    },
+    "Cavada Grande": {
+      "x": 0,
+      "y": 0
+    },
+    "Comarca": {
+      "x": 774,
+      "y": 949
+    },
+    "Cricava": {
+      "x": 0,
+      "y": 0
+    },
+    "Cuaderna del Este": {
+      "x": 2280,
+      "y": 950
+    },
+    "Cuaderna del Sur": {
+      "x": 0,
+      "y": 0
+    },
+    "Delagua": {
+      "x": 0,
+      "y": 0
+    },
+    "Erebor": {
+      "x": 2280,
+      "y": 2
+    },
+    "Esgalduin": {
+      "x": 0,
+      "y": 0
+    },
+    "Esgarot": {
+      "x": 0,
+      "y": 0
+    },
+    "Fontegrís": {
+      "x": 1,
+      "y": 2280
+    },
+    "Fornost": {
+      "x": 0,
+      "y": 0
+    },
+    "Fronteras del Oeste": {
+      "x": 0,
+      "y": 0
+    },
+    "Gamoburgo": {
+      "x": 0,
+      "y": 0
+    },
+    "Gondor": {
+      "x": 0,
+      "y": 0
+    },
+    "Gran Bosque Verde": {
+      "x": 0,
+      "y": 0
+    },
+    "Grandes Smials": {
+      "x": 0,
+      "y": 0
+    },
+    "Hobbiton": {
+      "x": 1,
+      "y": 2280
+    },
+    "Lago Largo": {
+      "x": 0,
+      "y": 0
+    },
+    "Landas de Etten": {
+      "x": 0,
+      "y": 0
+    },
+    "Los Gamos": {
+      "x": 2280,
+      "y": 948
+    },
+    "Lun": {
+      "x": 2280,
+      "y": 1
+    },
+    "Marjala": {
+      "x": 0,
+      "y": 0
+    },
+    "Montaña": {
+      "x": 0,
+      "y": 0
+    },
+    "Montañas Nubladas": {
+      "x": 2279,
+      "y": 1
+    },
+    "Montañas del Terror": {
+      "x": 0,
+      "y": 0
+    },
+    "Neldoreth": {
+      "x": 0,
+      "y": 0
+    },
+    "Norburgo": {
+      "x": 0,
+      "y": 0
+    },
+    "Puente Brandivino": {
+      "x": 0,
+      "y": 0
+    },
+    "Puente del Brandivino": {
+      "x": 0,
+      "y": 0
+    },
+    "Puertos Grises": {
+      "x": 0,
+      "y": 0
+    },
+    "Quebradas": {
+      "x": 192,
+      "y": 1368
+    },
+    "Rivendel": {
+      "x": 1,
+      "y": 2279
+    },
+    "Sonorona": {
+      "x": 0,
+      "y": 0
+    },
+    "Tharbad": {
+      "x": 0,
+      "y": 0
+    },
+    "Tierras Asperas": {
+      "x": 0,
+      "y": 0
+    },
+    "Tierras Brunas": {
+      "x": 0,
+      "y": 0
+    },
+    "Tierras de Tuk": {
+      "x": 0,
+      "y": 2279
+    },
+    "Tinúviel": {
+      "x": 0,
+      "y": 0
+    },
+    "Tornasauce": {
+      "x": 0,
+      "y": 0
+    },
+    "Torres de Abajo": {
+      "x": 0,
+      "y": 0
+    },
+    "Vado de Bruinen": {
+      "x": 0,
+      "y": 0
+    },
+    "Vado del Bruinen": {
+      "x": 0,
+      "y": 0
+    },
+    "Valle": {
+      "x": 796,
+      "y": 134
+    },
+    "Valles de Etten": {
+      "x": 0,
+      "y": 2280
+    },
+    "bosque de Chet": {
+      "x": 2280,
+      "y": 2280
+    },
+    "los Grandes Túmulos": {
+      "x": 0,
+      "y": 0
+    }
+  },
+  "CSR": 0.7,
+  "total_constraints": 20,
+  "width": 2280,
+  "height": 2280,
+  "rel_eval": [
+    {
+      "origen": "Rivendel",
+      "tipo": "NORTE_DE",
+      "destino": "Montañas Nubladas",
+      "satisface": true
+    },
+    {
+      "origen": "Bree",
+      "tipo": "ESTE_DE",
+      "destino": "Comarca",
+      "satisface": false
+    },
+    {
+      "origen": "Belfalas",
+      "tipo": "OESTE_DE",
+      "destino": "Lun",
+      "satisface": true
+    },
+    {
+      "origen": "Los Gamos",
+      "tipo": "ESTE_DE",
+      "destino": "Brandivino",
+      "satisface": true
+    },
+    {
+      "origen": "Erebor",
+      "tipo": "ESTE_DE",
+      "destino": "Montañas Nubladas",
+      "satisface": false
+    },
+    {
+      "origen": "Montañas Nubladas",
+      "tipo": "ESTE_DE",
+      "destino": "Tierras Asperas",
+      "satisface": true
+    },
+    {
+      "origen": "Cuaderna del Sur",
+      "tipo": "SUR_DE",
+      "destino": "Comarca",
+      "satisface": true
+    },
+    {
+      "origen": "Los Gamos",
+      "tipo": "ESTE_DE",
+      "destino": "Hobbiton",
+      "satisface": true
+    },
+    {
+      "origen": "Tierras de Tuk",
+      "tipo": "OESTE_DE",
+      "destino": "Hobbiton",
+      "satisface": false
+    },
+    {
+      "origen": "Cuaderna del Sur",
+      "tipo": "SUR_DE",
+      "destino": "Hobbiton",
+      "satisface": true
+    },
+    {
+      "origen": "Comarca",
+      "tipo": "OESTE_DE",
+      "destino": "Bree",
+      "satisface": false
+    },
+    {
+      "origen": "Los Gamos",
+      "tipo": "ESTE_DE",
+      "destino": "Comarca",
+      "satisface": true
+    },
+    {
+      "origen": "Cuaderna del Este",
+      "tipo": "ESTE_DE",
+      "destino": "Comarca",
+      "satisface": true
+    },
+    {
+      "origen": "Archet",
+      "tipo": "ESTE_DE",
+      "destino": "Bree",
+      "satisface": true
+    },
+    {
+      "origen": "Montañas Nubladas",
+      "tipo": "ESTE_DE",
+      "destino": "Bree",
+      "satisface": true
+    },
+    {
+      "origen": "bosque de Chet",
+      "tipo": "ESTE_DE",
+      "destino": "Bree",
+      "satisface": true
+    },
+    {
+      "origen": "Angmar",
+      "tipo": "NORTE_DE",
+      "destino": "Amon Sul",
+      "satisface": true
+    },
+    {
+      "origen": "Fontegrís",
+      "tipo": "NORTE_DE",
+      "destino": "Landas de Etten",
+      "satisface": true
+    },
+    {
+      "origen": "Rivendel",
+      "tipo": "SUR_DE",
+      "destino": "Landas de Etten",
+      "satisface": false
+    },
+    {
+      "origen": "Valles de Etten",
+      "tipo": "NORTE_DE",
+      "destino": "Rivendel",
+      "satisface": false
+    }
+  ],
+  "solver_mode": "optimized_soft_constraints"
+}

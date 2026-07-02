@@ -1,0 +1,295 @@
+{
+  "metricas": {
+    "cobertura": 27.3,
+    "similitud_posicional": 71.2,
+    "n_common": 9,
+    "n_off": 33,
+    "n_gen": 62
+  },
+  "nodos_emparejados": [
+    {
+      "oficial": "Amon Sul",
+      "generado": "Amon Sul",
+      "off_x": 0.456,
+      "off_y": 0.333,
+      "gen_x": 0.49,
+      "gen_y": 0.974
+    },
+    {
+      "oficial": "Bree",
+      "generado": "Bree",
+      "off_x": 0.384,
+      "off_y": 0.337,
+      "gen_x": 0.782,
+      "gen_y": 0.216
+    },
+    {
+      "oficial": "Carn Dum",
+      "generado": "Carn Dûm",
+      "off_x": 0.44,
+      "off_y": 0.1,
+      "gen_x": 0.079,
+      "gen_y": 0.696
+    },
+    {
+      "oficial": "Esgaroth",
+      "generado": "Esgarot",
+      "off_x": 0.8,
+      "off_y": 0.22,
+      "gen_x": 0.785,
+      "gen_y": 0.569
+    },
+    {
+      "oficial": "Fornost",
+      "generado": "Fornost",
+      "off_x": 0.36,
+      "off_y": 0.25,
+      "gen_x": 0.072,
+      "gen_y": 0.109
+    },
+    {
+      "oficial": "Hobbiton",
+      "generado": "Hobbiton",
+      "off_x": 0.3,
+      "off_y": 0.313,
+      "gen_x": 0.53,
+      "gen_y": 0.354
+    },
+    {
+      "oficial": "La Comarca",
+      "generado": "Comarca",
+      "off_x": 0.26,
+      "off_y": 0.33,
+      "gen_x": 0.614,
+      "gen_y": 0.33
+    },
+    {
+      "oficial": "Rivendel",
+      "generado": "Rivendel",
+      "off_x": 0.58,
+      "off_y": 0.317,
+      "gen_x": 0.774,
+      "gen_y": 0.297
+    },
+    {
+      "oficial": "Tharbad",
+      "generado": "Tharbad",
+      "off_x": 0.42,
+      "off_y": 0.417,
+      "gen_x": 0.353,
+      "gen_y": 0.876
+    }
+  ],
+  "orientaciones": {
+    "NORTE_DE": {
+      "correctas": 1,
+      "total": 1,
+      "pares": [
+        {
+          "A": "Fornost",
+          "B": "Tharbad",
+          "correcto": true
+        }
+      ]
+    },
+    "SUR_DE": {
+      "correctas": 2,
+      "total": 7,
+      "pares": [
+        {
+          "A": "Bree",
+          "B": "Carn Dum",
+          "correcto": false
+        },
+        {
+          "A": "Amon Sul",
+          "B": "Carn Dum",
+          "correcto": true
+        },
+        {
+          "A": "Fornost",
+          "B": "Carn Dum",
+          "correcto": false
+        },
+        {
+          "A": "Hobbiton",
+          "B": "Carn Dum",
+          "correcto": false
+        },
+        {
+          "A": "Tharbad",
+          "B": "Carn Dum",
+          "correcto": true
+        },
+        {
+          "A": "Rivendel",
+          "B": "Carn Dum",
+          "correcto": false
+        },
+        {
+          "A": "La Comarca",
+          "B": "Carn Dum",
+          "correcto": false
+        }
+      ]
+    },
+    "ESTE_DE": {
+      "correctas": 2,
+      "total": 5,
+      "pares": [
+        {
+          "A": "Amon Sul",
+          "B": "Hobbiton",
+          "correcto": false
+        },
+        {
+          "A": "Amon Sul",
+          "B": "La Comarca",
+          "correcto": false
+        },
+        {
+          "A": "Tharbad",
+          "B": "La Comarca",
+          "correcto": false
+        },
+        {
+          "A": "Rivendel",
+          "B": "La Comarca",
+          "correcto": true
+        },
+        {
+          "A": "Esgaroth",
+          "B": "Carn Dum",
+          "correcto": true
+        }
+      ]
+    },
+    "OESTE_DE": {
+      "correctas": 10,
+      "total": 12,
+      "pares": [
+        {
+          "A": "Bree",
+          "B": "Rivendel",
+          "correcto": false
+        },
+        {
+          "A": "Bree",
+          "B": "Esgaroth",
+          "correcto": true
+        },
+        {
+          "A": "Amon Sul",
+          "B": "Esgaroth",
+          "correcto": true
+        },
+        {
+          "A": "Fornost",
+          "B": "Rivendel",
+          "correcto": true
+        },
+        {
+          "A": "Fornost",
+          "B": "Esgaroth",
+          "correcto": true
+        },
+        {
+          "A": "Hobbiton",
+          "B": "Tharbad",
+          "correcto": false
+        },
+        {
+          "A": "Hobbiton",
+          "B": "Rivendel",
+          "correcto": true
+        },
+        {
+          "A": "Hobbiton",
+          "B": "Esgaroth",
+          "correcto": true
+        },
+        {
+          "A": "Tharbad",
+          "B": "Rivendel",
+          "correcto": true
+        },
+        {
+          "A": "Tharbad",
+          "B": "Esgaroth",
+          "correcto": true
+        },
+        {
+          "A": "Rivendel",
+          "B": "Esgaroth",
+          "correcto": true
+        },
+        {
+          "A": "La Comarca",
+          "B": "Esgaroth",
+          "correcto": true
+        }
+      ]
+    },
+    "CERCA_DE": {
+      "correctas": 1,
+      "total": 11,
+      "pares": [
+        {
+          "A": "Bree",
+          "B": "Amon Sul",
+          "correcto": false
+        },
+        {
+          "A": "Bree",
+          "B": "Fornost",
+          "correcto": false
+        },
+        {
+          "A": "Bree",
+          "B": "Hobbiton",
+          "correcto": false
+        },
+        {
+          "A": "Bree",
+          "B": "Tharbad",
+          "correcto": false
+        },
+        {
+          "A": "Bree",
+          "B": "La Comarca",
+          "correcto": false
+        },
+        {
+          "A": "Amon Sul",
+          "B": "Fornost",
+          "correcto": false
+        },
+        {
+          "A": "Amon Sul",
+          "B": "Tharbad",
+          "correcto": false
+        },
+        {
+          "A": "Amon Sul",
+          "B": "Rivendel",
+          "correcto": false
+        },
+        {
+          "A": "Fornost",
+          "B": "Hobbiton",
+          "correcto": false
+        },
+        {
+          "A": "Fornost",
+          "B": "La Comarca",
+          "correcto": false
+        },
+        {
+          "A": "Hobbiton",
+          "B": "La Comarca",
+          "correcto": true
+        }
+      ]
+    }
+  }
+}

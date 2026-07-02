@@ -1,0 +1,294 @@
+{
+  "metricas": {
+    "cobertura": 27.3,
+    "similitud_posicional": 79.5,
+    "n_common": 9,
+    "n_off": 33,
+    "n_gen": 63
+  },
+  "nodos_emparejados": [
+    {
+      "oficial": "Bree",
+      "generado": "Bree",
+      "off_x": 0.384,
+      "off_y": 0.337,
+      "gen_x": 0.758,
+      "gen_y": 0.521
+    },
+    {
+      "oficial": "Erebor",
+      "generado": "Erebor",
+      "off_x": 0.752,
+      "off_y": 0.193,
+      "gen_x": 0.665,
+      "gen_y": 0.278
+    },
+    {
+      "oficial": "Fornost",
+      "generado": "Fornost",
+      "off_x": 0.36,
+      "off_y": 0.25,
+      "gen_x": 0.461,
+      "gen_y": 0.402
+    },
+    {
+      "oficial": "Hobbiton",
+      "generado": "Hobbiton",
+      "off_x": 0.3,
+      "off_y": 0.313,
+      "gen_x": 0.648,
+      "gen_y": 0.529
+    },
+    {
+      "oficial": "La Comarca",
+      "generado": "Comarca",
+      "off_x": 0.26,
+      "off_y": 0.33,
+      "gen_x": 0.643,
+      "gen_y": 0.46
+    },
+    {
+      "oficial": "Puertos Grises",
+      "generado": "Puertos Grises",
+      "off_x": 0.12,
+      "off_y": 0.333,
+      "gen_x": 0.562,
+      "gen_y": 0.243
+    },
+    {
+      "oficial": "Rivendel",
+      "generado": "Rivendel",
+      "off_x": 0.58,
+      "off_y": 0.317,
+      "gen_x": 0.723,
+      "gen_y": 0.297
+    },
+    {
+      "oficial": "Tharbad",
+      "generado": "Tharbad",
+      "off_x": 0.42,
+      "off_y": 0.417,
+      "gen_x": 0.592,
+      "gen_y": 0.16
+    },
+    {
+      "oficial": "Valle",
+      "generado": "Valle",
+      "off_x": 0.772,
+      "off_y": 0.207,
+      "gen_x": 0.671,
+      "gen_y": 0.348
+    }
+  ],
+  "orientaciones": {
+    "NORTE_DE": {
+      "correctas": 0,
+      "total": 1,
+      "pares": [
+        {
+          "A": "Fornost",
+          "B": "Tharbad",
+          "correcto": false
+        }
+      ]
+    },
+    "SUR_DE": {
+      "correctas": 0,
+      "total": 0,
+      "pares": []
+    },
+    "ESTE_DE": {
+      "correctas": 13,
+      "total": 20,
+      "pares": [
+        {
+          "A": "Erebor",
+          "B": "Fornost",
+          "correcto": true
+        },
+        {
+          "A": "Erebor",
+          "B": "Tharbad",
+          "correcto": true
+        },
+        {
+          "A": "Erebor",
+          "B": "Puertos Grises",
+          "correcto": true
+        },
+        {
+          "A": "Erebor",
+          "B": "Bree",
+          "correcto": false
+        },
+        {
+          "A": "Erebor",
+          "B": "Rivendel",
+          "correcto": false
+        },
+        {
+          "A": "Erebor",
+          "B": "Hobbiton",
+          "correcto": true
+        },
+        {
+          "A": "Erebor",
+          "B": "La Comarca",
+          "correcto": true
+        },
+        {
+          "A": "Valle",
+          "B": "Fornost",
+          "correcto": true
+        },
+        {
+          "A": "Valle",
+          "B": "Tharbad",
+          "correcto": true
+        },
+        {
+          "A": "Valle",
+          "B": "Puertos Grises",
+          "correcto": true
+        },
+        {
+          "A": "Valle",
+          "B": "Bree",
+          "correcto": false
+        },
+        {
+          "A": "Valle",
+          "B": "Rivendel",
+          "correcto": false
+        },
+        {
+          "A": "Valle",
+          "B": "Hobbiton",
+          "correcto": true
+        },
+        {
+          "A": "Valle",
+          "B": "La Comarca",
+          "correcto": true
+        },
+        {
+          "A": "Fornost",
+          "B": "Puertos Grises",
+          "correcto": false
+        },
+        {
+          "A": "Tharbad",
+          "B": "Puertos Grises",
+          "correcto": true
+        },
+        {
+          "A": "Tharbad",
+          "B": "Hobbiton",
+          "correcto": false
+        },
+        {
+          "A": "Tharbad",
+          "B": "La Comarca",
+          "correcto": false
+        },
+        {
+          "A": "Rivendel",
+          "B": "Hobbiton",
+          "correcto": true
+        },
+        {
+          "A": "Rivendel",
+          "B": "La Comarca",
+          "correcto": true
+        }
+      ]
+    },
+    "OESTE_DE": {
+      "correctas": 5,
+      "total": 6,
+      "pares": [
+        {
+          "A": "Fornost",
+          "B": "Rivendel",
+          "correcto": true
+        },
+        {
+          "A": "Tharbad",
+          "B": "Rivendel",
+          "correcto": true
+        },
+        {
+          "A": "Puertos Grises",
+          "B": "Bree",
+          "correcto": true
+        },
+        {
+          "A": "Puertos Grises",
+          "B": "Rivendel",
+          "correcto": true
+        },
+        {
+          "A": "Puertos Grises",
+          "B": "Hobbiton",
+          "correcto": true
+        },
+        {
+          "A": "Bree",
+          "B": "Rivendel",
+          "correcto": false
+        }
+      ]
+    },
+    "CERCA_DE": {
+      "correctas": 4,
+      "total": 9,
+      "pares": [
+        {
+          "A": "Erebor",
+          "B": "Valle",
+          "correcto": true
+        },
+        {
+          "A": "Fornost",
+          "B": "Bree",
+          "correcto": false
+        },
+        {
+          "A": "Fornost",
+          "B": "Hobbiton",
+          "correcto": false
+        },
+        {
+          "A": "Fornost",
+          "B": "La Comarca",
+          "correcto": false
+        },
+        {
+          "A": "Tharbad",
+          "B": "Bree",
+          "correcto": false
+        },
+        {
+          "A": "Puertos Grises",
+          "B": "La Comarca",
+          "correcto": false
+        },
+        {
+          "A": "Bree",
+          "B": "Hobbiton",
+          "correcto": true
+        },
+        {
+          "A": "Bree",
+          "B": "La Comarca",
+          "correcto": true
+        },
+        {
+          "A": "Hobbiton",
+          "B": "La Comarca",
+          "correcto": true
+        }
+      ]
+    }
+  }
+}

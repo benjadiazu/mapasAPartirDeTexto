@@ -1,0 +1,375 @@
+{
+  "coords": {
+    "Angband": {
+      "x": 0,
+      "y": 2320
+    },
+    "Archet": {
+      "x": 0,
+      "y": 0
+    },
+    "Baranduin": {
+      "x": 0,
+      "y": 0
+    },
+    "Belfalas": {
+      "x": 0,
+      "y": 1
+    },
+    "Bolsón Cerrado": {
+      "x": 0,
+      "y": 0
+    },
+    "Bolsón de Tirada": {
+      "x": 0,
+      "y": 0
+    },
+    "Bosque": {
+      "x": 186,
+      "y": 180
+    },
+    "Bosque Cerrado": {
+      "x": 0,
+      "y": 0
+    },
+    "Bosque Viejo": {
+      "x": 2320,
+      "y": 193
+    },
+    "Bosque de Chet": {
+      "x": 0,
+      "y": 0
+    },
+    "Brandivino": {
+      "x": 168,
+      "y": 192
+    },
+    "Bree": {
+      "x": 60,
+      "y": 194
+    },
+    "Camino Verde": {
+      "x": 0,
+      "y": 0
+    },
+    "Campos Gladios": {
+      "x": 0,
+      "y": 0
+    },
+    "Cavada Grande": {
+      "x": 0,
+      "y": 0
+    },
+    "Cepeda": {
+      "x": 0,
+      "y": 0
+    },
+    "Comarca": {
+      "x": 141,
+      "y": 192
+    },
+    "Cricava": {
+      "x": 0,
+      "y": 0
+    },
+    "Cuaderna del Este": {
+      "x": 2320,
+      "y": 193
+    },
+    "Cuaderna del Oeste": {
+      "x": 0,
+      "y": 0
+    },
+    "Cuaderna del Sur": {
+      "x": 0,
+      "y": 0
+    },
+    "Delagua": {
+      "x": 0,
+      "y": 0
+    },
+    "Días Antiguos": {
+      "x": 0,
+      "y": 0
+    },
+    "Días del Exodo": {
+      "x": 0,
+      "y": 0
+    },
+    "Erebor": {
+      "x": 0,
+      "y": 194
+    },
+    "Esgalduin": {
+      "x": 0,
+      "y": 0
+    },
+    "Este": {
+      "x": 2320,
+      "y": 193
+    },
+    "Fontegrís": {
+      "x": 2319,
+      "y": 0
+    },
+    "Fornost": {
+      "x": 0,
+      "y": 0
+    },
+    "Gamoburgo": {
+      "x": 0,
+      "y": 0
+    },
+    "Gondor": {
+      "x": 0,
+      "y": 0
+    },
+    "Grandes Aguas": {
+      "x": 0,
+      "y": 0
+    },
+    "Grietas del Destino": {
+      "x": 0,
+      "y": 0
+    },
+    "Hobbiton": {
+      "x": 2320,
+      "y": 190
+    },
+    "La Perca Dorada": {
+      "x": 0,
+      "y": 0
+    },
+    "Lago Largo": {
+      "x": 0,
+      "y": 0
+    },
+    "Los Gamos": {
+      "x": 0,
+      "y": 191
+    },
+    "Lun": {
+      "x": 2320,
+      "y": 0
+    },
+    "Mares del cielo": {
+      "x": 0,
+      "y": 0
+    },
+    "Mares que Separan": {
+      "x": 0,
+      "y": 0
+    },
+    "Marjala": {
+      "x": 0,
+      "y": 0
+    },
+    "Montañas del Terror": {
+      "x": 0,
+      "y": 0
+    },
+    "Mordor": {
+      "x": 924,
+      "y": 115
+    },
+    "Neldoreth": {
+      "x": 0,
+      "y": 0
+    },
+    "Norburgo": {
+      "x": 0,
+      "y": 2320
+    },
+    "Orodruin": {
+      "x": 0,
+      "y": 0
+    },
+    "Puente Brandivino": {
+      "x": 0,
+      "y": 0
+    },
+    "Puente Ultimo": {
+      "x": 0,
+      "y": 0
+    },
+    "Puente del Brandivino": {
+      "x": 0,
+      "y": 0
+    },
+    "Quebradas": {
+      "x": 182,
+      "y": 195
+    },
+    "Rivendel": {
+      "x": 2320,
+      "y": 2320
+    },
+    "Sonorona": {
+      "x": 2320,
+      "y": 2320
+    },
+    "Tharbad": {
+      "x": 0,
+      "y": 2320
+    },
+    "Tierras Altas": {
+      "x": 0,
+      "y": 0
+    },
+    "Tierras Asperas": {
+      "x": 0,
+      "y": 0
+    },
+    "Tierras Brunas": {
+      "x": 1,
+      "y": 0
+    },
+    "Tierras de Tuk": {
+      "x": 0,
+      "y": 189
+    },
+    "las Cuadernas": {
+      "x": 0,
+      "y": 0
+    }
+  },
+  "CSR": 0.7727,
+  "total_constraints": 22,
+  "width": 2320,
+  "height": 2320,
+  "rel_eval": [
+    {
+      "origen": "Tierras Brunas",
+      "tipo": "SUR_DE",
+      "destino": "Tharbad",
+      "satisface": true
+    },
+    {
+      "origen": "Rivendel",
+      "tipo": "NORTE_DE",
+      "destino": "Fontegrís",
+      "satisface": true
+    },
+    {
+      "origen": "Bree",
+      "tipo": "OESTE_DE",
+      "destino": "Comarca",
+      "satisface": false
+    },
+    {
+      "origen": "Belfalas",
+      "tipo": "OESTE_DE",
+      "destino": "Lun",
+      "satisface": true
+    },
+    {
+      "origen": "Los Gamos",
+      "tipo": "ESTE_DE",
+      "destino": "Brandivino",
+      "satisface": false
+    },
+    {
+      "origen": "Norburgo",
+      "tipo": "NORTE_DE",
+      "destino": "Comarca",
+      "satisface": true
+    },
+    {
+      "origen": "Erebor",
+      "tipo": "OESTE_DE",
+      "destino": "Este",
+      "satisface": true
+    },
+    {
+      "origen": "Este",
+      "tipo": "ESTE_DE",
+      "destino": "Mordor",
+      "satisface": true
+    },
+    {
+      "origen": "Hobbiton",
+      "tipo": "ESTE_DE",
+      "destino": "Los Gamos",
+      "satisface": true
+    },
+    {
+      "origen": "Tierras de Tuk",
+      "tipo": "OESTE_DE",
+      "destino": "Hobbiton",
+      "satisface": true
+    },
+    {
+      "origen": "Bosque Viejo",
+      "tipo": "ESTE_DE",
+      "destino": "Comarca",
+      "satisface": true
+    },
+    {
+      "origen": "Este",
+      "tipo": "ESTE_DE",
+      "destino": "Quebradas",
+      "satisface": true
+    },
+    {
+      "origen": "Comarca",
+      "tipo": "ESTE_DE",
+      "destino": "Este",
+      "satisface": false
+    },
+    {
+      "origen": "Los Gamos",
+      "tipo": "OESTE_DE",
+      "destino": "Comarca",
+      "satisface": true
+    },
+    {
+      "origen": "Cuaderna del Este",
+      "tipo": "ESTE_DE",
+      "destino": "Comarca",
+      "satisface": true
+    },
+    {
+      "origen": "Comarca",
+      "tipo": "OESTE_DE",
+      "destino": "Bree",
+      "satisface": false
+    },
+    {
+      "origen": "Este",
+      "tipo": "ESTE_DE",
+      "destino": "Bree",
+      "satisface": true
+    },
+    {
+      "origen": "Rivendel",
+      "tipo": "ESTE_DE",
+      "destino": "Bree",
+      "satisface": true
+    },
+    {
+      "origen": "Mordor",
+      "tipo": "ESTE_DE",
+      "destino": "Bree",
+      "satisface": true
+    },
+    {
+      "origen": "Quebradas",
+      "tipo": "OESTE_DE",
+      "destino": "Bree",
+      "satisface": false
+    },
+    {
+      "origen": "Mordor",
+      "tipo": "SUR_DE",
+      "destino": "Angband",
+      "satisface": true
+    },
+    {
+      "origen": "Fontegrís",
+      "tipo": "SUR_DE",
+      "destino": "Sonorona",
+      "satisface": true
+    }
+  ],
+  "solver_mode": "optimized_soft_constraints"
+}

@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MapaLit — Generador de Mapas</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background: #f5f4f0;
+      color: #1a1a1a;
+      padding: 2rem 1rem;
+    }
+
+    .page { max-width: 860px; margin: 0 auto; }
+
+    h1 {
+      font-size: 1.55rem;
+      font-weight: 700;
+      margin-bottom: 0.2rem;
+    }
+
+    .subtitle {
+      color: #666;
+      font-size: 0.9rem;
+      margin-bottom: 2rem;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: 0 1px 5px rgba(0,0,0,.08);
+      margin-bottom: 1.25rem;
+    }
+
+    .card-title {
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      color: #888;
+      margin-bottom: 1rem;
+    }
+
+    /* ── Drop zone ── */
+    #drop-zone {
+      border: 2px dashed #d0d0d0;
+      border-radius: 8px;
+      padding: 2.2rem 1.5rem;
+      text-align: center;
+      cursor: pointer;
+      transition: border-color .2s, background .2s;
+      margin-bottom: 1.2rem;
+    }
+    #drop-zone.hover   { border-color: #4a7c59; background: #f0f7f3; }
+    #drop-zone.has-file { border-color: #4a7c59; background: #f0f7f3; }
+    #drop-zone .dz-icon { font-size: 2rem; margin-bottom: 0.4rem; }
+    #drop-zone .dz-hint { color: #999; font-size: 0.82rem; margin-top: 0.3rem; }
+    #file-name { font-weight: 600; color: #4a7c59; margin-top: 0.5rem; font-size: 0.9rem; }
+    #pdf-input { display: none; }
+
+    /* ── Radio buttons ── */
+    .radio-group {
+      display: flex;
+      gap: 0.75rem;
+      margin-bottom: 1.25rem;
+      flex-wrap: wrap;
+    }
+
+    .radio-option {
+      flex: 1;
+      min-width: 140px;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.65rem 1rem;
+      border: 1.5px solid #ddd;
+      border-radius: 7px;
+      cursor: pointer;
+      transition: border-color .15s, background .15s;
+      font-size: 0.9rem;
+      user-select: none;
+    }
+    .radio-option.active {
+      border-color: #4a7c59;
+      background: #f0f7f3;
+      color: #2d5a3d;
+      font-weight: 500;
+    }
+    .radio-option input { accent-color: #4a7c59; }
+
+    .tipo-desc {
+      font-size: 0.78rem;
+      color: #888;
+      margin-bottom: 1.2rem;
+      min-height: 1.2em;
+    }
+
+    /* ── Button ── */
+    #btn {
+      width: 100%;
+      padding: 0.8rem;
+      background: #4a7c59;
+      color: #fff;
+      border: none;
+      border-radius: 7px;
+      font-size: 1rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background .2s;
+    }
+    #btn:hover:not(:disabled) { background: #3a6247; }
+    #btn:disabled { background: #b0b0b0; cursor: not-allowed; }
+
+    /* ── Log ── */
+    #log-card { display: none; }
+
+    .log-header {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .spinner {
+      width: 15px; height: 15px;
+      border: 2px solid #ddd;
+      border-top-color: #4a7c59;
+      border-radius: 50%;
+      animation: spin .7s linear infinite;
+      flex-shrink: 0;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    #log {
+      background: #1a1a1a;
+      color: #ccc;
+      padding: 1rem;
+      border-radius: 7px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.75rem;
+      max-height: 280px;
+      overflow-y: auto;
+      white-space: pre-wrap;
+      word-break: break-all;
+      line-height: 1.5;
+    }
+
+    /* ── Result ── */
+    #result-card { display: none; }
+
+    .result-tabs {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .tab-btn {
+      padding: 0.4rem 1rem;
+      border: 1.5px solid #ddd;
+      border-radius: 20px;
+      background: none;
+      cursor: pointer;
+      font-size: 0.85rem;
+      transition: border-color .15s, background .15s;
+    }
+    .tab-btn.active {
+      border-color: #4a7c59;
+      background: #4a7c59;
+      color: #fff;
+      font-weight: 500;
+    }
+
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+
+    #svg-img {
+      width: 100%;
+      border: 1px solid #eee;
+      border-radius: 7px;
+    }
+
+    #map-iframe {
+      width: 100%;
+      height: 500px;
+      border: none;
+      border-radius: 7px;
+    }
+
+    .status-msg {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.4rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.82rem;
+      font-weight: 500;
+    }
+    .status-ok  { background: #e6f4ea; color: #2d5a3d; }
+    .status-err { background: #fdecea; color: #8b2020; }
+
+    /* ── Tablas de comparación ── */
+    .cmp-section-title {
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      color: #888;
+      margin: 1.25rem 0 0.6rem;
+    }
+    .cmp-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.82rem;
+    }
+    .cmp-table th {
+      background: #f5f4f0;
+      padding: 0.5rem 0.75rem;
+      text-align: left;
+      font-weight: 600;
+      border-bottom: 1.5px solid #e0e0e0;
+    }
+    .cmp-table td {
+      padding: 0.45rem 0.75rem;
+      border-bottom: 1px solid #f0f0f0;
+      font-variant-numeric: tabular-nums;
+    }
+    .cmp-table tr:last-child td { border-bottom: none; }
+    .pct-bar-wrap {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .pct-bar {
+      height: 6px;
+      border-radius: 3px;
+      background: #4a7c59;
+      min-width: 2px;
+    }
+    .pct-label { color: #444; min-width: 3rem; }
+    .no-data { color: #aaa; font-style: italic; }
+    .cmp-metric-box {
+      background: #f5f4f0;
+      border-radius: 8px;
+      padding: 0.75rem 1.1rem;
+      min-width: 140px;
+    }
+    .cmp-metric-label { font-size: 0.75rem; color: #888; margin-bottom: 0.2rem; }
+    .cmp-metric-value { font-size: 1.3rem; font-weight: 700; color: #1a1a1a; }
+    .cmp-metric-note  { font-size: 0.7rem; color: #aaa; margin-top: 0.1rem; }
+    .orient-group-row td {
+      background: #f5f4f0;
+      font-weight: 600;
+      font-size: 0.8rem;
+      padding: 0.4rem 0.75rem;
+    }
+    .orient-pair-row td { padding: 0.35rem 0.75rem 0.35rem 1.5rem; font-size: 0.81rem; }
+    .tag-ok  { color: #2d5a3d; font-weight: 600; }
+    .tag-err { color: #8b2020; font-weight: 600; }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <h1>Generador de Mapas Literarios</h1>
+  <p class="subtitle">Sube un texto en PDF y obtén un mapa espacial de los lugares mencionados.</p>
+
+  <!-- ── Formulario ── -->
+  <div class="card">
+    <div class="card-title">Configuración</div>
+
+    <div id="drop-zone">
+      <div class="dz-icon">📄</div>
+      <div>Arrastra tu PDF aquí o <strong>haz clic para seleccionar</strong></div>
+      <div class="dz-hint">Solo archivos .pdf</div>
+      <div id="file-name"></div>
+    </div>
+    <input type="file" id="pdf-input" accept=".pdf">
+
+    <div class="radio-group">
+      <label class="radio-option active" id="opt-historico">
+        <input type="radio" name="tipo" value="historico" checked>
+        🏛️ Texto histórico
+      </label>
+      <label class="radio-option" id="opt-fantasia">
+        <input type="radio" name="tipo" value="fantasia">
+        🐉 Texto de fantasía
+      </label>
+    </div>
+
+    <p class="tipo-desc" id="tipo-desc">
+      Ejecuta el pipeline completo, incluyendo georreferenciación con Wikidata.
+    </p>
+
+    <button id="btn">Generar Mapa</button>
+  </div>
+
+  <!-- ── Progreso ── -->
+  <div class="card" id="log-card">
+    <div class="log-header">
+      <div class="spinner" id="spinner"></div>
+      <span class="card-title" style="margin-bottom:0">Progreso</span>
+      <span id="status-badge"></span>
+    </div>
+    <pre id="log"></pre>
+  </div>
+
+  <!-- ── Resultado ── -->
+  <div class="card" id="result-card">
+    <div class="card-title">Resultado</div>
+
+    <div class="result-tabs" id="tabs"></div>
+
+    <div class="tab-panel active" id="panel-grafo">
+      <img id="svg-img" src="" alt="Grafo topológico generado">
+    </div>
+
+    <div class="tab-panel" id="panel-fantasia">
+      <img id="fantasia-img" src="" alt="Mapa de fantasía generado" style="width:100%;border:1px solid #eee;border-radius:7px;">
+    </div>
+
+    <div class="tab-panel" id="panel-comparacion">
+      <p style="font-size:0.82rem;color:#888;margin-bottom:0.75rem;">
+        Los nodos <span style="color:#4FC3F7;font-weight:600;">azules</span> son los generados por el modelo,
+        los <span style="color:#EF5350;font-weight:600;">rojos</span> son los del grafo oficial, y los
+        <span style="color:#66BB6A;font-weight:600;">verdes</span> son los nodos en común.
+        Las líneas punteadas verdes conectan cada par de nodos equivalentes.
+      </p>
+      <img id="comparacion-img" src="" alt="Comparación de grafos" style="width:100%;border:1px solid #eee;border-radius:7px;background:#0d1117;">
+
+      <div id="comparacion-detalle" style="display:none;">
+
+        <!-- Métricas resumen -->
+        <div id="cmp-metricas" style="display:flex;gap:1.5rem;flex-wrap:wrap;margin:1.25rem 0 0.5rem;">
+          <div class="cmp-metric-box">
+            <div class="cmp-metric-label">Cobertura de nodos</div>
+            <div class="cmp-metric-value" id="val-cobertura">—</div>
+          </div>
+          <div class="cmp-metric-box">
+            <div class="cmp-metric-label">Similitud posicional</div>
+            <div class="cmp-metric-value" id="val-posicional">—</div>
+            <div class="cmp-metric-note">coordenadas normalizadas</div>
+          </div>
+          <div class="cmp-metric-box">
+            <div class="cmp-metric-label">Nodos en común</div>
+            <div class="cmp-metric-value" id="val-comun">—</div>
+          </div>
+        </div>
+
+        <div class="cmp-section-title">Nodos emparejados</div>
+        <table class="cmp-table" id="tabla-nodos">
+          <thead>
+            <tr>
+              <th>Nodo</th>
+              <th>Oficial (x, y)</th>
+              <th>Generado (x, y)</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+
+        <div class="cmp-section-title">Precisión de orientaciones</div>
+        <table class="cmp-table" id="tabla-orientaciones">
+          <thead>
+            <tr>
+              <th>Relación / Par</th>
+              <th>Resultado</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="panel-comparacion-comunes">
+      <p style="font-size:0.82rem;color:#888;margin-bottom:0.75rem;">
+        Solo se muestran los nodos del modelo que aparecen en el grafo oficial.
+        Los <span style="color:#4FC3F7;font-weight:600;">azules</span> son los generados por el modelo,
+        los <span style="color:#EF5350;font-weight:600;">rojos</span> son los del grafo oficial,
+        los <span style="color:#66BB6A;font-weight:600;">verdes</span> marcan los emparejados y
+        los <span style="color:#FFD54F;font-weight:600;">amarillos</span> son pivotes del modelo.
+      </p>
+      <img id="comparacion-comunes-img" src="" alt="Comparación (nodos en común)" style="width:100%;border:1px solid #eee;border-radius:7px;background:#0d1117;">
+    </div>
+
+    <div class="tab-panel" id="panel-mapa">
+      <iframe id="map-iframe" src=""></iframe>
+      <div id="solver-graph-container" style="display:none; margin-top:1.5rem;">
+        <div class="card-title" style="margin-bottom:0.5rem;">Grafo topológico (solver)</div>
+        <img id="svg-historico" src="" alt="Grafo topológico generado" style="width:100%;border:1px solid #eee;border-radius:7px;">
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  // ── Drop zone ──
+  const dropZone  = document.getElementById('drop-zone');
+  const fileInput = document.getElementById('pdf-input');
+  const fileNameEl = document.getElementById('file-name');
+
+  dropZone.addEventListener('click', () => fileInput.click());
+  dropZone.addEventListener('dragover', e => { e.preventDefault(); dropZone.classList.add('hover'); });
+  dropZone.addEventListener('dragleave', () => dropZone.classList.remove('hover'));
+  dropZone.addEventListener('drop', e => {
+    e.preventDefault();
+    dropZone.classList.remove('hover');
+    const f = e.dataTransfer.files[0];
+    if (f && f.name.toLowerCase().endsWith('.pdf')) {
+      fileInput.files = e.dataTransfer.files;
+      setFile(f.name);
+    }
+  });
+  fileInput.addEventListener('change', () => {
+    if (fileInput.files[0]) setFile(fileInput.files[0].name);
+  });
+  function setFile(name) {
+    fileNameEl.textContent = name;
+    dropZone.classList.add('has-file');
+  }
+
+  // ── Radio tipo ──
+  const TIPO_DESC = {
+    historico: 'Extrae relaciones, georeferencia con Pleiades/Wikidata, genera el mapa histórico interactivo, y luego aplica el solver (Z3) para generar también el grafo topológico.',
+    fantasia:  'Genera el grafo topológico y el mapa de fantasía. Omite la georreferenciación (los lugares no existen en el mundo real).'
+  };
+
+  document.querySelectorAll('input[name="tipo"]').forEach(r => {
+    r.addEventListener('change', () => {
+      document.getElementById('opt-historico').classList.toggle('active', r.value !== 'fantasia' || !r.checked);
+      document.getElementById('opt-fantasia').classList.toggle('active', r.value === 'fantasia' && r.checked);
+      // recalculate both
+      const val = document.querySelector('input[name="tipo"]:checked').value;
+      document.getElementById('opt-historico').classList.toggle('active', val === 'historico');
+      document.getElementById('opt-fantasia').classList.toggle('active', val === 'fantasia');
+      document.getElementById('tipo-desc').textContent = TIPO_DESC[val];
+    });
+  });
+
+  // ── Submit ──
+  document.getElementById('btn').addEventListener('click', async () => {
+    const file = fileInput.files[0];
+    if (!file) { alert('Selecciona un archivo PDF primero.'); return; }
+
+    const tipo = document.querySelector('input[name="tipo"]:checked').value;
+
+    resetUI();
+
+    // 1. Subir PDF
+    appendLog('Subiendo PDF...');
+    const form = new FormData();
+    form.append('pdf', file);
+
+    let upload_id;
+    try {
+      const res = await fetch('/upload', { method: 'POST', body: form });
+      const data = await res.json();
+      if (data.error) throw new Error(data.error);
+      upload_id = data.upload_id;
+      appendLog('PDF recibido. Iniciando pipeline...\n');
+    } catch (err) {
+      appendLog(`Error al subir PDF: ${err.message}`);
+      setStatus('error');
+      return;
+    }
+
+    // 2. Ejecutar pipeline vía SSE
+    const es = new EventSource(`/run/${upload_id}?tipo=${tipo}`);
+
+    es.onmessage = e => { if (e.data.trim()) appendLog(e.data); };
+
+    es.addEventListener('done', e => {
+      es.close();
+      setStatus('ok');
+      appendLog('\nPipeline completado con éxito.');
+      showResult(e.data);
+    });
+
+    es.addEventListener('error', () => {
+      if (es.readyState === EventSource.CLOSED) return;
+      es.close();
+      setStatus('error');
+      appendLog('\nEl pipeline encontró un error. Revisa el log.');
+    });
+  });
+
+  // ── Helpers ──
+  function resetUI() {
+    document.getElementById('btn').disabled = true;
+    document.getElementById('spinner').style.display = 'block';
+    document.getElementById('log-card').style.display = 'block';
+    document.getElementById('result-card').style.display = 'none';
+    document.getElementById('status-badge').innerHTML = '';
+    document.getElementById('log').textContent = '';
+    document.getElementById('tabs').innerHTML = '';
+    document.getElementById('solver-graph-container').style.display = 'none';
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  }
+
+  function setStatus(state) {
+    document.getElementById('btn').disabled = false;
+    document.getElementById('spinner').style.display = 'none';
+    const badge = document.getElementById('status-badge');
+    if (state === 'ok') {
+      badge.innerHTML = '<span class="status-msg status-ok">✓ Completado</span>';
+    } else {
+      badge.innerHTML = '<span class="status-msg status-err">✗ Error</span>';
+    }
+  }
+
+  function appendLog(text) {
+    const el = document.getElementById('log');
+    el.textContent += text + '\n';
+    el.scrollTop = el.scrollHeight;
+  }
+
+  function showResult(tipo) {
+    const card = document.getElementById('result-card');
+    card.style.display = 'block';
+
+    const tabs = document.getElementById('tabs');
+    tabs.innerHTML = '';
+
+    // Ocultar todos los paneles primero
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+
+    if (tipo === 'historico') {
+      addTab('Mapa histórico', 'panel-mapa', true);
+      document.getElementById('map-iframe').src = '/output/mapa?' + Date.now();
+      document.getElementById('svg-historico').src = '/output/svg?' + Date.now();
+      document.getElementById('solver-graph-container').style.display = 'block';
+      document.getElementById('panel-mapa').classList.add('active');
+    } else {
+      addTab('Grafo topológico', 'panel-grafo', true);
+      document.getElementById('svg-img').src = '/output/svg?' + Date.now();
+      document.getElementById('panel-grafo').classList.add('active');
+
+      addTab('Mapa Fantasía', 'panel-fantasia', false);
+      document.getElementById('fantasia-img').src = '/output/fantasia?' + Date.now();
+
+      addTab('Comparación con oficial', 'panel-comparacion', false);
+      document.getElementById('comparacion-img').src = '/output/comparacion?' + Date.now();
+      cargarDetalleComparacion();
+
+      addTab('Nodos en común', 'panel-comparacion-comunes', false);
+      document.getElementById('comparacion-comunes-img').src = '/output/comparacion/comunes?' + Date.now();
+    }
+  }
+
+  async function cargarDetalleComparacion() {
+    try {
+      const res = await fetch('/output/comparacion/detalle?' + Date.now());
+      if (!res.ok) return;
+      const data = await res.json();
+
+      // Métricas resumen
+      const m = data.metricas;
+      document.getElementById('val-cobertura').textContent  = m.cobertura + '%';
+      document.getElementById('val-posicional').textContent = m.similitud_posicional + '%';
+      document.getElementById('val-comun').textContent      = m.n_common + ' / ' + m.n_off;
+
+      // Tabla de nodos emparejados
+      const tbodyNodos = document.querySelector('#tabla-nodos tbody');
+      tbodyNodos.innerHTML = '';
+      data.nodos_emparejados.forEach(n => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td><strong>${n.oficial}</strong>${n.oficial !== n.generado ? ` <span style="color:#aaa;font-size:0.78rem;">≈ ${n.generado}</span>` : ''}</td>
+          <td>(${n.off_x}, ${n.off_y})</td>
+          <td>(${n.gen_x}, ${n.gen_y})</td>`;
+        tbodyNodos.appendChild(tr);
+      });
+
+      // Tabla de orientaciones con detalle de pares
+      const tbodyOrient = document.querySelector('#tabla-orientaciones tbody');
+      tbodyOrient.innerHTML = '';
+      const orden = ['NORTE_DE', 'SUR_DE', 'ESTE_DE', 'OESTE_DE', 'CERCA_DE'];
+      orden.forEach(tipo => {
+        const v = data.orientaciones[tipo];
+        if (v.total === 0) return;
+
+        const pct = Math.round(v.correctas / v.total * 100);
+        const pctBar = `<div class="pct-bar-wrap"><div class="pct-bar" style="width:${pct}px"></div><span class="pct-label">${pct}%</span></div>`;
+
+        // Fila cabecera del grupo
+        const trHead = document.createElement('tr');
+        trHead.className = 'orient-group-row';
+        trHead.innerHTML = `<td>${tipo} (${v.correctas}/${v.total})</td><td>${pctBar}</td>`;
+        tbodyOrient.appendChild(trHead);
+
+        // Filas de pares
+        v.pares.forEach(p => {
+          const tr = document.createElement('tr');
+          tr.className = 'orient-pair-row';
+          const icon = p.correcto
+            ? '<span class="tag-ok">✓</span>'
+            : '<span class="tag-err">✗</span>';
+          tr.innerHTML = `<td>${p.A} → ${p.B}</td><td>${icon}</td>`;
+          tbodyOrient.appendChild(tr);
+        });
+      });
+
+      document.getElementById('comparacion-detalle').style.display = 'block';
+    } catch (e) { /* si no hay datos, no se muestra nada */ }
+  }
+
+  function addTab(label, panelId, active) {
+    const btn = document.createElement('button');
+    btn.className = 'tab-btn' + (active ? ' active' : '');
+    btn.textContent = label;
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById(panelId).classList.add('active');
+    });
+    document.getElementById('tabs').appendChild(btn);
+  }
+</script>
+</body>
+</html>

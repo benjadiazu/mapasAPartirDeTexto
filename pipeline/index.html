@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visor de Mapa Voronoi</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: #2c2c2c;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+            font-family: sans-serif;
+        }
+        /* El contenedor permite hacer scroll si el mapa es muy grande */
+        #mapa-container {
+            overflow: auto;
+            max-width: 95vw;
+            max-height: 95vh;
+            border: 2px solid #555;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+        /* Color de fondo por si hay huecos (Océano profundo) */
+        canvas {
+            background-color: #7a9ea8; 
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="mapa-container">
+        <canvas id="lienzoMapa"></canvas>
+    </div>
+
+    <script>
+        async function cargarMapa() {
+            try {
+                // 1. Cargar el JSON
+                const respuesta = await fetch('mapa_generado.json');
+                const datos = await respuesta.json();
+                
+                const canvas = document.getElementById('lienzoMapa');
+                const ctx = canvas.getContext('2d');
+
+                // 2. Calcular el tamaño del lienzo basado en los polígonos
+                let maxX = 0;
+                let maxY = 0;
+                
+                datos.regiones.forEach(region => {
+                    region.poligono.forEach(punto => {
+                        if (punto[0] > maxX) maxX = punto[0];
+                        if (punto[1] > maxY) maxY = punto[1];
+                    });
+                });
+
+                // Damos un margen al canvas
+                canvas.width = maxX + 100;
+                canvas.height = maxY + 100;
+
+                // 3. Dibujar cada región
+                datos.regiones.forEach(region => {
+                    ctx.beginPath();
+                    
+                    // Trazar las líneas del polígono
+                    region.poligono.forEach((punto, index) => {
+                        if (index === 0) {
+                            ctx.moveTo(punto[0], punto[1]);
+                        } else {
+                            ctx.lineTo(punto[0], punto[1]);
+                        }
+                    });
+                    
+                    ctx.closePath();
+
+                    // 4. Colorear dependiendo de si es tierra u océano
+                    if (region.es_tierra) {
+                        ctx.fillStyle = '#e2d2b0'; // Color tierra/pergamino
+                        ctx.fill();
+                        ctx.strokeStyle = '#c4b492'; // Borde de la región
+                        ctx.lineWidth = 2;
+                        ctx.stroke();
+
+                        // 5. Dibujar el nombre de la ciudad
+                        if (region.id_nodo) {
+                            // Calculamos el centro aproximado del polígono para poner el texto
+                            const xCentro = region.poligono.reduce((sum, p) => sum + p[0], 0) / region.poligono.length;
+                            const yCentro = region.poligono.reduce((sum, p) => sum + p[1], 0) / region.poligono.length;
+                            
+                            // Un pequeño punto rojo para marcar la ciudad exacta
+                            ctx.beginPath();
+                            ctx.arc(xCentro, yCentro, 4, 0, Math.PI * 2);
+                            ctx.fillStyle = '#8b0000';
+                            ctx.fill();
+
+                            // El texto
+                            ctx.fillStyle = 'black';
+                            ctx.font = 'bold 16px sans-serif';
+                            ctx.textAlign = 'center';
+                            ctx.fillText(region.id_nodo, xCentro, yCentro - 10);
+                        }
+                    } else {
+                        ctx.fillStyle = '#a5c3cf'; // Color océano
+                        ctx.fill();
+                        ctx.strokeStyle = '#8eb3c2'; // Olas/corrientes
+                        ctx.lineWidth = 1;
+                        ctx.stroke();
+                    }
+                });
+
+            } catch (error) {
+                console.error("Error al cargar o dibujar el mapa:", error);
+                alert("Hubo un error cargando el mapa. Revisa la consola.");
+            }
+        }
+
+        cargarMapa();
+    </script>
+</body>
+</html>

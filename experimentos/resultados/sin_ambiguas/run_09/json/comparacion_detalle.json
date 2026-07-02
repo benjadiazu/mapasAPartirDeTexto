@@ -1,0 +1,405 @@
+{
+  "metricas": {
+    "cobertura": 33.3,
+    "similitud_posicional": 71.5,
+    "n_common": 11,
+    "n_off": 33,
+    "n_gen": 57
+  },
+  "nodos_emparejados": [
+    {
+      "oficial": "Amon Sul",
+      "generado": "Amon Sul",
+      "off_x": 0.456,
+      "off_y": 0.333,
+      "gen_x": 0.436,
+      "gen_y": 0.086
+    },
+    {
+      "oficial": "Bree",
+      "generado": "Bree",
+      "off_x": 0.384,
+      "off_y": 0.337,
+      "gen_x": 0.535,
+      "gen_y": 0.412
+    },
+    {
+      "oficial": "Erebor",
+      "generado": "Erebor",
+      "off_x": 0.752,
+      "off_y": 0.193,
+      "gen_x": 0.548,
+      "gen_y": 0.482
+    },
+    {
+      "oficial": "Esgaroth",
+      "generado": "Esgarot",
+      "off_x": 0.8,
+      "off_y": 0.22,
+      "gen_x": 0.544,
+      "gen_y": 0.831
+    },
+    {
+      "oficial": "Fornost",
+      "generado": "Fornost",
+      "off_x": 0.36,
+      "off_y": 0.25,
+      "gen_x": 0.077,
+      "gen_y": 0.982
+    },
+    {
+      "oficial": "Hobbiton",
+      "generado": "Hobbiton",
+      "off_x": 0.3,
+      "off_y": 0.313,
+      "gen_x": 0.522,
+      "gen_y": 0.575
+    },
+    {
+      "oficial": "La Comarca",
+      "generado": "Comarca",
+      "off_x": 0.26,
+      "off_y": 0.33,
+      "gen_x": 0.475,
+      "gen_y": 0.537
+    },
+    {
+      "oficial": "Puertos Grises",
+      "generado": "Puertos Grises",
+      "off_x": 0.12,
+      "off_y": 0.333,
+      "gen_x": 0.447,
+      "gen_y": 0.309
+    },
+    {
+      "oficial": "Rivendel",
+      "generado": "Rivendel",
+      "off_x": 0.58,
+      "off_y": 0.317,
+      "gen_x": 0.482,
+      "gen_y": 0.371
+    },
+    {
+      "oficial": "Tharbad",
+      "generado": "Tharbad",
+      "off_x": 0.42,
+      "off_y": 0.417,
+      "gen_x": 0.077,
+      "gen_y": 0.982
+    },
+    {
+      "oficial": "Valle",
+      "generado": "Valle",
+      "off_x": 0.772,
+      "off_y": 0.207,
+      "gen_x": 0.477,
+      "gen_y": 0.583
+    }
+  ],
+  "orientaciones": {
+    "NORTE_DE": {
+      "correctas": 0,
+      "total": 0,
+      "pares": []
+    },
+    "SUR_DE": {
+      "correctas": 1,
+      "total": 1,
+      "pares": [
+        {
+          "A": "Tharbad",
+          "B": "Fornost",
+          "correcto": true
+        }
+      ]
+    },
+    "ESTE_DE": {
+      "correctas": 17,
+      "total": 26,
+      "pares": [
+        {
+          "A": "Rivendel",
+          "B": "Tharbad",
+          "correcto": true
+        },
+        {
+          "A": "Rivendel",
+          "B": "Hobbiton",
+          "correcto": false
+        },
+        {
+          "A": "Rivendel",
+          "B": "Fornost",
+          "correcto": true
+        },
+        {
+          "A": "Rivendel",
+          "B": "Bree",
+          "correcto": false
+        },
+        {
+          "A": "Rivendel",
+          "B": "Puertos Grises",
+          "correcto": true
+        },
+        {
+          "A": "Rivendel",
+          "B": "La Comarca",
+          "correcto": true
+        },
+        {
+          "A": "Erebor",
+          "B": "Tharbad",
+          "correcto": true
+        },
+        {
+          "A": "Erebor",
+          "B": "Hobbiton",
+          "correcto": true
+        },
+        {
+          "A": "Erebor",
+          "B": "Fornost",
+          "correcto": true
+        },
+        {
+          "A": "Erebor",
+          "B": "Bree",
+          "correcto": true
+        },
+        {
+          "A": "Erebor",
+          "B": "Puertos Grises",
+          "correcto": true
+        },
+        {
+          "A": "Erebor",
+          "B": "Amon Sul",
+          "correcto": true
+        },
+        {
+          "A": "Erebor",
+          "B": "La Comarca",
+          "correcto": true
+        },
+        {
+          "A": "Tharbad",
+          "B": "Hobbiton",
+          "correcto": false
+        },
+        {
+          "A": "Tharbad",
+          "B": "Puertos Grises",
+          "correcto": false
+        },
+        {
+          "A": "Tharbad",
+          "B": "La Comarca",
+          "correcto": false
+        },
+        {
+          "A": "Valle",
+          "B": "Hobbiton",
+          "correcto": false
+        },
+        {
+          "A": "Valle",
+          "B": "Fornost",
+          "correcto": true
+        },
+        {
+          "A": "Valle",
+          "B": "Bree",
+          "correcto": false
+        },
+        {
+          "A": "Valle",
+          "B": "Puertos Grises",
+          "correcto": true
+        },
+        {
+          "A": "Valle",
+          "B": "Amon Sul",
+          "correcto": true
+        },
+        {
+          "A": "Valle",
+          "B": "La Comarca",
+          "correcto": true
+        },
+        {
+          "A": "Hobbiton",
+          "B": "Puertos Grises",
+          "correcto": true
+        },
+        {
+          "A": "Fornost",
+          "B": "Puertos Grises",
+          "correcto": false
+        },
+        {
+          "A": "Bree",
+          "B": "Puertos Grises",
+          "correcto": true
+        },
+        {
+          "A": "Amon Sul",
+          "B": "La Comarca",
+          "correcto": false
+        }
+      ]
+    },
+    "OESTE_DE": {
+      "correctas": 10,
+      "total": 13,
+      "pares": [
+        {
+          "A": "Rivendel",
+          "B": "Erebor",
+          "correcto": true
+        },
+        {
+          "A": "Rivendel",
+          "B": "Valle",
+          "correcto": false
+        },
+        {
+          "A": "Rivendel",
+          "B": "Esgaroth",
+          "correcto": true
+        },
+        {
+          "A": "Tharbad",
+          "B": "Valle",
+          "correcto": true
+        },
+        {
+          "A": "Tharbad",
+          "B": "Esgaroth",
+          "correcto": true
+        },
+        {
+          "A": "Hobbiton",
+          "B": "Amon Sul",
+          "correcto": false
+        },
+        {
+          "A": "Hobbiton",
+          "B": "Esgaroth",
+          "correcto": true
+        },
+        {
+          "A": "Fornost",
+          "B": "Esgaroth",
+          "correcto": true
+        },
+        {
+          "A": "Bree",
+          "B": "Esgaroth",
+          "correcto": true
+        },
+        {
+          "A": "Puertos Grises",
+          "B": "Amon Sul",
+          "correcto": false
+        },
+        {
+          "A": "Puertos Grises",
+          "B": "Esgaroth",
+          "correcto": true
+        },
+        {
+          "A": "Amon Sul",
+          "B": "Esgaroth",
+          "correcto": true
+        },
+        {
+          "A": "La Comarca",
+          "B": "Esgaroth",
+          "correcto": true
+        }
+      ]
+    },
+    "CERCA_DE": {
+      "correctas": 3,
+      "total": 15,
+      "pares": [
+        {
+          "A": "Rivendel",
+          "B": "Amon Sul",
+          "correcto": false
+        },
+        {
+          "A": "Erebor",
+          "B": "Valle",
+          "correcto": true
+        },
+        {
+          "A": "Erebor",
+          "B": "Esgaroth",
+          "correcto": false
+        },
+        {
+          "A": "Tharbad",
+          "B": "Bree",
+          "correcto": false
+        },
+        {
+          "A": "Tharbad",
+          "B": "Amon Sul",
+          "correcto": false
+        },
+        {
+          "A": "Valle",
+          "B": "Esgaroth",
+          "correcto": false
+        },
+        {
+          "A": "Hobbiton",
+          "B": "Fornost",
+          "correcto": false
+        },
+        {
+          "A": "Hobbiton",
+          "B": "Bree",
+          "correcto": false
+        },
+        {
+          "A": "Hobbiton",
+          "B": "La Comarca",
+          "correcto": true
+        },
+        {
+          "A": "Fornost",
+          "B": "Bree",
+          "correcto": false
+        },
+        {
+          "A": "Fornost",
+          "B": "Amon Sul",
+          "correcto": false
+        },
+        {
+          "A": "Fornost",
+          "B": "La Comarca",
+          "correcto": false
+        },
+        {
+          "A": "Bree",
+          "B": "Amon Sul",
+          "correcto": false
+        },
+        {
+          "A": "Bree",
+          "B": "La Comarca",
+          "correcto": true
+        },
+        {
+          "A": "Puertos Grises",
+          "B": "La Comarca",
+          "correcto": false
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,381 @@
+{
+  "coords": {
+    "Amon Sul": {
+      "x": 2800,
+      "y": 0
+    },
+    "Anduin": {
+      "x": 2800,
+      "y": 1
+    },
+    "Angmar": {
+      "x": 0,
+      "y": 1
+    },
+    "Archet": {
+      "x": 0,
+      "y": 0
+    },
+    "Balsadera": {
+      "x": 2800,
+      "y": 0
+    },
+    "Baranduin": {
+      "x": 0,
+      "y": 0
+    },
+    "Belfalas": {
+      "x": 0,
+      "y": 1
+    },
+    "Beren": {
+      "x": 0,
+      "y": 0
+    },
+    "Bolsón Cerrado": {
+      "x": 1247,
+      "y": 115
+    },
+    "Bolsón de Tirada": {
+      "x": 0,
+      "y": 0
+    },
+    "Bosque": {
+      "x": 1230,
+      "y": 130
+    },
+    "Bosque Cerrado": {
+      "x": 0,
+      "y": 0
+    },
+    "Bosque Negro": {
+      "x": 0,
+      "y": 0
+    },
+    "Bosque Viejo": {
+      "x": 0,
+      "y": 2
+    },
+    "Bosque de Chet": {
+      "x": 2800,
+      "y": 116
+    },
+    "Brandivino": {
+      "x": 0,
+      "y": 0
+    },
+    "Bree": {
+      "x": 1180,
+      "y": 115
+    },
+    "Bruinen": {
+      "x": 0,
+      "y": 0
+    },
+    "Camino": {
+      "x": 1814,
+      "y": 654
+    },
+    "Carn Dûm": {
+      "x": 0,
+      "y": 0
+    },
+    "Cavada Grande": {
+      "x": 0,
+      "y": 0
+    },
+    "Cepeda": {
+      "x": 0,
+      "y": 0
+    },
+    "Cricava": {
+      "x": 2800,
+      "y": 2
+    },
+    "Cuaderna del Este": {
+      "x": 0,
+      "y": 0
+    },
+    "Cuaderna del Oeste": {
+      "x": 0,
+      "y": 0
+    },
+    "Cuaderna del Sur": {
+      "x": 0,
+      "y": 0
+    },
+    "Delagua": {
+      "x": 0,
+      "y": 0
+    },
+    "Eriador": {
+      "x": 0,
+      "y": 0
+    },
+    "Esgalduin": {
+      "x": 0,
+      "y": 0
+    },
+    "Fontegrís": {
+      "x": 0,
+      "y": 0
+    },
+    "Fornost": {
+      "x": 0,
+      "y": 0
+    },
+    "Gamoburgo": {
+      "x": 0,
+      "y": 1
+    },
+    "Gondor": {
+      "x": 0,
+      "y": 0
+    },
+    "Gran Bosque Verde": {
+      "x": 0,
+      "y": 0
+    },
+    "Grandes Aguas": {
+      "x": 0,
+      "y": 0
+    },
+    "Grandes Smials": {
+      "x": 0,
+      "y": 0
+    },
+    "Grietas del Destino": {
+      "x": 0,
+      "y": 0
+    },
+    "Hobbiton": {
+      "x": 2800,
+      "y": 1
+    },
+    "Lago Largo": {
+      "x": 0,
+      "y": 0
+    },
+    "Landas de Etten": {
+      "x": 0,
+      "y": 0
+    },
+    "Lithe": {
+      "x": 0,
+      "y": 0
+    },
+    "Los Gamos": {
+      "x": 2800,
+      "y": 1
+    },
+    "Lun": {
+      "x": 2800,
+      "y": 0
+    },
+    "Marjala": {
+      "x": 0,
+      "y": 0
+    },
+    "Mitheithel": {
+      "x": 1,
+      "y": 2800
+    },
+    "Montañas del Terror": {
+      "x": 0,
+      "y": 0
+    },
+    "Mordor": {
+      "x": 0,
+      "y": 0
+    },
+    "Moscagua": {
+      "x": 2800,
+      "y": 116
+    },
+    "Neldoreth": {
+      "x": 0,
+      "y": 0
+    },
+    "Norburgo": {
+      "x": 0,
+      "y": 0
+    },
+    "Oeste": {
+      "x": 674,
+      "y": 1808
+    },
+    "Oesternesse": {
+      "x": 0,
+      "y": 0
+    },
+    "Orodruin": {
+      "x": 0,
+      "y": 0
+    },
+    "Puente Ultimo": {
+      "x": 0,
+      "y": 0
+    },
+    "Puente del Brandivino": {
+      "x": 0,
+      "y": 0
+    },
+    "Puertos Grises": {
+      "x": 0,
+      "y": 1
+    },
+    "Quebradas": {
+      "x": 0,
+      "y": 0
+    },
+    "Quebradas Blancas": {
+      "x": 0,
+      "y": 0
+    },
+    "Rivendel": {
+      "x": 1,
+      "y": 2800
+    },
+    "Sonorona": {
+      "x": 0,
+      "y": 0
+    },
+    "Sur": {
+      "x": 0,
+      "y": 0
+    },
+    "Tierra de Angmar": {
+      "x": 0,
+      "y": 0
+    },
+    "Tierra de Mordor": {
+      "x": 0,
+      "y": 0
+    },
+    "Tierras de Tuk": {
+      "x": 0,
+      "y": 0
+    },
+    "Tinúviel": {
+      "x": 0,
+      "y": 0
+    },
+    "Tornasauce": {
+      "x": 0,
+      "y": 0
+    },
+    "Torres Blancas": {
+      "x": 2800,
+      "y": 0
+    },
+    "Torres de Abajo": {
+      "x": 0,
+      "y": 0
+    },
+    "las Cuadernas": {
+      "x": 0,
+      "y": 0
+    },
+    "pantanos de Moscagua": {
+      "x": 0,
+      "y": 0
+    }
+  },
+  "CSR": 0.8667,
+  "total_constraints": 15,
+  "width": 2800,
+  "height": 2800,
+  "rel_eval": [
+    {
+      "origen": "Anduin",
+      "tipo": "ESTE_DE",
+      "destino": "Gran Bosque Verde",
+      "satisface": true
+    },
+    {
+      "origen": "Rivendel",
+      "tipo": "NORTE_DE",
+      "destino": "Fontegrís",
+      "satisface": true
+    },
+    {
+      "origen": "Belfalas",
+      "tipo": "OESTE_DE",
+      "destino": "Lun",
+      "satisface": true
+    },
+    {
+      "origen": "Los Gamos",
+      "tipo": "ESTE_DE",
+      "destino": "Brandivino",
+      "satisface": true
+    },
+    {
+      "origen": "Puertos Grises",
+      "tipo": "OESTE_DE",
+      "destino": "Torres Blancas",
+      "satisface": true
+    },
+    {
+      "origen": "Cricava",
+      "tipo": "ESTE_DE",
+      "destino": "Gamoburgo",
+      "satisface": true
+    },
+    {
+      "origen": "Balsadera",
+      "tipo": "ESTE_DE",
+      "destino": "Gamoburgo",
+      "satisface": true
+    },
+    {
+      "origen": "Tierras de Tuk",
+      "tipo": "OESTE_DE",
+      "destino": "Hobbiton",
+      "satisface": true
+    },
+    {
+      "origen": "Los Gamos",
+      "tipo": "OESTE_DE",
+      "destino": "Bosque Viejo",
+      "satisface": false
+    },
+    {
+      "origen": "Bosque Viejo",
+      "tipo": "OESTE_DE",
+      "destino": "Los Gamos",
+      "satisface": true
+    },
+    {
+      "origen": "Moscagua",
+      "tipo": "ESTE_DE",
+      "destino": "Bree",
+      "satisface": true
+    },
+    {
+      "origen": "Bosque de Chet",
+      "tipo": "ESTE_DE",
+      "destino": "Bree",
+      "satisface": true
+    },
+    {
+      "origen": "Angmar",
+      "tipo": "OESTE_DE",
+      "destino": "Amon Sul",
+      "satisface": true
+    },
+    {
+      "origen": "Rivendel",
+      "tipo": "SUR_DE",
+      "destino": "Landas de Etten",
+      "satisface": false
+    },
+    {
+      "origen": "Mitheithel",
+      "tipo": "NORTE_DE",
+      "destino": "Landas de Etten",
+      "satisface": true
+    }
+  ],
+  "solver_mode": "optimized_soft_constraints"
+}

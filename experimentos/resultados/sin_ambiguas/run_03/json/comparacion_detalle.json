@@ -1,0 +1,295 @@
+{
+  "metricas": {
+    "cobertura": 27.3,
+    "similitud_posicional": 79.5,
+    "n_common": 9,
+    "n_off": 33,
+    "n_gen": 65
+  },
+  "nodos_emparejados": [
+    {
+      "oficial": "Bree",
+      "generado": "Bree",
+      "off_x": 0.384,
+      "off_y": 0.337,
+      "gen_x": 0.617,
+      "gen_y": 0.489
+    },
+    {
+      "oficial": "Carn Dum",
+      "generado": "Carn Dûm",
+      "off_x": 0.44,
+      "off_y": 0.1,
+      "gen_x": 0.226,
+      "gen_y": 0.015
+    },
+    {
+      "oficial": "Erebor",
+      "generado": "Erebor",
+      "off_x": 0.752,
+      "off_y": 0.193,
+      "gen_x": 0.615,
+      "gen_y": 0.537
+    },
+    {
+      "oficial": "Fornost",
+      "generado": "Fornost",
+      "off_x": 0.36,
+      "off_y": 0.25,
+      "gen_x": 0.226,
+      "gen_y": 0.015
+    },
+    {
+      "oficial": "Hobbiton",
+      "generado": "Hobbiton",
+      "off_x": 0.3,
+      "off_y": 0.313,
+      "gen_x": 0.495,
+      "gen_y": 0.537
+    },
+    {
+      "oficial": "La Comarca",
+      "generado": "Comarca",
+      "off_x": 0.26,
+      "off_y": 0.33,
+      "gen_x": 0.484,
+      "gen_y": 0.478
+    },
+    {
+      "oficial": "Rivendel",
+      "generado": "Rivendel",
+      "off_x": 0.58,
+      "off_y": 0.317,
+      "gen_x": 0.618,
+      "gen_y": 0.433
+    },
+    {
+      "oficial": "Tharbad",
+      "generado": "Tharbad",
+      "off_x": 0.42,
+      "off_y": 0.417,
+      "gen_x": 0.77,
+      "gen_y": 0.28
+    },
+    {
+      "oficial": "Valle",
+      "generado": "Valle",
+      "off_x": 0.772,
+      "off_y": 0.207,
+      "gen_x": 0.529,
+      "gen_y": 0.518
+    }
+  ],
+  "orientaciones": {
+    "NORTE_DE": {
+      "correctas": 1,
+      "total": 1,
+      "pares": [
+        {
+          "A": "Carn Dum",
+          "B": "La Comarca",
+          "correcto": true
+        }
+      ]
+    },
+    "SUR_DE": {
+      "correctas": 6,
+      "total": 6,
+      "pares": [
+        {
+          "A": "Tharbad",
+          "B": "Fornost",
+          "correcto": true
+        },
+        {
+          "A": "Tharbad",
+          "B": "Carn Dum",
+          "correcto": true
+        },
+        {
+          "A": "Hobbiton",
+          "B": "Carn Dum",
+          "correcto": true
+        },
+        {
+          "A": "Fornost",
+          "B": "Carn Dum",
+          "correcto": true
+        },
+        {
+          "A": "Bree",
+          "B": "Carn Dum",
+          "correcto": true
+        },
+        {
+          "A": "Rivendel",
+          "B": "Carn Dum",
+          "correcto": true
+        }
+      ]
+    },
+    "ESTE_DE": {
+      "correctas": 9,
+      "total": 13,
+      "pares": [
+        {
+          "A": "Erebor",
+          "B": "Tharbad",
+          "correcto": false
+        },
+        {
+          "A": "Erebor",
+          "B": "Hobbiton",
+          "correcto": true
+        },
+        {
+          "A": "Erebor",
+          "B": "Fornost",
+          "correcto": true
+        },
+        {
+          "A": "Erebor",
+          "B": "Bree",
+          "correcto": false
+        },
+        {
+          "A": "Erebor",
+          "B": "Rivendel",
+          "correcto": false
+        },
+        {
+          "A": "Erebor",
+          "B": "Carn Dum",
+          "correcto": true
+        },
+        {
+          "A": "Erebor",
+          "B": "La Comarca",
+          "correcto": true
+        },
+        {
+          "A": "Tharbad",
+          "B": "Hobbiton",
+          "correcto": true
+        },
+        {
+          "A": "Tharbad",
+          "B": "La Comarca",
+          "correcto": true
+        },
+        {
+          "A": "Valle",
+          "B": "Rivendel",
+          "correcto": false
+        },
+        {
+          "A": "Valle",
+          "B": "Carn Dum",
+          "correcto": true
+        },
+        {
+          "A": "Valle",
+          "B": "La Comarca",
+          "correcto": true
+        },
+        {
+          "A": "Rivendel",
+          "B": "La Comarca",
+          "correcto": true
+        }
+      ]
+    },
+    "OESTE_DE": {
+      "correctas": 5,
+      "total": 8,
+      "pares": [
+        {
+          "A": "Tharbad",
+          "B": "Valle",
+          "correcto": false
+        },
+        {
+          "A": "Tharbad",
+          "B": "Rivendel",
+          "correcto": false
+        },
+        {
+          "A": "Hobbiton",
+          "B": "Valle",
+          "correcto": true
+        },
+        {
+          "A": "Hobbiton",
+          "B": "Rivendel",
+          "correcto": true
+        },
+        {
+          "A": "Fornost",
+          "B": "Valle",
+          "correcto": true
+        },
+        {
+          "A": "Fornost",
+          "B": "Rivendel",
+          "correcto": true
+        },
+        {
+          "A": "Bree",
+          "B": "Valle",
+          "correcto": false
+        },
+        {
+          "A": "Bree",
+          "B": "Rivendel",
+          "correcto": true
+        }
+      ]
+    },
+    "CERCA_DE": {
+      "correctas": 4,
+      "total": 8,
+      "pares": [
+        {
+          "A": "Erebor",
+          "B": "Valle",
+          "correcto": true
+        },
+        {
+          "A": "Tharbad",
+          "B": "Bree",
+          "correcto": false
+        },
+        {
+          "A": "Hobbiton",
+          "B": "Fornost",
+          "correcto": false
+        },
+        {
+          "A": "Hobbiton",
+          "B": "Bree",
+          "correcto": true
+        },
+        {
+          "A": "Hobbiton",
+          "B": "La Comarca",
+          "correcto": true
+        },
+        {
+          "A": "Fornost",
+          "B": "Bree",
+          "correcto": false
+        },
+        {
+          "A": "Fornost",
+          "B": "La Comarca",
+          "correcto": false
+        },
+        {
+          "A": "Bree",
+          "B": "La Comarca",
+          "correcto": true
+        }
+      ]
+    }
+  }
+}

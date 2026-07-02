@@ -1,0 +1,164 @@
+{
+  "metricas": {
+    "cobertura": 18.2,
+    "similitud_posicional": 78.5,
+    "n_common": 6,
+    "n_off": 33,
+    "n_gen": 53
+  },
+  "nodos_emparejados": [
+    {
+      "oficial": "Amon Sul",
+      "generado": "Amon Sul",
+      "off_x": 0.456,
+      "off_y": 0.333,
+      "gen_x": 0.109,
+      "gen_y": 0.143
+    },
+    {
+      "oficial": "Bree",
+      "generado": "Bree",
+      "off_x": 0.384,
+      "off_y": 0.337,
+      "gen_x": 0.56,
+      "gen_y": 0.368
+    },
+    {
+      "oficial": "Fornost",
+      "generado": "Fornost",
+      "off_x": 0.36,
+      "off_y": 0.25,
+      "gen_x": 0.071,
+      "gen_y": 0.605
+    },
+    {
+      "oficial": "Hobbiton",
+      "generado": "Hobbiton",
+      "off_x": 0.3,
+      "off_y": 0.313,
+      "gen_x": 0.444,
+      "gen_y": 0.31
+    },
+    {
+      "oficial": "Rivendel",
+      "generado": "Rivendel",
+      "off_x": 0.58,
+      "off_y": 0.317,
+      "gen_x": 0.714,
+      "gen_y": 0.351
+    },
+    {
+      "oficial": "Tharbad",
+      "generado": "Tharbad",
+      "off_x": 0.42,
+      "off_y": 0.417,
+      "gen_x": 0.916,
+      "gen_y": 0.312
+    }
+  ],
+  "orientaciones": {
+    "NORTE_DE": {
+      "correctas": 0,
+      "total": 0,
+      "pares": []
+    },
+    "SUR_DE": {
+      "correctas": 0,
+      "total": 1,
+      "pares": [
+        {
+          "A": "Tharbad",
+          "B": "Fornost",
+          "correcto": false
+        }
+      ]
+    },
+    "ESTE_DE": {
+      "correctas": 0,
+      "total": 0,
+      "pares": []
+    },
+    "OESTE_DE": {
+      "correctas": 4,
+      "total": 6,
+      "pares": [
+        {
+          "A": "Hobbiton",
+          "B": "Amon Sul",
+          "correcto": false
+        },
+        {
+          "A": "Hobbiton",
+          "B": "Tharbad",
+          "correcto": true
+        },
+        {
+          "A": "Hobbiton",
+          "B": "Rivendel",
+          "correcto": true
+        },
+        {
+          "A": "Bree",
+          "B": "Rivendel",
+          "correcto": true
+        },
+        {
+          "A": "Tharbad",
+          "B": "Rivendel",
+          "correcto": false
+        },
+        {
+          "A": "Fornost",
+          "B": "Rivendel",
+          "correcto": true
+        }
+      ]
+    },
+    "CERCA_DE": {
+      "correctas": 1,
+      "total": 8,
+      "pares": [
+        {
+          "A": "Hobbiton",
+          "B": "Bree",
+          "correcto": true
+        },
+        {
+          "A": "Hobbiton",
+          "B": "Fornost",
+          "correcto": false
+        },
+        {
+          "A": "Amon Sul",
+          "B": "Bree",
+          "correcto": false
+        },
+        {
+          "A": "Amon Sul",
+          "B": "Tharbad",
+          "correcto": false
+        },
+        {
+          "A": "Amon Sul",
+          "B": "Fornost",
+          "correcto": false
+        },
+        {
+          "A": "Amon Sul",
+          "B": "Rivendel",
+          "correcto": false
+        },
+        {
+          "A": "Bree",
+          "B": "Tharbad",
+          "correcto": false
+        },
+        {
+          "A": "Bree",
+          "B": "Fornost",
+          "correcto": false
+        }
+      ]
+    }
+  }
+}

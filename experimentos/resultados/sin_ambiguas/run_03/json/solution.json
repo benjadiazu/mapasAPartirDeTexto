@@ -1,0 +1,415 @@
+{
+  "coords": {
+    "Alforzada": {
+      "x": 0,
+      "y": 0
+    },
+    "Anduin": {
+      "x": 0,
+      "y": 0
+    },
+    "Angband": {
+      "x": 0,
+      "y": 2600
+    },
+    "Archet": {
+      "x": 2600,
+      "y": 2600
+    },
+    "Balsadera": {
+      "x": 0,
+      "y": 0
+    },
+    "Baranduin": {
+      "x": 0,
+      "y": 0
+    },
+    "Belfalas": {
+      "x": 0,
+      "y": 0
+    },
+    "Beren": {
+      "x": 0,
+      "y": 0
+    },
+    "Bolsón Cerrado": {
+      "x": 2600,
+      "y": 2600
+    },
+    "Bolsón de Tirada": {
+      "x": 0,
+      "y": 0
+    },
+    "Bosque Cerrado": {
+      "x": 0,
+      "y": 0
+    },
+    "Bosque Viejo": {
+      "x": 2600,
+      "y": 0
+    },
+    "Bosque de Chet": {
+      "x": 2600,
+      "y": 212
+    },
+    "Brandivino": {
+      "x": 96,
+      "y": 211
+    },
+    "Bree": {
+      "x": 0,
+      "y": 213
+    },
+    "Campos Gladios": {
+      "x": 0,
+      "y": 0
+    },
+    "Carn Dûm": {
+      "x": 0,
+      "y": 0
+    },
+    "Cavada Grande": {
+      "x": 0,
+      "y": 0
+    },
+    "Cepeda": {
+      "x": 0,
+      "y": 0
+    },
+    "Comarca": {
+      "x": 70,
+      "y": 209
+    },
+    "Cricava": {
+      "x": 0,
+      "y": 0
+    },
+    "Cuaderna del Este": {
+      "x": 0,
+      "y": 0
+    },
+    "Cuaderna del Sur": {
+      "x": 2600,
+      "y": 118
+    },
+    "Delagua": {
+      "x": 0,
+      "y": 0
+    },
+    "Días Antiguos": {
+      "x": 0,
+      "y": 0
+    },
+    "El Dragón Verde": {
+      "x": 0,
+      "y": 0
+    },
+    "Erebor": {
+      "x": 2598,
+      "y": 0
+    },
+    "Eriador": {
+      "x": 1,
+      "y": 212
+    },
+    "Fornost": {
+      "x": 0,
+      "y": 0
+    },
+    "Frontera del Oeste": {
+      "x": 0,
+      "y": 0
+    },
+    "Gamoburgo": {
+      "x": 0,
+      "y": 2599
+    },
+    "Gondor": {
+      "x": 0,
+      "y": 0
+    },
+    "Gran Bosque Verde": {
+      "x": 0,
+      "y": 0
+    },
+    "Grandes Aguas": {
+      "x": 0,
+      "y": 0
+    },
+    "Grandes Smials": {
+      "x": 0,
+      "y": 0
+    },
+    "Grietas del Destino": {
+      "x": 0,
+      "y": 0
+    },
+    "Hobbiton": {
+      "x": 2599,
+      "y": 2600
+    },
+    "Jinetes Negros": {
+      "x": 127,
+      "y": 1560
+    },
+    "La Perca Dorada": {
+      "x": 0,
+      "y": 0
+    },
+    "Lithe": {
+      "x": 0,
+      "y": 0
+    },
+    "Los Gamos": {
+      "x": 5,
+      "y": 1
+    },
+    "Lun": {
+      "x": 0,
+      "y": 0
+    },
+    "Marjala": {
+      "x": 2600,
+      "y": 2
+    },
+    "Montaña": {
+      "x": 0,
+      "y": 0
+    },
+    "Montañas Nubladas": {
+      "x": 2507,
+      "y": 211
+    },
+    "Montañas del Terror": {
+      "x": 1,
+      "y": 0
+    },
+    "Norburgo": {
+      "x": 0,
+      "y": 0
+    },
+    "Orodruin": {
+      "x": 0,
+      "y": 0
+    },
+    "Puente Grande": {
+      "x": 0,
+      "y": 0
+    },
+    "Puente del Brandivino": {
+      "x": 0,
+      "y": 0
+    },
+    "Quebradas Blancas": {
+      "x": 0,
+      "y": 0
+    },
+    "Quebradas Lejanas": {
+      "x": 0,
+      "y": 0
+    },
+    "Rivendel": {
+      "x": 2600,
+      "y": 210
+    },
+    "Río Grande": {
+      "x": 0,
+      "y": 0
+    },
+    "Sonorona": {
+      "x": 0,
+      "y": 0
+    },
+    "Tharbad": {
+      "x": 0,
+      "y": 0
+    },
+    "Tierra Tenebrosa": {
+      "x": 0,
+      "y": 0
+    },
+    "Tierra de Angmar": {
+      "x": 0,
+      "y": 0
+    },
+    "Tierras Asperas": {
+      "x": 2600,
+      "y": 212
+    },
+    "Tierras Brunas": {
+      "x": 0,
+      "y": 0
+    },
+    "Tierras de Tuk": {
+      "x": 0,
+      "y": 0
+    },
+    "Tinúviel": {
+      "x": 0,
+      "y": 0
+    },
+    "Tornasauce": {
+      "x": 123,
+      "y": 157
+    },
+    "Torres de Abajo": {
+      "x": 0,
+      "y": 0
+    },
+    "Valle": {
+      "x": 992,
+      "y": 1033
+    }
+  },
+  "CSR": 0.625,
+  "total_constraints": 24,
+  "width": 2600,
+  "height": 2600,
+  "rel_eval": [
+    {
+      "origen": "Eriador",
+      "tipo": "OESTE_DE",
+      "destino": "Montañas Nubladas",
+      "satisface": true
+    },
+    {
+      "origen": "Rivendel",
+      "tipo": "NORTE_DE",
+      "destino": "Montañas Nubladas",
+      "satisface": false
+    },
+    {
+      "origen": "Bree",
+      "tipo": "ESTE_DE",
+      "destino": "Comarca",
+      "satisface": false
+    },
+    {
+      "origen": "Marjala",
+      "tipo": "ESTE_DE",
+      "destino": "Los Gamos",
+      "satisface": true
+    },
+    {
+      "origen": "Erebor",
+      "tipo": "SUR_DE",
+      "destino": "Valle",
+      "satisface": true
+    },
+    {
+      "origen": "Erebor",
+      "tipo": "ESTE_DE",
+      "destino": "Montañas Nubladas",
+      "satisface": false
+    },
+    {
+      "origen": "Montañas Nubladas",
+      "tipo": "OESTE_DE",
+      "destino": "Tierras Asperas",
+      "satisface": true
+    },
+    {
+      "origen": "Cuaderna del Sur",
+      "tipo": "SUR_DE",
+      "destino": "Comarca",
+      "satisface": false
+    },
+    {
+      "origen": "Comarca",
+      "tipo": "ESTE_DE",
+      "destino": "Rivendel",
+      "satisface": false
+    },
+    {
+      "origen": "Hobbiton",
+      "tipo": "ESTE_DE",
+      "destino": "Los Gamos",
+      "satisface": true
+    },
+    {
+      "origen": "Bolsón Cerrado",
+      "tipo": "ESTE_DE",
+      "destino": "Gamoburgo",
+      "satisface": true
+    },
+    {
+      "origen": "Tierras de Tuk",
+      "tipo": "OESTE_DE",
+      "destino": "Hobbiton",
+      "satisface": true
+    },
+    {
+      "origen": "Cuaderna del Sur",
+      "tipo": "SUR_DE",
+      "destino": "Hobbiton",
+      "satisface": true
+    },
+    {
+      "origen": "Gamoburgo",
+      "tipo": "NORTE_DE",
+      "destino": "Los Gamos",
+      "satisface": true
+    },
+    {
+      "origen": "Bosque Viejo",
+      "tipo": "OESTE_DE",
+      "destino": "Los Gamos",
+      "satisface": false
+    },
+    {
+      "origen": "Bosque Viejo",
+      "tipo": "ESTE_DE",
+      "destino": "Comarca",
+      "satisface": true
+    },
+    {
+      "origen": "Montañas Nubladas",
+      "tipo": "ESTE_DE",
+      "destino": "Bree",
+      "satisface": true
+    },
+    {
+      "origen": "Rivendel",
+      "tipo": "ESTE_DE",
+      "destino": "Bree",
+      "satisface": true
+    },
+    {
+      "origen": "Archet",
+      "tipo": "ESTE_DE",
+      "destino": "Bree",
+      "satisface": true
+    },
+    {
+      "origen": "Bosque de Chet",
+      "tipo": "ESTE_DE",
+      "destino": "Bree",
+      "satisface": true
+    },
+    {
+      "origen": "Los Gamos",
+      "tipo": "ESTE_DE",
+      "destino": "Bree",
+      "satisface": false
+    },
+    {
+      "origen": "Brandivino",
+      "tipo": "ESTE_DE",
+      "destino": "Los Gamos",
+      "satisface": false
+    },
+    {
+      "origen": "Eriador",
+      "tipo": "OESTE_DE",
+      "destino": "Bree",
+      "satisface": false
+    },
+    {
+      "origen": "Montañas del Terror",
+      "tipo": "SUR_DE",
+      "destino": "Angband",
+      "satisface": true
+    }
+  ],
+  "solver_mode": "optimized_soft_constraints"
+}

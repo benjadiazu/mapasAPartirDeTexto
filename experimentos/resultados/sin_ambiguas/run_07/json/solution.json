@@ -1,0 +1,489 @@
+{
+  "coords": {
+    "Alforzada": {
+      "x": 0,
+      "y": 0
+    },
+    "Amon Sul": {
+      "x": 0,
+      "y": 0
+    },
+    "Angband": {
+      "x": 0,
+      "y": 0
+    },
+    "Angmar": {
+      "x": 0,
+      "y": 0
+    },
+    "Archet": {
+      "x": 3040,
+      "y": 0
+    },
+    "Balsadera": {
+      "x": 0,
+      "y": 0
+    },
+    "Baranduin": {
+      "x": 0,
+      "y": 0
+    },
+    "Belfalas": {
+      "x": 0,
+      "y": 0
+    },
+    "Bolsón Cerrado": {
+      "x": 0,
+      "y": 0
+    },
+    "Bolsón de Tirada": {
+      "x": 0,
+      "y": 0
+    },
+    "Bosque Negro": {
+      "x": 0,
+      "y": 1
+    },
+    "Bosque Viejo": {
+      "x": 3040,
+      "y": 445
+    },
+    "Bosque de Chet": {
+      "x": 0,
+      "y": 0
+    },
+    "Brandivino": {
+      "x": 0,
+      "y": 0
+    },
+    "Bree": {
+      "x": 109,
+      "y": 1
+    },
+    "Camino": {
+      "x": 214,
+      "y": 444
+    },
+    "Camino Verde": {
+      "x": 0,
+      "y": 0
+    },
+    "Camino del Vado": {
+      "x": 0,
+      "y": 0
+    },
+    "Carn Dûm": {
+      "x": 0,
+      "y": 0
+    },
+    "Cavada Grande": {
+      "x": 0,
+      "y": 0
+    },
+    "Cepeda": {
+      "x": 1,
+      "y": 3040
+    },
+    "Colinas Verdes": {
+      "x": 0,
+      "y": 0
+    },
+    "Comarca": {
+      "x": 191,
+      "y": 444
+    },
+    "Cricava": {
+      "x": 3040,
+      "y": 1
+    },
+    "Cuaderna del Sur": {
+      "x": 1,
+      "y": 0
+    },
+    "Delagua": {
+      "x": 0,
+      "y": 0
+    },
+    "El Agua": {
+      "x": 177,
+      "y": 436
+    },
+    "El Dragón Verde": {
+      "x": 0,
+      "y": 0
+    },
+    "Erebor": {
+      "x": 3040,
+      "y": 0
+    },
+    "Eriador": {
+      "x": 0,
+      "y": 3
+    },
+    "Esgalduin": {
+      "x": 0,
+      "y": 0
+    },
+    "Este": {
+      "x": 167,
+      "y": 424
+    },
+    "Fontegrís": {
+      "x": 111,
+      "y": 0
+    },
+    "Fornost": {
+      "x": 0,
+      "y": 0
+    },
+    "Fronteras del Oeste": {
+      "x": 0,
+      "y": 0
+    },
+    "Gamoburgo": {
+      "x": 0,
+      "y": 0
+    },
+    "Gondor": {
+      "x": 0,
+      "y": 0
+    },
+    "Grandes Aguas": {
+      "x": 3,
+      "y": 3040
+    },
+    "Grandes Smials": {
+      "x": 0,
+      "y": 0
+    },
+    "Hobbiton": {
+      "x": 3039,
+      "y": 435
+    },
+    "Jinetes Negros": {
+      "x": 0,
+      "y": 0
+    },
+    "Lago Largo": {
+      "x": 0,
+      "y": 3040
+    },
+    "Lithe": {
+      "x": 0,
+      "y": 0
+    },
+    "Los Gamos": {
+      "x": 3040,
+      "y": 434
+    },
+    "Lun": {
+      "x": 3040,
+      "y": 1
+    },
+    "Marjala": {
+      "x": 0,
+      "y": 0
+    },
+    "Montañas Nubladas": {
+      "x": 3039,
+      "y": 2
+    },
+    "Montañas del Terror": {
+      "x": 0,
+      "y": 0
+    },
+    "Mordor": {
+      "x": 3040,
+      "y": 2
+    },
+    "Neldoreth": {
+      "x": 0,
+      "y": 0
+    },
+    "Norburgo": {
+      "x": 190,
+      "y": 3040
+    },
+    "Norte": {
+      "x": 1199,
+      "y": 1381
+    },
+    "Oesternesse": {
+      "x": 0,
+      "y": 0
+    },
+    "País de Bree": {
+      "x": 0,
+      "y": 0
+    },
+    "Puente Ultimo": {
+      "x": 0,
+      "y": 0
+    },
+    "Puente del Brandivino": {
+      "x": 3040,
+      "y": 1
+    },
+    "Puertos Grises": {
+      "x": 0,
+      "y": 444
+    },
+    "Quebradas": {
+      "x": 0,
+      "y": 0
+    },
+    "Rivendel": {
+      "x": 110,
+      "y": 3039
+    },
+    "Rohan": {
+      "x": 0,
+      "y": 0
+    },
+    "Río Grande": {
+      "x": 0,
+      "y": 0
+    },
+    "Sonorona": {
+      "x": 0,
+      "y": 0
+    },
+    "Tharbad": {
+      "x": 1,
+      "y": 3040
+    },
+    "Tierra Tenebrosa": {
+      "x": 274,
+      "y": 423
+    },
+    "Tierra de Angmar": {
+      "x": 0,
+      "y": 0
+    },
+    "Tierra de Mordor": {
+      "x": 3040,
+      "y": 0
+    },
+    "Tierras Asperas": {
+      "x": 0,
+      "y": 0
+    },
+    "Tierras Brunas": {
+      "x": 0,
+      "y": 0
+    },
+    "Tierras de Tuk": {
+      "x": 0,
+      "y": 436
+    },
+    "Torres Blancas": {
+      "x": 3031,
+      "y": 443
+    },
+    "Torres de Abajo": {
+      "x": 0,
+      "y": 0
+    },
+    "Tumularios": {
+      "x": 0,
+      "y": 0
+    },
+    "Vado de Rivendel": {
+      "x": 0,
+      "y": 0
+    },
+    "las Cuadernas": {
+      "x": 0,
+      "y": 0
+    },
+    "los Túmulos": {
+      "x": 0,
+      "y": 0
+    },
+    "los fríos Tumularios": {
+      "x": 0,
+      "y": 0
+    }
+  },
+  "CSR": 0.6897,
+  "total_constraints": 29,
+  "width": 3040,
+  "height": 3040,
+  "rel_eval": [
+    {
+      "origen": "Eriador",
+      "tipo": "OESTE_DE",
+      "destino": "Montañas Nubladas",
+      "satisface": true
+    },
+    {
+      "origen": "Tharbad",
+      "tipo": "NORTE_DE",
+      "destino": "Tierras Brunas",
+      "satisface": true
+    },
+    {
+      "origen": "Rivendel",
+      "tipo": "NORTE_DE",
+      "destino": "Fontegrís",
+      "satisface": true
+    },
+    {
+      "origen": "Belfalas",
+      "tipo": "OESTE_DE",
+      "destino": "Lun",
+      "satisface": true
+    },
+    {
+      "origen": "Puente del Brandivino",
+      "tipo": "ESTE_DE",
+      "destino": "Fronteras del Oeste",
+      "satisface": true
+    },
+    {
+      "origen": "Los Gamos",
+      "tipo": "ESTE_DE",
+      "destino": "Brandivino",
+      "satisface": true
+    },
+    {
+      "origen": "Lago Largo",
+      "tipo": "NORTE_DE",
+      "destino": "Cuaderna del Sur",
+      "satisface": true
+    },
+    {
+      "origen": "Norburgo",
+      "tipo": "NORTE_DE",
+      "destino": "Comarca",
+      "satisface": true
+    },
+    {
+      "origen": "Erebor",
+      "tipo": "ESTE_DE",
+      "destino": "Montañas Nubladas",
+      "satisface": false
+    },
+    {
+      "origen": "Torres Blancas",
+      "tipo": "OESTE_DE",
+      "destino": "Comarca",
+      "satisface": false
+    },
+    {
+      "origen": "Puertos Grises",
+      "tipo": "OESTE_DE",
+      "destino": "Torres Blancas",
+      "satisface": true
+    },
+    {
+      "origen": "Bosque Negro",
+      "tipo": "OESTE_DE",
+      "destino": "Mordor",
+      "satisface": true
+    },
+    {
+      "origen": "Rivendel",
+      "tipo": "OESTE_DE",
+      "destino": "Bosque Negro",
+      "satisface": false
+    },
+    {
+      "origen": "Los Gamos",
+      "tipo": "ESTE_DE",
+      "destino": "Hobbiton",
+      "satisface": false
+    },
+    {
+      "origen": "Cricava",
+      "tipo": "ESTE_DE",
+      "destino": "Gamoburgo",
+      "satisface": true
+    },
+    {
+      "origen": "El Agua",
+      "tipo": "OESTE_DE",
+      "destino": "Hobbiton",
+      "satisface": true
+    },
+    {
+      "origen": "Tierras de Tuk",
+      "tipo": "OESTE_DE",
+      "destino": "Hobbiton",
+      "satisface": true
+    },
+    {
+      "origen": "Marjala",
+      "tipo": "SUR_DE",
+      "destino": "Cepeda",
+      "satisface": true
+    },
+    {
+      "origen": "Grandes Aguas",
+      "tipo": "OESTE_DE",
+      "destino": "Rivendel",
+      "satisface": false
+    },
+    {
+      "origen": "Tierra de Mordor",
+      "tipo": "ESTE_DE",
+      "destino": "Bosque Negro",
+      "satisface": true
+    },
+    {
+      "origen": "Bosque Viejo",
+      "tipo": "ESTE_DE",
+      "destino": "Comarca",
+      "satisface": true
+    },
+    {
+      "origen": "Comarca",
+      "tipo": "OESTE_DE",
+      "destino": "Bree",
+      "satisface": false
+    },
+    {
+      "origen": "Tierra Tenebrosa",
+      "tipo": "ESTE_DE",
+      "destino": "Este",
+      "satisface": false
+    },
+    {
+      "origen": "Montañas Nubladas",
+      "tipo": "ESTE_DE",
+      "destino": "Bree",
+      "satisface": true
+    },
+    {
+      "origen": "Norte",
+      "tipo": "NORTE_DE",
+      "destino": "Bree",
+      "satisface": true
+    },
+    {
+      "origen": "Rivendel",
+      "tipo": "ESTE_DE",
+      "destino": "Bree",
+      "satisface": false
+    },
+    {
+      "origen": "Archet",
+      "tipo": "ESTE_DE",
+      "destino": "Bree",
+      "satisface": true
+    },
+    {
+      "origen": "Eriador",
+      "tipo": "OESTE_DE",
+      "destino": "Bree",
+      "satisface": true
+    },
+    {
+      "origen": "Este",
+      "tipo": "ESTE_DE",
+      "destino": "Bree",
+      "satisface": false
+    }
+  ],
+  "solver_mode": "optimized_soft_constraints"
+}

@@ -1,0 +1,203 @@
+{
+  "metricas": {
+    "cobertura": 21.2,
+    "similitud_posicional": 64.5,
+    "n_common": 7,
+    "n_off": 33,
+    "n_gen": 57
+  },
+  "nodos_emparejados": [
+    {
+      "oficial": "Bree",
+      "generado": "Bree",
+      "off_x": 0.384,
+      "off_y": 0.337,
+      "gen_x": 0.596,
+      "gen_y": 0.698
+    },
+    {
+      "oficial": "Esgaroth",
+      "generado": "Esgarot",
+      "off_x": 0.8,
+      "off_y": 0.22,
+      "gen_x": 0.088,
+      "gen_y": 0.919
+    },
+    {
+      "oficial": "Fornost",
+      "generado": "Fornost",
+      "off_x": 0.36,
+      "off_y": 0.25,
+      "gen_x": 0.633,
+      "gen_y": 0.081
+    },
+    {
+      "oficial": "Hobbiton",
+      "generado": "Hobbiton",
+      "off_x": 0.3,
+      "off_y": 0.313,
+      "gen_x": 0.731,
+      "gen_y": 0.804
+    },
+    {
+      "oficial": "Puertos Grises",
+      "generado": "Puertos Grises",
+      "off_x": 0.12,
+      "off_y": 0.333,
+      "gen_x": 0.327,
+      "gen_y": 0.146
+    },
+    {
+      "oficial": "Rivendel",
+      "generado": "Rivendel",
+      "off_x": 0.58,
+      "off_y": 0.317,
+      "gen_x": 0.644,
+      "gen_y": 0.645
+    },
+    {
+      "oficial": "Tharbad",
+      "generado": "Tharbad",
+      "off_x": 0.42,
+      "off_y": 0.417,
+      "gen_x": 0.899,
+      "gen_y": 0.585
+    }
+  ],
+  "orientaciones": {
+    "NORTE_DE": {
+      "correctas": 1,
+      "total": 1,
+      "pares": [
+        {
+          "A": "Fornost",
+          "B": "Tharbad",
+          "correcto": true
+        }
+      ]
+    },
+    "SUR_DE": {
+      "correctas": 0,
+      "total": 0,
+      "pares": []
+    },
+    "ESTE_DE": {
+      "correctas": 6,
+      "total": 8,
+      "pares": [
+        {
+          "A": "Fornost",
+          "B": "Puertos Grises",
+          "correcto": true
+        },
+        {
+          "A": "Rivendel",
+          "B": "Tharbad",
+          "correcto": false
+        },
+        {
+          "A": "Rivendel",
+          "B": "Bree",
+          "correcto": true
+        },
+        {
+          "A": "Rivendel",
+          "B": "Puertos Grises",
+          "correcto": true
+        },
+        {
+          "A": "Rivendel",
+          "B": "Hobbiton",
+          "correcto": false
+        },
+        {
+          "A": "Tharbad",
+          "B": "Puertos Grises",
+          "correcto": true
+        },
+        {
+          "A": "Tharbad",
+          "B": "Hobbiton",
+          "correcto": true
+        },
+        {
+          "A": "Bree",
+          "B": "Puertos Grises",
+          "correcto": true
+        }
+      ]
+    },
+    "OESTE_DE": {
+      "correctas": 2,
+      "total": 8,
+      "pares": [
+        {
+          "A": "Fornost",
+          "B": "Rivendel",
+          "correcto": true
+        },
+        {
+          "A": "Fornost",
+          "B": "Esgaroth",
+          "correcto": false
+        },
+        {
+          "A": "Rivendel",
+          "B": "Esgaroth",
+          "correcto": false
+        },
+        {
+          "A": "Tharbad",
+          "B": "Esgaroth",
+          "correcto": false
+        },
+        {
+          "A": "Bree",
+          "B": "Esgaroth",
+          "correcto": false
+        },
+        {
+          "A": "Puertos Grises",
+          "B": "Hobbiton",
+          "correcto": true
+        },
+        {
+          "A": "Puertos Grises",
+          "B": "Esgaroth",
+          "correcto": false
+        },
+        {
+          "A": "Hobbiton",
+          "B": "Esgaroth",
+          "correcto": false
+        }
+      ]
+    },
+    "CERCA_DE": {
+      "correctas": 0,
+      "total": 4,
+      "pares": [
+        {
+          "A": "Fornost",
+          "B": "Bree",
+          "correcto": false
+        },
+        {
+          "A": "Fornost",
+          "B": "Hobbiton",
+          "correcto": false
+        },
+        {
+          "A": "Tharbad",
+          "B": "Bree",
+          "correcto": false
+        },
+        {
+          "A": "Bree",
+          "B": "Hobbiton",
+          "correcto": false
+        }
+      ]
+    }
+  }
+}

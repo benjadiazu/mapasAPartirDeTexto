@@ -1,0 +1,355 @@
+{
+  "cities": [],
+  "towns": [
+    {
+      "name": "Amon Sul",
+      "nx": 0.841296,
+      "ny": 0.751929
+    },
+    {
+      "name": "Anduin",
+      "nx": 0.98,
+      "ny": 0.192057
+    },
+    {
+      "name": "Angmar",
+      "nx": 0.815332,
+      "ny": 0.724354
+    },
+    {
+      "name": "Archet",
+      "nx": 0.445804,
+      "ny": 0.361639
+    },
+    {
+      "name": "Balsadera",
+      "nx": 0.723575,
+      "ny": 0.290125
+    },
+    {
+      "name": "Baranduin",
+      "nx": 0.287668,
+      "ny": 0.854118
+    },
+    {
+      "name": "Belfalas",
+      "nx": 0.907336,
+      "ny": 0.596371
+    },
+    {
+      "name": "Beren",
+      "nx": 0.02,
+      "ny": 0.088104
+    },
+    {
+      "name": "Bolson Cerrado",
+      "nx": 0.506025,
+      "ny": 0.371346
+    },
+    {
+      "name": "Bolson de Tirada",
+      "nx": 0.472054,
+      "ny": 0.324886
+    },
+    {
+      "name": "Bosque",
+      "nx": 0.505257,
+      "ny": 0.372021
+    },
+    {
+      "name": "Bosque Cerrado",
+      "nx": 0.55575,
+      "ny": 0.200318
+    },
+    {
+      "name": "Bosque Negro",
+      "nx": 0.02,
+      "ny": 0.088104
+    },
+    {
+      "name": "Bosque Viejo",
+      "nx": 0.550789,
+      "ny": 0.310746
+    },
+    {
+      "name": "Bosque de Chet",
+      "nx": 0.448375,
+      "ny": 0.386882
+    },
+    {
+      "name": "Brandivino",
+      "nx": 0.624661,
+      "ny": 0.201261
+    },
+    {
+      "name": "Bree",
+      "nx": 0.503,
+      "ny": 0.371346
+    },
+    {
+      "name": "Bruinen",
+      "nx": 0.224193,
+      "ny": 0.783657
+    },
+    {
+      "name": "Camino",
+      "nx": 0.531625,
+      "ny": 0.395679
+    },
+    {
+      "name": "Carn Dum",
+      "nx": 0.02,
+      "ny": 0.088104
+    },
+    {
+      "name": "Cavada Grande",
+      "nx": 0.02,
+      "ny": 0.088104
+    },
+    {
+      "name": "Cepeda",
+      "nx": 0.02,
+      "ny": 0.088104
+    },
+    {
+      "name": "Cricava",
+      "nx": 0.586089,
+      "ny": 0.315968
+    },
+    {
+      "name": "Cuaderna del Este",
+      "nx": 0.563314,
+      "ny": 0.262593
+    },
+    {
+      "name": "Cuaderna del Oeste",
+      "nx": 0.02,
+      "ny": 0.088104
+    },
+    {
+      "name": "Cuaderna del Sur",
+      "nx": 0.02,
+      "ny": 0.088104
+    },
+    {
+      "name": "Delagua",
+      "nx": 0.677857,
+      "ny": 0.328118
+    },
+    {
+      "name": "Eriador",
+      "nx": 0.287668,
+      "ny": 0.854118
+    },
+    {
+      "name": "Esgalduin",
+      "nx": 0.02,
+      "ny": 0.088104
+    },
+    {
+      "name": "Fontegris",
+      "nx": 0.369925,
+      "ny": 0.872229
+    },
+    {
+      "name": "Fornost",
+      "nx": 0.02,
+      "ny": 0.088104
+    },
+    {
+      "name": "Gamoburgo",
+      "nx": 0.654111,
+      "ny": 0.289161
+    },
+    {
+      "name": "Gondor",
+      "nx": 0.421468,
+      "ny": 0.57135
+    },
+    {
+      "name": "Gran Bosque Verde",
+      "nx": 0.931711,
+      "ny": 0.209529
+    },
+    {
+      "name": "Grandes Aguas",
+      "nx": 0.287668,
+      "ny": 0.854118
+    },
+    {
+      "name": "Grandes Smials",
+      "nx": 0.02,
+      "ny": 0.088104
+    },
+    {
+      "name": "Grietas del Destino",
+      "nx": 0.02,
+      "ny": 0.088104
+    },
+    {
+      "name": "Hobbiton",
+      "nx": 0.613543,
+      "ny": 0.351221
+    },
+    {
+      "name": "Lago Largo",
+      "nx": 0.02,
+      "ny": 0.088104
+    },
+    {
+      "name": "Landas de Etten",
+      "nx": 0.369925,
+      "ny": 0.872229
+    },
+    {
+      "name": "Lithe",
+      "nx": 0.02,
+      "ny": 0.088104
+    },
+    {
+      "name": "Los Gamos",
+      "nx": 0.603368,
+      "ny": 0.263886
+    },
+    {
+      "name": "Lun",
+      "nx": 0.959279,
+      "ny": 0.617318
+    },
+    {
+      "name": "Marjala",
+      "nx": 0.02,
+      "ny": 0.088104
+    },
+    {
+      "name": "Mitheithel",
+      "nx": 0.3815,
+      "ny": 0.916968
+    },
+    {
+      "name": "Montanas del Terror",
+      "nx": 0.02,
+      "ny": 0.088104
+    },
+    {
+      "name": "Mordor",
+      "nx": 0.02,
+      "ny": 0.088104
+    },
+    {
+      "name": "Moscagua",
+      "nx": 0.574318,
+      "ny": 0.420429
+    },
+    {
+      "name": "Neldoreth",
+      "nx": 0.02,
+      "ny": 0.088104
+    },
+    {
+      "name": "Norburgo",
+      "nx": 0.02,
+      "ny": 0.088104
+    },
+    {
+      "name": "Oeste",
+      "nx": 0.480157,
+      "ny": 0.447779
+    },
+    {
+      "name": "Oesternesse",
+      "nx": 0.02,
+      "ny": 0.088104
+    },
+    {
+      "name": "Orodruin",
+      "nx": 0.02,
+      "ny": 0.088104
+    },
+    {
+      "name": "Puente Ultimo",
+      "nx": 0.557725,
+      "ny": 0.450286
+    },
+    {
+      "name": "Puente del Brandivino",
+      "nx": 0.595136,
+      "ny": 0.225575
+    },
+    {
+      "name": "Puertos Grises",
+      "nx": 0.524529,
+      "ny": 0.585346
+    },
+    {
+      "name": "Quebradas",
+      "nx": 0.711325,
+      "ny": 0.083032
+    },
+    {
+      "name": "Quebradas Blancas",
+      "nx": 0.02,
+      "ny": 0.088104
+    },
+    {
+      "name": "Rivendel",
+      "nx": 0.319125,
+      "ny": 0.854739
+    },
+    {
+      "name": "Sonorona",
+      "nx": 0.255464,
+      "ny": 0.826857
+    },
+    {
+      "name": "Sur",
+      "nx": 0.444971,
+      "ny": 0.518346
+    },
+    {
+      "name": "Tierra de Angmar",
+      "nx": 0.02,
+      "ny": 0.088104
+    },
+    {
+      "name": "Tierra de Mordor",
+      "nx": 0.02,
+      "ny": 0.088104
+    },
+    {
+      "name": "Tierras de Tuk",
+      "nx": 0.677857,
+      "ny": 0.328118
+    },
+    {
+      "name": "Tinuviel",
+      "nx": 0.02,
+      "ny": 0.088104
+    },
+    {
+      "name": "Tornasauce",
+      "nx": 0.674929,
+      "ny": 0.132325
+    },
+    {
+      "name": "Torres Blancas",
+      "nx": 0.5051,
+      "ny": 0.527179
+    },
+    {
+      "name": "Torres de Abajo",
+      "nx": 0.02,
+      "ny": 0.088104
+    },
+    {
+      "name": "las Cuadernas",
+      "nx": 0.449661,
+      "ny": 0.491129
+    },
+    {
+      "name": "pantanos de Moscagua",
+      "nx": 0.625868,
+      "ny": 0.459982
+    }
+  ]
+}
