@@ -1,0 +1,4 @@
+D:/seminario/Seminario2025_ICI5541/FantasyMapGenerator/build/CMakeFiles/objects.dir
+D:/seminario/Seminario2025_ICI5541/FantasyMapGenerator/build/CMakeFiles/map_generation.dir
+D:/seminario/Seminario2025_ICI5541/FantasyMapGenerator/build/CMakeFiles/ALL_BUILD.dir
+D:/seminario/Seminario2025_ICI5541/FantasyMapGenerator/build/CMakeFiles/ZERO_CHECK.dir

@@ -1,0 +1,10 @@
+^D:\SEMINARIO\SEMINARIO2025_ICI5541\FANTASYMAPGENERATOR\BUILD\CMAKEFILES\0AA155E98AF970B59E801231784BE4F1\GENERATE.STAMP.RULE
+setlocal
+D:\CMake\bin\cmake.exe -SD:/seminario/Seminario2025_ICI5541/FantasyMapGenerator -BD:/seminario/Seminario2025_ICI5541/FantasyMapGenerator/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file D:/seminario/Seminario2025_ICI5541/FantasyMapGenerator/build/map_generation.slnx
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="18.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\seminario\Seminario2025_ICI5541\FantasyMapGenerator\build\CMakeFiles\0aa155e98af970b59e801231784be4f1\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{2828C7BD-F431-3D91-BEE1-BA5028A82246}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

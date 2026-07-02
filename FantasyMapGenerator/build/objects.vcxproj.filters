@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="18.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\seminario\Seminario2025_ICI5541\FantasyMapGenerator\src\argtable3\argtable3.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\seminario\Seminario2025_ICI5541\FantasyMapGenerator\src\config.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\seminario\Seminario2025_ICI5541\FantasyMapGenerator\src\dcel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\seminario\Seminario2025_ICI5541\FantasyMapGenerator\src\delaunay.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\seminario\Seminario2025_ICI5541\FantasyMapGenerator\src\fontface.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\seminario\Seminario2025_ICI5541\FantasyMapGenerator\src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\seminario\Seminario2025_ICI5541\FantasyMapGenerator\src\mapgenerator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\seminario\Seminario2025_ICI5541\FantasyMapGenerator\src\poissondiscsampler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\seminario\Seminario2025_ICI5541\FantasyMapGenerator\src\render.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\seminario\Seminario2025_ICI5541\FantasyMapGenerator\src\resources.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\seminario\Seminario2025_ICI5541\FantasyMapGenerator\src\spatialpointgrid.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\seminario\Seminario2025_ICI5541\FantasyMapGenerator\src\stopwatch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\seminario\Seminario2025_ICI5541\FantasyMapGenerator\src\vertexmap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\seminario\Seminario2025_ICI5541\FantasyMapGenerator\src\voronoi.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\seminario\Seminario2025_ICI5541\FantasyMapGenerator\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{BE02C2FE-80F3-31DF-86F5-1E87C86E03CB}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

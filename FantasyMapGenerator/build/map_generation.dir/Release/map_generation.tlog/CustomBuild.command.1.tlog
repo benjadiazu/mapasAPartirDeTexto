@@ -1,0 +1,10 @@
+^D:\SEMINARIO\SEMINARIO2025_ICI5541\FANTASYMAPGENERATOR\CMAKELISTS.TXT
+setlocal
+D:\CMake\bin\cmake.exe -SD:/seminario/Seminario2025_ICI5541/FantasyMapGenerator -BD:/seminario/Seminario2025_ICI5541/FantasyMapGenerator/build --check-stamp-file D:/seminario/Seminario2025_ICI5541/FantasyMapGenerator/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
